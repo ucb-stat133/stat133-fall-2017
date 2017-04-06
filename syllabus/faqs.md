@@ -43,25 +43,29 @@ journalist, or get some analytic skills, this course should be a good choice.
 ### Are we going to learn about machine learning methods?
 
 No. This course is not about machine learning (or statistical learning) methods.
-The Statistics department offers a dedcidated course on this topic: __Stat 154__.
-There is also __CS 189__ offered through Electrical Engineering and Computer Sciences (EECS).
+The Statistics department offers a dedcidated course on this topic: 
+__Stat 154: Modern Statistical Prediction and Machine Learning__.
+There is also __CS 189: Introduction to Machine Learning__ offered through 
+Electrical Engineering and Computer Sciences (EECS).
 
 
 ### Are we going to learn about data bases?
 
 No. If you are interested in Databases you should consider 
-__CS XYZ__ offered through Electrical Engineering and Computer Sciences (EECS).
+__CS 186: Introduction to Database Systems__ offered through 
+Electrical Engineering and Computer Sciences (EECS).
 
 
 ### Are we going to learn about linear models?
 
-No. The course for linear models is __Stat 151A__.
+No. The course for linear models is __Stat 151A: Linear Modeling, Theory and Applications__.
 
 
 ### Are we going to learn about Reproducible Research (RR)?
 
 Not really. We will touch on dynamic documents and practices that are useful 
-in RR, but the dedicated course for this topic is __Stat 159__.
+in RR, but the dedicated course for this topic is 
+__Stat 159: Reproducible and Collaborative Statistical Data Science__.
 
 
 ### Do we need to memorize all commands?
@@ -97,14 +101,15 @@ of work on your own.
 
 ### Can I ask you to write me a Letter of Recommendation (LoR)?
 
-Simple answer: No. However, I am happy to write you a letter of recommendation 
-if I have known you for at least one year, and as long as we have a good collegial relationship 
-(e.g. I know your name, I know your personal story, you've shown interest in my work).
+Quick answer: No. However, I am happy to write you a letter of recommendation 
+if I have known you for at least one year, and as long as we have developed 
+a good collegial relationship (e.g. I know your name, I know your personal story, 
+you've shown interest in my work).
 Getting a "good grade" does not guarantee that I will write you a LoR. Conversely,
 getting a "not so good grade" does not have to be an impediment to write you a LoR.
 
 
-### I invited you to join my network in LinkedIn. Why haven't you accepted?
+### I invited you to join my network in LinkedIn. Why haven't you accepted it?
 
 First: Don't take it personal. It's not you, it's me. Second: if you really 
 want me to be part of your network, why don't you come see me in person? 
@@ -112,3 +117,11 @@ We can meet in OH, we can talk right before or after class. Or you can also
 schedule a meeting at a different time. Let me know you better than just as 
 a distant contact in a social media networking site.
 
+
+### Do you have research projects open to undergrad students?
+
+Lecturing takes most of my time and I don't a lab. However, I'm always coming up 
+with new ideas and experiments, and it's nice to have additional human resources 
+to create something useful, interesting, open (and cool). If you are 
+interested in volunteering and willing to learn a lot, come talk to me and 
+let's see if we can join forces, and add our two cents to the world.
