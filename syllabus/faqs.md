@@ -47,9 +47,21 @@ The Statistics department offers a dedcidated course on this topic: __Stat 154__
 There is also __CS 189__ offered through Electrical Engineering and Computer Sciences (EECS).
 
 
+### Are we going to learn about data bases?
+
+No. If you are interested in Databases you should consider 
+__CS XYZ__ offered through Electrical Engineering and Computer Sciences (EECS).
+
+
 ### Are we going to learn about linear models?
 
 No. The course for linear models is __Stat 151A__.
+
+
+### Are we going to learn about Reproducible Research (RR)?
+
+Not really. We will touch on dynamic documents and practices that are useful 
+in RR, but the dedicated course for this topic is __Stat 159__.
 
 
 ### Do we need to memorize all commands?
@@ -85,9 +97,8 @@ of work on your own.
 
 ### Can I ask you to write me a Letter of Recommendation (LoR)?
 
-Simple answer: No. At least not right after the end of the course. I am happy 
-to write you a letter of recommendation if I've have known you for at least one year, 
-and as long as we have a good collegial relationship 
+Simple answer: No. However, I am happy to write you a letter of recommendation 
+if I have known you for at least one year, and as long as we have a good collegial relationship 
 (e.g. I know your name, I know your personal story, you've shown interest in my work).
 Getting a "good grade" does not guarantee that I will write you a LoR. Conversely,
 getting a "not so good grade" does not have to be an impediment to write you a LoR.
