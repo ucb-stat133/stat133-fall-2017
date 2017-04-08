@@ -1,8 +1,10 @@
-# Frequently Asked Questions about Stat 133
+# Frequently Asked Questions
 
 Below are some of the questions I get asked everytime I teach Stat 133.
 Do you really need to read them? Not really, but if you ever ask me a 
 question that it's here, I'm going to kindly ask you to refer to this document.
+
+-----
 
 
 ### Is this course a good fit if I don't have any programming experience?
@@ -120,7 +122,7 @@ a distant contact in a social media networking site.
 
 ### Do you have research projects open to undergrad students?
 
-Lecturing takes most of my time and I don't a lab. However, I'm always coming up 
+Lecturing takes most of my time and I don't have a lab. However, I'm always coming up 
 with new ideas and experiments, and it's nice to have additional human resources 
 to create something useful, interesting, open (and cool). If you are 
 interested in volunteering and willing to learn a lot, come talk to me and 
