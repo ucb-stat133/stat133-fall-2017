@@ -1,7 +1,7 @@
 ## stat133-fall-2017
 
 This repository holds the course materials for the fall 2017 edition of 
-Statistics 133 __Concepts in Computing with Data__ at UC Berkeley.
+__Statistics 133: Concepts in Computing with Data__ at UC Berkeley.
 
 
 ## Contents
