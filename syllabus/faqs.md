@@ -127,3 +127,26 @@ with new ideas and experiments, and it's nice to have additional human resources
 to create something useful, interesting, open (and cool). If you are 
 interested in volunteering and willing to learn a lot, come talk to me and 
 let's see if we can join forces, and add our two cents to the world.
+
+
+### How did you learn R?
+
+I basically learned R by myself. I was introduced to R way back in 2001 when I 
+was a senior undergrad. We used R to fit regression models. Then I used R for 
+my undergrad thesis with applications of cluster analysis. A couple of years later when I went to grad school (2004) I started to use R on a daily basis. My advisor gave me a couple of books on multivariate statistics and kindly asked me to replicate all of the examples in R. Keep in mind that back then, you could literally count the number of published books about R with the fingers of one hand.
+
+
+### When did you create your first R package?
+
+I created my first R package for my PhD dissertation. It took me about 2 years to write the code (i.e. the functions). The challenging part was the process to package all the functions, which took me several frustrating attempts until successfully completion in April 2009. Again, there was almost no documentation on how to create R packages.
+
+
+### How many R packages have you developed?
+
+I've created about 16 or so packages. A handful of them have been experimental packages that I've never submitted to CRAN.
+
+
+### How do you memorize all those commands?
+
+I don't. I've been able to memorize those commands that I constantly use, but there are still many functions (that I use a lot) with arguments that I can't remember their names and/or their meanings. That's why the help/manual documentation is critical for all users.
+
