@@ -45,41 +45,19 @@ acquire them in the wild. Stat 133 aims to add its two cents to provide solid
 foundations that will help you crunch data in a less improvised/naive way.
 
 
-
-### Contents
-
-__Statistics 133__ is an introduction to computational data analysis using R 
-(and other computational tools) with an emphasis on five major cornerstones:
-
-- Data Manipulation
-- Data Visualization
-- Programming Concepts (with emphasis on data analysis)
-- Data Technologies
-- Reporting Tools
-
-- Use the computer extensively to conduct statistical analysis of data.
-- Use existing software rather than build routines from the ground up.
-- Focus on aspects of computing to conduct data analysis, NOT the 
-computational aspects of statistical methods.
-
-
-
-### Prerequisites / Review
-
-This course does not have any prerequisites, although it would be nice if you 
-have taken an introductory course in statistics (e.g. Stat 2, 20, 21, 131A). 
-
-The curriculum and format is designed specifically for students (ideally  
-majoring in Statistics) who have NOT taken computer science courses.
-
-Students with some prior experience in either computational statistics 
-or computing are welcome to enroll, though some parts of the course will be slow. 
-Students who have taken computer science courses should instead 
-take a more advanced course.
-
-
-
 ### Description
+
+__Stat 133: Concepts in Computing with Data__ is one of the core courses 
+of the Statistics Department. 
+The ultimate goal is to provide foundations for "computing with data" so students 
+have the basic computational skills for subsequent 
+upper division courses (e.g. Stat 150, 151A, 152, 153, 154, 155, 157, 158, 159).
+This involves teaching students how to:
+
+- use the computer extensively to conduct statistical analysis of data.
+- use existing software rather than build routines from the ground up.
+- focus on aspects of computing to conduct data analysis, NOT the 
+computational aspects of statistical methods.
 
 The goal is to help you gain literacy about "computing with data."
 You don't need previous programming experience, and you also don't need previous
@@ -89,14 +67,6 @@ concepts, and data analysis tend to understand certain concepts better.
 The main computational software of the course is the statistical programming
 language R. 
 
-There is a considerable amount of work outside class and lab. You should plan
-ahead of time to not wait until the last hours. Learning programming is
-frustrating, but it can be fun.
-
-You are not competing with other students. There will be projects in this
-course but this is not a "hackathon". No extra credit is given to amazing,
-blow minding projects.
-
 Much of the course is about learning good practices:
 
 - Organize your workflow
@@ -104,6 +74,37 @@ Much of the course is about learning good practices:
 - Understand how to visualize data and display statistical information
 - Learn the basic principles for writing code
 - Use computational tools to carry our the data analysis cycle
+
+
+
+
+
+
+### Contents
+
+__Statistics 133__ is an introduction to computational data analysis using R 
+(and other computational tools) with an emphasis on five major cornerstones:
+
+- Data Manipulation (wrangling, reshaping, tidying)
+- Data Visualization (focus on statistical charts)
+- Programming Concepts (with emphasis on data analysis)
+- Data Technologies (various sources/formats of data)
+- Reporting Tools (via dynamic documents)
+
+
+
+### Prerequisites / Review
+
+This course does not have any prerequisites, although it would be nice if you 
+have taken an introductory course in statistics (e.g. Stat 2, 20, 21, 131A). 
+
+The curriculum and format is designed specifically for students (ideally 
+majoring in Statistics) who have NOT taken computer science courses.
+
+Students with some prior experience in either computational statistics 
+or computing are welcome to enroll, though some parts of the course will be slow. 
+Students who have taken computer science courses (e.g. CS C8, CS C100, CS 9H) 
+should instead take a more advanced course.
 
 
 
