@@ -1,5 +1,9 @@
 ## Stat 133 Course Logistics and Policies
 
+There is a considerable amount of work outside class and lab. You should plan
+ahead of time to not wait until the last hours. Learning programming is
+frustrating, but it can be fun.
+
 
 ### Labs
 
@@ -25,7 +29,7 @@
 - Don't wait until the last minute to submit your assignment.
 - __No late assignments__ will be accepted, for any reason, including, but not 
 limited to, Internet congestion, system crashes, natural disasters, 
-theft, medical emergencies, personal crisis,theft or any extraordinary 
+theft, medical emergencies, personal crisis, theft or any extraordinary 
 circumnstances (e.g. illnes, exhaustion, mourning, loss of internet connection, bCourses is down, broken computer). Don't ask. I won't be sympathetic. 
 Plan ahead and pace yourself.
 - The homework assignments will get substantially more difficult as we
@@ -142,11 +146,12 @@ Unless I have known you at least one year, and we have developed a good collegia
 ### Additional Course Policies
 
 - Be sure to pay attention to deadlines.
+- Check bCourses to keep up to date with announcements and incoming assignments.
 - In consideration to everybody in the classroom, please turn off your cell phone during class and lab time.
 
 
 
 ### Fine Print
 
-The course deadlines, assignments, exam times and material are subject to change at the whim of the professor.
+The course deadlines, assignments, exam times, and material are subject to change at the whim of the professor.
 
