@@ -1,8 +1,6 @@
 ## Stat 133 Course Logistics and Policies
 
-There is a considerable amount of work outside class and lab. You should plan
-ahead of time to not wait until the last hours. Learning programming is
-frustrating, but it can be fun.
+![Mrs Mutner Rules](../images/mrs-mutner-rules.jpg)
 
 
 ### Labs
@@ -36,7 +34,7 @@ Plan ahead and pace yourself.
 progress with the course.
 - If you collaborate with other students when working on a HW assignment, please include the names of those students in your submission.
 - You must write your own answers (using your own words). Copy and plagiarism will not be tolerated (see _Academic Honesty_ policy).
-
+- Learning programming is frustrating, but it can be fun.
 
 
 ### Exams
