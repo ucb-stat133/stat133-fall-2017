@@ -30,8 +30,7 @@ _AugSep 28-01:_ Getting started with R, and comprehensive review of the RStudio 
     + [First contact with R](../tutorials/01-intro-to-R.md) (tutorial)
     + [Intro to Rmd files](../tutorials/01-intro-to-Rmd-files.md) (tutorial)
 + __Lab material__:
-    + [Getting started with R](../labs/01-getting-started-with-R.md)
-    + [Getting started with Rmd files](../labs/02-getting-started-with-Rmd-files.md)
+    + [Getting started with R](../labs/01-R-basics.md)
 + __Reading__:
     + [Markdown tutorial](http://commonmark.org/help/tutorial) by CommonMark
     + [www.markdowntutorial.com/](http://www.markdowntutorial.com/)
@@ -46,7 +45,7 @@ _AugSep 28-01:_ Getting started with R, and comprehensive review of the RStudio 
 
 
 
-## 2) Filesystem and Path Names
+## 2) Housekeeping: Filesystem, Bash, Git, Github
 
 _Sep 04-08:_ The BIG picture and How all the pieces fit together.
 
@@ -54,7 +53,7 @@ _Sep 04-08:_ The BIG picture and How all the pieces fit together.
     + [BIG picture](https://docs.google.com/presentation/d/1TZRjIvfBfG_3vjj7bmb6B_oyR7k0lxge7V_Ih2B1mwo/edit?usp=sharing) (slides)
     + [Filesystem](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/edit?usp=sharing) (slides)
 + __Lab material__:
-    + [Minimal git and Github](../labs/02-minimal-git.md)
+    + [Getting started with Rmd files](../labs/02-minimal-git-bash.md)
 + __Reading__:
     + [Installing Git and Github](http://happygitwithr.com/installation-pain.html) from 
     _Happy Git and GitHub for the useR_ by Jenny Bryan et al.
@@ -167,7 +166,7 @@ _Oct 08-12:_ Basics of loops, and more about functions.
 
 
 
-## 8) Simulations
+## 8) Random Numbers and Simulations
 
 _Oct 15-19:_ Random numbers, sampling, and monte carlo simulation.
 
