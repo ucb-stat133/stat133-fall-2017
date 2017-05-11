@@ -367,28 +367,26 @@ Review Questions
 
 Take a look at the following commands. Notice the difficulty of reading code when assignment operators are not surrounded by spaces (Don't do this!). Without typing the code on the console, try to guess what will be the output:
 
-``` r
-# example 1
-var<-3
-Var*2
+    # example 1
+    var<-3
+    Var*2
 
 
-# example 2
-x<-2
-2x<-2*x
+    # example 2
+    x<-2
+    2x<-2*x
 
 
-# example 3
-sqrt4 <- sqrt(4)
-sqrt4
+    # example 3
+    sqrt4 <- sqrt(4)
+    sqrt4
 
 
-# example 4
-a number <- 16
+    # example 4
+    a number <- 16
 
 
-# example 5
-"one number" <- 16
-`one number`
-one number
-```
+    # example 5
+    "one number" <- 16
+    `one number`
+    one number
