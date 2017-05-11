@@ -103,19 +103,17 @@ evenOthersUseCamelCase
 
 The following are invalid names (and invalid assignments)
 
-``` r
-# cannot start with a number
-5variable <- 5
+    # cannot start with a number
+    5variable <- 5
 
-# cannot start with an underscore
-_invalid <- 10
+    # cannot start with an underscore
+    _invalid <- 10
 
-# cannot contain comma
-my,variable <- 3
+    # cannot contain comma
+    my,variable <- 3
 
-# cannot contain spaces
-my variable <- 1
-```
+    # cannot contain spaces
+    my variable <- 1
 
 This is fine but a little bit too much:
 
@@ -177,11 +175,11 @@ Your Turn
 
 ### Pythagoras formula
 
-The pythagoras formula is used to compute the length of the hypotenuse, \(h\), of a right triangle with legs of length \(a\) and \(b\):
+The pythagoras formula is used to compute the length of the hypotenuse, *h*, of a right triangle with legs of length *a* and *b*:
 
-\[
-h = \sqrt{(a^2 + b^2)}
-\]
+$$
+h = \\sqrt{(a^2 + b^2)}
+$$
 
 Calculate the hypotenuse of a right triangle with legs of length 3 and 4. Use the `sqrt()` function, and create variables `a = 3` and `b = 4`. If you don't know what's the symbol to calculate exponents, search for the help documentation of the arithmetic operators: `?Arithmetic`.
 
@@ -261,16 +259,16 @@ Notice the use of quotes surrounding the input name inside `help.search()`
 
 The formula for the binomial probability is:
 
-\[
-P(k) = \binom{n}{k} p^k (1-p)^{n-k}
-\]
+$$
+P(k) = \\binom{n}{k} p^k (1-p)^{n-k}
+$$
 
 where:
 
--   \(n\) is the number of (fixed) trials
--   \(p\) is the probability of success on each trial
--   \(1 - p\) is the probability of failure on each trial
--   \(k\) is a variable that represents the number of successes out of \(n\) trials
+-   *n* is the number of (fixed) trials
+-   *p* is the probability of success on each trial
+-   1 − *p* is the probability of failure on each trial
+-   *k* is a variable that represents the number of successes out of *n* trials
 
 Let's consider an example. A fair coin is tossed 5 times. What is the probability of getting exactly 2 heads?
 
@@ -328,7 +326,7 @@ library(knitr)
 ### Your turn
 
 -   Install packages `"stringr"`, `"RColorBrewer"`
--   Calculate: \(3x^2 + 4x + 8\) when \(x = 2\)
+-   Calculate: 3*x*<sup>2</sup> + 4*x* + 8 when *x* = 2
 -   Look for the manual (i.e. help) documentation of the function `exp`
 -   Find out how to look for information about binary operators like `+` or `^` (without using `?Arithmetic`).
 -   There are several tabs in the pane `Files, Plots, Packages, Help, Viewer`. Find what does the tab **Files** is good for?
