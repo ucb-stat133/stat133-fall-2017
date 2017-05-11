@@ -46,7 +46,15 @@ load('usa-states.RData')
 ls()
 ```
 
-Check the available objects in your session and confirm that you have the following objects:
+### What's happening in the code above?
+
+The function `download.file()` allows you to download any type of file from the Web. In this case you are downloading the file called `usa-states.RData` which is located in the github repository of the course. This file is a binary file. To be more precise, the file extension `.RData` is the default extension used by R for its binary native format.
+
+Where does the file is downloaded? The file `usa-states.RData` gets downloaded to your **working directory**. If you are curious about what is the current directory to which R is paying attention, simply type the function `getwd()`---which stands for *get the working directory*.
+
+To load the contents of the binary file into R's session you use `load()`. Finally, `ls()` allows you to **list** all the available R objects.
+
+Check that the following objects are available in your session:
 
 -   `state` (names of the States)
 -   `capital` (names of the capitals)
@@ -54,9 +62,11 @@ Check the available objects in your session and confirm that you have the follow
 -   `water` (water area in km2)
 -   `seats` (number of house seats)
 
+**A note on `.RData` files.** Most of the data sets you are going to be working with in real life are going to be stored in some sort of text file. So you probably won't be handling many R binary files (i.e. `.RData` files). However, R binary files are an interesting option for saving intermediate results, and/or for saving R objects (as R objects).
+
 ### Inspecting the data objects
 
-Once you have some data objects to work with, the first step is to inspect some of their characteristics. R has a handful of functions that allows you to examine objects:
+Once you have some data objects to work with, the first step is to inspect some of their characteristics. R has various of functions that allow you to examine objects:
 
 -   `typeof()` type of storage of any object
 -   `class()` gives you the class of the object
@@ -68,7 +78,7 @@ Once you have some data objects to work with, the first step is to inspect some 
 -   `tail()` take a peek at the last elements
 -   `summary()` shows a summary of a given object
 
-Let's find out what is the class of each of the objects:
+Your turn. Find out what is the class of each of the objects `state`, `capital`, etc:
 
 ``` r
 # your code here
@@ -80,14 +90,22 @@ Now use `length()`, `head()`, `tail()`, and `summary()` to start exploring the c
 # your code here
 ```
 
+Do all the objects have the same length?
+
 Vectors in R
 ------------
 
 Vectors are the most basic type of data structures in R. Learning how to manipulate data structures in R requires you to start learning how to manipulate vectors.
 
+How do you know if any of the loaded objects is a vector? Using `class()` does not explicitly tell you whether an R object is a vector or not. A more explicit way to check if `state` or `capital` are vectors is with the function `is.vector()`.
+
+``` r
+# check whether the loaded objects are vectors
+```
+
 Remember that R vectors are **atomic structures**, which is just the fancy name to indicate that all the elements of a vector must be of the same type, either all numbers, all characters, or all logical values.
 
-How do you know that a given vector is of a certain data type? With `typeof()`
+How do you know that a given vector is of a certain data type? One function to answer this question is `typeof()`
 
 ``` r
 typeof(state)
@@ -99,7 +117,7 @@ typeof(water)
 Manipulating Vectors: Subsetting
 --------------------------------
 
-Subsetting refers to extracting elements of a vector (or another R object). To do so, you use what is known as **bracket notation**. This implies using (square) brackets `[ ]` to get access to the elements of a vector:
+Subsetting refers to extracting elements of a vector (or another R object). To do so, you use what is known as **bracket notation**. This implies using (square) brackets `[ ]` to get access to the elements of a vector, for instance:
 
 ``` r
 # first element of 'state'
@@ -136,29 +154,31 @@ state[c(20, 9, 10, 50)]
 state[rep(3, 4)]
 ```
 
-Try these:
+Try these. What happens if you specify:
 
--   What happens if you specify an index of zero: `state[0]`?
--   What happens if you specify a negative index: `state[-1]`?
--   What happens if you specify various negative indices: `state[-c(1,2,3,4)]`?
--   What happens if you specify an index greater than the length of the vector: `state[53]`?
--   What happens if you specify repeated indices: `state[c(1,2,2,3,3,3)]`?
+-   an index of zero: `state[0]`?
+-   a negative index: `state[-1]`?
+-   various negative indices: `state[-c(1,2,3,4)]`?
+-   an index greater than the length of the vector: `state[53]`?
+-   repeated indices: `state[c(1,2,2,3,3,3)]`?
 
 ### Subsetting with Logical Indices
 
-Logical subsetting involves using a logical vector inside the brackets. This kind of subsetting is **very powerful** because it allows you to extract elements based on some logical condition. Let me put it this way:
-*logical subsetting* is a fundamental survival skill.
+Logical subsetting involves using a logical vector inside the brackets. Learning about *logical subsetting* is a fundamental survival skill. This kind of subsetting is **very powerful** because it allows you to extract elements based on some logical condition.
 
 Here's a toy example of logical subsetting:
 
 ``` r
+# dummy vector
 a <- c(5, 6, 7, 8)
+
+# logical subsetting
 a[c(TRUE, FALSE, TRUE, FALSE)]
 ```
 
     ## [1] 5 7
 
-To do logical subsetting, the vector that you put inside the brackets, must match the length of the manipulated vector.
+To do logical subsetting, the vector that you put inside the brackets, must match the length of the manipulated vector. The elements of the vector that are subset are those which match the logical value `TRUE`.
 
 ``` r
 # your turn
@@ -169,9 +189,9 @@ a[c(TRUE, FALSE, TRUE, FALSE)]
 a[c(FALSE, FALSE, FALSE, FALSE)]
 ```
 
-When subsetting a vector logically, most of the times you won't really be providing an explicit vector of `TRUE`'s and `FALSE`s. Instead, you will be providing a logical condition or a comparison operation that returns a logical vector.
+When subsetting a vector logically, most of the times you won't really be providing an explicit vector of `TRUE`'s and `FALSE`s. Just imagine having a vector of 100 or 1000 or 1000000 elements, and trying to do logical subsetting by manually creating a logical vector of the same length. Instead, you will be providing a logical condition or a comparison operation that returns a logical vector.
 
-A comparison operation occurs when using comparison operators such as:
+A comparison operation occurs when you use comparison operators such as:
 
 -   `>` greater than
 -   `>=` greater than or equal
@@ -188,29 +208,100 @@ a > 6
     ## [1] FALSE FALSE  TRUE  TRUE
 
 ``` r
-# elements different from 5
+# elements different from 6
 a != 6
 ```
 
     ## [1]  TRUE FALSE  TRUE  TRUE
 
-Notice that a comparison operation always returns a logical vector. Here's how to actually extract the values of a vector based on a logical indexing:
+Notice that a comparison operation always returns a logical vector. Here's how you actually extract the values of a vector based on a logical indexing:
 
 ``` r
 a <- c(5, 6, 7, 8)
 
 # elements greater than 6
 a[a > 6]
+```
 
+    ## [1] 7 8
+
+``` r
 # elements less then 8
 a[a < 8]
+```
 
+    ## [1] 5 6 7
+
+``` r
 # elements less than or equal to 6
 a[a <= 6]
+```
 
+    ## [1] 5 6
+
+``` r
 # elements different from 5
 a[a != 5]
 ```
+
+    ## [1] 6 7 8
+
+Logical conditions, in turn, use a logical operator:
+
+-   `&` AND
+-   `|` OR
+-   `!` negation
+
+``` r
+# AND
+TRUE & TRUE
+```
+
+    ## [1] TRUE
+
+``` r
+TRUE & FALSE
+```
+
+    ## [1] FALSE
+
+``` r
+FALSE & FALSE
+```
+
+    ## [1] FALSE
+
+``` r
+# OR
+TRUE | TRUE
+```
+
+    ## [1] TRUE
+
+``` r
+TRUE | FALSE
+```
+
+    ## [1] TRUE
+
+``` r
+FALSE | FALSE
+```
+
+    ## [1] FALSE
+
+``` r
+# NOT
+!TRUE
+```
+
+    ## [1] FALSE
+
+``` r
+!FALSE
+```
+
+    ## [1] TRUE
 
 Here are more examples of logical subsetting with the US States data vectors:
 
@@ -336,7 +427,7 @@ Or the sum of `area` plus `water` to get the total area:
 area + water
 ```
 
-### Why should you care about vectorzation?
+### Why should you care about vectorization?
 
 If you are new to programming, learning about R's vectorization will be very natural (you won't stop to think about it too much). If you have some previous programming experience in other languages (e.g. C, python, perl), you know that vectorization does not tend to be a native thing.
 
