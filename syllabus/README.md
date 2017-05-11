@@ -93,9 +93,11 @@ _Sep 18-22:_ Data tables, typical storage formats, data frames.
     + [R Data Frames](https://docs.google.com/presentation/d/1OsxnIgNTZG-gnD0rdTXzqf162_gNqnok_suMHG5KxpU/edit?usp=sharing) (slides)
 + __Lab material__:
     + basic reading in data frames
-    + [Getting started with dplyr and ggplot2](../labs/04-dplyr-ggplot2-basics.md)
+    + [Getting started with dplyr](../labs/04-dplyr-basics.md)
+    + [Getting started with ggplot2](../labs/04-ggplot2-basics.md)
 + __Reading__:
     + [Organizing data in spreadsheets](http://kbroman.org/dataorg/) by Karl Broman
+    + [Introduction to dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) introductory vignette by Hadley Wickham
 + __Cheat sheet__:
     + [Data import cheat sheet](../cheat-sheets/data-import-cheatsheet.pdf)
  
