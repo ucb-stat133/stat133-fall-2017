@@ -30,7 +30,7 @@ _AugSep 28-01:_ Getting started with R, and comprehensive review of the RStudio 
     + [First contact with R](../tutorials/01-intro-to-R.md) (tutorial)
     + [Intro to Rmd files](../tutorials/01-intro-to-Rmd-files.md) (tutorial)
 + __Lab material__:
-    + [Getting started with R](../labs/01-R-basics.md)
+    + [Getting started with R](../labs/lab01-R-basics.md)
 + __Reading__:
     + [Markdown tutorial](http://commonmark.org/help/tutorial) by CommonMark
     + [www.markdowntutorial.com/](http://www.markdowntutorial.com/)
@@ -53,7 +53,7 @@ _Sep 04-08:_ The BIG picture and How all the pieces fit together.
     + [BIG picture](https://docs.google.com/presentation/d/1TZRjIvfBfG_3vjj7bmb6B_oyR7k0lxge7V_Ih2B1mwo/edit?usp=sharing) (slides)
     + [Filesystem](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/edit?usp=sharing) (slides)
 + __Lab material__:
-    + [Getting started with Rmd files](../labs/02-minimal-git-bash.md)
+    + [Getting started with Rmd files](../labs/lab02-minimal-git-bash.md)
 + __Reading__:
     + [Installing Git and Github](http://happygitwithr.com/installation-pain.html) from 
     _Happy Git and GitHub for the useR_ by Jenny Bryan et al.
@@ -74,7 +74,7 @@ _Sep 11-15:_ Getting to know R vectors, atomicity, vectorization, subsetting and
     + [Data Types](https://docs.google.com/presentation/d/1TZRjIvfBfG_3vjj7bmb6B_oyR7k0lxge7V_Ih2B1mwo/edit?usp=sharing) (slides)
     + [R Vectors](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/edit?usp=sharing) (slides)
 + __Lab material__:
-    + [Getting started with vectors, factors, and lists](../labs/03-vector-basics.md)
+    + [Getting started with vectors, factors, and lists](../labs/lab03-vector-basics.md)
 + __Reading__:
     + [chapter 20: Vectors](http://r4ds.had.co.nz/vectors.html) from _R for Data Science_ by Grolemund and Wickham.
 + __HOMEWORK:__ Problem set 1
@@ -93,7 +93,7 @@ _Sep 18-22:_ Data tables, typical storage formats, data frames.
     + [R Data Frames](https://docs.google.com/presentation/d/1OsxnIgNTZG-gnD0rdTXzqf162_gNqnok_suMHG5KxpU/edit?usp=sharing) (slides)
 + __Lab material__:
     + basic reading in data frames
-    + [Getting started with dplyr](../labs/04-dplyr-basics.md)
+    + [Getting started with dplyr](../labs/lab04-dplyr-basics.md)
     + [Getting started with ggplot2](../labs/04-ggplot2-basics.md)
 + __Reading__:
     + [Organizing data in spreadsheets](http://kbroman.org/dataorg/) by Karl Broman
@@ -138,7 +138,7 @@ _Oct 01-05:_ Basics of Functions, R expressions, and conditionals.
     + [Introduction to functions](../tutorials/06-intro-to-functions.md)
     + [Introduction to R expressions and conditionals](../tutorials/06-intro-to-expressions-conditionals.md)
 + __Lab material__:
-    + [Getting started with functions](../labs/06-simple-functions.md)
+    + [Getting started with functions](../labs/lab06-simple-functions.md)
     + [Getting started with expressions and conditionals](../labs/06-simple-conditionals.md)
 + __Reading__: 
     + [chapter 19: Functions](http://r4ds.had.co.nz/functions.html) from _R for Data Science_ by Grolemund and Wickham.
@@ -157,7 +157,7 @@ _Oct 08-12:_ Basics of loops, and more about functions.
     + [Introduction to loops](../tutorials/08-intro-to-loops.md)
     + [More about functions](../tutorials/09-more-functions.md)
 + __Lab material__: 
-    + [Getting started with loops](../labs/07-simple-loops.md)
+    + [Getting started with loops](../labs/lab07-simple-loops.md)
 + __Reading__:
     + [chapter 21: Iteration](http://r4ds.had.co.nz/iteration.html) from _R for Data Science_ by Grolemund and Wickham.
 + __Cheat sheet__: 
@@ -176,7 +176,7 @@ _Oct 15-19:_ Random numbers, sampling, and monte carlo simulation.
     + [Introduction to random numbers](../tutorials/08-intro-to-random-numbers.md)
     + [Monte Carlo Simulations](../tutorials/09-intro-to-simulations.md)
 + __Lab material__:
-    + [Running Monte Carlo simulations](../labs/08-random-numbers.md)
+    + [Running Monte Carlo simulations](../labs/lab08-random-numbers.md)
     + [More shiny apps](../labs/08-shiny-simulations.md)
 + __Reading__:
     + TBA.
