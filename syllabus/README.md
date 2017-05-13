@@ -54,7 +54,7 @@ _Sep 04-08:_ The BIG picture and How all the pieces fit together.
     + [BIG picture](https://docs.google.com/presentation/d/1TZRjIvfBfG_3vjj7bmb6B_oyR7k0lxge7V_Ih2B1mwo/edit?usp=sharing) (slides)
     + [Filesystem](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/edit?usp=sharing) (slides)
 + __Lab material__:
-    + [Getting started with Rmd files](../labs/lab02-minimal-bash-git.md)
+    + [Minimala Bash and Git](../labs/lab02-minimal-bash-git.md)
 + __Reading__:
     + [Installing Git and Github](http://happygitwithr.com/installation-pain.html) from 
     _Happy Git and GitHub for the useR_ by Jenny Bryan et al.
