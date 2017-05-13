@@ -33,12 +33,13 @@ _AugSep 28-01:_ Getting started with R, and comprehensive review of the RStudio 
     + [Getting started with R](../labs/lab01-R-basics.md)
 + __Reading__:
     + [Markdown tutorial](http://commonmark.org/help/tutorial) by CommonMark
-    + [www.markdowntutorial.com/](http://www.markdowntutorial.com/)
+    + [www.markdowntutorial.com/](http://www.markdowntutorial.com)
     + [Introduction to R Markdown](http://rmarkdown.rstudio.com/lesson-1.html) by RStudio
 + __Cheat sheet__: 
     + [RStudio cheat sheet](../cheat-sheets/rstudio-IDE-cheatsheet.pdf)
     + [R markdown cheat sheet](../cheat-sheets/rsmarkdown-cheatsheet-2.0.pdf)
-+ __HOMEWORK:__ Markdown practice.
++ __HOMEWORK__:
+    + [HW00 - Markdown practice](../hws/00-markdown.md)
 
 
 -----
@@ -53,13 +54,14 @@ _Sep 04-08:_ The BIG picture and How all the pieces fit together.
     + [BIG picture](https://docs.google.com/presentation/d/1TZRjIvfBfG_3vjj7bmb6B_oyR7k0lxge7V_Ih2B1mwo/edit?usp=sharing) (slides)
     + [Filesystem](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/edit?usp=sharing) (slides)
 + __Lab material__:
-    + [Getting started with Rmd files](../labs/lab02-minimal-git-bash.md)
+    + [Getting started with Rmd files](../labs/lab02-minimal-bash-git.md)
 + __Reading__:
     + [Installing Git and Github](http://happygitwithr.com/installation-pain.html) from 
     _Happy Git and GitHub for the useR_ by Jenny Bryan et al.
 + __Cheat sheet__:
     + [git cheat sheet](../cheat-sheets/git-cheatsheet.pdf)
-+ __HOMEWORK:__ Git and github for the uninitiated.
++ __HOMEWORK__:
+    + Git and github for the uninitiated.
 
 
 -----
@@ -91,10 +93,10 @@ _Sep 18-22:_ Data tables, typical storage formats, data frames.
 + __Lecture material__
     + [Data Tables](https://docs.google.com/presentation/d/1WQIrQxtNXhEEpI0Yd5Ch4r2zwIp3KG2O_BVY5nsdY4Q/edit?usp=sharing) (slides)
     + [R Data Frames](https://docs.google.com/presentation/d/1OsxnIgNTZG-gnD0rdTXzqf162_gNqnok_suMHG5KxpU/edit?usp=sharing) (slides)
+    + [Importing Tables in R]() (slides)
 + __Lab material__:
-    + basic reading in data frames
+    + [Reading in data frames in R](../labs/lab04-reading-data-frames.md)
     + [Getting started with dplyr](../labs/lab04-dplyr-basics.md)
-    + [Getting started with ggplot2](../labs/04-ggplot2-basics.md)
 + __Reading__:
     + [Organizing data in spreadsheets](http://kbroman.org/dataorg/) by Karl Broman
     + [Introduction to dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) introductory vignette by Hadley Wickham
@@ -116,8 +118,9 @@ graphs with `"ggplot2"`.
     + Introduction to the R package `ggplot2`
     + Introduction to shiny apps
 + __Lab material__:
-    + [More wrangling with data frames](../labs/05-more-dplyr.md)
-    + [Getting started with shiny apps](../labs/05-shiny-basics.md)
+    + [More wrangling with data frames](../labs/lab05-more-dplyr.md)
+    + [Getting started with ggplot2](../labs/04-ggplot2-basics.md)
+    + [Getting started with shiny apps](../labs/lab05-shiny-basics.md)
 + __Reading__:
     + [Tidy Data](http://vita.had.co.nz/papers/tidy-data.pdf) by Hadley Wickham
 + __Cheat sheet__:
@@ -139,7 +142,7 @@ _Oct 01-05:_ Basics of Functions, R expressions, and conditionals.
     + [Introduction to R expressions and conditionals](../tutorials/06-intro-to-expressions-conditionals.md)
 + __Lab material__:
     + [Getting started with functions](../labs/lab06-simple-functions.md)
-    + [Getting started with expressions and conditionals](../labs/06-simple-conditionals.md)
+    + [Getting started with expressions and conditionals](../labs/lab06-simple-conditionals.md)
 + __Reading__: 
     + [chapter 19: Functions](http://r4ds.had.co.nz/functions.html) from _R for Data Science_ by Grolemund and Wickham.
 + __Cheat sheet__: 
