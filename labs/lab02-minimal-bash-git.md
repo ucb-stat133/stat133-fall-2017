@@ -25,8 +25,8 @@ Before we start
 
 ------------------------------------------------------------------------
 
-Bash and the Command Line
--------------------------
+1) Bash and the Command Line
+----------------------------
 
 We are going to start this lab talking about very simple bash commands. If you are a Linux user, I'm assuming that you already know how to open the command line and move around the filesystem.
 
@@ -38,10 +38,7 @@ We are going to start this lab talking about very simple bash commands. If you a
 
 **Bash for Windows**. If you are a Windows user, I recommend using Git-Bash. Git for Windows provides a Bash emulator used to run Git from the command line. If you have installed Git (for Windows), you should also have its associated Bash.
 
-------------------------------------------------------------------------
-
-Command Line Practice
----------------------
+### Command Line Practice
 
 During the first hour of the lab, work on the first 3 sections of the workshop [The Unix Shell](http://swcarpentry.github.io/shell-novice/) by *Software Carpentry*
 
@@ -51,8 +48,8 @@ During the first hour of the lab, work on the first 3 sections of the workshop [
 
 ------------------------------------------------------------------------
 
-Git Practice
-------------
+2) Git Practice
+---------------
 
 During the second hour of the lab, work on the [Version Control with Git](http://swcarpentry.github.io/git-novice/) workshop by *Software Carpentry*, especifically parts 3 to 7 (I'm assuming that you have Git setup in your machine).
 
