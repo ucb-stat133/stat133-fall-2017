@@ -50,7 +50,7 @@ dim(dat)
 
 If you know in advanced how many rows and columns are in the data table, this is a good way to make sure that R was able to read all the records.
 
-Then, depending oon the size of the data, you may want to try to take a peek at its contents with `head()` or `tail()`, just to get an idea of what the data looks like:
+Then, depending on the size of the data, you may want to take a peek at its contents with `head()` or `tail()`, just to get an idea of what the data looks like:
 
 ``` r
 # display first few rows
