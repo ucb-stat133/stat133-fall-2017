@@ -1,0 +1,465 @@
+---
+title: "Getting started with R and RStudio"
+subtitle: "Stat 133, Fall 2017"
+author: "Gaston Sanchez"
+output: github_document
+fontsize: 11pt
+urlcolor: blue
+---
+
+> ### Learning Objectives:
+>
+> - To gain familiarity interacting with R
+> - To gain familiarity with the pane layout of RStudio
+> - To understand the help documentation in R
+> - To be able to manage your workspace in an interactive R session
+> - Introduction to package management
+> - Differentiate between `.R` and `.Rmd` files
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+library(ggplot2)
+```
+
+------
+
+## R and RStudio
+
+I'm assuming that you already installed R and RStudio. If that is not the case, you can check these links and follow the corresponding instructions:
+
+- Install __R__
+	- R for Mac: [https://cran.r-project.org/bin/macosx/](https://cran.r-project.org/bin/macosx/)
+	- R for windows: [https://cran.r-project.org/bin/windows/base/](https://cran.r-project.org/bin/windows/base/)
+- Install __RStudio__
+	- RStudio download: [https://www.rstudio.com/products/rstudio/download/](https://www.rstudio.com/products/rstudio/download/)
+
+
+### About the R-GUI
+
+When you install R, it comes with a basic graphical user interface (GUI).
+Launching the R-GUI will let you interact with R in a "minimalist" way.
+Nowadays, however, it is more convenient to interact with R through a more advanced and 
+sophisticated development environment like RStudio.
+
+Difference between R-GUI and RStudio:
+
+- R-GUI is a simple graphical user interface.
+- RStudio is an _Integrated Development Environment_ (IDE).
+	- It is much more than a simple GUI.
+	- It provides a nice working environment and development framework.
+- In this course you are going to use mainly RStudio.
+- But remember: RStudio is NOT R!
+- RStudio is like an outer layer that makes it easy to interact with R.
+
+-----
+
+## The R Console
+
+For the most part in this course, you are going to be working with R in what is 
+called __interactive mode__. This means establishing a _dialogue_ between you 
+and R. How? By writing commands, executing them, checking the output, and 
+repeating these steps again, and again, until you get the job done. 
+The main device to establish this interaction is the so-called __console__.
+This is where commands get executed, and it is also the place where most outputs 
+get displayed.
+
+There are various ways to work with R in interactive mode (via its console):
+
+- Using the basic R-GUI.
+- Using R via RStudio (or any other IDE).
+- Using R via a terminal emulator (e.g. command line).
+
+Just for illustration purposes, I will briefly show you the basic R-GUI. 
+However, your main workbench will be RStudio.
+
+-----
+
+## NBA Player Data Set
+
+To have a working example that allows us to introduce and discuss many of the concepts in this course, I will make extensive use of data about NBA players from the regular season 2016-2017 (without play-offs). The main source is the website [http://www.basketball-reference.com](http://www.basketball-reference.com).
+
+To make things more concrete, let's focus on data about the Golden State Warriors:
+
+![GSW Totals table](../images/gsw-2017-totals.png)
+
+![GSW Salary table](../images/gsw-2017-salaries.png)
+
+In this tutorial, let's consider a seemingly simple research question:
+
+> The more points a player scores, the higher his salary?
+
+
+-----
+
+## R as a scientific calculator
+
+The most recommended way to break the ice with R is by using it as a 
+scientific calculator. 
+Open RStudio and locate the _console_ (or prompt).
+Let's start typing basic calculations in the console:
+
+```r
+# addition
+1 + 1
+2 + 3
+
+# subtraction
+4 - 2
+5 - 7
+
+# multiplication
+10 * 0
+7 * 7
+
+# division
+9 / 3
+1 / 2
+
+# power
+2 ^ 2
+3 ^ 3
+```
+
+
+### Functions
+
+R has many functions. To use a function, type its name followed by parenthesis.
+Inside the parenthesis you pass one or more inputs. Most functions will display 
+some sort of output on the console:
+
+```{r}
+# absolute value
+abs(10)
+abs(-4)
+
+# square root
+sqrt(9)
+
+# natural logarithm
+log(2)
+```
+
+
+### Variables and Assignments
+
+R is more powerful than a calculator, and you can do many more things than
+practically most scientific calculators. One of the things you will be
+doing a lot in R is creating variables or objects to store values.
+
+For instance, you can create a variable `x` and give it the value of 1.
+This is done using what is known as the __assignment operator__ `<-`,
+also known in R as the _arrow_ operator:
+
+```{r}
+x <- 1
+x
+```
+
+This is a way to tell R: create an object `x` and store in it the number 1.
+Alternatively, you can use the equals sign `=` as an assignment operator:
+
+```{r}
+y = 2
+y
+```
+
+With variables, you can operate in the same way you do algebraic operations:
+
+```{r}
+x + y
+x - y
+x * y
+x / y
+x ^ y
+```
+
+
+### Case Sensitive
+
+R is case sensitive. This means that `abs()` is not the same
+as `Abs()` or `ABS()`. Only the function `abs()` is the valid one.
+When working with variables and objects, make sure you are calling the 
+right name:
+
+```{r}
+# case sensitive
+x <- 1
+X <- 2
+x + x
+x + X
+X + X
+```
+
+
+### Comments in R
+
+All programming languages use a set of characters to indicate that a
+specifc part or lines of code are __comments__, that is, things that are
+not to be executed. R uses the hash or pound symbol `#` to specify comments.
+Any code to the right of `#` will not be executed by R.
+
+```{r}
+# this is a comment
+# this is another comment
+2 * 9
+
+4 + 5  # you can place comments like this
+```
+
+
+
+### Some Examples
+
+Here are some examples that illustrate how to use R to define
+variables and perform basic calculations:
+
+```{r}
+# convert Fahrenheit degrees to Celsius degrees
+fahrenheit <- 50
+celsius <- (fahrenheit - 32) * (5/9)
+print(celsius)
+
+
+# compute the area of a rectangle
+rec_length <- 10
+rec_height <- 5
+rec_area <- rec_length * rec_height
+rec_area
+
+
+# degrees to radians
+deg <- 90
+rad <- (deg * pi) / 180
+rad
+
+
+# toss a fair coin 5 times, chance of 3 heads
+chance_heads <- 0.5
+dbinom(3, 5, prob = chance_heads)
+```
+
+
+-----
+
+## More about RStudio
+
+You will be working with RStudio a lot, and you will have time to learn
+most of the bells and whistles RStudio provides. Think about RStudio as
+your "workbench". Keep in mind that RStudio is NOT R. RStudio is an environment
+that makes it easier to work with R, while taking care of many of
+the little tasks than can be a hassle.
+
+
+### A quick tour of RStudio
+
+- Understand the __pane layout__ (i.e. windows) of RStudio
+	- Source
+	- Console
+	- Environment, History, etc
+	- Files, Plots, Packages, Help, Viewer
+- Customize RStudio Appearance of source pane
+  - font
+  - size
+  - background
+
+
+
+### Getting help
+
+Because we work with functions all the time, it's important to know certain
+details about how to use them, what input(s) is required, and what is the
+returned output.
+
+There are several ways to get information about a function in R. We refer to 
+this as "getting help".
+
+If you know the name of a function you are interested in knowing more,
+you can use the function `help()` and pass it the name of the function you
+are looking for:
+
+```{r eval = FALSE}
+# documentation about the 'abs' function
+help(abs)
+
+# documentation about the 'mean' function
+help(mean)
+```
+
+Alternatively, you can use a shortcut using the question mark `?` followed
+by the name of the function:
+
+```r
+# documentation about the 'abs' function
+?abs
+
+# documentation about the 'mean' function
+?mean
+```
+
+- Anatomy of the manual documentation of a function:
+	- Title
+	- Description
+	- Usage of function
+	- Arguments
+	- Details
+	- See Also
+	- Examples!!!
+
+`help()` only works if you know the name of the function your are looking for.
+Sometimes, however, you don't know the name but you may know some keywords.
+To look for related functions associated to a keyword, use `help.search()` or 
+simply a double question mark: `??`
+
+```r
+# search for 'absolute'
+help.search("absolute")
+
+# alternatively you can also search like this:
+??absolute
+```
+Notice the use of quotes surrounding the input name inside `help.search()`
+
+
+### Example: NBA Player Variables
+
+Let's go back to the Warriors data. Often, you want to create variables or objects that store more than one value. One way to do this in R is with __vectors__, which is the most basic data structure. To create a vector you can use the _combine_ function `c()` by passing different values separated by comma:
+
+```{r}
+# last name
+player <- c('Thompson', 'Curry', 'Green', 'Durant', 'Iguodala')
+
+# field goals
+goals <- c(644, 675, 272, 551, 219)
+
+# salary (dollars)
+salary <- c(16663575, 12112359, 15330435, 26540100, 11131368)
+```
+
+In this case we don't really have all the points scored by each player but we have information about the field goals (combined number of 2-points and 3-points goals).
+
+In order to investigate our research question, we can start visualizing the data with a scatterplot of `goals` and `salary` using the function `plot()`:
+
+```{r}
+plot(goals, salary)
+text(goals, salary, labels = player)
+```
+
+Furthermore, we can calculate the correlation coefficient:
+
+```{r}
+cor(goals, salary)
+```
+
+
+
+### Installing Packages
+
+R comes with a large set of functions and packages. A package is a collection
+of functions that have been designed for a specific purpose. One of the great
+advantages of R is that many analysts, scientists, programmers, and users
+can create their own pacakages and make them available for everybody to use them.
+R packages can be shared in different ways. The most common way to share a
+package is to submit it to what is known as __CRAN__, the
+_Comprehensive R Archive Network_.
+
+You can install a package using the `install.packages()` function.
+Just give it the name of a package, surrounded by qoutes, and R will look for
+it in CRAN, and if it finds it, R will download it to your computer.
+
+```r
+# installing
+install.packages("knitr")
+```
+
+You can also install a bunch of packages at once:
+
+```r
+install.packages(c("readr", "ggplot2"))
+```
+
+Once you installed a package, you can start using its functions
+by _loading_ the package with the function `library()`
+
+```r
+library("knitr")
+library("ggplot2")
+```
+
+Notice that when invoking `library()`, you can type the name of the package without using quotes:
+
+```r
+# no quotes
+library(knitr)
+library(ggplot2)
+```
+
+
+### Example: Plots for NBA data
+
+The package `"ggplot2"` provides a wide range of functions to create nicer graphics than those offered in base R:
+
+```{r}
+dat <- data.frame(
+  player = player,
+  goals = goals,
+  salary = salary
+)
+
+dat
+```
+
+Scatter plot with `ggplot2()`
+
+```{r}
+ggplot(data = dat, aes(x = goals, y = salary)) + 
+  geom_point() + 
+  geom_text(aes(label = player))
+```
+
+
+### Quitting a session
+
+To quit an R session, you can simply type the function `quit()` or its
+abbreviated version `q()`. 
+
+By default, every time you quit a session, R will ask you if you want to
+save your __workspace image__. What does this mean? Your _workspace_ involves 
+all the objects that you've created in your current session. A _workspace image_, 
+in turn, is a special type of R file. This is actually a binary file 
+(using R's native binary format), and the default file extension is `.RData`.
+You can only open these files with R.
+
+The workspace only contains the objects (variables, data objects, functions 
+that you have created). But it does not contain all the commands that you've 
+been invoking. The invoked commands, are actually in a separate file.
+
+R keeps a log of all the commands that you've used in the current (and past) 
+session(s). This log is known as the __history__, and R keeps this information 
+in another special file called by default `.Rhistory`. In RStudio, you can 
+actually see the history of your commands in the pane that has the tabs 
+`Environment` and `History`.
+
+`.Rhistory` is a simple text file, and you should be able to find it in your 
+working directory.
+
+-----
+
+## Source Files
+
+Most of the times you won't be working directly on the console.
+Instead, you will be typing your commands in some source file.
+The basic type of source files are known as _R script_ files, commonly 
+referred to as `.R` files. Another type of source file that is becoming quite 
+popular are _R Markdown_ files or `.Rmd` files.
+
+
+### Using an R script file
+
+Open a new script file in the _source_ pane and let's rewrite some of the 
+previous commands.
+
+How do you execute the commands in your source file? You can copy the commands 
+in your source file and paste them in the console. But that's not very efficient. Alternatively, you can run (execute) the commands with some keyboard shortcuts. 
+Or you can also use some buttons in RStudio (look for the "Run" icon).
+
+
+-----
