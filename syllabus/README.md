@@ -8,8 +8,8 @@ Tentative Calendar (Weekly Topics), Fall 2017
 _Aug 23-25:_ Introduction, policies/logistics, and course in a nutshell.
 
 + __Lecture material__
-    + [About the Course](https://docs.google.com/presentation/d/1odMBh760lfSBiRhEh2cNLEq8LY8YcQTl_lLutRVbZhs/edit?usp=sharing) (slides)
-    + [Introduction](https://docs.google.com/presentation/d/1q8fIQ_xVo-S1awfh3qA6XqfZeyG4z3KvLgQj1L9ZuAY/edit?usp=sharing) (slides)
+    + [About the Course](https://docs.google.com/presentation/d/1odMBh760lfSBiRhEh2cNLEq8LY8YcQTl_lLutRVbZhs/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Introduction](https://docs.google.com/presentation/d/1q8fIQ_xVo-S1awfh3qA6XqfZeyG4z3KvLgQj1L9ZuAY/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab__: No lab
 + __Reading__:
     + [Course policies](policies.md), and [FAQs](faqs.md)
@@ -26,9 +26,9 @@ _Aug 23-25:_ Introduction, policies/logistics, and course in a nutshell.
 _AugSep 28-01:_ Getting started with R, and comprehensive review of the RStudio workspace.
 
 + __Lecture material__
-    + [Introduction to R and RStudio](https://docs.google.com/presentation/d/1n4Wo6lhYIeUi6XPhE7BVhX6cgfcTHkr1_uap0GWmD5Q/edit?usp=sharing) (slides)
+    + [About R](https://docs.google.com/presentation/d/1n4Wo6lhYIeUi6XPhE7BVhX6cgfcTHkr1_uap0GWmD5Q/pub?start=false&loop=false&delayms=3000) (slides)
     + [First contact with R](../tutorials/01-intro-to-R.md) (tutorial)
-    + [Intro to Rmd files](../tutorials/01-intro-to-Rmd-files.md) (tutorial)
+    + [Intro to Rmd files](../tutorials/02-intro-to-Rmd-files.md) (tutorial)
 + __Lab material__:
     + [Getting started with R](../labs/lab01-R-basics.md)
 + __Reading__:
@@ -37,7 +37,7 @@ _AugSep 28-01:_ Getting started with R, and comprehensive review of the RStudio 
     + [Introduction to R Markdown](http://rmarkdown.rstudio.com/lesson-1.html) by RStudio
 + __Cheat sheet__: 
     + [RStudio cheat sheet](../cheat-sheets/rstudio-IDE-cheatsheet.pdf)
-    + [R markdown cheat sheet](../cheat-sheets/rsmarkdown-cheatsheet-2.0.pdf)
+    + [R markdown cheat sheet](../cheat-sheets/rmarkdown-cheatsheet-2.0.pdf)
 + __HOMEWORK__:
     + [HW00 - Markdown practice](../hws/00-markdown.md)
 
