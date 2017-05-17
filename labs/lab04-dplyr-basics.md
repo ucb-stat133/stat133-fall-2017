@@ -107,7 +107,7 @@ In order to use the functions in `"dplyr"`, you must load the package first. Her
 install.packages("dplyr")
 ```
 
-Remember that you only need to install a package once! After a package has been installed in your machine, there is no need to call `install.packages()` on the same package. What you should always invoke in order to use the functions in a package is the `library()` function:
+Remember that you only need to install a package once! After a package has been installed in your machine, there is no need to call `install.packages()` again on the same package. What you should always invoke in order to use the functions in a package is the `library()` function:
 
 ``` r
 library(dplyr)
@@ -117,7 +117,7 @@ library(dplyr)
 
 ### Basic `"dplyr"` verbs
 
-The first *verbs* to learn about `"dplyr"` are `filter()`, `slice()`, and `select()`. Why? Because these are the functions to select a subset of rows and columns, the most essential type of operation when wrangling with data frames.
+The first *verbs* to learn about `"dplyr"` are `filter()`, `slice()`, and `select()`. Why? Because these are the functions to select a subset of rows and columns, which are the most essential type of operations when wrangling data frames.
 
 Select rows by position with `slice()`
 

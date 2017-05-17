@@ -1,0 +1,83 @@
+---
+title: "Lab 2: Bash and Git Basic Workflow"
+subtitle: "Stat 133, Fall 2017"
+author: "Gaston Sanchez"
+output: github_document
+---
+
+> ### Learning Objectives
+>
+> * To gain familiarity with the Shell
+> * Learn basic commands to navigate the file-system
+> * Learn how to express file paths: absolute and relative
+> * To gain familiarity with Git
+> * Configuration settings
+> * Understand the basic Git workflow
+
+------
+
+## Before we start
+
+- Make sure everybody has installed __Git__
+	- Git for Mac: [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+	- Git for windows: [https://git-for-windows.github.io/](https://git-for-windows.github.io/)
+	- Git for Linux: [https://git-scm.com/download/linux](https://git-scm.com/download/linux)
+- Make sure everybody has a __GitHub__ account
+	- Join github: [https://github.com/join](https://github.com/join)
+
+-----
+
+## 1 Bash and the Command Line
+
+We are going to start this lab talking about very simple bash commands.
+If you are a Linux user, I'm assuming that you already know how to open the command line and move around the filesystem. 
+
+__Bash for Mac__. For those of you using Mac, here's how to launch the so-called _Terminal_ app:
+
+- Go to `Applications`
+- Then, go to `Utilities`
+- And then click on the `Terminal`
+
+__Bash for Windows__. If you are a Windows user, I recommend using Git-Bash. Git for Windows provides a Bash emulator used to run Git from the command line. If you have installed Git (for Windows), you should also have its associated Bash.
+
+
+### Command Line Practice
+
+During the first hour of the lab, work on the first 3 sections of the workshop 
+[The Unix Shell](http://swcarpentry.github.io/shell-novice/) 
+by _Software Carpentry_
+
+1. [Introducing the Shell](http://swcarpentry.github.io/shell-novice/01-intro/)
+2. [Files and Directories](http://swcarpentry.github.io/shell-novice/02-filedir/)
+3. [Creating Things](http://swcarpentry.github.io/shell-novice/03-create/)
+
+-----
+
+## 2 Git Practice
+
+During the second hour of the lab, work on the 
+[Version Control with Git](http://swcarpentry.github.io/git-novice/) 
+workshop by _Software Carpentry_, especifically parts 3 to 7 
+(I'm assuming that you have Git setup in your machine).
+
+3. [Creating a Repository](http://swcarpentry.github.io/git-novice/03-create/)
+4. [Tracking Changes](http://swcarpentry.github.io/git-novice/04-changes/)
+5. [Exploring History](http://swcarpentry.github.io/git-novice/05-history/)
+6. [Ignoring Things](http://swcarpentry.github.io/git-novice/06-ignore/)
+7. [Remotes in GitHub](http://swcarpentry.github.io/git-novice/07-github/)
+
+
+-----
+
+### Resources
+
+[Learn Enough Command Line to Be Dangerous](https://www.learnenough.com/command-line-tutorial) by Michael Hartl
+
+Part 1 - The Basics from the ebook [Learn Version Control with Git](https://www.git-tower.com/learn/git/ebook/en/command-line/introduction) by [Tower](https://www.git-tower.com/)
+
+Chapters 1 __Getting Started__, and sections 2.1 to 2.5 in chapter 2 __Git Basics__, of the [Pro Git](https://git-scm.com/book/en/v2) by Scott Chacon and Ben Straub.
+
+[Github Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+
+
+-----
