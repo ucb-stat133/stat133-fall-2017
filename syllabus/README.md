@@ -51,8 +51,7 @@ _AugSep 28-01:_ Getting started with R, and comprehensive review of the RStudio 
 _Sep 04-08:_ The BIG picture and How all the pieces fit together.
 
 + __Lecture material__
-    + [BIG picture](https://docs.google.com/presentation/d/1TZRjIvfBfG_3vjj7bmb6B_oyR7k0lxge7V_Ih2B1mwo/edit?usp=sharing) (slides)
-    + [Filesystem](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/edit?usp=sharing) (slides)
+    + [Filesystem](https://docs.google.com/presentation/d/1V-JPhr3Do3A7Jn-zgFSqD7R171W-G02uEmxWoHZI7bs/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
     + [Minimal Bash and Git](../labs/lab02-minimal-bash-git.md)
 + __Reading__:
@@ -95,7 +94,7 @@ _Sep 18-22:_ Data tables, typical storage formats, data frames.
     + [R Data Frames](https://docs.google.com/presentation/d/1OsxnIgNTZG-gnD0rdTXzqf162_gNqnok_suMHG5KxpU/edit?usp=sharing) (slides)
     + [Importing Tables in R]() (slides)
 + __Lab material__:
-    + [Reading in data frames in R](../labs/lab04-reading-data-frames.md)
+    + [Reading in tables in R](../labs/lab04-reading-tables.md)
     + [Getting started with dplyr](../labs/lab04-dplyr-basics.md)
 + __Reading__:
     + [Organizing data in spreadsheets](http://kbroman.org/dataorg/) by Karl Broman
