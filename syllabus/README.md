@@ -72,8 +72,8 @@ _Sep 04-08:_ The BIG picture and How all the pieces fit together.
 _Sep 11-15:_ Getting to know R vectors, atomicity, vectorization, subsetting and bracket notation.
 
 + __Lecture material__
-    + [Data Types](https://docs.google.com/presentation/d/1TZRjIvfBfG_3vjj7bmb6B_oyR7k0lxge7V_Ih2B1mwo/edit?usp=sharing) (slides)
-    + [R Vectors](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/edit?usp=sharing) (slides)
+    + [Data Types](https://docs.google.com/presentation/d/1TZRjIvfBfG_3vjj7bmb6B_oyR7k0lxge7V_Ih2B1mwo/pub?start=false&loop=false&delayms=3000) (slides)
+    + [R Vectors](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
     + [Getting started with vectors, factors, and lists](../labs/lab03-vector-basics.md)
 + __Reading__:
