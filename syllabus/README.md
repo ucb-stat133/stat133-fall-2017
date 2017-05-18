@@ -9,7 +9,7 @@ _Aug 23-25:_ Introduction, policies/logistics, and course in a nutshell.
 
 + __Lecture material__
     + [About the Course](https://docs.google.com/presentation/d/1odMBh760lfSBiRhEh2cNLEq8LY8YcQTl_lLutRVbZhs/pub?start=false&loop=false&delayms=3000) (slides)
-    + [Introduction](https://docs.google.com/presentation/d/1q8fIQ_xVo-S1awfh3qA6XqfZeyG4z3KvLgQj1L9ZuAY/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Introduction: Big Picture](https://docs.google.com/presentation/d/1q8fIQ_xVo-S1awfh3qA6XqfZeyG4z3KvLgQj1L9ZuAY/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab__: No lab
 + __Reading__:
     + [Course policies](policies.md), and [FAQs](faqs.md)
@@ -48,7 +48,7 @@ _AugSep 28-01:_ Getting started with R, and comprehensive review of the RStudio 
 
 ## 2) Housekeeping: Filesystem, Bash, Git, Github
 
-_Sep 04-08:_ The BIG picture and How all the pieces fit together.
+_Sep 04-08:_ Fundamental low-level stuff for the rest of the course.
 
 + __Lecture material__
     + [Filesystem](https://docs.google.com/presentation/d/1V-JPhr3Do3A7Jn-zgFSqD7R171W-G02uEmxWoHZI7bs/pub?start=false&loop=false&delayms=3000) (slides)
@@ -67,13 +67,14 @@ _Sep 04-08:_ The BIG picture and How all the pieces fit together.
 
 
 
-## 3) Data Types and Vectors
+## 3) Data Types, Vectors and Other Structues
 
-_Sep 11-15:_ Getting to know R vectors, atomicity, vectorization, subsetting and bracket notation.
+_Sep 11-15:_ Getting to know R vectors and concepts like atomicity, vectorization, recycling, and subsetting.
 
 + __Lecture material__
     + [Data Types](https://docs.google.com/presentation/d/1TZRjIvfBfG_3vjj7bmb6B_oyR7k0lxge7V_Ih2B1mwo/pub?start=false&loop=false&delayms=3000) (slides)
     + [R Vectors](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Lists and Data Frames](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
     + [Getting started with vectors, factors, and lists](../labs/lab03-vector-basics.md)
 + __Reading__:
@@ -87,12 +88,12 @@ _Sep 11-15:_ Getting to know R vectors, atomicity, vectorization, subsetting and
 
 ## 4) Basics of Tabular Data
 
-_Sep 18-22:_ Data tables, typical storage formats, data frames.
+_Sep 18-22:_ Data Tables, typical storage formats, and relation with data frames.
 
 + __Lecture material__
-    + [Data Tables](https://docs.google.com/presentation/d/1WQIrQxtNXhEEpI0Yd5Ch4r2zwIp3KG2O_BVY5nsdY4Q/edit?usp=sharing) (slides)
+    + [Data Tables](https://docs.google.com/presentation/d/1WQIrQxtNXhEEpI0Yd5Ch4r2zwIp3KG2O_BVY5nsdY4Q/pub?start=false&loop=false&delayms=3000) (slides)
     + [R Data Frames](https://docs.google.com/presentation/d/1OsxnIgNTZG-gnD0rdTXzqf162_gNqnok_suMHG5KxpU/edit?usp=sharing) (slides)
-    + [Importing Tables in R]() (slides)
+    + [Importing Tables in R](https://docs.google.com/presentation/d/1vbqZoR2i8z3Zlpc8WxhA3ntKnfB8O1WVKnFVDdxZzdA/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
     + [Reading in tables in R](../labs/lab04-reading-tables.md)
     + [Getting started with dplyr](../labs/lab04-dplyr-basics.md)
