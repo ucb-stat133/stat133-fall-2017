@@ -37,8 +37,13 @@ I'm assuming that you already installed R and RStudio. If that is not the case, 
 
 When you install R, it comes with a basic graphical user interface (GUI).
 Launching the R-GUI will let you interact with R in a "minimalist" way.
+
+![Basic R-GUI console](../images/screen-rgui.png)
+
 Nowadays, however, it is more convenient to interact with R through a more advanced and 
 sophisticated development environment like RStudio.
+
+![RStudio IDE](../images/screen-rstudio.png)
 
 Difference between R-GUI and RStudio:
 
@@ -77,11 +82,26 @@ However, your main workbench will be RStudio.
 
 To have a working example that allows us to introduce and discuss many of the concepts in this course, I will make extensive use of data about NBA players from the regular season 2016-2017 (without play-offs). The main source is the website [http://www.basketball-reference.com](http://www.basketball-reference.com).
 
-To make things more concrete, let's focus on data about the Golden State Warriors:
+To make things more concrete, let's focus on data about the Golden State Warriors. Below are two screenshots; the first one shows part of the season statistics, and the second one shows the salaries:
 
-![GSW Totals table](../images/gsw-2017-totals.png)
+- `Rk`: Rank of player
+- Name of player
+- `Age` of player
+- `G` number of games played
+- `GS` nuber of games started
+- `MP` minutes played
+- `FG` number of field goals (3-pts and 2-pts shots)
+- `FGA` number of field goal attempts
 
-![GSW Salary table](../images/gsw-2017-salaries.png)
+
+```{r out.width='85%', echo = FALSE, fig.align='center'}
+knitr::include_graphics('../images/gsw-2017-totals.png')
+```
+
+```{r out.width='60%', echo = FALSE, fig.align='center'}
+knitr::include_graphics('../images/gsw-2017-salaries.png')
+```
+
 
 In this tutorial, let's consider a seemingly simple research question:
 
@@ -97,24 +117,37 @@ scientific calculator.
 Open RStudio and locate the _console_ (or prompt).
 Let's start typing basic calculations in the console:
 
+- addition
+
 ```r
-# addition
 1 + 1
 2 + 3
+```
 
-# subtraction
+-  subtraction
+
+```r
 4 - 2
 5 - 7
+```
 
-# multiplication
+- multiplication
+
+```r
 10 * 0
 7 * 7
+```
 
-# division
+- division
+
+```r
 9 / 3
 1 / 2
+```
 
-# power
+- power
+
+```r
 2 ^ 2
 3 ^ 3
 ```
@@ -126,50 +159,55 @@ R has many functions. To use a function, type its name followed by parenthesis.
 Inside the parenthesis you pass one or more inputs. Most functions will display 
 some sort of output on the console:
 
+- absolute value
+
 ```{r}
-# absolute value
-abs(10)
 abs(-4)
+```
 
-# square root
+- square root
+
+```{r}
 sqrt(9)
+```
 
-# natural logarithm
+- natural logarithm
+
+```{r}
 log(2)
 ```
 
 
-### Variables and Assignments
+## Variables and Assignments
 
 R is more powerful than a calculator, and you can do many more things than
 practically most scientific calculators. One of the things you will be
 doing a lot in R is creating variables or objects to store values.
 
-For instance, you can create a variable `x` and give it the value of 1.
+For instance, you can create a variable `thompson` and give it the value of Field Goals made by thompson (644).
 This is done using what is known as the __assignment operator__ `<-`,
 also known in R as the _arrow_ operator:
 
 ```{r}
-x <- 1
-x
+thompson <- 644
+thompson
 ```
 
-This is a way to tell R: create an object `x` and store in it the number 1.
-Alternatively, you can use the equals sign `=` as an assignment operator:
+This is a way to tell R: create an object `thompson` and store in it the number 644.
+Alternatively, you can use the equals sign `=` as an assignment operator. Here's how to create a variable (or object) `curry`:
 
 ```{r}
-y = 2
-y
+curry = 675
+curry
 ```
 
 With variables, you can operate in the same way you do algebraic operations:
 
 ```{r}
-x + y
-x - y
-x * y
-x / y
-x ^ y
+thompson + curry
+thompson - curry
+thompson * curry
+thompson / curry
 ```
 
 
@@ -182,11 +220,13 @@ right name:
 
 ```{r}
 # case sensitive
-x <- 1
-X <- 2
-x + x
-x + X
-X + X
+green <- 272
+durant <- 551
+Durant <- 0
+
+green + durant
+green + Durant
+durant + Durant
 ```
 
 
@@ -197,12 +237,12 @@ specifc part or lines of code are __comments__, that is, things that are
 not to be executed. R uses the hash or pound symbol `#` to specify comments.
 Any code to the right of `#` will not be executed by R.
 
-```{r}
+```r
 # this is a comment
 # this is another comment
-2 * 9
+thompson + curry
 
-4 + 5  # you can place comments like this
+thompson + curry + green  # you can place comments like this
 ```
 
 
@@ -395,7 +435,7 @@ library(ggplot2)
 
 ### Example: Plots for NBA data
 
-The package `"ggplot2"` provides a wide range of functions to create nicer graphics than those offered in base R:
+The package `"ggplot2"` provides a wide range of functions to create nicer graphics than those offered in base R. We will cover how the functions in `"ggplot2"` work in a couple of weeks. In the meantime, here's some sample code to create a more visually apealing scatterplot:
 
 ```{r}
 dat <- data.frame(
@@ -461,5 +501,7 @@ How do you execute the commands in your source file? You can copy the commands
 in your source file and paste them in the console. But that's not very efficient. Alternatively, you can run (execute) the commands with some keyboard shortcuts. 
 Or you can also use some buttons in RStudio (look for the "Run" icon).
 
+In the next tutorial we'll see how to use the so-called `Rmd` files:
+[Getting Started with R Markdown files](02-intro-to-Rmd-files.md)
 
 -----

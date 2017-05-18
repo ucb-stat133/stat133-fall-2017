@@ -26,7 +26,13 @@ I'm assuming that you already installed R and RStudio. If that is not the case, 
 
 ### About the R-GUI
 
-When you install R, it comes with a basic graphical user interface (GUI). Launching the R-GUI will let you interact with R in a "minimalist" way. Nowadays, however, it is more convenient to interact with R through a more advanced and sophisticated development environment like RStudio.
+When you install R, it comes with a basic graphical user interface (GUI). Launching the R-GUI will let you interact with R in a "minimalist" way.
+
+![Basic R-GUI console](../images/screen-rgui.png)
+
+Nowadays, however, it is more convenient to interact with R through a more advanced and sophisticated development environment like RStudio.
+
+![RStudio IDE](../images/screen-rstudio.png)
 
 Difference between R-GUI and RStudio:
 
@@ -60,11 +66,20 @@ NBA Player Data Set
 
 To have a working example that allows us to introduce and discuss many of the concepts in this course, I will make extensive use of data about NBA players from the regular season 2016-2017 (without play-offs). The main source is the website <http://www.basketball-reference.com>.
 
-To make things more concrete, let's focus on data about the Golden State Warriors:
+To make things more concrete, let's focus on data about the Golden State Warriors. Below are two screenshots; the first one shows part of the season statistics, and the second one shows the salaries:
 
-![GSW Totals table](../images/gsw-2017-totals.png)
+-   `Rk`: Rank of player
+-   Name of player
+-   `Age` of player
+-   `G` number of games played
+-   `GS` nuber of games started
+-   `MP` minutes played
+-   `FG` number of field goals (3-pts and 2-pts shots)
+-   `FGA` number of field goal attempts
 
-![GSW Salary table](../images/gsw-2017-salaries.png)
+<img src="../images/gsw-2017-totals.png" width="85%" style="display: block; margin: auto;" />
+
+<img src="../images/gsw-2017-salaries.png" width="60%" style="display: block; margin: auto;" />
 
 In this tutorial, let's consider a seemingly simple research question:
 
@@ -77,24 +92,37 @@ R as a scientific calculator
 
 The most recommended way to break the ice with R is by using it as a scientific calculator. Open RStudio and locate the *console* (or prompt). Let's start typing basic calculations in the console:
 
+-   addition
+
 ``` r
-# addition
 1 + 1
 2 + 3
+```
 
-# subtraction
+-   subtraction
+
+``` r
 4 - 2
 5 - 7
+```
 
-# multiplication
+-   multiplication
+
+``` r
 10 * 0
 7 * 7
+```
 
-# division
+-   division
+
+``` r
 9 / 3
 1 / 2
+```
 
-# power
+-   power
+
+``` r
 2 ^ 2
 3 ^ 3
 ```
@@ -103,12 +131,7 @@ The most recommended way to break the ice with R is by using it as a scientific 
 
 R has many functions. To use a function, type its name followed by parenthesis. Inside the parenthesis you pass one or more inputs. Most functions will display some sort of output on the console:
 
-``` r
-# absolute value
-abs(10)
-```
-
-    ## [1] 10
+-   absolute value
 
 ``` r
 abs(-4)
@@ -116,73 +139,70 @@ abs(-4)
 
     ## [1] 4
 
+-   square root
+
 ``` r
-# square root
 sqrt(9)
 ```
 
     ## [1] 3
 
+-   natural logarithm
+
 ``` r
-# natural logarithm
 log(2)
 ```
 
     ## [1] 0.6931472
 
-### Variables and Assignments
+Variables and Assignments
+-------------------------
 
 R is more powerful than a calculator, and you can do many more things than practically most scientific calculators. One of the things you will be doing a lot in R is creating variables or objects to store values.
 
-For instance, you can create a variable `x` and give it the value of 1. This is done using what is known as the **assignment operator** `<-`, also known in R as the *arrow* operator:
+For instance, you can create a variable `thompson` and give it the value of Field Goals made by thompson (644). This is done using what is known as the **assignment operator** `<-`, also known in R as the *arrow* operator:
 
 ``` r
-x <- 1
-x
+thompson <- 644
+thompson
 ```
 
-    ## [1] 1
+    ## [1] 644
 
-This is a way to tell R: create an object `x` and store in it the number 1. Alternatively, you can use the equals sign `=` as an assignment operator:
+This is a way to tell R: create an object `thompson` and store in it the number 644. Alternatively, you can use the equals sign `=` as an assignment operator. Here's how to create a variable (or object) `curry`:
 
 ``` r
-y = 2
-y
+curry = 675
+curry
 ```
 
-    ## [1] 2
+    ## [1] 675
 
 With variables, you can operate in the same way you do algebraic operations:
 
 ``` r
-x + y
+thompson + curry
 ```
 
-    ## [1] 3
+    ## [1] 1319
 
 ``` r
-x - y
+thompson - curry
 ```
 
-    ## [1] -1
+    ## [1] -31
 
 ``` r
-x * y
+thompson * curry
 ```
 
-    ## [1] 2
+    ## [1] 434700
 
 ``` r
-x / y
+thompson / curry
 ```
 
-    ## [1] 0.5
-
-``` r
-x ^ y
-```
-
-    ## [1] 1
+    ## [1] 0.9540741
 
 ### Case Sensitive
 
@@ -190,24 +210,26 @@ R is case sensitive. This means that `abs()` is not the same as `Abs()` or `ABS(
 
 ``` r
 # case sensitive
-x <- 1
-X <- 2
-x + x
+green <- 272
+durant <- 551
+Durant <- 0
+
+green + durant
 ```
 
-    ## [1] 2
+    ## [1] 823
 
 ``` r
-x + X
+green + Durant
 ```
 
-    ## [1] 3
+    ## [1] 272
 
 ``` r
-X + X
+durant + Durant
 ```
 
-    ## [1] 4
+    ## [1] 551
 
 ### Comments in R
 
@@ -216,16 +238,10 @@ All programming languages use a set of characters to indicate that a specifc par
 ``` r
 # this is a comment
 # this is another comment
-2 * 9
+thompson + curry
+
+thompson + curry + green  # you can place comments like this
 ```
-
-    ## [1] 18
-
-``` r
-4 + 5  # you can place comments like this
-```
-
-    ## [1] 9
 
 ### Some Examples
 
@@ -357,7 +373,7 @@ plot(goals, salary)
 text(goals, salary, labels = player)
 ```
 
-![](01-intro-to-R_files/figure-markdown_github/unnamed-chunk-11-1.png)
+![](01-intro-to-R_files/figure-markdown_github/unnamed-chunk-14-1.png)
 
 Furthermore, we can calculate the correlation coefficient:
 
@@ -401,7 +417,7 @@ library(ggplot2)
 
 ### Example: Plots for NBA data
 
-The package `"ggplot2"` provides a wide range of functions to create nicer graphics than those offered in base R:
+The package `"ggplot2"` provides a wide range of functions to create nicer graphics than those offered in base R. We will cover how the functions in `"ggplot2"` work in a couple of weeks. In the meantime, here's some sample code to create a more visually apealing scatterplot:
 
 ``` r
 dat <- data.frame(
@@ -428,7 +444,7 @@ ggplot(data = dat, aes(x = goals, y = salary)) +
   geom_text(aes(label = player))
 ```
 
-![](01-intro-to-R_files/figure-markdown_github/unnamed-chunk-14-1.png)
+![](01-intro-to-R_files/figure-markdown_github/unnamed-chunk-17-1.png)
 
 ### Quitting a session
 
@@ -454,5 +470,7 @@ Most of the times you won't be working directly on the console. Instead, you wil
 Open a new script file in the *source* pane and let's rewrite some of the previous commands.
 
 How do you execute the commands in your source file? You can copy the commands in your source file and paste them in the console. But that's not very efficient. Alternatively, you can run (execute) the commands with some keyboard shortcuts. Or you can also use some buttons in RStudio (look for the "Run" icon).
+
+In the next tutorial we'll see how to use the so-called `Rmd` files: [Getting Started with R Markdown files](02-intro-to-Rmd-files.md)
 
 ------------------------------------------------------------------------
