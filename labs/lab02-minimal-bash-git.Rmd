@@ -27,7 +27,9 @@ output: github_document
 
 -----
 
-## 1 Bash and the Command Line
+1) Bash and the Command Line
+----------------------------
+
 
 We are going to start this lab talking about very simple bash commands.
 If you are a Linux user, I'm assuming that you already know how to open the command line and move around the filesystem. 
@@ -53,7 +55,8 @@ by _Software Carpentry_
 
 -----
 
-## 2 Git Practice
+2) Git Practice
+---------------
 
 During the second hour of the lab, work on the 
 [Version Control with Git](http://swcarpentry.github.io/git-novice/) 
@@ -71,13 +74,13 @@ workshop by _Software Carpentry_, especifically parts 3 to 7
 
 ### Resources
 
-[Learn Enough Command Line to Be Dangerous](https://www.learnenough.com/command-line-tutorial) by Michael Hartl
+- [Learn Enough Command Line to Be Dangerous](https://www.learnenough.com/command-line-tutorial) by Michael Hartl
 
-Part 1 - The Basics from the ebook [Learn Version Control with Git](https://www.git-tower.com/learn/git/ebook/en/command-line/introduction) by [Tower](https://www.git-tower.com/)
+- Part 1: The Basics from the ebook [Learn Version Control with Git](https://www.git-tower.com/learn/git/ebook/en/command-line/introduction) by [Tower](https://www.git-tower.com/)
 
-Chapters 1 __Getting Started__, and sections 2.1 to 2.5 in chapter 2 __Git Basics__, of the [Pro Git](https://git-scm.com/book/en/v2) by Scott Chacon and Ben Straub.
+- Chapters 1 __Getting Started__, and sections 2.1 to 2.5 in chapter 2 __Git Basics__, of the [Pro Git](https://git-scm.com/book/en/v2) by Scott Chacon and Ben Straub.
 
-[Github Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+- [Github Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 
 
 -----

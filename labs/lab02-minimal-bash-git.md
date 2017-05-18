@@ -63,12 +63,12 @@ During the second hour of the lab, work on the [Version Control with Git](http:/
 
 ### Resources
 
-[Learn Enough Command Line to Be Dangerous](https://www.learnenough.com/command-line-tutorial) by Michael Hartl
+-   [Learn Enough Command Line to Be Dangerous](https://www.learnenough.com/command-line-tutorial) by Michael Hartl
 
-Part 1 - The Basics from the ebook [Learn Version Control with Git](https://www.git-tower.com/learn/git/ebook/en/command-line/introduction) by [Tower](https://www.git-tower.com/)
+-   Part 1: The Basics from the ebook [Learn Version Control with Git](https://www.git-tower.com/learn/git/ebook/en/command-line/introduction) by [Tower](https://www.git-tower.com/)
 
-Chapters 1 **Getting Started**, and sections 2.1 to 2.5 in chapter 2 **Git Basics**, of the [Pro Git](https://git-scm.com/book/en/v2) by Scott Chacon and Ben Straub.
+-   Chapters 1 **Getting Started**, and sections 2.1 to 2.5 in chapter 2 **Git Basics**, of the [Pro Git](https://git-scm.com/book/en/v2) by Scott Chacon and Ben Straub.
 
-[Github Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+-   [Github Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 
 ------------------------------------------------------------------------

@@ -291,7 +291,7 @@ Now consider rolling a fair die 10 times. What is the probability of getting exa
 
 Now look for help documentation using the keyword binomial: `??binomial`. You should get a list of topics related with the searched term `binomial`. Choose the one related with the *Binomial Distribution*, which is part of the R package `stats` (i.e. `stats::Binomial`).
 
-Read the documentation and figure out how to use the `dbinom()` function to obtain the above probabilities: 2 heads in 5 oin tosses, and 3 sixes in 3 rolls of a die.
+Read the documentation and figure out how to use the `dbinom()` function to obtain the above probabilities: 2 heads in 5 coin tosses, and 3 sixes in 3 rolls of a die.
 
 ``` r
 # use R's native binomial formula

@@ -347,7 +347,7 @@ Choose the one related with the _Binomial Distribution_, which is
 part of the R package `stats` (i.e. `stats::Binomial`).
 
 Read the documentation and figure out how to use the `dbinom()` function 
-to obtain the above probabilities: 2 heads in 5 oin tosses, and 
+to obtain the above probabilities: 2 heads in 5 coin tosses, and 
 3 sixes in 3 rolls of a die.
 
 ```{r}
