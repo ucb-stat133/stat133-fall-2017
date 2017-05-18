@@ -77,9 +77,9 @@ To make things more concrete, let's focus on data about the Golden State Warrior
 -   `FG` number of field goals (3-pts and 2-pts shots)
 -   `FGA` number of field goal attempts
 
-<img src="../images/gsw-2017-totals.png" width="85%" style="display: block; margin: auto;" />
+![GSW Salaries](../images/gsw-2017-totals.png)
 
-<img src="../images/gsw-2017-salaries.png" width="60%" style="display: block; margin: auto;" />
+![GSW Salaries](../images/gsw-2017-salaries.png)
 
 In this tutorial, let's consider a seemingly simple research question:
 
@@ -373,7 +373,7 @@ plot(goals, salary)
 text(goals, salary, labels = player)
 ```
 
-![](01-intro-to-R_files/figure-markdown_github/unnamed-chunk-14-1.png)
+![](01-intro-to-R_files/figure-markdown_github/unnamed-chunk-12-1.png)
 
 Furthermore, we can calculate the correlation coefficient:
 
@@ -444,7 +444,7 @@ ggplot(data = dat, aes(x = goals, y = salary)) +
   geom_text(aes(label = player))
 ```
 
-![](01-intro-to-R_files/figure-markdown_github/unnamed-chunk-17-1.png)
+![](01-intro-to-R_files/figure-markdown_github/unnamed-chunk-15-1.png)
 
 ### Quitting a session
 

@@ -94,13 +94,9 @@ To make things more concrete, let's focus on data about the Golden State Warrior
 - `FGA` number of field goal attempts
 
 
-```{r out.width='85%', echo = FALSE, fig.align='center'}
-knitr::include_graphics('../images/gsw-2017-totals.png')
-```
+![GSW Salaries](../images/gsw-2017-totals.png)
 
-```{r out.width='60%', echo = FALSE, fig.align='center'}
-knitr::include_graphics('../images/gsw-2017-salaries.png')
-```
+![GSW Salaries](../images/gsw-2017-salaries.png)
 
 
 In this tutorial, let's consider a seemingly simple research question:
