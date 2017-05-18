@@ -4,16 +4,15 @@ Gaston Sanchez
 
 > ### Learning Objectives:
 >
-> -   To gain familiarity with Markdown syntax
-> -   To gain familiarity with R Markdown `.Rmd` files
 > -   Differentiate between `.R` and `.Rmd` files
 > -   To understand dynamic documents
+> -   To gain familiarity with R Markdown `.Rmd` files
 > -   To gain familiarity with code chunks
 
 ------------------------------------------------------------------------
 
-Introduction to Markdown
-------------------------
+Introduction to R Markdown files
+--------------------------------
 
 Besides using R script files to write source code, you will be using other type of source files known as *R markdown* files. Because you will be turning in most homework assignments as `Rmd` files, it is important that you quickly become familiar with this resource.
 
@@ -21,7 +20,7 @@ Besides using R script files to write source code, you will be using other type 
 
 In the menu bar of RStudio, click on **File**, then **New File**, and choose **R Markdown**. Select the default option (Document), and click **Ok**. RStudio will open a new `.Rmd` file in the source pane. And you should be able to see a file with some default content.
 
-Locate the button **Knit HTML**, the one with an icon of a ball of yarn and two needles. Click the button (knit to HTML) so you can see how `Rmd` files are rendered and displayed as HTML documents.
+Locate the button **Knit HTML**, the one with an icon of a ball of yarn and two needles. Click the button (knit to HTML) so you can see how `Rmd` files are rendered and displayed as HTML documents. Alternatively, you can use a keyboard shortcut: in Mac `Command+Shift+K`, in Windows `Ctrl+Shift+K`
 
 ### What is an `Rmd` file?
 
@@ -31,20 +30,20 @@ Rmd files are plain text files. This means that you can open an Rmd file with an
 
 The main idea behind dynamic documents is simple yet very powerful: instead of working with two separate files, one that contains the R code, and another one that contains the narrative, you use an `.Rmd` file to include both the commands and the narrative. One of the main advantages of this paradigm, is that you avoid having to copy results from your computations and paste them into a report file. In fact, there are more complex ways to work with dynamic documents and source files. But the core idea is the same: combine narrative and code in a way that you let the computer do the manual, repetitive, and time consuming job.
 
-Rmd files is just one type of dynamic document that you will find in RStudio. In fact, RStudio provides a wide array of file formats that can be sued as dynamic documents: e.g. `Rnw`, `Rpres`, etc.
+Rmd files is just one type of dynamic document that you will find in RStudio. In fact, RStudio provides other file formats that can be sued as dynamic documents: e.g. `Rnw`, `Rpres`, etc.
 
 ### Anatomy of an `Rmd` file
 
-The structure of an `.Rmd` file can be divided in two parts: 1) a **YAML header**, and 2) the **body** of the document.
+The structure of an `.Rmd` file can be divided in two parts: 1) a **YAML header**, and 2) the **body** of the document. In addition to the structure, you should know that `.Rmd` files use three types of syntax: YAML, Markdown, and R.
 
-The *YAML header* consists of the first few lines at the top of the file. This header uses a set of three dashes `---` as delimiters (one starting set, and another ending set). Within the delimiter sets of dashes, you specify settings (or metadata) that will apply to the entire document. Some of the common options are things like:
+The *YAML header* consists of the first few lines at the top of the file. This header is established by a set of three dashes `---` as delimiters (one starting set, and another ending set). This part of the file requires you to use YAML syntax (Yet Another Markup Language.) Within the delimiter sets of dashes, you specify settings (or metadata) that will apply to the entire document. Some of the common options are things like:
 
 -   `title`
 -   `author`
 -   `date`
 -   `output`
 
-The *body* of the document is everything below the YAML header. It consists of a mix of narrative and R code. All the text that is narrative is written in a markup syntax called **Markdown**. In turn, all the text that is code is written as *blocks of code*.
+The *body* of the document is everything below the YAML header. It consists of a mix of narrative and R code. All the text that is narrative is written in a markup syntax called **Markdown**. In turn, all the text that is code is written in R syntax inside *blocks of code*.
 
 There are two types of blocks of code: 1) **code chunks**, and 2) **inline code**. Code chunks are lines of text separated from any lines of narrative text. Inline code is code inserted within a line of narrative text .
 
@@ -56,9 +55,9 @@ Rmd files are plain text files. All that matters is the syntax of its content. T
 -   The narrative in the body uses Markdown syntax.
 -   The code and commands use R syntax.
 
-The process to generate a nice rendered document from an Rmd file is known as **knitting**. When you *knit* an Rmd file, various R packages and programs run behind the scenes. But the process can be broken down in two main phases: 1) Parsing, 2) Execution, and 3) rendering.
+The process to generate a nice rendered document from an Rmd file is known as **knitting**. When you *knit* an Rmd file, various R packages and programs run behind the scenes. But the process can be broken down in three main phases: 1) Parsing, 2) Execution, and 3) Rendering.
 
-1.  Parsing: the content of the file is parsed (examined line by line) and each component is identified as yaml header, or text, or code.
+1.  Parsing: the content of the file is parsed (examined line by line) and each component is identified as yaml header, or as markdown text, or as R code.
 
 Each component receives a special treatment and formatting.
 

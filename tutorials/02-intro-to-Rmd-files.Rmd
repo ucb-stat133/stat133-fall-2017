@@ -9,15 +9,14 @@ urlcolor: blue
 
 > ### Learning Objectives:
 >
-> - To gain familiarity with Markdown syntax
-> - To gain familiarity with R Markdown `.Rmd` files
 > - Differentiate between `.R` and `.Rmd` files
 > - To understand dynamic documents
+> - To gain familiarity with R Markdown `.Rmd` files
 > - To gain familiarity with code chunks
 
 ------
 
-## Introduction to Markdown
+## Introduction to R Markdown files
 
 Besides using R script files to write source code, you will be using other
 type of source files known as _R markdown_ files. 
@@ -34,7 +33,8 @@ And you should be able to see a file with some default content.
 
 Locate the button __Knit HTML__, the one with an icon of a ball of yarn and two 
 needles. Click the button (knit to HTML) so you can see how `Rmd` files are 
-rendered and displayed as HTML documents.
+rendered and displayed as HTML documents. Alternatively, you can use a keyboard 
+shortcut: in Mac `Command+Shift+K`, in Windows `Ctrl+Shift+K`
 
 
 ### What is an `Rmd` file?
@@ -58,19 +58,22 @@ and code in a way that you let the computer do the manual, repetitive,
 and time consuming job.
 
 Rmd files is just one type of dynamic document that you will find in RStudio.
-In fact, RStudio provides a wide array of file formats that can be sued 
+In fact, RStudio provides other file formats that can be sued 
 as dynamic documents: e.g. `Rnw`, `Rpres`, etc.
 
 
 ### Anatomy of an `Rmd` file
 
 The structure of an `.Rmd` file can be divided in two parts: 1) a __YAML header__, 
-and 2) the __body__ of the document.
+and 2) the __body__ of the document. In addition to the structure, you should 
+know that `.Rmd` files use three types of syntax: YAML, Markdown, and R.
 
-The _YAML header_ consists of the first few lines at the top of the file. This 
-header uses a set of three dashes `---` as delimiters (one starting set, and 
-another ending set). Within the delimiter sets of dashes, you specify settings 
-(or metadata) that will apply to the entire document. Some of the common 
+The _YAML header_ consists of the first few lines at the top of the file. 
+This header is established by a set of three dashes `---` as delimiters 
+(one starting set, and another ending set). This part of the file requires you 
+to use YAML syntax (Yet Another Markup Language.)
+Within the delimiter sets of dashes, you specify settings (or metadata) that 
+will apply to the entire document. Some of the common 
 options are things like:
 
 - `title`
@@ -81,7 +84,7 @@ options are things like:
 The _body_ of the document is everything below the YAML header. It consists 
 of a mix of narrative and R code. All the text that is narrative is written 
 in a markup syntax called __Markdown__. In turn, all the text that is code 
-is written as _blocks of code_. 
+is written in R syntax inside _blocks of code_. 
 
 There are two types of blocks of code: 1) __code chunks__, and 
 2) __inline code__. Code chunks are lines of text separated from any lines of 
@@ -100,10 +103,10 @@ The content is basically divided in the header, and the body.
 The process to generate a nice rendered document from an Rmd file is 
 known as __knitting__. When you _knit_ an Rmd file, various R packages 
 and programs run behind the scenes. But the process can be broken down
-in two main phases: 1) Parsing, 2) Execution, and 3) rendering.
+in three main phases: 1) Parsing, 2) Execution, and 3) Rendering.
 
 1) Parsing: the content of the file is parsed (examined line by line) 
-and each component is identified as yaml header, or text, or code.
+and each component is identified as yaml header, or as markdown text, or as R code.
 
 Each component receives a special treatment and formatting.
 
