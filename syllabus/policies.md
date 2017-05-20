@@ -5,24 +5,24 @@
 
 ### Labs
 
-- Lab discussion is an important part of the class and is meant to supplement lecture.
+- Weekly labs are a required part of the course and is meant to supplement lecture.
 - You must attend the discussion group you are officially registered in.
 - You will be encouraged to problem solve individually or in groups.
-- Weekly labs are a required part of the course and should be submitted during your lab session.
-- To receive credit, you must attend lab, work on the lab assignment until you're finished or the lab period is over, and get checked off by a course staff member. 
-- Labs will be released on Monday night. If you don't want to attend lab physically, you may complete a lab assignment remotely, but you must complete it by Tuesday at 11:59pm to receive credit. 
+- To receive credit, you must attend lab, work on the lab assignment until you're finished or the lab period is over, and get checked off by a course staff member.
+- To receive full credit, you must be present for the entire time of the lab (partial credit for partial attendance).
+- You can miss two labs without losing points (no reasons asked). After the third absence, you will lose points, regardless of the reason for your absence.
 - Note that if you attend lab, you can still get credit even if you don't finish all of the lab problems. However, if you choose to work remotely, you must finish the entire lab to receive credit. 
-- Each person must submit each lab independently, but you are welcome to collaborate with other students in your lab room.
-- There will be about 4/5 short quizzes given in discussion to test your understanding.
+- Each person must submit each lab independently to their github account, but you are welcome to collaborate with other students in your lab room.
+- There will be about 4 short quizzes given in discussion to test your understanding.
 - Your quiz scores __will NOT__ be part of your grade.
 
 
 
 ### Homework Assignments
 
-- Homework assignments will be assigned almost every two weeks (about 5/6 HW).
-- You will submit your homework via bCourses electronically (as a word, text, pdf, or html file).
-- I will drop your lowest HW score.
+- Homework assignments will be assigned almost every two weeks.
+- You will submit your homework to your Github repository. 
+- You should also submit the github's link of your assignment to bCourses.
 - Don't wait until the last hour to do an assignment. Plan ahead and pace yourself.
 - Don't wait until the last minute to submit your assignment.
 - __No late assignments__ will be accepted, for any reason, including, but not 
