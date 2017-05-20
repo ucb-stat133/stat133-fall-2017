@@ -74,6 +74,7 @@ _Sep 11-15:_ Getting to know R vectors and concepts like atomicity, vectorizatio
 + __Lecture material__
     + [Data Types](https://docs.google.com/presentation/d/1TZRjIvfBfG_3vjj7bmb6B_oyR7k0lxge7V_Ih2B1mwo/pub?start=false&loop=false&delayms=3000) (slides)
     + [R Vectors](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Intro to vectors](../tutorials/03-intro-to-vectors.md) (tutorial)
     + [Lists and Data Frames](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
     + [Getting started with vectors, factors, and lists](../labs/lab03-vector-basics.md)
@@ -92,8 +93,8 @@ _Sep 18-22:_ Data Tables, typical storage formats, and relation with data frames
 
 + __Lecture material__
     + [Data Tables](https://docs.google.com/presentation/d/1WQIrQxtNXhEEpI0Yd5Ch4r2zwIp3KG2O_BVY5nsdY4Q/pub?start=false&loop=false&delayms=3000) (slides)
-    + [R Data Frames](https://docs.google.com/presentation/d/1OsxnIgNTZG-gnD0rdTXzqf162_gNqnok_suMHG5KxpU/edit?usp=sharing) (slides)
     + [Importing Tables in R](https://docs.google.com/presentation/d/1vbqZoR2i8z3Zlpc8WxhA3ntKnfB8O1WVKnFVDdxZzdA/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Intro to package "dplyr"](https://docs.google.com/presentation/d/1OsxnIgNTZG-gnD0rdTXzqf162_gNqnok_suMHG5KxpU/edit?usp=sharing) (slides)
 + __Lab material__:
     + [Reading in tables in R](../labs/lab04-reading-tables.md)
     + [Getting started with dplyr](../labs/lab04-dplyr-basics.md)
@@ -139,7 +140,7 @@ _Oct 01-05:_ Basics of Functions, R expressions, and conditionals.
 
 + __Lecture Material__
     + [Introduction to functions](../tutorials/06-intro-to-functions.md)
-    + [Introduction to R expressions and conditionals](../tutorials/06-intro-to-expressions-conditionals.md)
+    + [Introduction to R expressions and conditionals](../tutorials/07-intro-to-expressions-conditionals.md)
 + __Lab material__:
     + [Getting started with functions](../labs/lab06-simple-functions.md)
     + [Getting started with expressions and conditionals](../labs/lab06-simple-conditionals.md)
@@ -176,8 +177,8 @@ _Oct 08-12:_ Basics of loops, and more about functions.
 _Oct 15-19:_ Random numbers, sampling, and monte carlo simulation.
 
 + __Lecture Material__
-    + [Introduction to random numbers](../tutorials/08-intro-to-random-numbers.md)
-    + [Monte Carlo Simulations](../tutorials/09-intro-to-simulations.md)
+    + [Introduction to random numbers](../tutorials/10-intro-to-random-numbers.md)
+    + [Monte Carlo Simulations](../tutorials/11-intro-to-simulations.md)
 + __Lab material__:
     + [Running Monte Carlo simulations](../labs/lab08-random-numbers.md)
     + [More shiny apps](../labs/08-shiny-simulations.md)
