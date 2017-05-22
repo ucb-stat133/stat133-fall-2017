@@ -44,7 +44,7 @@ progress with the course.
 
 
 
-### Exams
+### Midterm and Final Exam
 
 - There will be one 50-minute in-class midterm, and one 3-hour final exam.
 - The tentative date of the midterm is TBD. 
@@ -63,13 +63,24 @@ progress with the course.
 
 
 
+### Oral Exam
+
+- I reserve the right to have a meeting with you and test you in person (oral examination, with the blackboard, and live coding).
+- Testing in person can happen haphazardly (most of the times), but it can also occur based on special circumstances (grad students, strong programming background, allegedly cheating/plagiarism, unusual low or high performance).
+- You can also request me to be tested in person if you are not satisfied with one or more of your graded work.
+- The purpose of this type of testing is for me to have a more direct way of evaluate your work (domain, knowledge, thinking process, problem solving).
+- While testing in person, I may waive the standard grading structure and hold you to a different norm.
+
+
+
 ### Grading Structure
 
 - 10% labs
 - 50% homework
 - 10% posts
 - 15% midterm
-- 20% final test 
+- 20% final test
+- ?% oral examination
 
 No individual letter grades will be given for midterm, or final. You will get a letter grade for the course that is based on your overall score.
 
