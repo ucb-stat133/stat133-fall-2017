@@ -2,19 +2,25 @@
 
 ![Mrs Mutner Rules](../images/mrs-mutner-rules.jpg)
 
+-----
+
+As Stat 133 gets larger and larger every year, running the course as smoothly as possible becomes more challenging. Please take some time to carefully read all the course policies. They should let you know what are the game rules, the _do's_ and _dont's_, and what to expect. While writing this document, I've tried to be as comprehensive and clear as possible, leaving little room for misinterpretation. In case of doubt, contact me or any member of the GSI staff.
+
+
 
 ### Labs
 
-- Weekly labs are a required part of the course and is meant to supplement lecture.
+- Weekly labs are a required part of the course and they are meant to supplement lecture.
 - You must attend the discussion group you are officially registered in.
 - You will be encouraged to problem solve individually or in groups.
+- Each person must submit each lab independently to their github account, but you are welcome to collaborate with other students in your lab room.
 - To receive credit, you must attend lab, work on the lab assignment until you're finished or the lab period is over, and get checked off by a course staff member.
 - To receive full credit, you must be present for the entire time of the lab (partial credit for partial attendance).
-- You can miss two labs without losing points (no reasons asked). After the third absence, you will lose points, regardless of the reason for your absence.
-- Note that if you attend lab, you can still get credit even if you don't finish all of the lab problems. However, if you choose to work remotely, you must finish the entire lab to receive credit. 
-- Each person must submit each lab independently to their github account, but you are welcome to collaborate with other students in your lab room.
+- After 9/18, you can miss one lab without losing points (no reasons asked).
+- Also after 9/18, if you have three absences or more, you will lose one letter grade. If you are in this situation come talk to me or reach out to me ASAP.
 - There will be about 4 short quizzes given in discussion to test your understanding.
 - Your quiz scores __will NOT__ be part of your grade.
+- During lab, we will look at your work (e.g. how you code, what you are doing, how you approach problems), and we will take notes that will be used to assess part of your performance in the course.
 
 
 
@@ -24,17 +30,18 @@
 - You will submit your homework to your Github repository. 
 - You should also submit the github's link of your assignment to bCourses.
 - Don't wait until the last hour to do an assignment. Plan ahead and pace yourself.
-- Don't wait until the last minute to submit your assignment.
+- Don't wait until the last minute to push your commits.
 - __No late assignments__ will be accepted, for any reason, including, but not 
 limited to, Internet congestion, system crashes, natural disasters, 
 theft, medical emergencies, personal crisis, theft or any extraordinary 
-circumnstances (e.g. illnes, exhaustion, mourning, loss of internet connection, bCourses is down, broken computer). Don't ask. I won't be sympathetic. 
-Plan ahead and pace yourself.
+circumnstances (e.g. illnes, exhaustion, mourning, loss of internet connection, bCourses is down, broken computer). Don't ask. I won't be sympathetic.
 - The homework assignments will get substantially more difficult as we
 progress with the course.
 - If you collaborate with other students when working on a HW assignment, please include the names of those students in your submission.
 - You must write your own answers (using your own words). Copy and plagiarism will not be tolerated (see _Academic Honesty_ policy).
 - Learning programming is frustrating, but it can be fun.
+- Homework assignments are NOT eligible for regrades.
+
 
 
 ### Exams
@@ -43,23 +50,28 @@ progress with the course.
 - The tentative date of the midterm is TBD. 
 - The final exam is currently scheduled for Day, Dec ddth from time1 to time2. (classroom to be announced).
 - If you do not take the final, you will NOT pass the class.
+- Please don't cheat. It's not worth it.
+- If I see you doing something that looks like cheating (e.g. moving your lips, talking, looking at someone else's paper, acting suspiciously), I will take it AS cheating and give you a zero (No questions asked).
 - There will be __no early or makeup exams__.
 - Do not take the class if you are not available at these dates and times.
-- To ask for regrading, you must answer a test using pen. Tests answered with pencil will not be accepted for regrading.
-- When asking for regrading, please clearly state the reasons that make you think you deserve a higher score.
-- In case of regrading, I (Gaston Sanchez) will regrade your entire test.
+- We will use _gradescope_ to grade the tests.
+- You will have one full week after grades are published on gradescope to request a regrade.
+- Please only ask for regrades if you see an error in the grading rather than a dispute with the rubric.
+- In case of regrading, I (Gaston Sanchez) will regrade your entire test. And I will be very strict.
+- During the regrading process you can lose points, even for questions you did not ask to be regraded.
+- After the regrade deadline, no requests will be considered, even if there was an error in the grading.
 
 
 
 ### Grading Structure
 
 - 10% labs
-- 30% homework
-- 10% midterm
-- 30% final project
-- 20% final 
+- 50% homework
+- 10% posts
+- 15% midterm
+- 20% final test 
 
-No individual letter grades will be given for midterm, or final. You will get a letter grade for the course that is based on your overall score. Your final grade will be graded on a 30/30/30/10 (A/B/C/DF) scale.
+No individual letter grades will be given for midterm, or final. You will get a letter grade for the course that is based on your overall score.
 
 
 
@@ -97,7 +109,7 @@ Rather than copying someone else's work, ask for help. You are not alone in this
 
 Students needing accommodations for any physical, psychological, or learning disability, should speak with me during the first two weeks of the semester, either after class or during office hours and see [http://dsp.berkeley.edu](http://dsp.berkeley.edu) to learn about Berkeley’s policy. If you are a DSP student, please contact me at least three weeks prior to a midterm or final so that we can work out acceptable accommodations via the DSP Office.
 
-If you are an athlete or Cal band member, please check your calendar and come see me as soon as possible to OH during the first two weeks of the semester. Do not take the class if you are not available to take the midterm, final, and/or attend lab discussions. I won't be able to provide accommodation for a late exam (No coaching staff proctoring).
+If you are an athlete or Cal band member, please check your calendar and come see me as soon as possible to OH during the first two weeks of the semester. Do not take the class if you are not available to take the midterm, final, and/or attend lab discussions. I won't be able to provide accommodations for a late exam. Since this is a hands-on programming-based class, I don't allow coaching staff proctoring.
 
 
 
@@ -151,5 +163,5 @@ Unless I have known you at least one year, and we have developed a good collegia
 
 ### Fine Print
 
-The course deadlines, assignments, exam times, and material are subject to change at the whim of the professor.
+The course deadlines, assignments, exam times, material, and policies are subject to change at the whim of the professor.
 
