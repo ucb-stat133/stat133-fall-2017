@@ -68,7 +68,7 @@ progress with the course.
 - I reserve the right to have a meeting with you and evaluate your understanding of the material in person (oral examination, with the blackboard, and live coding).
 - Testing in person can happen haphazardly (most of the time), but it can also occur based on special circumstances (e.g. grad students, strong programming background, allegedly cheating/plagiarism, unusual low or high performance).
 - You can also request to be evaluated in person if you are not satisfied with one or more of your graded work. Oral evaluations may be comprehensive.
-- The purpose of this type of testing is for me to have a more direct way of evaluate your work (e.g. knowledge, skills, thinking process, problem solving).
+- The purpose of this evaluation is for me to have a more direct way of assessing your entire work (e.g. knowledge, skills, thinking process, problem solving).
 
 
 
@@ -81,7 +81,13 @@ progress with the course.
 - 20% final test
 - ?% oral evaluation
 
-No individual letter grades will be given for midterm, or final. You will get a letter grade for the course that is based on your overall score.
+No individual letter grades will be given for midterm, or final. You will get a letter grade for the course that is based on your overall score. The final grades tend to---roughly---follow a 20/40/30/10 (A/B/C/DF) scale. As a guideline:
+
+- 90%-100%: some kind of A
+- 80%-90%: some kind of B
+- 70%-80%: some kind of C
+- 60%-70%: D
+- below 60%: F
 
 
 
@@ -89,15 +95,13 @@ No individual letter grades will be given for midterm, or final. You will get a 
 
 With the obvious exception of exams, we encourage you to discuss all of the course activities with your friends and classmates as you are working on them. You will definitely learn more in this class if you work with others than if you do not. Ask questions, answer questions, and share ideas liberally.
 
-Since you're working collaboratively, keep your project partner and the course staff informed. If some medical or personal emergency takes you away from the course for an extended period, or if you decide to drop the course for any reason, please don't just disappear silently! You should inform your project partner, so that nobody is depending on you to do something you can't finish.
-
 
 
 ### Academic Honesty
 
-Cooperation has a limit, however. You should not share your code or answers directly with other students. Doing so doesn't help them; it just sets them up for trouble on exams. Feel free to discuss the problems with others beforehand, but not the solutions. Please complete your own work and keep it to yourself. The exception to this rule is that you can share everything related to a project with your project partner and turn in one project between you.
+Cooperation has a limit, however. You should not share your code or answers directly with other students. Doing so doesn't help them; it just sets them up for trouble on exams. Feel free to discuss the problems with others beforehand, but not the solutions. Please complete your own work and keep it to yourself. If you suspect other people may be plagiarizing you, let us know ASAP.
 
-I (Gaston Sanchez) expect you to do your own work and to uphold the standards of intellectual integrity. Collaborating on homework is fine and I encourage you to work together---but copying is not, nor is having somebody else submit assignments for you. Cheating will not be tolerated. Anyone found cheating will receive an F and will be reported to the [Center for the Student Conduct](http://sa.berkeley.edu/conduct). If you are having trouble with an assignment or studying for an exam, or if you are uncertain about permissible and impermissible conduct or collaboration, please come see me with your questions. 
+I (Gaston Sanchez) expect you to do your own work and to uphold the standards of intellectual integrity. Collaborating on homework is fine and I encourage you to work together---but copying is not, nor is having somebody else submit assignments for you. __Cheating will not be tolerated__. Anyone found cheating will receive an F and will be reported to the [Center for the Student Conduct](http://sa.berkeley.edu/conduct). If you are having trouble with an assignment or studying for an exam, or if you are uncertain about permissible and impermissible conduct or collaboration, please come see me with your questions. 
 
 Rather than copying someone else's work, ask for help. You are not alone in this course! The course staff is here to help you succeed. If you invest the time to learn the material and complete the projects, you won't need to copy any answers.
 
@@ -153,7 +157,9 @@ Call (510) 643-7985, email ask_ophd@berkeley.edu, or go to
 Under emergency/special circumstances, students may petition me to receive an Incomplete grade. By University policy, for a student to get an Incomplete requires (i) that the student was performing __passing-level work__ until the time that (ii) something happened that---through no fault of the student---prevented the student from completing the coursework. If you take the final, you completed the course, even if you took it while ill, exhausted, mourning, etc. The time to talk to me about incomplete grades is BEFORE you take the final, when the situation that prevents you from finishing presents itself. Please clearly state your reasoning in your comments to me.
 
 It is your responsibility to develop good time management skills, good studying habits, know your limits, and learn to ask for professional help.
-Life happens. Social, family, cultural, scholar, and individual circumstances can affect your performance (both positive and negatively). If you find yourself in a situation that raises concerns about passing the course, please come see me as soon as possible. Above all, please do not wait till the end of the semester to share your concerns about passing the course because it will be too late by then.
+Life happens. Social, family, cultural, scholar, and individual circumstances can affect your performance (both positive and negatively). If you find yourself in a situation that raises concerns about passing the course, please come see me as soon as possible. 
+
+__Above all, please do not wait till the end of the semester to share your concerns about passing the course because it will be too late by then.__
 
 
 
