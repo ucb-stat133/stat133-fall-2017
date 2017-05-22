@@ -13,6 +13,11 @@ As Stat 133 gets larger and larger every year, running the course as smoothly as
 - [Learning Cooperatively](#learning-cooperatively)
 - [Academic Honesty](#academic-honesty)
 - [Email Policy](#email-policy)
+- [Special Accomodations](#special-accomodations)
+- [Incomplete Grade](#incomplete-grade)
+- [Safe and Inclusive Environment](#environment)
+- [Letters of Recommendations](#letters-of-rec)
+- [Fine Print](#fine-print)
 
 -----
 
@@ -130,7 +135,7 @@ Rather than copying someone else's work, ask for help. You are not alone in this
 
 
 
-### Accommodation Policy
+### Special Accommodations
 
 Students needing accommodations for any physical, psychological, or learning disability, should speak with me during the first two weeks of the semester, either after class or during office hours and see [http://dsp.berkeley.edu](http://dsp.berkeley.edu) to learn about Berkeley’s policy. If you are a DSP student, please contact me at least three weeks prior to a midterm or final so that we can work out acceptable accommodations via the DSP Office.
 
@@ -138,7 +143,18 @@ If you are an athlete or Cal band member, please check your calendar and come se
 
 
 
-### Safe, Supportive, and Inclusive Environment
+### Incomplete Grade
+
+Under emergency/special circumstances, students may petition me to receive an Incomplete grade. By University policy, for a student to get an Incomplete requires (i) that the student was performing __passing-level work__ until the time that (ii) something happened that---through no fault of the student---prevented the student from completing the coursework. If you take the final, you completed the course, even if you took it while ill, exhausted, mourning, etc. The time to talk to me about incomplete grades is BEFORE you take the final, when the situation that prevents you from finishing presents itself. Please clearly state your reasoning in your comments to me.
+
+It is your responsibility to develop good time management skills, good studying habits, know your limits, and learn to ask for professional help.
+Life happens. Social, family, cultural, scholar, and individual circumstances can affect your performance (both positive and negatively). If you find yourself in a situation that raises concerns about passing the course, please come see me as soon as possible. 
+
+__Above all, please do not wait till the end of the semester to share your concerns about passing the course because it will be too late by then.__
+
+
+
+### Safe and Inclusive Environment
 
 Whenever a faculty member, staff member, post-doc, or GSI is responsible for 
 the supervision of a student, a personal relationship between them of a 
@@ -163,28 +179,9 @@ Call (510) 643-7985, email ask_ophd@berkeley.edu, or go to
 
 
 
-### Incomplete Policy
-
-Under emergency/special circumstances, students may petition me to receive an Incomplete grade. By University policy, for a student to get an Incomplete requires (i) that the student was performing __passing-level work__ until the time that (ii) something happened that---through no fault of the student---prevented the student from completing the coursework. If you take the final, you completed the course, even if you took it while ill, exhausted, mourning, etc. The time to talk to me about incomplete grades is BEFORE you take the final, when the situation that prevents you from finishing presents itself. Please clearly state your reasoning in your comments to me.
-
-It is your responsibility to develop good time management skills, good studying habits, know your limits, and learn to ask for professional help.
-Life happens. Social, family, cultural, scholar, and individual circumstances can affect your performance (both positive and negatively). If you find yourself in a situation that raises concerns about passing the course, please come see me as soon as possible. 
-
-__Above all, please do not wait till the end of the semester to share your concerns about passing the course because it will be too late by then.__
-
-
-
 ### Letters of Recommendation
 
 Unless I have known you at least one year, and we have developed a good collegial relationship, I do not provide letters of recommendation. 
-
-
-
-### Additional Course Policies
-
-- Be sure to pay attention to deadlines.
-- Check bCourses to keep up to date with announcements and incoming assignments.
-- In consideration to everybody in the classroom, please turn off your cell phone during class and lab time.
 
 
 
