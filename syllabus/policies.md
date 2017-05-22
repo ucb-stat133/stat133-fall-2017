@@ -4,7 +4,7 @@
 
 -----
 
-As Stat 133 gets larger and larger every year, running the course as smoothly as possible becomes more challenging. Please take some time to carefully read all the course policies. They should let you know what are the game rules, the _do's_ and _dont's_, and what to expect. While writing this document, I've tried to be as comprehensive and clear as possible, leaving little room for misinterpretation. In case of doubt, contact me or any member of the GSI staff.
+As Stat 133 gets larger and larger every year, running the course as smoothly as possible becomes more challenging. Please take some time to carefully read all the course policies. They should let you know what the game rules are, the _do's_ and _dont's_, and what to expect. While writing this document, I've tried to be as comprehensive and clear as possible, leaving little room for misinterpretation. In case of doubt, contact me or any member of the GSI staff.
 
 
 
@@ -74,20 +74,23 @@ progress with the course.
 
 ### Grading Structure
 
-- 10% labs
-- 50% homework
-- 10% posts
-- 15% midterm
-- 20% final test
-- ?% oral evaluation
+| Concept    | Weight |
+|------------|--------|
+| Labs       | 10% |
+| Homework   | 40% |
+| Posts      | 10% |
+| Midterm    | 15% |
+| Final test | 25% |
+| _Oral evaluation_ | ?% |
 
-No individual letter grades will be given for midterm, or final. You will get a letter grade for the course that is based on your overall score. The final grades tend to---roughly---follow a 30/30/30/10 (A/B/C/DF) scale. As a provisional guideline:
-
-- 90%-100%: some kind of A
-- 80%-90%: some kind of B
-- 70%-80%: some kind of C
-- 60%-70%: D
-- below 60%: F
+- No individual letter grades will be given for midterm, or final.
+- You will get a letter grade for the course that is based on your overall score.
+- The final grades tend to---roughly---follow a 30/30/30/10 (A/B/C/DF) scale. As a provisional guideline:
+    + 90%-100%: some kind of A
+    + 80%-90%: some kind of B
+    + 70%-80%: some kind of C
+    + 60%-70%: D
+    + below 60%: F
 
 
 
