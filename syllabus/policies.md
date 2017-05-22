@@ -15,8 +15,8 @@ As Stat 133 gets larger and larger every year, running the course as smoothly as
 - [Email Policy](#email-policy)
 - [Special Accomodations](#special-accomodations)
 - [Incomplete Grade](#incomplete-grade)
-- [Safe and Inclusive Environment](#environment)
-- [Letters of Recommendations](#letters-of-rec)
+- [Safe and Inclusive Environment](#safe-and-inclusive-environment)
+- [Letters of Recommendation](#letters-of-recommendation)
 - [Fine Print](#fine-print)
 
 -----
