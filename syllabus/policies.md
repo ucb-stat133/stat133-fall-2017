@@ -6,7 +6,15 @@
 
 As Stat 133 gets larger and larger every year, running the course as smoothly as possible becomes more challenging. Please take some time to carefully read all the course policies. They should let you know what the game rules are, the _do's_ and _dont's_, and what to expect. While writing this document, I've tried to be as comprehensive and clear as possible, leaving little room for misinterpretation. In case of doubt, contact me or any member of the GSI staff.
 
+- [Labs](#labs)
+- [Homework](#homework)
+- [Tests](#tests)
+- [Oral Evaluation](#oral-evaluation)
+- [Learning Cooperatively](#learning-cooperatively)
+- [Academic Honesty](#academic-honesty)
+- [Email Policy](#email-policy)
 
+-----
 
 ### Labs
 
@@ -24,7 +32,7 @@ As Stat 133 gets larger and larger every year, running the course as smoothly as
 
 
 
-### Homework Assignments
+### Homework
 
 - Homework assignments will be assigned almost every two weeks.
 - You will submit your homework to your Github repository. 
@@ -44,7 +52,7 @@ progress with the course.
 
 
 
-### Midterm and Final Exam
+### Tests
 
 - There will be one 50-minute in-class midterm, and one 3-hour final exam.
 - The tentative date of the midterm is TBD. 
@@ -65,7 +73,7 @@ progress with the course.
 
 ### Oral Evaluation
 
-- I reserve the right to have a meeting with you and evaluate your understanding of the material in person (oral examination, with the blackboard, and live coding).
+- I reserve the right to have a meeting with you and evaluate your understanding of the material in person (oral examination, whiteboard coding, and live coding).
 - Testing in person can happen haphazardly (most of the time), but it can also occur based on special circumstances (e.g. grad students, strong programming background, allegedly cheating/plagiarism, unusual low or high performance).
 - You can also request to be evaluated in person if you are not satisfied with one or more of your graded work. Oral evaluations may be comprehensive.
 - The purpose of this evaluation is for me to have a more direct way of assessing your entire work (e.g. knowledge, skills, thinking process, problem solving).
