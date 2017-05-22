@@ -13,7 +13,7 @@ As Stat 133 gets larger and larger every year, running the course as smoothly as
 - [Learning Cooperatively](#learning-cooperatively)
 - [Academic Honesty](#academic-honesty)
 - [Email Policy](#email-policy)
-- [Special Accomodations](#special-accomodations)
+- [Special Accommodations](#special-accommodations)
 - [Incomplete Grade](#incomplete-grade)
 - [Safe and Inclusive Environment](#safe-and-inclusive-environment)
 - [Letters of Recommendation](#letters-of-recommendation)
