@@ -81,7 +81,7 @@ progress with the course.
 - 20% final test
 - ?% oral evaluation
 
-No individual letter grades will be given for midterm, or final. You will get a letter grade for the course that is based on your overall score. The final grades tend to---roughly---follow a 20/40/30/10 (A/B/C/DF) scale. As a guideline:
+No individual letter grades will be given for midterm, or final. You will get a letter grade for the course that is based on your overall score. The final grades tend to---roughly---follow a 30/30/30/10 (A/B/C/DF) scale. As a provisional guideline:
 
 - 90%-100%: some kind of A
 - 80%-90%: some kind of B
