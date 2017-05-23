@@ -1,4 +1,4 @@
-HW00 - Stat 133, Fall 2017
+HW01 - Stat 133, Fall 2017
 ================
 
 The purpose of this assignment is to work with an `Rmd` file and practice writing content using markdown syntax.
@@ -80,6 +80,6 @@ Reflect on what was hard/easy, problems you solved, helpful tutorials you read, 
 Submission
 ----------
 
-Name your `Rmd` file using the following structure: `hw00-first-last.Rmd` where "first" and "last" are your first and last names. E.g. `hw00-gaston-sanchez.Rmd`.
+Name your `Rmd` file using the following structure: `hw01-first-last.Rmd` where "first" and "last" are your first and last names. E.g. `hw01-gaston-sanchez.Rmd`.
 
 Please submit the knitted (i.e. compiled) html file to bCourses, and include your GitHub username.
