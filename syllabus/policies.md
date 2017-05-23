@@ -8,6 +8,7 @@ As Stat 133 gets larger and larger every year, running the course as smoothly as
 
 - [Labs](#labs)
 - [Homework](#homework)
+- [Posts](#posts)
 - [Tests](#tests)
 - [Oral Evaluation](#oral-evaluation)
 - [Learning Cooperatively](#learning-cooperatively)
@@ -57,6 +58,15 @@ progress with the course.
 
 
 
+### Posts
+
+- There will be three post assignments (due at the end of each month: Sep, Oct, Nov).
+- Posts are mastery-oriented goals.
+- Each post is worth 5%
+- You will have the opportunity to expand your knowledge, researching a specific topic, and going further from what will be covered in the course.
+
+
+
 ### Tests
 
 - There will be one 50-minute in-class midterm, and one 3-hour final exam.
@@ -68,10 +78,11 @@ progress with the course.
 - There will be __no early or makeup exams__.
 - Do not take the class if you are not available at these dates and times.
 - We will use _gradescope_ to grade the tests.
-- You will have one full week after grades are published on gradescope to request a regrade.
+- You will have one full week after grades are published on gradescope to request a regrade for the midterm. The final test is NOT eligible for regrades.
 - Please only ask for regrades if you see an error in the grading rather than a dispute with the rubric.
 - In case of regrading, I (Gaston Sanchez) will regrade your entire test. And I will be very strict.
 - During the regrading process you can lose points, even for questions you did not ask to be regraded.
+- Regrades are based on what you actually wrote, not on what you were thinking, or what you meant to say, or what you assumed or failed to assume.
 - After the regrade deadline, no requests will be considered, even if there was an error in the grading.
 
 
@@ -90,8 +101,8 @@ progress with the course.
 | Concept    | Weight |
 |------------|--------|
 | Labs       | 10% |
-| Homework   | 40% |
-| Posts      | 10% |
+| Homework   | 35% |
+| Posts      | 15% |
 | Midterm    | 15% |
 | Final test | 25% |
 | _Oral evaluation_ | ?% |
