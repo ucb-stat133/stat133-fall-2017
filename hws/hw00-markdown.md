@@ -7,13 +7,14 @@ You will be using R markdown files, aka `Rmd` files, throughout the rest of the 
 
 Although this HW is a dummy assignment, please take it as an inexpensive opportunity to tackle any logistic problems, and make sure R, RStudio, bCourses, Git, Github, and your computer work nicely---without being penalized.
 
-To complete this assignment, you may find the following resources useful:
+Here are some useful resources that you can consult to complete this assignment:
 
 -   Markdown tutorial by CommonMark: <http://commonmark.org/help/tutorial/>
 -   [www.markdown-tutorial.com](http://www.markdown-tutorial.com)
 -   [www.markdowntutorial.com/](http://www.markdowntutorial.com/)
 -   Github Mastering Markdown: <https://guides.github.com/features/mastering-markdown/>
 -   Markdown reference: <http://commonmark.org/help/>
+-   Adam Pritchard's [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 -   RStudio cheat sheet: <https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf>
 
 ------------------------------------------------------------------------
@@ -23,9 +24,9 @@ Requirements
 
 Here's a summary of the topics you have to write about. You don't have to write any R code (yet).
 
-1.  Cooking recipe
-2.  Quadratic Equation
-3.  Comments on this assignment
+1.  [Cooking Recipe](#cooking-recipe)
+2.  [Quadratic Equation](#quadratic-equation)
+3.  [Comments and Reflections](#comments-and-reflections)
 
 Make sure to include the following elements (using markdown syntax)
 
@@ -43,11 +44,16 @@ Make sure to include the following elements (using markdown syntax)
 
 ### Cooking Recipe
 
-Write about your favorite cooking recipe (or any other recipe). You can write a recipe for a breakfast, or for a cocktail, or anything you like.
+Write about your favorite cooking recipe (or any other recipe). You can write a recipe for a breakfast, or a fancy cocktail, or anything you like.
 
 -   Use an **unordered** list (of bullets) to list the ingredients.
--   Use an ordered list to list all the steps of the recipe.
+-   Use another unordered list to list any "special" kitchen tools that are needed.
+-   Use an ordered list to list and describe all the steps of the recipe.
 -   If possible, look for an image online that you could insert to show the appearance of the meal (plate, drink, etc).
+-   Or even better, take a picture of the outcome and include it in your document!
+-   Also include a description of when to use the recipe?
+-   Is there a special season of the year for it?
+-   Are there variations of the recipe? Using other ingredients?
 
 ### Quadratic Equation
 
@@ -55,9 +61,19 @@ Visit the wikipedia page for the quadratic equation: <https://en.wikipedia.org/w
 
 Write the general form of a quadratic equation, and provide a brief description for it. Also, write the quadratic formula for the roots of the general quadratic equation.
 
-### Comments on this assignment
+If you feel the quadratic is not enough, feel free to find other math equations and formulas to play with.
 
-Reflect on what was hard/easy, problems you solved, helpful tutorials you read, etc. What things were hard, even though you saw them in class? What was easy(-ish) even though we haven't done it in class?
+### Comments and Reflections
+
+Reflect on what was hard/easy, problems you solved, helpful tutorials you read, etc. Here are some questions that you can start with to provide comments on your HW.
+
+-   What things were hard, even though you saw them in class?
+-   What was easy(-ish) even though we haven't done it in class?
+-   Was this the first time you were using markdown?
+-   If you have used markdown before, was there something new you learned while doing this assignment?
+-   Did you need help to complete the assignment? If so, what kind of help? Who helped you?
+-   How much time did it take to complete this HW?
+-   What was the most time consuming part?
 
 ------------------------------------------------------------------------
 
