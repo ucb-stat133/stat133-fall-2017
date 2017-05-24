@@ -38,8 +38,8 @@ _AugSep 28-01:_ Getting started with R, and comprehensive review of the RStudio 
 + __Cheat sheet__: 
     + [RStudio cheat sheet](../cheat-sheets/rstudio-IDE-cheatsheet.pdf)
     + [R markdown cheat sheet](../cheat-sheets/rmarkdown-cheatsheet-2.0.pdf)
-+ __HOMEWORK__:
-    + [HW00 - Markdown practice](../hws/00-markdown.md)
++ __WARM-UP__:
+    + [Markdown practice](../hws/up01-markdown.md)
 
 
 -----
@@ -59,8 +59,8 @@ _Sep 04-08:_ Fundamental low-level stuff for the rest of the course.
     _Happy Git and GitHub for the useR_ by Jenny Bryan et al.
 + __Cheat sheet__:
     + [git cheat sheet](../cheat-sheets/git-cheatsheet.pdf)
-+ __HOMEWORK__:
-    + Git and github for the uninitiated.
++ __WARM-UP__:
+    + [Git, bash](../hws/up02-bash-git-basics.md)
 
 
 -----
@@ -80,7 +80,8 @@ _Sep 11-15:_ Getting to know R vectors and concepts like atomicity, vectorizatio
     + [Getting started with vectors, factors, and lists](../labs/lab03-vector-basics.md)
 + __Reading__:
     + [chapter 20: Vectors](http://r4ds.had.co.nz/vectors.html) from _R for Data Science_ by Grolemund and Wickham.
-+ __HOMEWORK:__ Problem set 1
++ __HOMEWORK__:
+    + [HW01 - Vectors and Factors](../hws/hw01-vector-basics.md)
 
 
 -----
