@@ -15,15 +15,18 @@ Gaston Sanchez
 Getting the Data File
 ---------------------
 
-In this lab, you are going to work with a handful of variables about the U.S. States:
+In this lab, you are going to work with a handful of variables about NBA players from the regular season 2016-2017:
 
--   *State*: names of the States
--   *Capital*: names of the capitals
--   *Area*: total area in square kilometers
--   *Water*: water area in square kilometers
--   *Seats*: number of House seats
+-   `player`: name of the player.
+-   `team`: team name abbreviation.
+-   `position`: player position.
+-   `salary`: salary (in dollars).
+-   `points`: total scored points.
+-   `points1`: number of free throws, worth 1 point each.
+-   `points2`: number of 2-point field goals, worth 2 points each.
+-   `points3`: number of 3-point field goals, worth 3 points each.
 
-The data comes from the wikipedia page of the List of States and territories of the US: <https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States>
+The data is in the file `nba2017-salary-points.RData`, located in the `data/` folder. The original source of the data is the website [www.basketball-reference.com](http://www.basketball-reference.com/)
 
 Open a new session in Rstudio, and make sure you have a clean workspace:
 
@@ -32,15 +35,22 @@ Open a new session in Rstudio, and make sure you have a clean workspace:
 rm(list = ls())
 ```
 
-Use the following code to read the data contained in the file `usa-states.RData` (from the course's github repository)
+Assuming that your **working directory** is the `labs/` directory like in the github repository of the course, you can use the `load()` function to read its contents in R:
+
+``` r
+# load data in your R session
+load('../data/nba2017-salary-points.RData')
+```
+
+Alternative, you can first download the `.RData` file to your working directory, and then `load()` it like this:
 
 ``` r
 # download RData file into your working directory
-rdata <- "https://github.com/ucb-stat133/stat133-fall-2017/raw/master/data/usa-states.RData"
-download.file(url = rdata, destfile = 'usa-states.RData')
+rdata <- "https://github.com/ucb-stat133/stat133-fall-2017/raw/master/data/nba2017-salary-points.RData"
+download.file(url = rdata, destfile = 'nba2017-salary-points.RData')
 
 # load data in your R session
-load('usa-states.RData')
+load('nba2017-salary-points.RData')
 
 # list the available objects with ls()
 ls()
@@ -48,19 +58,19 @@ ls()
 
 ### What's happening in the code above?
 
-The function `download.file()` allows you to download any type of file from the Web. In this case you are downloading the file called `usa-states.RData` which is located in the github repository of the course. This file is a binary file. To be more precise, the file extension `.RData` is the default extension used by R for its binary native format.
+The function `download.file()` allows you to download any type of file from the Web. In this case you are downloading the file called `nba2017-salary-points.RData` which is located in the github repository of the course. This file is a binary file. To be more precise, the file extension `.RData` is the default extension used by R for its binary native format.
 
-Where does the file is downloaded? The file `usa-states.RData` gets downloaded to your **working directory**. If you are curious about what is the current directory to which R is paying attention, simply type the function `getwd()`---which stands for *get the working directory*.
+Where does the file is downloaded? The file `nba2017-salary-points.RData` gets downloaded to your **working directory**. If you are curious about what is the current directory to which R is paying attention, simply type the function `getwd()`---which stands for *get the working directory*.
 
 To load the contents of the binary file into R's session you use `load()`. Finally, `ls()` allows you to **list** all the available R objects.
 
 Check that the following objects are available in your session:
 
--   `state` (names of the States)
--   `capital` (names of the capitals)
--   `area` (total area in km2)
--   `water` (water area in km2)
--   `seats` (number of house seats)
+-   `player`
+-   `team`
+-   `position`
+-   `salary`
+-   `points`
 
 **A note on `.RData` files.** Most of the data sets you are going to be working with in real life are going to be stored in some sort of text file. So you probably won't be handling many R binary files (i.e. `.RData` files). However, R binary files are an interesting option for saving intermediate results, and/or for saving R objects (as R objects).
 
@@ -78,7 +88,7 @@ Once you have some data objects to work with, the first step is to inspect some 
 -   `tail()` take a peek at the last elements
 -   `summary()` shows a summary of a given object
 
-Your turn. Find out what is the class of each of the objects `state`, `capital`, etc:
+Your turn. Find out what is the class of each of the objects `player`, `team`, etc:
 
 ``` r
 # your code here
@@ -108,10 +118,9 @@ Remember that R vectors are **atomic structures**, which is just the fancy name 
 How do you know that a given vector is of a certain data type? One function to answer this question is `typeof()`
 
 ``` r
-typeof(state)
-typeof(capital)
-typeof(area)
-typeof(water)
+typeof(player)
+typeof(position)
+typeof(points)
 ```
 
 Manipulating Vectors: Subsetting
@@ -120,11 +129,11 @@ Manipulating Vectors: Subsetting
 Subsetting refers to extracting elements of a vector (or another R object). To do so, you use what is known as **bracket notation**. This implies using (square) brackets `[ ]` to get access to the elements of a vector, for instance:
 
 ``` r
-# first element of 'state'
-state[1]
+# first element of 'player'
+player[1]
 
-# first five elements of 'state'
-state[1:5]
+# first five elements of 'player'
+player[1:5]
 ```
 
 What type of things can you specify inside the brackets? Basically:
@@ -138,29 +147,35 @@ What type of things can you specify inside the brackets? Basically:
 Here are some subsetting examples using a numeric vector inside the brackets:
 
 ``` r
-# fifth element of 'state'
-state[5]
+# fifth element of 'player'
+player[5]
 
 # numeric range
-state[2:8]
+player[2:8]
 
 # numeric vector
-state[c(1, 3, 5, 7)]
+player[c(1, 3, 5, 7)]
 
 # different order
-state[c(20, 9, 10, 50)]
+player[c(20, 9, 10, 50)]
 
 # third element (four times)
-state[rep(3, 4)]
+player[rep(3, 4)]
 ```
 
-Try these. What happens if you specify:
+Subset the first four players:
 
--   an index of zero: `state[0]`?
--   a negative index: `state[-1]`?
--   various negative indices: `state[-c(1,2,3,4)]`?
--   an index greater than the length of the vector: `state[53]`?
--   repeated indices: `state[c(1,2,2,3,3,3)]`?
+``` r
+four <- player[1:4]
+```
+
+Now try these. What happens if you specify:
+
+-   an index of zero: `four[0]`?
+-   a negative index: `four[-1]`?
+-   various negative indices: `four[-c(1,2,3)]`?
+-   an index greater than the length of the vector: `four[5]`?
+-   repeated indices: `four[c(1,2,2,3,3,3)]`?
 
 ### Subsetting with Logical Indices
 
@@ -182,11 +197,11 @@ To do logical subsetting, the vector that you put inside the brackets, must matc
 
 ``` r
 # your turn
-a[c(TRUE, TRUE, TRUE, TRUE)]
-a[c(TRUE, TRUE, FALSE, FALSE)]
-a[c(FALSE, FALSE, TRUE, TRUE)]
-a[c(TRUE, FALSE, TRUE, FALSE)]
-a[c(FALSE, FALSE, FALSE, FALSE)]
+four[c(TRUE, TRUE, TRUE, TRUE)]
+four[c(TRUE, TRUE, FALSE, FALSE)]
+four[c(FALSE, FALSE, TRUE, TRUE)]
+four[c(TRUE, FALSE, TRUE, FALSE)]
+four[c(FALSE, FALSE, FALSE, FALSE)]
 ```
 
 When subsetting a vector logically, most of the times you won't really be providing an explicit vector of `TRUE`'s and `FALSE`s. Just imagine having a vector of 100 or 1000 or 1000000 elements, and trying to do logical subsetting by manually creating a logical vector of the same length. Instead, you will be providing a logical condition or a comparison operation that returns a logical vector.
@@ -217,34 +232,34 @@ a != 6
 Notice that a comparison operation always returns a logical vector. Here's how you actually extract the values of a vector based on a logical indexing:
 
 ``` r
-a <- c(5, 6, 7, 8)
+points_four <- points[1:4]
 
-# elements greater than 6
-a[a > 6]
+# elements greater than 100
+points_four[points_four > 100]
 ```
 
-    ## [1] 7 8
+    ## [1] 952 520 894
 
 ``` r
-# elements less then 8
-a[a < 8]
+# elements less then 100
+points_four[points_four < 100]
 ```
 
-    ## [1] 5 6 7
+    ## [1] 10
 
 ``` r
-# elements less than or equal to 6
-a[a <= 6]
+# elements less than or equal to 10
+points_four[points_four <= 10]
 ```
 
-    ## [1] 5 6
+    ## [1] 10
 
 ``` r
-# elements different from 5
-a[a != 5]
+# elements different from 10
+points_four[points_four != 10]
 ```
 
-    ## [1] 6 7 8
+    ## [1] 952 520 894
 
 Logical conditions, in turn, use a logical operator:
 
@@ -306,14 +321,14 @@ FALSE | FALSE
 Here are more examples of logical subsetting with the US States data vectors:
 
 ``` r
-# area of California
-area[state == 'California']
+# players of Golden State (GSW)
+player[team == 'GSW']
 
-# name of states with areas greater than 400,000 square km
-state[area > 400000]
+# name of players with salaries greater than 20 million dollars
+player[salary > 20000000]
 
-# name of states with areas between 100,000 and 125,000 square km
-state[area > 100000 & area < 125000]
+# name of players with scored points between 1000 and 1200 (exclusive)
+player[points > 1000 & points < 1200]
 ```
 
 ### Your turn
@@ -321,110 +336,102 @@ state[area > 100000 & area < 125000]
 Write commands to answer the following questions:
 
 ``` r
-# name of the state with largest area
+# name of the player with largest salary
 
 
-# name of the state with smallest area
+# name of the player with smallest salary
 
 
-# name of the state with largest number of seats
+# name of the player with largest number of points
 
 
-# capital of the state with the smallest water area
+# team of the player with the largest number of points
 
 
-#
+# name of the player with the largest number of 3-pointers
 ```
 
 ### Subsetting with Character Vectors
 
 A third type of subsetting involves passing a character vector inside brackets. When you do this, the characters are supposed to be names of the manipulated vector.
 
-None of the vectors `state`, `capital`, `area`, `water`, and `seats` have names. You can confirm that with the `names()` function applied on any of the vectors:
+None of the vectors `player`, `position`, `points`, and `salary` have names. You can confirm that with the `names()` function applied on any of the vectors:
 
 ``` r
-names(state)
+names(player)
 ```
 
-Create a new vector `total` by adding `area` and `water`, and then assign `state` as the names of `total`
+Create a vector `warriors` by selecting the players of `team == 'GSW'`; then create a vector `warriors_salary` with their salaries, and then assign `warriors` as the names of `warriors_salary`
 
 ``` r
-# create 'total
+# create warriors
 
 
-# assign 'state' as names of 'total'
+# create warriors_salary
 
 ```
 
-You should have a vector `total` with named elements. Now you can use character subsetting:
+You should have a vector `warriors_salary` with named elements. Now you can use character subsetting:
 
 ``` r
-total["Alabama"]
+warriors_salary["Andre Iguodala"]
 
-total[c("California", "Oregon", "Washington")]
-
-total[c("Texas", "Alaska")]
+warriors_salary[c("Stephen Curry", "Kevin Durant")]
 ```
 
 ### Some plotting
 
-Use the function `plot()` to make a scatterplot of `area` and `water`
+Use the function `plot()` to make a scatterplot of `points` and `salary`
 
 ``` r
-plot(area, water)
+plot(points, salary)
 ```
 
 Keep in mind tht `plot()` is a generic function. This means that the behavior of `plot()` depends on the type of input. When you pass two numeric vectors to `plot()` it will create a scatter plot.
 
 Looking at the generated plot, can you see any issues?
 
-To get a better display of the scatterplot, let's create two vectors `log_area` and `log_water` by transforming `area` and `water` with the logarithm function `log()`
+To get a better display of the scatterplot, let's create two vectors `log_points` and `log_salary` by transforming `points` and `salary` with the logarithm function `log()`
 
 ``` r
-log_area <- log(area)
-log_water <- log(water)
+log_points <- log(points)
+log_salary <- log(salary)
 ```
 
 Make another scatterplot but now use the log-transformed vectors:
 
 ``` r
-plot(log_area, log_water)
+plot(log_points, log_salary)
 ```
 
 To add the names of the states in the plot, you can use `text()`:
 
 ``` r
-plot(log_area, log_water)
-text(log_area, log_water, labels = state)
+plot(log_points, log_salary)
+text(log_points, log_salary, labels = player)
 ```
 
 Now we have another problem. The labels in the plot are a bit messy. A quick and dirty fix is to use `abbreviate()` to shorten the displayed names:
 
 ``` r
-plot(log_area, log_water)
-text(log_area, log_water, labels = abbreviate(state))
+plot(log_points, log_salary)
+text(log_points, log_salary, labels = abbreviate(player))
 ```
 
 Vectorization
 -------------
 
-When you create the vectors `log_area <- log(area)` and `log_water <- log(water)`, what you're doing is applying a function to a vector, which in turn acts on all elements of the vector.
+When you create the vectors `log_points <- log(points)` and `log_salary <- log(salary)`, what you're doing is applying a function to a vector, which in turn acts on all elements of the vector.
 
 This is called **Vectorization** in R parlance. Most functions that operate with vectors in R are **vectorized** functions. This means that an action is applied to all elements of the vector without the need to explicitly type commands to traverse all the elements.
 
 In many other programming languages, you would have to use a set of commands to loop over each element of a vector (or list of numbers) to transform them. But not in R.
 
-Another example of vectorization would be the calculation of the square root of all the elements in `area` and `water`:
+Another example of vectorization would be the calculation of the square root of all the elements in `points` and `salary`:
 
 ``` r
-sqrt(area)
-sqrt(water)
-```
-
-Or the sum of `area` plus `water` to get the total area:
-
-``` r
-area + water
+sqrt(points)
+sqrt(salary)
 ```
 
 ### Why should you care about vectorization?
