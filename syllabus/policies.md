@@ -41,6 +41,7 @@ As Stat 133 gets larger and larger every year, running the course as smoothly as
 ### Homework
 
 - Homework assignments will be assigned almost every two weeks.
+- The first two HW will not be part of your grade. These are "warming-up" assignments.
 - You will submit your homework to your Github repository. 
 - You should also submit the github's link of your assignment to bCourses.
 - Don't wait until the last hour to do an assignment. Plan ahead and pace yourself.
