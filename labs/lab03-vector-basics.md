@@ -42,7 +42,7 @@ Assuming that your **working directory** is the `labs/` directory like in the gi
 load('../data/nba2017-salary-points.RData')
 ```
 
-Alternative, you can first download the `.RData` file to your working directory, and then `load()` it like this:
+Alternatively, you can first download the `.RData` file to your working directory, and then `load()` it like this:
 
 ``` r
 # download RData file into your working directory
@@ -176,6 +176,15 @@ Now try these. What happens if you specify:
 -   various negative indices: `four[-c(1,2,3)]`?
 -   an index greater than the length of the vector: `four[5]`?
 -   repeated indices: `four[c(1,2,2,3,3,3)]`?
+
+Often, you will need to generate vectors of numeric sequences, like the first five elements `1:5`, or from the first till the last element `1:length(player)`. R provides the colon operator `:`, and the functions `seq()`, and `rep()` to create various types of sequences.
+
+Figure out how to use `seq()`, `rep()` to:
+
+-   all the even elements in `player`
+-   all the odd elements in `salary`
+-   all multiples of 5 (e.g. 5, 10, 15, etc) of `team`
+-   elements in positions 10, 20, 30, 40, etc of `points`
 
 ### Subsetting with Logical Indices
 
@@ -445,7 +454,13 @@ Recycling
 
 Closely related with the concept of *vectorization* we have the notion of **Recycling**. To explain *recycling* let's see an example.
 
-`area` and `water` are given in square kilometers, but what if you need to obtain the areas in square miles?. Let's create two new vectors `area_square_miles` and `water_square_miles` with the converted values in square miles. To convert from square kilometers to aquare miles use the following conversion: 1 sqr km = 0.386 sqr mi
+`salary` is given in dollars, but what if you need to obtain the salaries in millions of dollars?. Create a new vector `salary_mill` with the converted values in millions of dollars.
+
+``` r
+# your code here
+```
+
+Take the values in `height`, given in inches, to create a new vector `height_cms` that show the values in centimeters; use the conversion of 1 inch = 2.54 centimeters.
 
 ``` r
 # your code here
@@ -459,26 +474,18 @@ Well, R uses the **recycling rule**, which takes the shorter vector (in this cas
 
 ### Another recycling example
 
-Here's another example of recycling. Areas of elements in an odd number position will be transformed to square miles; areas of elements in an even number position will be transformed to acres:
+Here's another example of recycling. Heights of elements in an odd number position will be transformed to cms; heights of elements in an even number position will be transformed to meters:
 
 ``` r
-units <- c(0.386, 247.105)
-new_area <- area * units
+units <- c(2.54, 0.0254)
+mix_height <- height * units
 ```
 
-The elements of `units` are recycled and repeated as many times as elements in `area`. The previous command is equivalent to this:
+The elements of `units` are recycled and repeated as many times as elements in `height`. The previous command is equivalent to this:
 
 ``` r
-new_units <- rep(c(0.386, 247.105), length.out = length(area))
-area * new_units
-```
-
-### Your turn
-
-Make a scatterplot of `area_square_miles` and `water_square_miles` transforming the vectors into log scale (use `log()`)
-
-``` r
-# your scatter plot
+new_units <- rep(c(2.54, 0.0254), length.out = length(height))
+height * new_units
 ```
 
 ------------------------------------------------------------------------
@@ -585,3 +592,110 @@ second_factor[second_factor == 'b']
     ## Levels: a b c
 
 ------------------------------------------------------------------------
+
+Solutions
+---------
+
+``` r
+# class of objects
+class(player)
+```
+
+    ## [1] "character"
+
+``` r
+class(team)
+```
+
+    ## [1] "factor"
+
+``` r
+class(position)
+```
+
+    ## [1] "character"
+
+``` r
+class(salary)
+```
+
+    ## [1] "numeric"
+
+``` r
+class(points)
+```
+
+    ## [1] "integer"
+
+``` r
+# check whether the loaded objects are vectors
+is.vector(player)
+```
+
+    ## [1] TRUE
+
+``` r
+is.vector(team)
+```
+
+    ## [1] FALSE
+
+``` r
+is.vector(position)
+```
+
+    ## [1] TRUE
+
+``` r
+is.vector(salary)
+```
+
+    ## [1] TRUE
+
+``` r
+# all the even elements in `player`
+player_even <- player[seq(from = 1, to = length(player), by = 2)]
+
+# all the odd elements in `salary`
+salary_odd <- salary[seq(from = 2, to = length(player), by = 2)]
+
+# all multiples of 5 (e.g. 5, 10, 15, etc) of `team`
+teams_by_5 <- team[seq(from = 5, to = length(player), by = 5)]
+
+# elements in positions 10, 20, 30, 40, etc of `points`
+points_by_10 <- points[seq(from = 10, to = length(player), by = 10)]
+
+# name of the player with largest salary
+player[which.max(salary)]
+```
+
+    ## [1] "LeBron James"
+
+``` r
+# name of the player with smallest salary
+player[which.min(salary)]
+```
+
+    ## [1] "Edy Tavares"
+
+``` r
+# name of the player with largest number of points
+player[which.max(points)]
+```
+
+    ## [1] "Russell Westbrook"
+
+``` r
+# team of the player with the largest number of points
+team[which.max(points)]
+```
+
+    ## [1] OKC
+    ## 30 Levels: ATL BOS BRK CHI CHO CLE DAL DEN DET GSW HOU IND LAC LAL ... WAS
+
+``` r
+# name of the player with the largest number of 3-pointers
+player[which.max(points3)]
+```
+
+    ## [1] "Stephen Curry"
