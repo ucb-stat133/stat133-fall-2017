@@ -18,15 +18,15 @@ The most common format/structure for a data set is in a tabular format, with row
 
 You need to learn how to manipulate data tables. In the past (before 2014), R users manipulated data frames using bracket notation, e.g. `dat[ , ]`, in order to select specific rows, columns, or cells. This is still possible and it is a good skill to learn. But nowadays there is an interesting alternative for *data wrangling* provided with the functionality of the package `"dplyr"`.
 
-Star Wars Data
---------------
+NBA Players Data
+----------------
 
-The data for this lab is in the file `starwars.csv`, which as you may guess, contains 13 variables measured on 20 famous characters of the Star Wars universe.
+The data for this lab is in the file `nba2017-players.csv`, which as you may guess, contains 15 variables measured on 441 players.
 
 To import the data in R you can use the function `read.csv()`:
 
 ``` r
-dat <- read.csv('../data/starwars.csv', stringsAsFactors = FALSE)
+dat <- read.csv('../data/nba2017-players.csv', stringsAsFactors = FALSE)
 ```
 
 Notice that I'm spcifying the argument `stringsAsFactors = FALSE` to avoid the conversion of characters into R factors. Why do you think this is a good practice?
@@ -46,7 +46,7 @@ A first check-up is to examine the dimensions of the data frame with `dim()`:
 dim(dat)
 ```
 
-    ## [1] 20 13
+    ## [1] 441  15
 
 If you know in advanced how many rows and columns are in the data table, this is a good way to make sure that R was able to read all the records.
 
@@ -57,20 +57,27 @@ Then, depending on the size of the data, you may want to take a peek at its cont
 head(dat)
 ```
 
-    ##               name gender height weight eyecolor haircolor skincolor
-    ## 1 Anakin Skywalker   male   1.88   84.0     blue     blond      fair
-    ## 2    Padme Amidala female   1.65   45.0    brown     brown     light
-    ## 3   Luke Skywalker   male   1.72   77.0     blue     blond      fair
-    ## 4   Leia Skywalker female   1.50   49.0    brown     brown     light
-    ## 5     Qui-Gon Jinn   male   1.93   88.5     blue     brown     light
-    ## 6   Obi-Wan Kenobi   male   1.82   77.0 bluegray    auburn      fair
-    ##     homeland    born     died     jedi species     weapon
-    ## 1   Tatooine 41.9BBY     4ABY yes_jedi   human lightsaber
-    ## 2      Naboo   46BBY    19BBY  no_jedi   human    unarmed
-    ## 3   Tatooine   19BBY unk_died yes_jedi   human lightsaber
-    ## 4   Alderaan   19BBY unk_died  no_jedi   human    blaster
-    ## 5 unk_planet   92BBY    32BBY yes_jedi   human lightsaber
-    ## 6    Stewjon   57BBY     0BBY yes_jedi   human lightsaber
+    ##              player team position height weight age experience
+    ## 1        Al Horford  BOS        C     82    245  30          9
+    ## 2      Amir Johnson  BOS       PF     81    240  29         11
+    ## 3     Avery Bradley  BOS       SG     74    180  26          6
+    ## 4 Demetrius Jackson  BOS       PG     73    201  22          0
+    ## 5      Gerald Green  BOS       SF     79    205  31          9
+    ## 6     Isaiah Thomas  BOS       PG     69    185  27          5
+    ##                         college   salary games minutes points points3
+    ## 1         University of Florida 26540100    68    2193    952      86
+    ## 2                               12000000    80    1608    520      27
+    ## 3 University of Texas at Austin  8269663    55    1835    894     108
+    ## 4      University of Notre Dame  1450000     5      17     10       1
+    ## 5                                1410598    47     538    262      39
+    ## 6      University of Washington  6587132    76    2569   2199     245
+    ##   points2 points1
+    ## 1     293     108
+    ## 2     186      67
+    ## 3     251      68
+    ## 4       2       3
+    ## 5      56      33
+    ## 6     437     590
 
 For a more detailed description of how R is treating the data type in each column, you should use the structure function `str()`
 
@@ -79,20 +86,22 @@ For a more detailed description of how R is treating the data type in each colum
 str(dat, vec.len = 1)
 ```
 
-    ## 'data.frame':    20 obs. of  13 variables:
-    ##  $ name     : chr  "Anakin Skywalker" ...
-    ##  $ gender   : chr  "male" ...
-    ##  $ height   : num  1.88 1.65 ...
-    ##  $ weight   : num  84 45 ...
-    ##  $ eyecolor : chr  "blue" ...
-    ##  $ haircolor: chr  "blond" ...
-    ##  $ skincolor: chr  "fair" ...
-    ##  $ homeland : chr  "Tatooine" ...
-    ##  $ born     : chr  "41.9BBY" ...
-    ##  $ died     : chr  "4ABY" ...
-    ##  $ jedi     : chr  "yes_jedi" ...
-    ##  $ species  : chr  "human" ...
-    ##  $ weapon   : chr  "lightsaber" ...
+    ## 'data.frame':    441 obs. of  15 variables:
+    ##  $ player    : chr  "Al Horford" ...
+    ##  $ team      : chr  "BOS" ...
+    ##  $ position  : chr  "C" ...
+    ##  $ height    : int  82 81 ...
+    ##  $ weight    : int  245 240 ...
+    ##  $ age       : int  30 29 ...
+    ##  $ experience: int  9 11 ...
+    ##  $ college   : chr  "University of Florida" ...
+    ##  $ salary    : num  26540100 ...
+    ##  $ games     : int  68 80 ...
+    ##  $ minutes   : int  2193 1608 ...
+    ##  $ points    : int  952 520 ...
+    ##  $ points3   : int  86 27 ...
+    ##  $ points2   : int  293 186 ...
+    ##  $ points1   : int  108 67 ...
 
 When working with data frames, remember to always take some time inspecting the contents, and checking how R is handling the data types. It is in these early stages of data exploration that you can catch potential issues in order to avoid (disastrous?) consequences or bugs in subsequent stages.
 
@@ -125,68 +134,56 @@ Select rows by position with `slice()`
 slice(dat, 1:3)
 ```
 
-    ##               name gender height weight eyecolor haircolor skincolor
-    ## 1 Anakin Skywalker   male   1.88     84     blue     blond      fair
-    ## 2    Padme Amidala female   1.65     45    brown     brown     light
-    ## 3   Luke Skywalker   male   1.72     77     blue     blond      fair
-    ##   homeland    born     died     jedi species     weapon
-    ## 1 Tatooine 41.9BBY     4ABY yes_jedi   human lightsaber
-    ## 2    Naboo   46BBY    19BBY  no_jedi   human    unarmed
-    ## 3 Tatooine   19BBY unk_died yes_jedi   human lightsaber
+    ##          player team position height weight age experience
+    ## 1    Al Horford  BOS        C     82    245  30          9
+    ## 2  Amir Johnson  BOS       PF     81    240  29         11
+    ## 3 Avery Bradley  BOS       SG     74    180  26          6
+    ##                         college   salary games minutes points points3
+    ## 1         University of Florida 26540100    68    2193    952      86
+    ## 2                               12000000    80    1608    520      27
+    ## 3 University of Texas at Austin  8269663    55    1835    894     108
+    ##   points2 points1
+    ## 1     293     108
+    ## 2     186      67
+    ## 3     251      68
 
 Select rows by condition with `filter()`
 
 ``` r
-filter(dat, height > 1.9)
+filter(dat, height > 85)
 ```
 
-    ##           name gender height weight eyecolor haircolor skincolor
-    ## 1 Qui-Gon Jinn   male   1.93   88.5     blue     brown     light
-    ## 2        Dooku   male   1.93   86.0    brown     brown     light
-    ## 3    Chewbacca   male   2.28  112.0     blue     brown      <NA>
-    ## 4        Jabba   male   3.90     NA   yellow      none tan-green
-    ## 5     Grievous   male   2.16  159.0     gold     black    orange
-    ##     homeland     born  died     jedi species      weapon
-    ## 1 unk_planet    92BBY 32BBY yes_jedi   human  lightsaber
-    ## 2    Serenno   102BBY 19BBY yes_jedi   human  lightsaber
-    ## 3   Kashyyyk   200BBY 25ABY  no_jedi wookiee   bowcaster
-    ## 4   Tatooine unk_born  4ABY  no_jedi    hutt     unarmed
-    ## 5      Kalee unk_born 19BBY  no_jedi kaleesh slugthrower
+    ##               player team position height weight age experience
+    ## 1        Edy Tavares  CLE        C     87    260  24          1
+    ## 2   Boban Marjanovic  DET        C     87    290  28          1
+    ## 3 Kristaps Porzingis  NYK       PF     87    240  21          1
+    ## 4        Roy Hibbert  DEN        C     86    270  30          8
+    ## 5      Alexis Ajinca  NOP        C     86    248  28          6
+    ##                 college  salary games minutes points points3 points2
+    ## 1                          5145     1      24      6       0       3
+    ## 2                       7000000    35     293    191       0      72
+    ## 3                       4317720    66    2164   1196     112     331
+    ## 4 Georgetown University 5000000     6      11      4       0       2
+    ## 5                       4600000    39     584    207       0      89
+    ##   points1
+    ## 1       0
+    ## 2      47
+    ## 3     198
+    ## 4       0
+    ## 5      29
 
 Select columns by name with `select()`
 
 ``` r
-select(dat, name, height)
+player_height <- select(dat, player, height)
 ```
-
-    ##                name height
-    ## 1  Anakin Skywalker   1.88
-    ## 2     Padme Amidala   1.65
-    ## 3    Luke Skywalker   1.72
-    ## 4    Leia Skywalker   1.50
-    ## 5      Qui-Gon Jinn   1.93
-    ## 6    Obi-Wan Kenobi   1.82
-    ## 7          Han Solo   1.80
-    ## 8   Sheev Palpatine   1.73
-    ## 9             R2-D2   0.96
-    ## 10            C-3PO   1.67
-    ## 11             Yoda   0.66
-    ## 12       Darth Maul   1.75
-    ## 13            Dooku   1.93
-    ## 14        Chewbacca   2.28
-    ## 15            Jabba   3.90
-    ## 16 Lando Calrissian   1.78
-    ## 17        Boba Fett   1.83
-    ## 18       Jango Fett   1.83
-    ## 19         Grievous   2.16
-    ## 20     Chief Chirpa   1.00
 
 ### Your turn:
 
--   subset the data by selecting the last 5 rows
--   select those individuals with height less than 1.6 meters tall, and of human species
--   of those individuals that are human, select their names and jedi status
--   display the names of jedis
+-   subset the data by selecting the last 5 rows.
+-   select those players with height less than 70 inches tall.
+-   of those players that are centers (position `C`), select their names and salaries.
+-   display the names of the lakers (`'LAL'`).
 
 Your Turn
 ---------
@@ -199,19 +196,23 @@ Use functions in `"dplyr"` to answer the following questions:
 
 -   What's the overall average height?
 
--   Who has the smallest height?
+-   Who is the tallest player?
 
--   Who has the largest height?
+-   Who is the shortest player?
 
--   What are the unique weapons?
+-   Which are the unique teams?
 
--   How many different species?
+-   How many different teams?
 
--   Who is the individual with the shortest height?
+-   Who is the oldest player?
 
--   Are there any subjects with weapon "knife"? If so how many and who are they?
+-   What is the median salary?
 
--   Are there any subjects with height &gt; 2 meters? If so how many and who are they?
+-   Are there any players from "University of California, Berkeley"? If so how many and who are they?
+
+-   Are there any players from "University of California, Los Angeles"? If so how many and who are they?
+
+-   Are there any players with weight greater than 260 pounds? If so how many and who are they?
 
 ### Sorting
 
@@ -234,24 +235,21 @@ Use functions in `"dplyr"` to answer the following questions:
 # Subsetting operations
 # =====================================================
 
-# create a data frame `han` with Han Solo's information (i.e. row)
+# create a data frame `durant` with Kevin Durant's information (i.e. row)
 
 
-# create a data frame `males` with the data of male subjects
+# create a data frame `ucla` with the data of players from college UCLA
 
 
-# get the data for those subjects 
-# with height less than 1.7 
+# create a data frame `rookies` 
+# with those players with 0 years of experience 
 
 
-# get the data for subjects with 
-# height less than 1.7 and weight less than 50
+# create a data frame `rookie_centers` with the data of Center rookie players 
 
 
-# create a data frame `droids_humans` with the data of droids or humans
-
-
-# create a data frame `non_humans` with the data of non-humans
+# create a data frame for players with more than 50 games 
+# and more than 100 minutes
 
 
 #
@@ -279,17 +277,11 @@ Use functions in `"dplyr"` to answer the following questions:
 # median height of unarmed non-humans
 
 
-# get the square weight of non-jedis
+# add a column 'weight_kgm' for weight to kilograms
 
 
-# get the log of height for subjects
-# with blaster or bowcaster weapons
-
-
-# create a new variable "newvar": height divided by weight
-
-
-# add 'newvar' to the data frame sw
+# get the log of height for players
+# with age less than or equal to 25 years
 
 
 #
@@ -303,63 +295,15 @@ Solutions
 ``` r
 # selecting the last 5 rows
 slice(dat, 15:20)
-```
 
-    ##               name gender height weight eyecolor haircolor skincolor
-    ## 1            Jabba   male   3.90     NA   yellow      none tan-green
-    ## 2 Lando Calrissian   male   1.78     79    brown     blank      dark
-    ## 3        Boba Fett   male   1.83     78    brown     black     brown
-    ## 4       Jango Fett   male   1.83     79    brown     black     brown
-    ## 5         Grievous   male   2.16    159     gold     black    orange
-    ## 6     Chief Chirpa   male   1.00     50    black      gray     brown
-    ##      homeland     born     died    jedi species      weapon
-    ## 1    Tatooine unk_born     4ABY no_jedi    hutt     unarmed
-    ## 2     Socorro    31BBY unk_died no_jedi   human     blaster
-    ## 3      Kamino  31.5BBY unk_died no_jedi   human     blaster
-    ## 4 ConcordDawn    66BBY    22BBY no_jedi   human     blaster
-    ## 5       Kalee unk_born    19BBY no_jedi kaleesh slugthrower
-    ## 6       Endor unk_born     4ABY no_jedi    ewok       spear
-
-``` r
 # individuals with height < 1.6, and of human species
 filter(dat, height < 1.6 & species == "human")
-```
 
-    ##             name gender height weight eyecolor haircolor skincolor
-    ## 1 Leia Skywalker female    1.5     49    brown     brown     light
-    ##   homeland  born     died    jedi species  weapon
-    ## 1 Alderaan 19BBY unk_died no_jedi   human blaster
-
-``` r
 # display names and jedi status of humans
 humans <- filter(dat, species == "human")
 select(humans, name, jedi)
-```
 
-    ##                name     jedi
-    ## 1  Anakin Skywalker yes_jedi
-    ## 2     Padme Amidala  no_jedi
-    ## 3    Luke Skywalker yes_jedi
-    ## 4    Leia Skywalker  no_jedi
-    ## 5      Qui-Gon Jinn yes_jedi
-    ## 6    Obi-Wan Kenobi yes_jedi
-    ## 7          Han Solo  no_jedi
-    ## 8   Sheev Palpatine  no_jedi
-    ## 9             Dooku yes_jedi
-    ## 10 Lando Calrissian  no_jedi
-    ## 11        Boba Fett  no_jedi
-    ## 12       Jango Fett  no_jedi
-
-``` r
 # display the names of jedis
 jedis <- filter(dat, jedi == "yes_jedi")
 select(jedis, name)
 ```
-
-    ##               name
-    ## 1 Anakin Skywalker
-    ## 2   Luke Skywalker
-    ## 3     Qui-Gon Jinn
-    ## 4   Obi-Wan Kenobi
-    ## 5             Yoda
-    ## 6            Dooku
