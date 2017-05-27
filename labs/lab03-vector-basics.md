@@ -179,7 +179,7 @@ Now try these. What happens if you specify:
 
 Often, you will need to generate vectors of numeric sequences, like the first five elements `1:5`, or from the first till the last element `1:length(player)`. R provides the colon operator `:`, and the functions `seq()`, and `rep()` to create various types of sequences.
 
-Figure out how to use `seq()`, `rep()` to:
+Figure out how to use `seq()`, `rep()` to subtract:
 
 -   all the even elements in `player`
 -   all the odd elements in `salary`
@@ -213,9 +213,9 @@ four[c(TRUE, FALSE, TRUE, FALSE)]
 four[c(FALSE, FALSE, FALSE, FALSE)]
 ```
 
-When subsetting a vector logically, most of the times you won't really be providing an explicit vector of `TRUE`'s and `FALSE`s. Just imagine having a vector of 100 or 1000 or 1000000 elements, and trying to do logical subsetting by manually creating a logical vector of the same length. Instead, you will be providing a logical condition or a comparison operation that returns a logical vector.
+When subsetting a vector logically, most of the times you won't really be providing an explicit vector of `TRUE`'s and `FALSE`s. Just imagine having a vector of 100 or 1000 or 1000000 elements, and trying to do logical subsetting by manually creating a logical vector of the same length. That would be very boring. Instead, you will be providing a logical condition or a comparison operation that returns a logical vector.
 
-A comparison operation occurs when you use comparison operators such as:
+A **comparison operation** occurs when you use comparison operators such as:
 
 -   `>` greater than
 -   `>=` greater than or equal
@@ -270,64 +270,31 @@ points_four[points_four != 10]
 
     ## [1] 952 520 894
 
-Logical conditions, in turn, use a logical operator:
+In addition to using comparison operators, you can also use **logical operators** to produce a logical vector. The most common type of logical operators are:
 
 -   `&` AND
 -   `|` OR
 -   `!` negation
 
+Run the following commands to see what R does:
+
 ``` r
 # AND
 TRUE & TRUE
-```
-
-    ## [1] TRUE
-
-``` r
 TRUE & FALSE
-```
-
-    ## [1] FALSE
-
-``` r
 FALSE & FALSE
-```
 
-    ## [1] FALSE
-
-``` r
 # OR
 TRUE | TRUE
-```
-
-    ## [1] TRUE
-
-``` r
 TRUE | FALSE
-```
-
-    ## [1] TRUE
-
-``` r
 FALSE | FALSE
-```
 
-    ## [1] FALSE
-
-``` r
 # NOT
 !TRUE
-```
-
-    ## [1] FALSE
-
-``` r
 !FALSE
 ```
 
-    ## [1] TRUE
-
-Here are more examples of logical subsetting with the US States data vectors:
+Logical operators allow you to combine several comparisons:
 
 ``` r
 # players of Golden State (GSW)
@@ -345,6 +312,12 @@ player[points > 1000 & points < 1200]
 Write commands to answer the following questions:
 
 ``` r
+# subset Centers of Warriors (GSW)
+
+
+# subset Shooting Guards and Point Guards of Lakers (LAL) 
+
+
 # name of the player with largest salary
 
 
@@ -497,99 +470,60 @@ As mentioned before, vectors are the most essential type of data structure in R.
 
 Related to vectors, there is another important data structure in R called **factor**. Factors are data structures exclusively designed to handle categorical data.
 
-The term *factor* as used in R for handling categorical variables, comes from the terminology used in *Analysis of Variance*, commonly referred to as ANOVA. In this statistical method, a categorical variable is commonly referred to as *factor* and its categories are known as *levels*.
+The object `team` is an R factor. You can confirm this by using `is.factor()` or `class()`
+
+``` r
+is.factor(team)
+```
+
+    ## [1] TRUE
 
 ### Creating Factors
 
-To create a factor you use the homonym function `factor()`, which takes a vector as input. The vector can be either numeric, character or logical.
+Use `factor()` to create an object `position_fac` by converting `position` into a factor:
 
 ``` r
-# numeric vector
-num_vector <- c(1, 2, 3, 1, 2, 3, 2)
-
-# creating a factor from num_vector
-first_factor <- factor(num_vector)
-
-first_factor
+position_fac <- factor(position)
 ```
 
-    ## [1] 1 2 3 1 2 3 2
-    ## Levels: 1 2 3
-
-You can also obtain a factor from a character vector:
+If you have a factor, you can invoke `table()` to get a the frequencies (i.e. counts) of its categories or *levels*:
 
 ``` r
-# string vector
-str_vector <- c('a', 'b', 'c', 'b', 'c', 'a', 'c', 'b')
-
-str_vector
+table(position_fac)
 ```
 
-    ## [1] "a" "b" "c" "b" "c" "a" "c" "b"
-
-``` r
-# creating a factor from str_vector
-second_factor <- factor(str_vector)
-
-second_factor
-```
-
-    ## [1] a b c b c a c b
-    ## Levels: a b c
-
-Notice how `str_vector` and `second_factor` are displayed. Even though the elements are the same in both the vector and the factor, they are printed in different formats. The letters in the string vector are displayed with quotes, while the letters in the factor are printed without quotes.
-
-### How does R store factors?
-
-Under the hood, a factor is internally stored using two arrays: one is an integer array containing the values of categories, the other array is the "levels" which has the names of categories which are mapped to the integers.
-
-One way to confirm that the values of the categories are mapped as integers is by using the function `storage.mode()`
-
-``` r
-# storage of factor
-storage.mode(first_factor)
-```
-
-    ## [1] "integer"
+    ## position_fac
+    ##  C PF PG SF SG 
+    ## 89 89 85 83 95
 
 ### Manipulating Factors
 
 Because factors are internally stored as integers, you can manipulate factors as any other vector:
 
 ``` r
-first_factor[1:5]
+position_fac[1:5]
 ```
 
-    ## [1] 1 2 3 1 2
-    ## Levels: 1 2 3
+    ## [1] C  PF SG PG SF
+    ## Levels: C PF PG SF SG
+
+Practice manipulating `position_fac` to get:
 
 ``` r
-first_factor[c(1, 3, 5)]
+# positions of Warriors
+
+
+# positions of players with salaries > 15 millions
+
+
+# frequencies (counts) of positions with salaries > 15 millions
+
+
+# relative frequencies (proportions) of 'SG' (Shooting Guards) in each team
+
+
+#
 ```
-
-    ## [1] 1 3 2
-    ## Levels: 1 2 3
-
-``` r
-first_factor[rep(1, 5)]
-```
-
-    ## [1] 1 1 1 1 1
-    ## Levels: 1 2 3
-
-``` r
-second_factor[second_factor == 'a']
-```
-
-    ## [1] a a
-    ## Levels: a b c
-
-``` r
-second_factor[second_factor == 'b']
-```
-
-    ## [1] b b b
-    ## Levels: a b c
 
 ------------------------------------------------------------------------
 
@@ -664,9 +598,27 @@ teams_by_5 <- team[seq(from = 5, to = length(player), by = 5)]
 
 # elements in positions 10, 20, 30, 40, etc of `points`
 points_by_10 <- points[seq(from = 10, to = length(player), by = 10)]
+```
 
+``` r
+# centers of Warriors
+player[team == 'GSW' & position == "C"]
+```
+
+    ## [1] "Damian Jones"  "David West"    "JaVale McGee"  "Kevon Looney" 
+    ## [5] "Zaza Pachulia"
+
+``` r
+# Shooting Guards and Point Guards of Lakers (LAL) 
+player[team == 'LAL' & (position == "SG" | position == "PG")]
+```
+
+    ## [1] "D'Angelo Russell" "David Nwaba"      "Jordan Clarkson" 
+    ## [4] "Nick Young"       "Tyler Ennis"
+
+``` r
 # name of the player with largest salary
-player[which.max(salary)]
+player[salary == max(salary)]
 ```
 
     ## [1] "LeBron James"
@@ -699,3 +651,46 @@ player[which.max(points3)]
 ```
 
     ## [1] "Stephen Curry"
+
+``` r
+# positions of Warriors
+position_fac[team == 'GSW']
+```
+
+    ##  [1] SF C  C  PF SG PF C  SF C  SG SF SG PG PG C 
+    ## Levels: C PF PG SF SG
+
+``` r
+# positions of players with salaries > 15 millions
+position_fac[salary > 20000000]
+```
+
+    ##  [1] C  PF SF SG SG C  PF SG C  C  SG SF PG C  SF PF PG PF PG C  PG SF C 
+    ## [24] PG PG C  PF PF
+    ## Levels: C PF PG SF SG
+
+``` r
+# frequencies (counts) of positions with salaries > 15 millions
+table(position_fac[salary > 15000000])
+```
+
+    ## 
+    ##  C PF PG SF SG 
+    ## 17  9  9 13  8
+
+``` r
+# relative frequencies (proportions) of 'SG' (Shooting Guards) in each team
+prop.table(table(team[position_fac == 'SG']))
+```
+
+    ## 
+    ##        ATL        BOS        BRK        CHI        CHO        CLE 
+    ## 0.01052632 0.03157895 0.04210526 0.04210526 0.04210526 0.03157895 
+    ##        DAL        DEN        DET        GSW        HOU        IND 
+    ## 0.02105263 0.04210526 0.03157895 0.03157895 0.03157895 0.02105263 
+    ##        LAC        LAL        MEM        MIA        MIL        MIN 
+    ## 0.03157895 0.03157895 0.03157895 0.04210526 0.04210526 0.02105263 
+    ##        NOP        NYK        OKC        ORL        PHI        PHO 
+    ## 0.02105263 0.04210526 0.02105263 0.04210526 0.02105263 0.04210526 
+    ##        POR        SAC        SAS        TOR        UTA        WAS 
+    ## 0.04210526 0.05263158 0.05263158 0.03157895 0.02105263 0.03157895
