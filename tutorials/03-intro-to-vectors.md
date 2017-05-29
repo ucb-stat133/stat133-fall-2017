@@ -1,0 +1,385 @@
+Vectors and other data structures
+================
+Gaston Sanchez
+
+> ### Learning Objectives
+>
+> -   Work with vectors of different data types
+> -   Understand the concept of *atomic* structures
+> -   Learn how to subset and slice R vectors
+> -   Understand the concept of *vectorization*
+> -   Understand *recycling* rules in R
+
+------------------------------------------------------------------------
+
+Vectors in R
+------------
+
+Vectors are the most basic type of data structures in R. Learning how to manipulate data structures in R requires you to start learning how to manipulate vectors.
+
+### Creating vectors with `c()`
+
+Among the main functions to work with vectors we have the **combine** function `c()`. This is the workhorse function to create vectors in R. Here's how to create various types of vectors with `c()`:
+
+``` r
+jedis <- c('Yoda', 'Qui-Gon', 'Obiwan', 'Luke')
+heights <- c(66, 193, 182, 172)   # in cms
+humans <- c(FALSE, TRUE, TRUE, TRUE)
+```
+
+### Vectors are Atomic structures
+
+The first thing you should learn about R vectors is that they are **atomic structures**, which is just the fancy name to indicate that all the elements of a vector must be of the same type, either all numbers, all characters, or all logical values.
+
+How do you know that a given vector is of a certain data type? There are several functions that allow you to answer this question:
+
+-   `typeof()`
+-   `class()`
+-   `mode()`
+
+Using `typeof()`
+
+``` r
+typeof(jedis)
+```
+
+    ## [1] "character"
+
+``` r
+typeof(heights)
+```
+
+    ## [1] "double"
+
+``` r
+typeof(humans)
+```
+
+    ## [1] "logical"
+
+Using `mode()`
+
+``` r
+mode(jedis)
+```
+
+    ## [1] "character"
+
+``` r
+mode(heights)
+```
+
+    ## [1] "numeric"
+
+``` r
+mode(humans)
+```
+
+    ## [1] "logical"
+
+Manipulating Vectors: Subsetting
+--------------------------------
+
+Subsetting refers to extracting elements of a vector (or another R object). To do so, you use what is known as **bracket notation**. This implies using (square) brackets `[ ]` to get access to the elements of a vector:
+
+``` r
+# first element
+jedis[1]
+```
+
+    ## [1] "Yoda"
+
+``` r
+# first three elements
+jedis[1:3]
+```
+
+    ## [1] "Yoda"    "Qui-Gon" "Obiwan"
+
+What type of things can you specify inside the brackets? Basically:
+
+-   numeric vectors
+-   logical vectors (the length of the logical vector must match the length of the vector to be subset)
+-   character vectors (if the elements have names)
+
+### Subsetting with Numeric Indices
+
+Here are some subsetting examples using a numeric vector inside the brackets:
+
+``` r
+# fifth element of 'state'
+jedis[4]
+```
+
+    ## [1] "Luke"
+
+``` r
+# numeric range
+jedis[2:4]
+```
+
+    ## [1] "Qui-Gon" "Obiwan"  "Luke"
+
+``` r
+# numeric vector
+jedis[c(1, 3)]
+```
+
+    ## [1] "Yoda"   "Obiwan"
+
+``` r
+# different order
+jedis[c(3, 1, 2)]
+```
+
+    ## [1] "Obiwan"  "Yoda"    "Qui-Gon"
+
+``` r
+# third element (four times)
+jedis[rep(3, 4)]
+```
+
+    ## [1] "Obiwan" "Obiwan" "Obiwan" "Obiwan"
+
+### Subsetting with Logical Indices
+
+Logical subsetting involves using a logical vector inside the brackets. This type of subsetting is very powerful because it allows you to extract elements based on some logical condition.
+
+To do logical subsetting, the vector that you put inside the brackets, must match the length of the manipulated vector.
+
+Here are some examples of logical subsetting:
+
+``` r
+# height of Obiwan
+heights[jedis == 'Obiwan']
+```
+
+    ## [1] 182
+
+``` r
+# name of jedis with height greater than 180 cm
+jedis[heights > 180]
+```
+
+    ## [1] "Qui-Gon" "Obiwan"
+
+``` r
+# name of jedis with height between 100 and 180 cm (exclusive)
+jedis[heights > 100 & heights < 180]
+```
+
+    ## [1] "Luke"
+
+``` r
+# name of jedis with height between 100 and 180 cm (inclusive)
+jedis[heights >= 100 & heights <= 180]
+```
+
+    ## [1] "Luke"
+
+### Subsetting with Character Vectors
+
+A third type of subsetting involves passing a character vector inside brackets. When you do this, the characters are supposed to be names of the manipulated vector.
+
+None of the vectors `jedis`, `heights`, and `humans`, have names. You can confirm that with the `names()` function applied on any of the vectors:
+
+``` r
+names(heights)
+```
+
+    ## NULL
+
+Create a new vector `inches` by converting `height` into inches, and then assign `jedis` as the names of `inches`
+
+``` r
+# create 'inches'
+inches <- heights * 0.3937
+
+# assign 'jedis' as names of 'inches'
+names(inches) <- jedis
+```
+
+You should have a vector `inches` with named elements. Now you can use character subsetting:
+
+``` r
+inches["Luke"]
+```
+
+    ##    Luke 
+    ## 67.7164
+
+``` r
+inches[c("Obiwan", "Qui-Gon", "Yoda")]
+```
+
+    ##  Obiwan Qui-Gon    Yoda 
+    ## 71.6534 75.9841 25.9842
+
+Vectorization
+-------------
+
+When you create the vectors `log_area <- log(area)` and `log_water <- log(water)`, what you're doing is applying a function to a vector, which in turn acts on all elements of the vector.
+
+This is called **Vectorization** in R parlance. Most functions that operate with vectors in R are **vectorized** functions. This means that an action is applied to all elements of the vector without the need to explicitly type commands to traverse all the elements.
+
+In many other programming languages, you would have to use a set of commands to loop over each element of a vector (or list of numbers) to transform them. But not in R.
+
+Another example of vectorization would be the calculation of the square root of all the elements in `heights`:
+
+``` r
+sqrt(heights)
+```
+
+    ## [1]  8.124038 13.892444 13.490738 13.114877
+
+Or the conversion of `heights` into inches:
+
+``` r
+heights * 0.3937 
+```
+
+    ## [1] 25.9842 75.9841 71.6534 67.7164
+
+### Why should you care about vectorization?
+
+If you are new to programming, learning about R's vectorization will be very natural (you won't stop to think about it too much). If you have some previous programming experience in other languages (e.g. C, python, perl), you know that vectorization does not tend to be a native thing.
+
+Vectorization is essential in R. It saves you from typing many lines of code, and you will exploit vectorization with other useful functions known as the *apply* family functions (we'll talk about them later in the course).
+
+Recycling
+---------
+
+Closely related with the concept of *vectorization* we have the notion of **Recycling**. To explain *recycling* let's see an example.
+
+`area` and `water` are given in square kilometers, but what if you need to obtain the areas in square miles?. Let's create two new vectors `area_square_miles` and `water_square_miles` with the converted values in square miles. To convert from square kilometers to aquare miles use the following conversion: 1 sqr km = 0.386 sqr mi
+
+``` r
+# your code here
+```
+
+What you just did (assuming that you did things correctly) is called **Recycling**. To understand this concept, you need to remember that R does not have a data structure for scalars (single numbers). Scalars are in reality vectors of length 1.
+
+Converting square kms to square miles requires this operation: `area * 0.836`. Although it may not be obvious, we are multiplying two vectors: `area` and `0.836`. Moreover (and more important) **we are multiplying two vectors of different lengths!**. So how does R know what to do in this cases?
+
+Well, R uses the **recycling rule**, which takes the shorter vector (in this case `0.386`) and recycles its elements to form a temporary vector that matches the length of the longer vector (i.e. `area`).
+
+### Another recycling example
+
+Here's another example of recycling. Areas of elements in an odd number position will be transformed to square miles; areas of elements in an even number position will be transformed to acres:
+
+``` r
+units <- c(0.386, 247.105)
+new_area <- area * units
+```
+
+The elements of `units` are recycled and repeated as many times as elements in `area`. The previous command is equivalent to this:
+
+``` r
+new_units <- rep(c(0.386, 247.105), length.out = length(area))
+area * new_units
+```
+
+------------------------------------------------------------------------
+
+Factors
+-------
+
+As mentioned before, vectors are the most essential type of data structure in R. They are *atomic* structures (can contain only one type of data): integers, real numbers, logical values, characters, complex numbers.
+
+Related to vectors, there is another important data structure in R called **factor**. Factors are data structures exclusively designed to handle categorical data.
+
+The term *factor* as used in R for handling categorical variables, comes from the terminology used in *Analysis of Variance*, commonly referred to as ANOVA. In this statistical method, a categorical variable is commonly referred to as *factor* and its categories are known as *levels*.
+
+### Creating Factors
+
+To create a factor you use the homonym function `factor()`, which takes a vector as input. The vector can be either numeric, character or logical.
+
+``` r
+# numeric vector
+num_vector <- c(1, 2, 3, 1, 2, 3, 2)
+
+# creating a factor from num_vector
+first_factor <- factor(num_vector)
+
+first_factor
+```
+
+    ## [1] 1 2 3 1 2 3 2
+    ## Levels: 1 2 3
+
+You can also obtain a factor from a character vector:
+
+``` r
+# string vector
+str_vector <- c('a', 'b', 'c', 'b', 'c', 'a', 'c', 'b')
+
+str_vector
+```
+
+    ## [1] "a" "b" "c" "b" "c" "a" "c" "b"
+
+``` r
+# creating a factor from str_vector
+second_factor <- factor(str_vector)
+
+second_factor
+```
+
+    ## [1] a b c b c a c b
+    ## Levels: a b c
+
+Notice how `str_vector` and `second_factor` are displayed. Even though the elements are the same in both the vector and the factor, they are printed in different formats. The letters in the string vector are displayed with quotes, while the letters in the factor are printed without quotes.
+
+### How does R store factors?
+
+Under the hood, a factor is internally stored using two arrays: one is an integer array containing the values of categories, the other array is the "levels" which has the names of categories which are mapped to the integers.
+
+One way to confirm that the values of the categories are mapped as integers is by using the function `storage.mode()`
+
+``` r
+# storage of factor
+storage.mode(first_factor)
+```
+
+    ## [1] "integer"
+
+### Manipulating Factors
+
+Because factors are internally stored as integers, you can manipulate factors as any other vector:
+
+``` r
+first_factor[1:5]
+```
+
+    ## [1] 1 2 3 1 2
+    ## Levels: 1 2 3
+
+``` r
+first_factor[c(1, 3, 5)]
+```
+
+    ## [1] 1 3 2
+    ## Levels: 1 2 3
+
+``` r
+first_factor[rep(1, 5)]
+```
+
+    ## [1] 1 1 1 1 1
+    ## Levels: 1 2 3
+
+``` r
+second_factor[second_factor == 'a']
+```
+
+    ## [1] a a
+    ## Levels: a b c
+
+``` r
+second_factor[second_factor == 'b']
+```
+
+    ## [1] b b b
+    ## Levels: a b c
+
+------------------------------------------------------------------------
