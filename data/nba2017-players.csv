@@ -1,0 +1,442 @@
+"player","team","position","height","weight","age","experience","college","salary","games","minutes","points","points3","points2","points1"
+"Al Horford","BOS","C",82,245,30,9,"University of Florida",26540100,68,2193,952,86,293,108
+"Amir Johnson","BOS","PF",81,240,29,11,"",1.2e+07,80,1608,520,27,186,67
+"Avery Bradley","BOS","SG",74,180,26,6,"University of Texas at Austin",8269663,55,1835,894,108,251,68
+"Demetrius Jackson","BOS","PG",73,201,22,0,"University of Notre Dame",1450000,5,17,10,1,2,3
+"Gerald Green","BOS","SF",79,205,31,9,"",1410598,47,538,262,39,56,33
+"Isaiah Thomas","BOS","PG",69,185,27,5,"University of Washington",6587132,76,2569,2199,245,437,590
+"Jae Crowder","BOS","SF",78,235,26,4,"Marquette University",6286408,72,2335,999,157,176,176
+"James Young","BOS","SG",78,215,21,2,"University of Kentucky",1825200,29,220,68,12,13,6
+"Jaylen Brown","BOS","SF",79,225,20,0,"University of California",4743000,78,1341,515,46,146,85
+"Jonas Jerebko","BOS","PF",82,231,29,6,"",5e+06,78,1232,299,45,69,26
+"Jordan Mickey","BOS","PF",80,235,22,1,"Louisiana State University",1223653,25,141,38,0,15,8
+"Kelly Olynyk","BOS","C",84,238,25,3,"Gonzaga University",3094014,75,1538,678,68,192,90
+"Marcus Smart","BOS","SG",76,220,22,2,"Oklahoma State University",3578880,79,2399,835,94,175,203
+"Terry Rozier","BOS","PG",74,190,22,1,"University of Louisville",1906440,74,1263,410,57,94,51
+"Tyler Zeller","BOS","C",84,253,27,4,"University of North Carolina",8e+06,51,525,178,0,78,22
+"Channing Frye","CLE","C",83,255,33,10,"University of Arizona",7806971,74,1398,676,137,101,63
+"Dahntay Jones","CLE","SF",78,225,36,12,"Duke University",18255,1,12,9,0,3,3
+"Deron Williams","CLE","PG",75,200,32,11,"University of Illinois at Urbana-Champaign",259626,24,486,179,22,46,21
+"Derrick Williams","CLE","PF",80,240,25,5,"University of Arizona",268029,25,427,156,21,33,27
+"Edy Tavares","CLE","C",87,260,24,1,"",5145,1,24,6,0,3,0
+"Iman Shumpert","CLE","SG",77,220,26,5,"Georgia Institute of Technology",9700000,76,1937,567,94,107,71
+"J.R. Smith","CLE","SG",78,225,31,12,"",12800000,41,1187,351,95,28,10
+"James Jones","CLE","SF",80,218,36,13,"University of Miami",1551659,48,381,132,31,13,13
+"Kay Felder","CLE","PG",69,176,21,0,"Oakland University",543471,42,386,166,7,55,35
+"Kevin Love","CLE","PF",82,251,28,8,"University of California, Los Angeles",21165675,60,1885,1142,145,225,257
+"Kyle Korver","CLE","SG",79,212,35,13,"Creighton University",5239437,35,859,373,97,34,14
+"Kyrie Irving","CLE","PG",75,193,24,5,"Duke University",17638063,72,2525,1816,177,494,297
+"LeBron James","CLE","SF",80,250,32,13,"",30963450,74,2794,1954,124,612,358
+"Richard Jefferson","CLE","SF",79,233,36,15,"University of Arizona",2500000,79,1614,448,62,91,80
+"Tristan Thompson","CLE","C",81,238,25,5,"University of Texas at Austin",15330435,78,2336,630,0,262,106
+"Bruno Caboclo","TOR","SF",81,218,21,2,"",1589640,9,40,14,2,4,0
+"Cory Joseph","TOR","SG",75,193,25,5,"University of Texas at Austin",7330000,80,2003,740,48,251,94
+"Delon Wright","TOR","PG",77,183,24,1,"University of Utah",1577280,27,446,150,10,39,42
+"DeMar DeRozan","TOR","SG",79,221,27,7,"University of Southern California",26540100,74,2620,2020,33,688,545
+"DeMarre Carroll","TOR","SF",80,215,30,7,"University of Missouri",14200000,72,1882,638,109,111,89
+"Fred VanVleet","TOR","PG",72,195,22,0,"Wichita State University",543471,37,294,107,11,28,18
+"Jakob Poeltl","TOR","C",84,248,21,0,"University of Utah",2703960,54,626,165,0,67,31
+"Jonas Valanciunas","TOR","C",84,265,24,4,"",14382022,80,2066,959,1,390,176
+"Kyle Lowry","TOR","PG",72,205,30,10,"Villanova University",1.2e+07,60,2244,1344,193,233,299
+"Lucas Nogueira","TOR","C",84,241,24,2,"",1921320,57,1088,253,3,100,44
+"Norman Powell","TOR","SG",76,215,23,1,"University of California, Los Angeles",874636,76,1368,636,56,171,126
+"P.J. Tucker","TOR","SF",78,245,31,5,"University of Texas at Austin",5300000,24,609,139,24,28,11
+"Pascal Siakam","TOR","PF",81,230,22,0,"New Mexico State University",1196040,55,859,229,1,102,22
+"Patrick Patterson","TOR","PF",81,230,27,6,"University of Kentucky",6050000,65,1599,445,94,60,43
+"Serge Ibaka","TOR","PF",82,235,27,7,"",12250000,23,712,327,41,87,30
+"Bojan Bogdanovic","WAS","SF",80,216,27,2,"",3730653,26,601,330,45,62,71
+"Bradley Beal","WAS","SG",77,207,23,4,"University of Florida",22116750,77,2684,1779,223,414,282
+"Brandon Jennings","WAS","PG",73,170,27,7,"",1200000,23,374,81,11,18,12
+"Chris McCullough","WAS","PF",83,200,21,1,"Syracuse University",1191480,2,8,1,0,0,1
+"Daniel Ochefu","WAS","C",83,245,23,0,"Villanova University",543471,19,75,24,0,12,0
+"Ian Mahinmi","WAS","C",83,250,30,8,"",15944154,31,555,173,0,65,43
+"Jason Smith","WAS","C",84,245,30,8,"Colorado State University",5e+06,74,1068,420,37,137,35
+"John Wall","WAS","PG",76,195,26,6,"University of Kentucky",16957900,78,2836,1805,89,558,422
+"Marcin Gortat","WAS","C",83,240,32,9,"",1.2e+07,82,2556,883,0,390,103
+"Markieff Morris","WAS","PF",82,245,27,5,"University of Kansas",7400000,76,2374,1063,71,335,180
+"Otto Porter","WAS","SF",80,198,23,3,"Georgetown University",5893981,80,2605,1075,148,266,99
+"Sheldon McClellan","WAS","SG",77,200,24,0,"University of Miami",543471,30,287,90,7,23,23
+"Tomas Satoransky","WAS","SG",79,210,25,0,"",2870813,57,719,154,9,52,23
+"Trey Burke","WAS","PG",73,191,24,3,"University of Michigan",3386598,57,703,285,31,85,22
+"DeAndre' Bembry","ATL","SF",78,210,22,0,"Saint Joseph's University",1499760,38,371,101,1,46,6
+"Dennis Schroder","ATL","PG",73,172,23,3,"",2708582,79,2485,1414,100,448,218
+"Dwight Howard","ATL","C",83,265,31,12,"",23180275,74,2199,1002,0,388,226
+"Ersan Ilyasova","ATL","PF",82,235,29,8,"",8400000,26,633,270,32,61,52
+"Jose Calderon","ATL","PG",75,200,35,11,"",392478,17,247,61,8,15,7
+"Kent Bazemore","ATL","SF",77,201,27,4,"Old Dominion University",15730338,73,1963,801,92,203,119
+"Kris Humphries","ATL","PF",81,235,31,12,"University of Minnesota",4e+06,56,689,257,19,68,64
+"Malcolm Delaney","ATL","PG",75,190,27,0,"Virginia Polytechnic Institute and State University",2500000,73,1248,391,26,119,75
+"Mike Dunleavy","ATL","SF",81,230,36,14,"Duke University",4837500,30,475,169,33,24,22
+"Mike Muscala","ATL","C",83,240,25,3,"Bucknell University",1015696,70,1237,435,46,124,49
+"Paul Millsap","ATL","PF",80,246,31,10,"Louisiana Tech University",20072033,69,2343,1246,75,355,311
+"Ryan Kelly","ATL","PF",83,230,25,3,"Duke University",418228,16,110,25,4,4,5
+"Thabo Sefolosha","ATL","SF",79,220,32,10,"",3850000,62,1596,444,41,133,55
+"Tim Hardaway","ATL","SG",78,205,24,3,"University of Michigan",2281605,79,2154,1143,149,266,164
+"Giannis Antetokounmpo","MIL","SF",83,222,22,3,"",2995421,80,2845,1832,49,607,471
+"Greg Monroe","MIL","C",83,265,26,6,"Georgetown University",17100000,81,1823,951,0,387,177
+"Jabari Parker","MIL","PF",80,250,21,2,"Duke University",5374320,51,1728,1025,65,334,162
+"Jason Terry","MIL","SG",74,185,39,17,"University of Arizona",1551659,74,1365,307,73,32,24
+"John Henson","MIL","C",83,229,26,4,"University of North Carolina",12517606,58,1123,392,0,159,74
+"Khris Middleton","MIL","SF",80,234,25,4,"Texas A&M University",15200000,29,889,426,45,105,81
+"Malcolm Brogdon","MIL","SG",77,215,24,0,"University of Virginia",925000,75,1982,767,78,212,109
+"Matthew Dellavedova","MIL","PG",76,198,26,3,"Saint Mary's College of California",9607500,76,1986,577,79,129,82
+"Michael Beasley","MIL","PF",81,235,28,8,"Kansas State University",1403611,56,935,528,18,198,78
+"Mirza Teletovic","MIL","PF",81,242,31,4,"",10500000,70,1133,451,104,52,35
+"Rashad Vaughn","MIL","SG",78,202,20,1,"University of Nevada, Las Vegas",1811040,41,458,142,26,31,2
+"Spencer Hawes","MIL","PF",85,245,28,9,"University of Washington",6348759,19,171,83,9,21,14
+"Thon Maker","MIL","C",85,216,19,0,"",2568600,57,562,226,28,55,32
+"Tony Snell","MIL","SG",79,200,25,3,"University of New Mexico",2368327,80,2336,683,144,102,47
+"Aaron Brooks","IND","PG",72,161,32,8,"University of Oregon",2700000,65,894,322,48,73,32
+"Al Jefferson","IND","C",82,289,32,12,"",10230179,66,931,535,0,235,65
+"C.J. Miles","IND","SF",78,225,29,11,"",4583450,76,1776,815,169,112,84
+"Georges Niang","IND","PF",80,230,23,0,"Iowa State University",650000,23,93,21,1,8,2
+"Jeff Teague","IND","PG",74,186,28,7,"Wake Forest University",8800000,82,2657,1254,90,312,360
+"Joe Young","IND","PG",74,180,24,1,"University of Oregon",1052342,33,135,68,5,21,11
+"Kevin Seraphin","IND","PF",81,285,27,6,"",1800000,49,559,232,0,109,14
+"Lance Stephenson","IND","SG",77,230,26,6,"University of Cincinnati",4e+06,6,132,43,5,13,2
+"Lavoy Allen","IND","PF",81,260,27,5,"Temple University",4e+06,61,871,177,0,77,23
+"Monta Ellis","IND","SG",75,185,31,11,"",10770000,74,1998,630,43,204,93
+"Myles Turner","IND","C",83,243,20,1,"University of Texas at Austin",2463840,81,2541,1173,40,404,245
+"Paul George","IND","SF",81,220,26,6,"California State University, Fresno",18314532,75,2689,1775,195,427,336
+"Rakeem Christmas","IND","PF",81,250,25,1,"Syracuse University",1052342,29,219,59,0,19,21
+"Thaddeus Young","IND","PF",80,221,28,9,"Georgia Institute of Technology",14153652,74,2237,814,45,317,45
+"Anthony Morrow","CHI","SG",77,210,31,8,"Georgia Institute of Technology",3488000,9,87,41,6,6,11
+"Bobby Portis","CHI","PF",83,230,21,1,"University of Arkansas",1453680,64,1000,437,32,151,39
+"Cameron Payne","CHI","PG",75,185,22,1,"Murray State University",2112480,11,142,54,11,10,1
+"Cristiano Felicio","CHI","C",82,275,24,1,"",874636,66,1040,316,0,128,60
+"Denzel Valentine","CHI","SG",78,212,23,0,"Michigan State University",2092200,57,976,291,73,29,14
+"Dwyane Wade","CHI","SG",76,220,35,13,"Marquette University",23200000,60,1792,1096,45,369,223
+"Isaiah Canaan","CHI","SG",72,201,25,3,"Murray State University",1015696,39,592,181,25,38,30
+"Jerian Grant","CHI","PG",76,195,24,1,"University of Notre Dame",1643040,63,1028,370,49,79,65
+"Jimmy Butler","CHI","SF",79,220,27,5,"Marquette University",17552209,76,2809,1816,91,479,585
+"Joffrey Lauvergne","CHI","C",83,220,25,2,"",1709720,20,241,89,6,31,9
+"Michael Carter-Williams","CHI","PG",78,190,25,3,"Syracuse University",3183526,45,846,297,15,97,58
+"Nikola Mirotic","CHI","PF",82,220,25,2,"",5782450,70,1679,744,129,129,99
+"Paul Zipser","CHI","SF",80,215,22,0,"",750000,44,843,240,33,55,31
+"Rajon Rondo","CHI","PG",73,186,30,10,"University of Kentucky",1.4e+07,69,1843,538,50,179,30
+"Robin Lopez","CHI","C",84,255,28,8,"Stanford University",13219250,81,2271,839,0,382,75
+"Dion Waiters","MIA","SG",76,225,25,4,"Syracuse University",2898000,46,1384,729,85,196,82
+"Goran Dragic","MIA","PG",75,190,30,8,"",15890000,73,2459,1483,117,417,298
+"Hassan Whiteside","MIA","C",84,265,27,4,"Marshall University",22116750,77,2513,1309,0,542,225
+"James Johnson","MIA","PF",81,250,29,7,"Wake Forest University",4e+06,76,2085,975,87,281,152
+"Josh McRoberts","MIA","PF",82,240,29,9,"Duke University",5782450,22,381,107,13,31,6
+"Josh Richardson","MIA","SG",78,200,23,1,"University of Tennessee",874636,53,1614,539,75,127,60
+"Justise Winslow","MIA","SF",79,225,20,1,"Duke University",2593440,18,625,196,7,73,29
+"Luke Babbitt","MIA","SF",81,225,27,6,"University of Nevada, Reno",1227000,68,1065,324,87,26,11
+"Okaro White","MIA","PF",80,204,24,0,"Florida State University",210995,35,471,98,12,21,20
+"Rodney McGruder","MIA","SG",76,205,25,0,"Kansas State University",543471,78,1966,497,73,117,44
+"Tyler Johnson","MIA","PG",76,186,24,2,"California State University, Fresno",5628000,73,2178,1002,93,264,195
+"Udonis Haslem","MIA","C",80,235,36,13,"University of Florida",4e+06,17,130,31,0,11,9
+"Wayne Ellington","MIA","SG",76,200,29,7,"University of North Carolina",6e+06,62,1500,648,149,82,37
+"Willie Reed","MIA","C",82,220,26,1,"Saint Louis University",1015696,71,1031,374,1,161,49
+"Andre Drummond","DET","C",83,279,23,4,"University of Connecticut",22116750,81,2409,1105,2,481,137
+"Aron Baynes","DET","C",82,260,30,4,"Washington State University",6500000,75,1163,365,0,143,79
+"Beno Udrih","DET","PG",75,205,34,12,"",1551659,39,560,227,11,81,32
+"Boban Marjanovic","DET","C",87,290,28,1,"",7e+06,35,293,191,0,72,47
+"Darrun Hilliard","DET","SG",78,205,23,1,"Villanova University",874060,39,381,127,12,35,21
+"Henry Ellenson","DET","PF",83,245,20,0,"Marquette University",1704120,19,146,60,10,13,4
+"Ish Smith","DET","PG",72,175,28,6,"Wake Forest University",6e+06,81,1955,758,28,301,72
+"Jon Leuer","DET","PF",82,228,27,5,"University of Wisconsin",10991957,75,1944,767,49,261,98
+"Kentavious Caldwell-Pope","DET","SG",77,205,23,3,"University of Georgia",3678319,76,2529,1047,153,217,154
+"Marcus Morris","DET","SF",81,235,27,5,"University of Kansas",4625000,79,2565,1105,118,303,145
+"Michael Gbinije","DET","SG",79,200,24,0,"Syracuse University",650000,9,32,4,0,1,2
+"Reggie Bullock","DET","SF",79,205,25,3,"University of North Carolina",2255644,31,467,141,28,26,5
+"Reggie Jackson","DET","PG",75,208,26,5,"Boston College",14956522,52,1424,752,66,218,118
+"Stanley Johnson","DET","SF",79,245,20,1,"University of Arizona",2969880,77,1371,339,45,84,36
+"Tobias Harris","DET","PF",81,235,24,5,"University of Tennessee",17200000,82,2567,1321,109,402,190
+"Brian Roberts","CHO","PG",73,173,31,4,"University of Dayton",1050961,41,416,142,17,29,33
+"Briante Weber","CHO","PG",74,165,24,1,"Virginia Commonwealth University",102898,13,159,50,1,19,9
+"Christian Wood","CHO","PF",83,220,21,1,"University of Nevada, Las Vegas",874636,13,107,35,0,12,11
+"Cody Zeller","CHO","PF",84,240,24,3,"Indiana University",5318313,62,1725,639,0,253,133
+"Frank Kaminsky","CHO","C",84,242,23,1,"University of Wisconsin",2730000,75,1954,874,116,204,118
+"Jeremy Lamb","CHO","SG",77,185,24,4,"University of Connecticut",6511628,62,1143,603,41,185,110
+"Johnny O'Bryant","CHO","PF",81,257,23,2,"Louisiana State University",161483,4,34,18,1,7,1
+"Kemba Walker","CHO","PG",73,172,26,5,"University of Connecticut",1.2e+07,79,2739,1830,240,403,304
+"Marco Belinelli","CHO","SG",77,210,30,9,"",6333333,74,1778,780,102,162,150
+"Marvin Williams","CHO","PF",81,237,30,11,"University of North Carolina",12250000,76,2295,849,124,173,131
+"Michael Kidd-Gilchrist","CHO","SF",79,232,23,4,"University of Kentucky",1.3e+07,81,2349,743,1,294,152
+"Miles Plumlee","CHO","C",83,249,28,4,"Duke University",12500000,13,174,31,0,14,3
+"Nicolas Batum","CHO","SG",80,200,28,8,"",20869566,77,2617,1164,135,258,243
+"Ramon Sessions","CHO","PG",75,190,30,9,"University of Nevada, Reno",6e+06,50,811,312,21,79,91
+"Treveon Graham","CHO","SG",78,220,23,0,"Virginia Commonwealth University",543471,27,189,57,9,10,10
+"Carmelo Anthony","NYK","SF",80,240,32,13,"Syracuse University",24559380,74,2538,1659,151,451,304
+"Chasson Randle","NYK","PG",74,185,23,0,"Stanford University",143860,18,225,95,10,18,29
+"Courtney Lee","NYK","SG",77,200,31,8,"Western Kentucky University",11242000,77,2459,835,108,213,85
+"Derrick Rose","NYK","PG",75,190,28,7,"University of Memphis",21323250,64,2082,1154,13,447,221
+"Joakim Noah","NYK","C",83,230,31,9,"University of Florida",1.7e+07,46,1015,232,0,99,34
+"Justin Holiday","NYK","SG",78,185,27,3,"University of Washington",1015696,82,1639,629,97,136,66
+"Kristaps Porzingis","NYK","PF",87,240,21,1,"",4317720,66,2164,1196,112,331,198
+"Kyle O'Quinn","NYK","C",82,250,26,4,"Norfolk State University",3900000,79,1229,496,2,213,64
+"Lance Thomas","NYK","PF",80,235,28,5,"Duke University",6191000,46,968,275,38,59,43
+"Marshall Plumlee","NYK","C",84,250,24,0,"Duke University",543471,21,170,40,0,16,8
+"Maurice Ndour","NYK","PF",81,200,24,0,"Ohio University",543471,32,331,98,1,38,19
+"Mindaugas Kuzminskas","NYK","SF",81,215,27,0,"",2898000,68,1016,425,54,104,55
+"Ron Baker","NYK","SG",76,220,23,0,"Wichita State University",543471,52,857,215,23,59,28
+"Sasha Vujacic","NYK","SG",79,195,32,9,"",1410598,42,408,124,23,19,17
+"Willy Hernangomez","NYK","C",83,240,22,0,"",1375000,72,1324,587,4,242,91
+"Aaron Gordon","ORL","SF",81,220,21,2,"University of Arizona",4351320,80,2298,1019,77,316,156
+"Bismack Biyombo","ORL","C",81,255,24,5,"",1.7e+07,81,1793,483,0,179,125
+"C.J. Watson","ORL","PG",74,175,32,9,"University of Tennessee",5e+06,62,1012,281,32,64,57
+"D.J. Augustin","ORL","PG",72,183,29,8,"University of Texas at Austin",7250000,78,1538,616,95,100,131
+"Damjan Rudez","ORL","SF",82,228,30,2,"",980431,45,314,82,20,11,0
+"Elfrid Payton","ORL","PG",76,185,22,2,"University of Louisiana at Lafayette",2613600,82,2412,1046,40,390,146
+"Evan Fournier","ORL","SG",79,205,24,4,"",1.7e+07,68,2234,1167,128,280,223
+"Jeff Green","ORL","PF",81,235,30,8,"Georgetown University",1.5e+07,69,1534,638,53,167,145
+"Jodie Meeks","ORL","SG",76,210,29,7,"University of Kentucky",6540000,36,738,327,56,47,65
+"Marcus Georges-Hunt","ORL","SG",77,216,22,0,"Georgia Institute of Technology",31969,5,48,14,1,1,9
+"Mario Hezonja","ORL","SF",80,215,21,1,"",3909840,65,960,317,43,74,40
+"Nikola Vucevic","ORL","C",84,260,26,5,"University of Southern California",11750000,75,2163,1096,23,460,107
+"Patricio Garino","ORL","SG",78,210,23,0,"George Washington University",31969,5,43,0,0,0,0
+"Stephen Zimmerman","ORL","C",84,240,20,0,"University of Nevada, Las Vegas",950000,19,108,23,0,10,3
+"Terrence Ross","ORL","SF",79,206,25,4,"University of Washington",1e+07,24,748,299,46,69,23
+"Alex Poythress","PHI","PF",79,238,23,0,"University of Kentucky",31969,6,157,64,6,19,8
+"Dario Saric","PHI","PF",82,223,22,0,"",2318280,81,2129,1040,106,275,172
+"Gerald Henderson","PHI","SG",77,215,29,7,"Duke University",9e+06,72,1667,662,61,173,133
+"Jahlil Okafor","PHI","C",83,275,21,1,"Duke University",4788840,50,1134,590,0,242,106
+"Jerryd Bayless","PHI","PG",75,200,28,8,"University of Arizona",9424084,3,71,33,2,9,9
+"Joel Embiid","PHI","C",84,250,22,0,"University of Kansas",4826160,31,786,627,36,164,191
+"Justin Anderson","PHI","SF",78,228,23,1,"University of Virginia",1514160,24,518,203,21,54,32
+"Nik Stauskas","PHI","SG",78,205,23,2,"University of Michigan",2993040,80,2188,756,132,119,122
+"Richaun Holmes","PHI","C",82,245,23,1,"Bowling Green State University",1025831,57,1193,559,27,203,72
+"Robert Covington","PHI","SF",81,215,26,3,"Tennessee State University",1015696,67,2119,864,137,155,143
+"Sergio Rodriguez","PHI","PG",75,176,30,4,"",8e+06,68,1518,530,92,118,18
+"Shawn Long","PHI","C",81,255,24,0,"University of Louisiana at Lafayette",89513,18,234,148,7,54,19
+"T.J. McConnell","PHI","PG",74,200,24,1,"University of Arizona",874636,81,2133,556,11,225,73
+"Tiago Splitter","PHI","C",83,245,32,6,"",8550000,8,76,39,2,12,9
+"Timothe Luwawu-Cabarrot","PHI","SF",78,205,21,0,"",1326960,69,1190,445,50,95,105
+"Andrew Nicholson","BRK","PF",81,250,27,4,"St. Bonaventure University",6088993,10,111,30,2,11,2
+"Archie Goodwin","BRK","SG",77,200,22,3,"University of Kentucky",119494,12,184,95,4,30,23
+"Brook Lopez","BRK","C",84,275,28,8,"Stanford University",21165675,75,2222,1539,134,421,295
+"Caris LeVert","BRK","SF",79,203,22,0,"University of Michigan",1562280,57,1237,468,59,112,67
+"Isaiah Whitehead","BRK","PG",76,213,21,0,"Seton Hall University",1074145,73,1643,543,44,160,91
+"Jeremy Lin","BRK","PG",75,200,28,6,"Harvard University",11483254,36,883,523,58,117,115
+"Joe Harris","BRK","SG",78,219,25,2,"University of Virginia",980431,52,1138,428,85,69,35
+"Justin Hamilton","BRK","C",84,260,26,2,"Louisiana State University",3e+06,64,1177,442,55,119,39
+"K.J. McDaniels","BRK","SF",78,205,23,2,"Clemson University",3333333,20,293,126,11,35,23
+"Quincy Acy","BRK","PF",79,240,26,4,"Baylor University",1790902,32,510,209,36,29,43
+"Randy Foye","BRK","SG",76,213,33,10,"Villanova University",2500000,69,1284,357,67,51,54
+"Rondae Hollis-Jefferson","BRK","SF",79,220,22,1,"University of Arizona",1395600,78,1761,675,15,220,190
+"Sean Kilpatrick","BRK","SG",76,210,27,2,"University of Cincinnati",980431,70,1754,919,105,200,204
+"Spencer Dinwiddie","BRK","PG",78,200,23,2,"University of Colorado",726672,59,1334,432,38,96,126
+"Trevor Booker","BRK","PF",80,228,29,6,"Clemson University",9250000,71,1754,709,25,280,74
+"Andre Iguodala","GSW","SF",78,215,33,12,"University of Arizona",11131368,76,1998,574,64,155,72
+"Damian Jones","GSW","C",84,245,21,0,"Vanderbilt University",1171560,10,85,19,0,8,3
+"David West","GSW","C",81,250,36,13,"Xavier University",1551659,68,854,316,3,132,43
+"Draymond Green","GSW","PF",79,230,26,4,"Michigan State University",15330435,76,2471,776,81,191,151
+"Ian Clark","GSW","SG",75,175,25,3,"Belmont University",1015696,77,1137,527,61,150,44
+"James Michael McAdoo","GSW","PF",81,230,24,2,"University of North Carolina",980431,52,457,147,2,60,21
+"JaVale McGee","GSW","C",84,270,29,8,"University of Nevada, Reno",1403611,77,739,472,0,208,56
+"Kevin Durant","GSW","SF",81,240,28,9,"University of Texas at Austin",26540100,62,2070,1555,117,434,336
+"Kevon Looney","GSW","C",81,220,20,1,"University of California, Los Angeles",1182840,53,447,135,2,54,21
+"Klay Thompson","GSW","SG",79,215,26,5,"Washington State University",16663575,78,2649,1742,268,376,186
+"Matt Barnes","GSW","SF",79,226,36,13,"University of California, Los Angeles",383351,20,410,114,18,20,20
+"Patrick McCaw","GSW","SG",79,185,21,0,"University of Nevada, Las Vegas",543471,71,1074,282,41,65,29
+"Shaun Livingston","GSW","PG",79,192,31,11,"",5782450,76,1345,389,1,172,42
+"Stephen Curry","GSW","PG",75,190,28,7,"Davidson College",12112359,79,2638,1999,324,351,325
+"Zaza Pachulia","GSW","C",83,270,32,13,"",2898000,70,1268,426,0,164,98
+"Bryn Forbes","SAS","SG",75,190,23,0,"Michigan State University",543471,36,285,94,17,19,5
+"Danny Green","SAS","SG",78,215,29,7,"University of North Carolina",1e+07,68,1807,497,118,58,27
+"David Lee","SAS","PF",81,245,33,11,"University of Florida",1551659,79,1477,576,0,248,80
+"Davis Bertans","SAS","PF",82,210,24,0,"",543471,67,808,303,69,34,28
+"Dejounte Murray","SAS","PG",77,170,20,0,"University of Washington",1180080,38,322,130,9,41,21
+"Dewayne Dedmon","SAS","C",84,245,27,3,"University of Southern California",2898000,76,1330,387,0,161,65
+"Joel Anthony","SAS","C",81,245,34,9,"University of Nevada, Las Vegas",165952,19,122,25,0,10,5
+"Jonathon Simmons","SAS","SG",78,195,27,1,"University of Houston",874636,78,1392,483,30,147,99
+"Kawhi Leonard","SAS","SF",79,230,25,5,"San Diego State University",17638063,74,2474,1888,147,489,469
+"Kyle Anderson","SAS","SG",81,230,23,2,"University of California, Los Angeles",1192080,72,1020,246,15,78,45
+"LaMarcus Aldridge","SAS","PF",83,260,31,10,"University of Texas at Austin",20575005,72,2335,1243,23,477,220
+"Manu Ginobili","SAS","SG",78,205,39,14,"",1.4e+07,69,1291,517,89,82,86
+"Patty Mills","SAS","PG",72,185,28,7,"Saint Mary's College of California",3578948,80,1754,759,147,126,66
+"Pau Gasol","SAS","C",84,250,36,15,"",15500000,64,1627,792,56,247,130
+"Tony Parker","SAS","PG",74,185,34,15,"",14445313,63,1587,638,23,242,85
+"Bobby Brown","HOU","PG",74,175,32,2,"California State University, Fullerton",680534,25,123,62,14,9,2
+"Chinanu Onuaku","HOU","C",82,245,20,0,"University of Louisville",543471,5,52,14,0,5,4
+"Clint Capela","HOU","C",82,240,22,2,"",1296240,65,1551,818,0,362,94
+"Eric Gordon","HOU","SG",76,215,28,8,"Indiana University",12385364,75,2323,1217,246,166,147
+"Isaiah Taylor","HOU","PG",75,170,22,0,"University of Texas at Austin",255000,4,52,3,0,1,1
+"James Harden","HOU","PG",77,220,27,7,"Arizona State University",26540100,81,2947,2356,262,412,746
+"Kyle Wiltjer","HOU","PF",82,240,24,0,"Gonzaga University",543471,14,44,13,4,0,1
+"Lou Williams","HOU","SG",73,175,30,11,"",7e+06,23,591,343,41,61,98
+"Montrezl Harrell","HOU","C",80,240,23,1,"University of Louisville",1e+06,58,1064,527,1,224,76
+"Patrick Beverley","HOU","SG",73,185,28,4,"University of Arkansas",6e+06,67,2058,639,110,118,73
+"Ryan Anderson","HOU","PF",82,240,28,8,"University of California",18735364,72,2116,979,204,119,129
+"Sam Dekker","HOU","SF",81,230,22,1,"University of Wisconsin",1720560,77,1419,504,60,143,38
+"Trevor Ariza","HOU","SF",80,215,31,12,"University of California, Los Angeles",7806971,80,2773,936,191,135,93
+"Troy Williams","HOU","SF",79,218,22,0,"Indiana University",150000,6,139,58,8,14,6
+"Alan Anderson","LAC","SF",78,220,34,7,"Michigan State University",1315448,30,308,86,14,16,12
+"Austin Rivers","LAC","SG",76,200,24,4,"Duke University",1.1e+07,74,2054,889,111,212,132
+"Blake Griffin","LAC","PF",82,251,27,6,"University of Oklahoma",20140838,61,2076,1316,38,441,320
+"Brandon Bass","LAC","PF",80,250,31,11,"Louisiana State University",1551659,52,577,292,1,106,77
+"Brice Johnson","LAC","PF",82,230,22,0,"University of North Carolina",1273920,3,9,4,0,2,0
+"Chris Paul","LAC","PG",72,175,31,11,"Wake Forest University",22868828,61,1921,1104,124,250,232
+"DeAndre Jordan","LAC","C",83,265,28,8,"Texas A&M University",21165675,81,2570,1029,0,412,205
+"Diamond Stone","LAC","C",83,255,19,0,"University of Maryland",543471,7,24,10,0,3,4
+"J.J. Redick","LAC","SG",76,190,32,10,"Duke University",7377500,78,2198,1173,201,195,180
+"Jamal Crawford","LAC","SG",77,200,36,16,"University of Michigan",13253012,82,2157,1008,116,243,174
+"Luc Mbah a Moute","LAC","SF",80,230,30,8,"University of California, Los Angeles",2203000,80,1787,484,43,148,59
+"Marreese Speights","LAC","C",82,255,29,8,"University of Florida",1403611,82,1286,711,103,141,120
+"Paul Pierce","LAC","SF",79,235,39,18,"University of Kansas",3500000,25,277,81,15,13,10
+"Raymond Felton","LAC","PG",73,205,32,11,"University of North Carolina",1551659,80,1700,538,46,175,50
+"Wesley Johnson","LAC","SF",79,215,29,6,"Syracuse University",5628000,68,810,186,29,44,11
+"Alec Burks","UTA","SG",78,214,25,5,"University of Colorado",10154495,42,653,283,25,74,60
+"Boris Diaw","UTA","PF",80,250,34,13,"",7e+06,73,1283,338,20,126,26
+"Dante Exum","UTA","PG",78,190,21,1,"",3940320,66,1228,412,44,111,58
+"Derrick Favors","UTA","PF",82,265,25,6,"Georgia Institute of Technology",11050000,50,1186,476,3,200,67
+"George Hill","UTA","PG",75,188,30,8,"Indiana University-Purdue University Indianapolis",8e+06,49,1544,829,94,195,157
+"Gordon Hayward","UTA","SF",80,226,26,6,"Butler University",16073140,73,2516,1601,149,396,362
+"Jeff Withey","UTA","C",84,231,26,3,"University of Kansas",1015696,51,432,146,0,55,36
+"Joe Ingles","UTA","SF",80,226,29,2,"",2250000,82,1972,581,123,81,50
+"Joe Johnson","UTA","SF",79,240,35,15,"University of Arkansas",1.1e+07,78,1843,715,106,167,63
+"Joel Bolomboy","UTA","PF",81,235,23,0,"Weber State University",6e+05,12,53,22,1,8,3
+"Raul Neto","UTA","PG",73,179,24,1,"",937800,40,346,100,10,31,8
+"Rodney Hood","UTA","SG",80,206,24,2,"Duke University",1406520,59,1593,748,114,158,90
+"Rudy Gobert","UTA","C",85,245,24,3,"",2121288,81,2744,1137,0,413,311
+"Shelvin Mack","UTA","PG",75,203,26,5,"Butler University",2433334,55,1205,430,37,133,53
+"Trey Lyles","UTA","PF",82,234,21,1,"University of Kentucky",2340600,71,1158,440,65,94,57
+"Alex Abrines","OKC","SG",78,190,23,0,"",5994764,68,1055,406,94,40,44
+"Andre Roberson","OKC","SF",79,210,25,3,"University of Colorado",2183072,79,2376,522,45,170,47
+"Domantas Sabonis","OKC","PF",83,240,20,0,"Gonzaga University",2440200,81,1632,479,51,141,44
+"Doug McDermott","OKC","SF",80,225,25,2,"Creighton University",2483040,22,430,145,21,35,12
+"Enes Kanter","OKC","C",83,245,24,5,"",17145838,72,1533,1033,5,397,224
+"Jerami Grant","OKC","SF",80,210,22,2,"Syracuse University",980431,78,1490,421,43,103,86
+"Josh Huestis","OKC","PF",79,230,25,1,"Stanford University",1191480,2,31,14,2,4,0
+"Kyle Singler","OKC","SF",80,228,28,4,"Duke University",4837500,32,385,88,7,27,13
+"Nick Collison","OKC","PF",82,255,36,12,"University of Kansas",3750000,20,128,33,0,14,5
+"Norris Cole","OKC","PG",74,175,28,5,"Cleveland State University",247991,13,125,43,3,13,8
+"Russell Westbrook","OKC","PG",75,200,28,8,"University of California, Los Angeles",26540100,81,2802,2558,200,624,710
+"Semaj Christon","OKC","PG",75,190,24,0,"Xavier University",543471,64,973,183,12,65,17
+"Steven Adams","OKC","C",84,255,23,3,"University of Pittsburgh",3140517,80,2389,905,0,374,157
+"Taj Gibson","OKC","PF",81,225,31,7,"University of Southern California",8950000,23,487,207,1,88,28
+"Victor Oladipo","OKC","SG",76,210,24,3,"Indiana University",6552960,67,2222,1067,127,285,116
+"Andrew Harrison","MEM","PG",78,213,22,0,"University of Kentucky",945000,72,1474,425,43,74,148
+"Brandan Wright","MEM","PF",82,210,29,8,"University of North Carolina",5700000,28,447,189,0,83,23
+"Chandler Parsons","MEM","SF",82,230,28,5,"University of Florida",22116750,34,675,210,25,50,35
+"Deyonta Davis","MEM","C",83,237,20,0,"Michigan State University",1369229,36,238,58,0,24,10
+"James Ennis","MEM","SF",79,210,26,2,"California State University, Long Beach",2898000,64,1501,429,51,95,86
+"JaMychal Green","MEM","PF",81,227,26,2,"University of Alabama",980431,77,2101,689,55,195,134
+"Jarell Martin","MEM","PF",82,239,22,1,"Louisiana State University",1286160,42,558,165,9,49,40
+"Marc Gasol","MEM","C",85,255,32,8,"",21165675,74,2531,1446,104,428,278
+"Mike Conley","MEM","PG",73,175,29,9,"Ohio State University",26540100,69,2292,1415,171,293,316
+"Tony Allen","MEM","SG",76,213,35,12,"Oklahoma State University",5505618,71,1914,643,15,259,80
+"Troy Daniels","MEM","SG",76,205,25,3,"Virginia Commonwealth University",3332940,67,1183,551,138,47,43
+"Vince Carter","MEM","SF",78,220,40,18,"University of North Carolina",4264057,73,1799,586,112,81,88
+"Wade Baldwin","MEM","PG",76,202,20,0,"Vanderbilt University",1793760,33,405,106,3,33,31
+"Wayne Selden","MEM","SG",77,230,22,0,"University of Kansas",83119,11,189,55,3,17,12
+"Zach Randolph","MEM","PF",81,260,35,15,"Michigan State University",10361445,73,1786,1028,21,412,141
+"Al-Farouq Aminu","POR","SF",81,220,26,6,"Wake Forest University",7680965,61,1773,532,70,113,96
+"Allen Crabbe","POR","SG",78,210,24,3,"University of California",18500000,79,2254,845,134,169,105
+"C.J. McCollum","POR","SG",76,200,25,3,"Lehigh University",3219579,80,2796,1837,185,507,268
+"Damian Lillard","POR","PG",75,195,26,4,"Weber State University",24328425,75,2694,2024,214,447,488
+"Ed Davis","POR","PF",82,240,27,6,"University of North Carolina",6666667,46,789,200,0,75,50
+"Evan Turner","POR","SF",79,220,28,6,"Ohio State University",16393443,65,1658,586,31,204,85
+"Jake Layman","POR","SF",81,210,22,0,"University of Maryland",6e+05,35,249,78,13,13,13
+"Jusuf Nurkic","POR","C",84,280,22,2,"",1921320,20,584,304,0,120,64
+"Maurice Harkless","POR","SF",81,215,23,4,"St. John's University",8988764,77,2223,773,68,246,77
+"Meyers Leonard","POR","PF",85,245,24,4,"University of Illinois at Urbana-Champaign",9213484,74,1222,401,74,72,35
+"Noah Vonleh","POR","PF",82,240,21,2,"Indiana University",2751360,74,1265,327,7,123,60
+"Pat Connaughton","POR","SG",77,206,24,1,"University of Notre Dame",874636,39,316,98,17,20,7
+"Shabazz Napier","POR","PG",73,175,25,2,"University of Connecticut",1350120,53,512,218,34,39,38
+"Tim Quarterman","POR","SG",78,195,22,0,"Louisiana State University",543471,16,80,31,5,8,0
+"Danilo Gallinari","DEN","SF",82,225,28,7,"",15050000,63,2134,1145,126,209,349
+"Darrell Arthur","DEN","PF",81,235,28,7,"University of Kansas",8070175,41,639,262,53,42,19
+"Emmanuel Mudiay","DEN","PG",77,200,20,1,"",3241800,55,1406,603,56,152,131
+"Gary Harris","DEN","SG",76,210,22,2,"Michigan State University",1655880,57,1782,851,107,213,104
+"Jamal Murray","DEN","SG",76,207,19,0,"University of Kentucky",3210840,82,1764,811,115,180,106
+"Jameer Nelson","DEN","PG",72,190,34,12,"Saint Joseph's University",4540525,75,2045,687,106,162,45
+"Juan Hernangomez","DEN","PF",81,230,21,0,"",1987440,62,842,305,46,55,57
+"Kenneth Faried","DEN","PF",80,228,27,5,"Morehead State University",12078652,61,1296,587,0,228,131
+"Malik Beasley","DEN","SG",77,196,20,0,"Florida State University",1627320,22,165,83,9,24,8
+"Mason Plumlee","DEN","C",83,245,26,3,"Duke University",2328530,27,632,245,0,99,47
+"Mike Miller","DEN","SF",80,218,36,16,"University of Florida",3500000,20,151,28,8,1,2
+"Nikola Jokic","DEN","C",82,250,21,1,"",1358500,73,2038,1221,45,449,188
+"Roy Hibbert","DEN","C",86,270,30,8,"Georgetown University",5e+06,6,11,4,0,2,0
+"Will Barton","DEN","SG",78,175,26,4,"University of Memphis",3533333,60,1705,820,87,208,143
+"Wilson Chandler","DEN","SF",80,225,29,8,"DePaul University",11200000,71,2197,1117,110,323,141
+"Alexis Ajinca","NOP","C",86,248,28,6,"",4600000,39,584,207,0,89,29
+"Anthony Davis","NOP","C",82,253,23,4,"University of Kentucky",22116750,75,2708,2099,40,730,519
+"Axel Toupane","NOP","SF",79,197,24,1,"",20580,2,41,11,1,4,0
+"Cheick Diallo","NOP","PF",81,220,20,0,"University of Kansas",543471,17,199,87,0,36,15
+"Dante Cunningham","NOP","SF",80,230,29,7,"Villanova University",2978250,66,1649,435,71,103,16
+"DeMarcus Cousins","NOP","C",83,270,26,6,"University of Kentucky",16957900,17,574,414,36,106,94
+"Donatas Motiejunas","NOP","PF",84,222,26,4,"",576724,34,479,150,11,46,25
+"E'Twaun Moore","NOP","SG",76,191,27,5,"Purdue University",8081363,73,1820,700,77,206,57
+"Jordan Crawford","NOP","SG",76,195,28,4,"Xavier University",173094,19,442,267,37,68,20
+"Jrue Holiday","NOP","PG",76,205,26,7,"University of California, Los Angeles",11286518,67,2190,1029,100,305,119
+"Omer Asik","NOP","C",84,255,30,6,"",9904494,31,482,85,0,31,23
+"Quinn Cook","NOP","PG",74,184,23,0,"Duke University",63938,9,111,52,6,16,2
+"Solomon Hill","NOP","SF",79,225,25,3,"University of Arizona",11241218,80,2374,563,94,89,103
+"Tim Frazier","NOP","PG",73,170,26,2,"Pennsylvania State University",2090000,65,1525,464,40,123,98
+"A.J. Hammons","DAL","C",84,260,24,0,"Purdue University",650000,22,163,48,5,12,9
+"DeAndre Liggins","DAL","SG",78,209,28,3,"University of Kentucky",1015696,1,25,8,0,3,2
+"Devin Harris","DAL","PG",75,192,33,12,"University of Wisconsin",4228000,65,1087,437,58,78,107
+"Dirk Nowitzki","DAL","PF",84,245,38,18,"",2.5e+07,54,1424,769,79,217,98
+"Dorian Finney-Smith","DAL","PF",80,220,23,0,"University of Florida",543471,81,1642,350,56,68,46
+"Dwight Powell","DAL","C",83,240,25,2,"Stanford University",8375000,77,1333,516,21,173,107
+"Harrison Barnes","DAL","PF",80,210,24,4,"University of North Carolina",22116750,79,2803,1518,78,521,242
+"J.J. Barea","DAL","PG",72,185,32,10,"Northeastern University",4096950,35,771,381,53,89,44
+"Jarrod Uthoff","DAL","PF",81,221,23,0,"University of Iowa",63938,9,115,40,3,13,5
+"Nerlens Noel","DAL","C",83,228,22,2,"University of Kentucky",4384490,22,483,188,0,77,34
+"Nicolas Brussino","DAL","SF",79,195,23,0,"",543471,54,521,150,29,23,17
+"Salah Mejri","DAL","C",85,245,30,1,"",874636,73,905,213,1,87,36
+"Seth Curry","DAL","PG",74,185,26,3,"Duke University",2898000,70,2029,898,137,201,85
+"Wesley Matthews","DAL","SG",77,220,30,7,"Marquette University",17100000,73,2495,986,174,159,146
+"Yogi Ferrell","DAL","PG",72,180,23,0,"Indiana University",207798,36,1046,408,60,82,64
+"Anthony Tolliver","SAC","PF",80,240,31,8,"Creighton University",8e+06,65,1477,461,90,65,61
+"Arron Afflalo","SAC","SG",77,210,31,9,"University of California, Los Angeles",12500000,61,1580,515,62,123,83
+"Ben McLemore","SAC","SG",77,195,23,3,"University of Kansas",4008882,61,1176,495,65,115,70
+"Buddy Hield","SAC","SG",76,214,23,0,"University of Oklahoma",3517200,25,727,378,59,83,35
+"Darren Collison","SAC","PG",72,175,29,7,"University of California, Los Angeles",5229454,68,2063,900,73,267,147
+"Garrett Temple","SAC","SG",78,195,30,6,"Louisiana State University",8e+06,65,1728,506,82,101,58
+"Georgios Papagiannis","SAC","C",85,240,19,0,"",2202240,22,355,124,0,56,12
+"Kosta Koufos","SAC","C",84,265,27,8,"Ohio State University",8046500,71,1419,470,0,216,38
+"Langston Galloway","SAC","PG",74,200,25,2,"Saint Joseph's University",5200000,19,375,114,19,23,11
+"Malachi Richardson","SAC","SG",78,205,21,0,"Syracuse University",1439880,22,198,79,8,20,15
+"Rudy Gay","SAC","SF",80,230,30,10,"University of Connecticut",13333333,30,1013,562,42,159,118
+"Skal Labissiere","SAC","PF",83,225,20,0,"University of Kentucky",1188840,33,612,289,3,114,52
+"Ty Lawson","SAC","PG",71,195,29,7,"University of North Carolina",1315448,69,1732,681,34,203,173
+"Tyreke Evans","SAC","SF",78,220,27,7,"University of Memphis",10661286,14,314,163,21,38,24
+"Willie Cauley-Stein","SAC","C",84,240,23,1,"University of Kentucky",3551160,75,1421,611,0,255,101
+"Adreian Payne","MIN","PF",82,237,25,2,"Michigan State University",2022240,18,135,63,3,20,14
+"Andrew Wiggins","MIN","SF",80,199,21,2,"University of Kansas",6006600,82,3048,1933,103,606,412
+"Brandon Rush","MIN","SG",78,220,31,8,"University of Kansas",3500000,47,1030,197,44,26,13
+"Cole Aldrich","MIN","C",83,250,28,6,"University of Kansas",7643979,62,531,105,0,45,15
+"Gorgui Dieng","MIN","PF",83,241,27,3,"University of Louisville",2348783,82,2653,816,16,316,136
+"Jordan Hill","MIN","C",82,235,29,7,"University of Arizona",3911380,7,47,12,0,5,2
+"Karl-Anthony Towns","MIN","C",84,244,21,1,"University of Kentucky",5960160,82,3030,2061,101,701,356
+"Kris Dunn","MIN","PG",76,210,22,0,"Providence College",3872520,78,1333,293,21,97,36
+"Nemanja Bjelica","MIN","PF",82,240,28,1,"",3800000,65,1190,403,56,95,45
+"Omri Casspi","MIN","SF",81,225,28,7,"",138414,13,222,45,2,17,5
+"Ricky Rubio","MIN","PG",76,194,26,5,"",13550000,75,2469,836,60,201,254
+"Shabazz Muhammad","MIN","SF",78,223,24,3,"University of California, Los Angeles",3046299,78,1516,772,49,239,147
+"Tyus Jones","MIN","PG",74,195,20,1,"Duke University",1339680,60,774,209,26,49,33
+"Zach LaVine","MIN","SG",77,189,21,2,"University of California, Los Angeles",2240880,47,1749,889,120,206,117
+"Brandon Ingram","LAL","SF",81,190,19,0,"Duke University",5281680,79,2279,740,55,221,133
+"Corey Brewer","LAL","SF",81,186,30,9,"University of Florida",7600000,24,358,129,5,48,18
+"D'Angelo Russell","LAL","PG",77,195,20,1,"Ohio State University",5332800,63,1811,984,135,216,147
+"David Nwaba","LAL","SG",76,209,24,0,"California Polytechnic State University, San Luis Obispo",73528,20,397,120,1,46,25
+"Ivica Zubac","LAL","C",85,265,19,0,"",1034956,38,609,284,0,126,32
+"Jordan Clarkson","LAL","SG",77,194,24,2,"University of Missouri",12500000,82,2397,1205,117,360,134
+"Julius Randle","LAL","PF",81,250,22,2,"University of Kentucky",3267120,74,2132,975,17,360,204
+"Larry Nance Jr.","LAL","PF",81,230,24,1,"University of Wyoming",1207680,63,1442,449,10,180,59
+"Luol Deng","LAL","SF",81,220,31,12,"Duke University",1.8e+07,56,1486,425,51,113,46
+"Metta World Peace","LAL","SF",78,260,37,16,"St. John's University",1551659,25,160,57,9,10,10
+"Nick Young","LAL","SG",79,210,31,9,"University of Southern California",5443918,60,1556,791,170,102,77
+"Tarik Black","LAL","C",81,250,25,2,"University of Kansas",6191000,67,1091,383,1,149,82
+"Thomas Robinson","LAL","PF",82,237,25,4,"University of Kansas",1050961,48,560,241,0,105,31
+"Timofey Mozgov","LAL","C",85,275,30,6,"",1.6e+07,54,1104,401,0,169,63
+"Tyler Ennis","LAL","PG",75,194,22,2,"Syracuse University",1733880,22,392,170,21,44,19
+"Alan Williams","PHO","C",80,260,24,1,"University of California, Santa Barbara",874636,47,708,346,0,138,70
+"Alex Len","PHO","C",85,260,23,3,"University of Maryland",4823621,77,1560,613,3,227,150
+"Brandon Knight","PHO","SG",75,189,25,5,"University of Kentucky",12606250,54,1140,595,45,164,132
+"Derrick Jones","PHO","SF",79,190,19,0,"University of Nevada, Las Vegas",543471,32,545,168,3,65,29
+"Devin Booker","PHO","SG",78,206,20,1,"University of Kentucky",2223600,78,2730,1726,147,459,367
+"Dragan Bender","PHO","PF",85,225,19,0,"",4276320,43,574,146,28,29,4
+"Elijah Millsap","PHO","SG",78,225,29,2,"University of Alabama at Birmingham",23069,2,23,3,0,1,1
+"Eric Bledsoe","PHO","PG",73,190,27,6,"University of Kentucky",1.4e+07,66,2176,1390,104,345,388
+"Jared Dudley","PHO","PF",79,225,31,9,"Boston College",10470000,64,1362,434,77,80,43
+"Leandro Barbosa","PHO","SG",75,194,34,13,"",4e+06,67,963,419,35,137,40
+"Marquese Chriss","PHO","PF",82,233,19,0,"University of Washington",2941440,82,1743,753,72,212,113
+"Ronnie Price","PHO","PG",74,190,33,11,"Utah Valley State College",282595,14,134,14,3,1,3
+"T.J. Warren","PHO","SF",80,230,23,2,"North Carolina State University",2128920,66,2048,951,26,377,119
+"Tyler Ulis","PHO","PG",70,150,21,0,"University of Kentucky",918369,61,1123,444,21,163,55
+"Tyson Chandler","PHO","C",85,240,34,15,"",12415000,47,1298,397,0,153,91
