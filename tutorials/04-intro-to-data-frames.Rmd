@@ -1,0 +1,46 @@
+---
+title: "Introduction to Data Frames"
+subtitle: "Stat 133, Fall 2017"
+author: "Gaston Sanchez"
+output: github_document
+fontsize: 11pt
+urlcolor: blue
+---
+
+> ### Learning Objectives
+>
+> - Understand Data Frames
+> - Importing
+> - Exporting
+> - Basic Manipulation with `[ , ]`
+> - Smart wrangling with `"dplyr"`
+
+------
+
+## Manipulating Data Frames
+
+The most common format/structure for a data set is in a tabular format, 
+with row and columns. When your data is in this shape, most of the times 
+you will work with R data frames (or similar structures).
+
+You need to learn how to manipulate data tables. In the past (before 2014), 
+R users manipulated data frames using bracket notation, e.g. `dat[ , ]`,
+in order to select specific rows, columns, or cells. This is still possible
+and it is a good skill to learn. But nowadays there is an interesting alternative 
+for _data wrangling_ provided with the functionality of the package `"dplyr"`.
+
+
+## R Data Frames
+
+A data frame is a special type of R list, in which each column 
+is an R vector (or a factor). Moreover, R vectors are atomic structures, which means that 
+their elements must be all of the same type. What `str()` returns is a display 
+of the dimensions of the data frame, and then a list with the name of all the 
+variables, and their data types (e.g. `chr` character, `num` real, etc). 
+The argument `vec.len = 1` indicates that just the first element in each 
+column should be displayed.
+
+When working with data frames, you should always take some time inspecting 
+the contents, and checking how R is handling the data types. It is in these 
+early stages of data exploration that you can catch potential issues in order 
+to avoid (disastrous?) consequences or bugs in subsequent stages.
