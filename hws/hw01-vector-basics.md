@@ -1,4 +1,4 @@
-HW03 - Stat 133, Fall 2017
+HW01 - Stat 133, Fall 2017
 ================
 
 The purpose of this assignment is to work with vectors of different data types: numeric (integer and real), character, logical, and factors.
@@ -10,7 +10,7 @@ Introduction
 
 In this assignment you will summarize quantitative and qualitative variables graphically and numerically. These tasks are often the first step in analyzing most data sets. Technically, this involves performing a univariate analysis, that is, analyzing one variable at a time. In future assignments you will work on analyzing two or more variables simultaneously.
 
-Keep in mind that summarizing and describing data, as simple as it may sound, can be tricky. Why? Because there is not one right way to analyze data, but there are wrong ways. Do your best to describe what you see. Jot down notes to capture your thinking as you go. It takes practice to learn to describe distributions and write an analysis. You will work on these skills over the entire semester.
+Keep in mind that summarizing and describing data, as simple as it may sound, can be tricky. Why? Because there is not one right way to analyze data, but there are wrong ways. Do your best to describe what you see. Jot down notes to capture your thinking as you go. It takes practice to learn to describe distributions and write an analysis. You will work on these skills over the rest of the semester.
 
 Research Question and Data
 --------------------------
@@ -94,7 +94,7 @@ What are we looking for from your work?
     -   Overall range, along with an interval of typical measurements.
 -   Add transitions to your narrative that help tie your observations.
 -   Use lots of inline code! Especially when writing paragraphs describing data and related values. Try not to hard-code values---this breaks computational reproducibility.
--   Keep practicing with Markdown syntax: use bullet/itemized lists, embed butllets within bullets, italics, bold, links, heading of different levels, pre-format (i.e. code), horizontal rules, etc.
+-   Keep practicing with Markdown syntax: use bullet/itemized lists, embed bullets within lists, italics, bold, links, headings of different levels, pre-format (i.e. code), horizontal rules, etc.
 -   Keep getting familiar with git and github. Commit early and often.
 -   Above all, avoid waiting till your work is almost done to commit and push to your github repository.
 
@@ -127,7 +127,7 @@ For people who want to take things further. You can try to look for:
 Submission
 ----------
 
-Name your `Rmd` file using the following structure: `hw03-first-last.Rmd` where "first" and "last" are your first and last names. E.g. `hw03-gaston-sanchez.Rmd`.
+Name your `Rmd` file using the following structure: `hw01-first-last.Rmd` where "first" and "last" are your first and last names. E.g. `hw01-gaston-sanchez.Rmd`.
 
 Add, push and commit the source `Rmd` file as well as the knitted `.md` file to your GitHub repository for the course assignments.
 
