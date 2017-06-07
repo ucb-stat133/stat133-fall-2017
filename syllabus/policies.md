@@ -157,7 +157,7 @@ If you are an athlete or Cal band member, please check your calendar and come se
 
 ### Incomplete Grade
 
-Under emergency/special circumstances, students may petition me to receive an Incomplete grade. By University policy, for a student to get an Incomplete requires (i) that the student was performing __passing-level work__ until the time that (ii) something happened that---through no fault of the student---prevented the student from completing the coursework. If you take the final, you completed the course, even if you took it while ill, exhausted, mourning, etc. The time to talk to me about incomplete grades is BEFORE you take the final, when the situation that prevents you from finishing presents itself. Please clearly state your reasoning in your comments to me.
+Under emergency/special circumstances, students may petition me to receive an Incomplete grade. By University policy, for a student to get an Incomplete requires (i) that the student was performing __passing-level work__ until the time that (ii) something happened that---through no fault of the student---prevented the student from completing the coursework. If you take the final, you completed the course, even if you took it while ill, exhausted, mourning, etc. The time to talk to me about incomplete grades is BEFORE you take the final (several weeks before), when the situation that prevents you from finishing the course presents itself. Please clearly state your reasoning in your comments to me.
 
 It is your responsibility to develop good time management skills, good studying habits, know your limits, and learn to ask for professional help.
 Life happens. Social, family, cultural, scholar, and individual circumstances can affect your performance (both positive and negatively). If you find yourself in a situation that raises concerns about passing the course, please come see me as soon as possible. 
@@ -193,7 +193,7 @@ Call (510) 643-7985, email ask_ophd@berkeley.edu, or go to
 
 ### Letters of Recommendation
 
-Unless I have known you at least one year, and we have developed a good collegial relationship, I do not provide letters of recommendation. 
+Unless I have known you at least one year, and we have developed a good collegial relationship, I do not provide letters of recommendation or any other kind of endorsement.
 
 
 
