@@ -66,7 +66,7 @@ NBA Player Data Set
 
 To have a working example that allows us to introduce and discuss many of the concepts in this course, I will make extensive use of data about NBA players from the regular season 2016-2017 (without play-offs). The main source is the website <http://www.basketball-reference.com>.
 
-To make things more concrete, let's focus on data about the Golden State Warriors. Below are two screenshots; the first one shows part of the season statistics, and the second one shows the salaries:
+To make things more concrete, let's focus on data about the Golden State Warriors. Below are two screenshots; the first one shows part of the season statistics, and the second one shows the player salaries:
 
 -   `Rk`: Rank of player
 -   Name of player
@@ -123,8 +123,8 @@ The most recommended way to break the ice with R is by using it as a scientific 
 -   power
 
 ``` r
-2 ^ 2
-3 ^ 3
+5 ^ 2
+2 ^ 3
 ```
 
 ### Functions
@@ -160,7 +160,7 @@ Variables and Assignments
 
 R is more powerful than a calculator, and you can do many more things than practically most scientific calculators. One of the things you will be doing a lot in R is creating variables or objects to store values.
 
-For instance, you can create a variable `thompson` and give it the value of Field Goals made by thompson (644). This is done using what is known as the **assignment operator** `<-`, also known in R as the *arrow* operator:
+For instance, you can create a variable `thompson` and give it the value of Field Goals made by Klay Thompson (644). This is done using what is known as the **assignment operator** `<-`, also known in R as the *arrow* operator:
 
 ``` r
 thompson <- 644
@@ -274,14 +274,6 @@ rad
 ```
 
     ## [1] 1.570796
-
-``` r
-# toss a fair coin 5 times, chance of 3 heads
-chance_heads <- 0.5
-dbinom(3, 5, prob = chance_heads)
-```
-
-    ## [1] 0.3125
 
 ------------------------------------------------------------------------
 
