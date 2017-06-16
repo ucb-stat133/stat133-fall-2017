@@ -29,6 +29,7 @@ _AugSep 28-01:_ Getting started with R, and comprehensive review of the RStudio 
     + [About R](https://docs.google.com/presentation/d/1n4Wo6lhYIeUi6XPhE7BVhX6cgfcTHkr1_uap0GWmD5Q/pub?start=false&loop=false&delayms=3000) (slides)
     + [First contact with R](../tutorials/01-intro-to-R.md) (tutorial)
     + [Intro to Rmd files](../tutorials/02-intro-to-Rmd-files.md) (tutorial)
+    + [Data Types](https://docs.google.com/presentation/d/1TZRjIvfBfG_3vjj7bmb6B_oyR7k0lxge7V_Ih2B1mwo/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
     + [Getting started with R](../labs/lab01-R-basics.md)
 + __Reading__:
@@ -46,42 +47,41 @@ _AugSep 28-01:_ Getting started with R, and comprehensive review of the RStudio 
 
 
 
-## 2) Housekeeping: Filesystem, Bash, Git, Github
+## 2) Data Types, Vectors and Other Structues
 
-_Sep 04-08:_ Fundamental low-level stuff for the rest of the course.
+_Sep 04-08:_ Getting to know R vectors and concepts like atomicity, vectorization, recycling, and subsetting.
 
 + __Lecture material__
-    + [Filesystem](https://docs.google.com/presentation/d/1V-JPhr3Do3A7Jn-zgFSqD7R171W-G02uEmxWoHZI7bs/pub?start=false&loop=false&delayms=3000) (slides)
+    + [R Vectors](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Intro to vectors](../tutorials/03-intro-to-vectors.md) (tutorial)
+    + [Lists and Data Frames](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
-    + [Minimal Bash and Git](../labs/lab02-minimal-bash-git.md)
+    + [Getting started with vectors, factors, and lists](../labs/lab02-vector-basics.md)
 + __Reading__:
-    + [Installing Git and Github](http://happygitwithr.com/installation-pain.html) from 
-    _Happy Git and GitHub for the useR_ by Jenny Bryan et al.
-+ __Cheat sheet__:
-    + [git cheat sheet](../cheat-sheets/git-cheatsheet.pdf)
+    + [chapter 20: Vectors](http://r4ds.had.co.nz/vectors.html) from _R for Data Science_ by Grolemund and Wickham.
 + __WARM-UP__:
-    + [Git, bash](../hws/up02-bash-git-basics.md)
+    + [Vectors and Factors](../hws/up02-vector-basics.md)
 
 
 -----
 
 
 
-## 3) Data Types, Vectors and Other Structues
+## 3) Housekeeping: Filesystem, Bash, Git, Github
 
-_Sep 11-15:_ Getting to know R vectors and concepts like atomicity, vectorization, recycling, and subsetting.
+_Sep 11-15:_ Fundamental low-level stuff for the rest of the course.
 
 + __Lecture material__
-    + [Data Types](https://docs.google.com/presentation/d/1TZRjIvfBfG_3vjj7bmb6B_oyR7k0lxge7V_Ih2B1mwo/pub?start=false&loop=false&delayms=3000) (slides)
-    + [R Vectors](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/pub?start=false&loop=false&delayms=3000) (slides)
-    + [Intro to vectors](../tutorials/03-intro-to-vectors.md) (tutorial)
-    + [Lists and Data Frames](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Filesystem](https://docs.google.com/presentation/d/1V-JPhr3Do3A7Jn-zgFSqD7R171W-G02uEmxWoHZI7bs/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Shell Basics](https://docs.google.com/presentation/d/1VTlxM0IrwhzSDVyqPM9a2JLG8wICVpOp3hrHvTcrA6Q/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Git Basics](https://docs.google.com/presentation/d/1szPjE9eDD23YdZiq3-Tk85ZprY7d31uRtVxgTXSS_rc/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
-    + [Getting started with vectors, factors, and lists](../labs/lab03-vector-basics.md)
+    + [Minimal Git](../labs/lab03-minimal-bash-git.md)
 + __Reading__:
-    + [chapter 20: Vectors](http://r4ds.had.co.nz/vectors.html) from _R for Data Science_ by Grolemund and Wickham.
-+ __HOMEWORK__:
-    + [HW01 - Vectors and Factors](../hws/hw01-vector-basics.md)
+    + [Installing Git and Github](http://happygitwithr.com/installation-pain.html) from 
+    _Happy Git and GitHub for the useR_ by Jenny Bryan et al.
++ __Cheat sheet__:
+    + [git cheat sheet](../cheat-sheets/git-cheatsheet.pdf)
 
 
 -----
