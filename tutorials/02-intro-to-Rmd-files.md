@@ -24,19 +24,21 @@ Locate the button **Knit HTML**, the one with an icon of a ball of yarn and two 
 
 ### What is an `Rmd` file?
 
-**Rmd** files are a special type of file, referred to as a *dynamic document*. This is the fancy term we use to describe a document that allows you to combine narrative (text) with R code in one single file.
+**Rmd** files are a special type of file, referred to as a *dynamic document*. This is the fancy term we use to describe a document that allows us to combine narrative (text) with R code in one single file.
 
 Rmd files are plain text files. This means that you can open an Rmd file with any text editor (not just RStudio) and being able to see and edit its contents.
 
-The main idea behind dynamic documents is simple yet very powerful: instead of working with two separate files, one that contains the R code, and another one that contains the narrative, you use an `.Rmd` file to include both the commands and the narrative. One of the main advantages of this paradigm, is that you avoid having to copy results from your computations and paste them into a report file. In fact, there are more complex ways to work with dynamic documents and source files. But the core idea is the same: combine narrative and code in a way that you let the computer do the manual, repetitive, and time consuming job.
+The main idea behind dynamic documents is simple yet very powerful: instead of working with two separate files, one that contains the R code, and another one that contains the narrative, you use an `.Rmd` file to include both the commands and the narrative.
 
-Rmd files is just one type of dynamic document that you will find in RStudio. In fact, RStudio provides other file formats that can be sued as dynamic documents: e.g. `Rnw`, `Rpres`, etc.
+One of the main advantages of this paradigm, is that you avoid having to copy results from your computations and paste them into a report file. In fact, there are more complex ways to work with dynamic documents and source files. But the core idea is the same: combine narrative and code in a way that you let the computer do the manual, repetitive, and time consuming job.
+
+Rmd files is just one type of dynamic document that you will find in RStudio. In fact, RStudio provides other file formats that can be sued as dynamic documents: e.g. `.Rnw`, `.Rpres`, `.Rhtml`, etc.
 
 ### Anatomy of an `Rmd` file
 
-The structure of an `.Rmd` file can be divided in two parts: 1) a **YAML header**, and 2) the **body** of the document. In addition to the structure, you should know that `.Rmd` files use three types of syntax: YAML, Markdown, and R.
+The structure of an `.Rmd` file can be divided in two parts: 1) a **YAML header**, and 2) the **body** of the document. In addition to this structure, you should know that `.Rmd` files use three types of syntaxes: YAML, Markdown, and R.
 
-The *YAML header* consists of the first few lines at the top of the file. This header is established by a set of three dashes `---` as delimiters (one starting set, and another ending set). This part of the file requires you to use YAML syntax (Yet Another Markup Language.) Within the delimiter sets of dashes, you specify settings (or metadata) that will apply to the entire document. Some of the common options are things like:
+The *YAML header* consists of the first few lines at the top of the file. This header is established by a set of three dashes `---` as delimiters (one starting set, and one ending set). This part of the file requires you to use YAML syntax (Yet Another Markup Language.) Within the delimiter sets of dashes, you specify settings (or metadata) that will apply to the entire document. Some of the common options are things like:
 
 -   `title`
 -   `author`
