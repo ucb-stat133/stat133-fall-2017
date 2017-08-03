@@ -73,7 +73,7 @@ Much of the course is about learning good practices:
 - Understand data formats
 - Understand how to visualize data and display statistical information
 - Learn the basic principles for writing code
-- Use computational tools to carry our the data analysis cycle
+- Use computational tools to carry out the data analysis cycle
 
 
 
