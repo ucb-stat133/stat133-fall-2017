@@ -5,6 +5,9 @@
     - Labs: For the covered topics in a given week, the associated lab takes place on Monday of the following week.
 
 
+-----
+
+
 ## 0. Course Introduction
 
 + __Dates__: Aug 23-25
@@ -97,7 +100,7 @@
 + __Lecture material__
     + [Data Tables](https://docs.google.com/presentation/d/1WQIrQxtNXhEEpI0Yd5Ch4r2zwIp3KG2O_BVY5nsdY4Q/pub?start=false&loop=false&delayms=3000) (slides)
     + [Importing Tables in R](https://docs.google.com/presentation/d/1vbqZoR2i8z3Zlpc8WxhA3ntKnfB8O1WVKnFVDdxZzdA/pub?start=false&loop=false&delayms=3000) (slides)
-    + [Intro to package "dplyr"](https://docs.google.com/presentation/d/1OsxnIgNTZG-gnD0rdTXzqf162_gNqnok_suMHG5KxpU/edit?usp=sharing) (slides)
+    + [Basic manipulation of data frames](https://docs.google.com/presentation/d/1OsxnIgNTZG-gnD0rdTXzqf162_gNqnok_suMHG5KxpU/edit?usp=sharing) (slides)
 + __Lab material__:
     + [Reading in tables in R](../labs/lab04-reading-tables.md)
     + [Getting started with dplyr](../labs/lab04-dplyr-basics.md)
@@ -137,7 +140,7 @@ graphs with `"ggplot2"`.
 
 
 
-## 6. Programming Basics part 1 (for data analysis)
+## 6. Programming Basics (for data analysis) part 1
 
 + __Dates__: Oct 01-05
 + __Topics__: Basics of Functions, R expressions, and conditionals.
@@ -156,7 +159,7 @@ graphs with `"ggplot2"`.
 
 
 
-## 7. Programming Basics part 2 (for data analysis)
+## 7. Programming Basics (for data analysis) part 2
 
 + __Dates__: Oct 08-12
 + __Topics__: Basics of loops, and more about functions.
