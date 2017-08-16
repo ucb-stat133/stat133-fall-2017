@@ -32,9 +32,10 @@ As Stat 133 gets larger and larger every year, running the course as smoothly as
 - To receive credit, you must attend lab, work on the lab assignment until you're finished or the lab period is over, and get checked off by a course staff member.
 - To receive full credit, you must be present for the entire time of the lab (partial credit for partial attendance 50%).
 - If you finish the lab early, we encourage you to help others with their lab.
-- After 9/18, if you miss
-    + one lab, you get full lab credit.
-    + two or three labs, you get half lab credit (you may lose one letter grade).
+- From Sep-11, if you miss
+    + one lab, you get full lab credit (10% of total grade).
+    + two labs,  you get half lab credit (5% of total grade).
+    + three labs, you get no lab credit (0% of total grade, cannot get an A in the course).
     + four or more labs, you fail the class (F grade).
 - There will be about 4 short quizzes given in discussion to test your understanding.
 - Your quiz scores __will NOT__ be part of your grade.
