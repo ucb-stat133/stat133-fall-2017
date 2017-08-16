@@ -1,4 +1,4 @@
-Lab 2: Bash and Git Basic Workflow
+Lab 3: Bash and Git Basic Workflow
 ================
 Gaston Sanchez
 
