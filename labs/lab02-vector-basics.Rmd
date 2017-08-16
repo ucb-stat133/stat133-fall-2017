@@ -1,5 +1,5 @@
 ---
-title: "Lab 3: Vectors and other data structures"
+title: "Lab 2: Vectors and other data structures"
 subtitle: "Stat 133, Fall 2017"
 author: "Gaston Sanchez"
 output: github_document

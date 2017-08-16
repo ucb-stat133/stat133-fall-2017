@@ -1,4 +1,4 @@
-Lab 3: Vectors and other data structures
+Lab 2: Vectors and other data structures
 ================
 Gaston Sanchez
 
