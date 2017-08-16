@@ -4,8 +4,8 @@ This repository holds the course materials for the fall 2017 edition of
 __Statistics 133: Concepts in Computing with Data__ at UC Berkeley.
 
 
-- __Instructor:__ Gaston Sanchez, gaston.stat[at]gmail.com
-- __Class Time:__ MWF 4-5pm in Dwinelle 155
+- __Instructor:__ [Gaston Sanchez](http://gastonsanchez.com), gaston.stat [at] gmail.com
+- __Class Time:__ MWF 4-5pm in [Dwinelle 155](http://www.berkeley.edu/map?dwinelle)
 - __Session Dates:__ 08/23/17 - 12/08/17
 - __Code #:__ 21287
 - __Units:__ 3 (more info [here](http://classes.berkeley.edu/content/2017-fall-stat-133-001-lec-001))
@@ -147,7 +147,7 @@ You will also use a terminal emulator to work with command line.
 about the structure of the course, DO's and DONT's, etc.
 
 - I've prepared a list of [Frequently Asked Questions](syllabus/faqs.md) that I get asked 
-most of the times.
+every semester.
 
 
 
