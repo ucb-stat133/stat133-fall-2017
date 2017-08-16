@@ -142,7 +142,7 @@ graphs with `"ggplot2"`.
 
 ## 6. Programming Basics (for data analysis) part 1
 
-+ __Dates__: Oct 01-05
++ __Dates__: Oct 02-06
 + __Topics__: Basics of Functions, R expressions, and conditionals.
 + __Lecture Material__
     + [Introduction to functions](../tutorials/06-intro-to-functions.md)
@@ -161,7 +161,7 @@ graphs with `"ggplot2"`.
 
 ## 7. Programming Basics (for data analysis) part 2
 
-+ __Dates__: Oct 08-12
++ __Dates__: Oct 09-13
 + __Topics__: Basics of loops, and more about functions.
 + __Lecture Material__
     + [Introduction to loops](../tutorials/08-intro-to-loops.md)
@@ -180,7 +180,7 @@ graphs with `"ggplot2"`.
 
 ## 8. Random Numbers and Simulations
 
-+ __Dates__: Oct 15-19
++ __Dates__: Oct 16-20
 + __Topics__: Random numbers, sampling, and monte carlo simulation.
 + __Lecture Material__
     + [Introduction to random numbers](../tutorials/10-intro-to-random-numbers.md)
@@ -200,7 +200,7 @@ graphs with `"ggplot2"`.
 
 ## 9. Manipulating Character Strings
 
-+ __Dates__: Oct 22-26
++ __Dates__: Oct 23-27
 + __Topics__: Character strings.
 + __Lecture Material__
     + [Introduction to loops](../tutorials/08-intro-to-loops.md)
@@ -219,7 +219,7 @@ graphs with `"ggplot2"`.
 
 ## 10. Regular Expressions
 
-+ __Dates__: Oct 28-01
++ __Dates__: Oct 30-Nov 03
 + __Topics__: Introduction to Regular Expressions.
 + __Lecture Material__
     + [Introduction to regex](../tutorials/08-intro-to-loops.md)
@@ -235,3 +235,29 @@ graphs with `"ggplot2"`.
 
 -----
 
+
+
+## 11. XML
+
++ __Dates__: Nov 06-10
++ __Topics__: Extensible Markup Language (XML) and related formats.
+
+
+-----
+
+
+
+## 12. Data Visualization
+
++ __Dates__: Nov 13-17
++ __Topics__: Visual Perception, Colors, Effective Statistical Graphics
+
+
+-----
+
+
+
+## 13. TBA
+
++ __Dates__: Nov 27-Dec 01
++ __Topics__: TBA
