@@ -31,7 +31,7 @@ dat <- read.csv('../data/nba2017-players.csv', stringsAsFactors = FALSE)
 
 Notice that I'm spcifying the argument `stringsAsFactors = FALSE` to avoid the conversion of characters into R factors. Why do you think this is a good practice?
 
-All the default reading table functions generate a data frame. Typically, everytime I read new data set which I'm not familiar with, or a data set that I haven't worked on in a long time, I always like to call a couple of functions to inspect its contents:
+All the default reading table functions generate a data frame. Typically, everytime I read a new data set which I'm not familiar with, or a data set that I haven't worked on in a long time, I always like to call a couple of functions to inspect its contents:
 
 -   `dim()`
 -   `head()`
@@ -79,7 +79,7 @@ head(dat)
     ## 5      56      33
     ## 6     437     590
 
-For a more detailed description of how R is treating the data type in each column, you should use the structure function `str()`
+For a more detailed description of how R is treating the data type in each column, you should use the structure function `str()`.
 
 ``` r
 # check the structure
@@ -103,14 +103,16 @@ str(dat, vec.len = 1)
     ##  $ points2   : int  293 186 ...
     ##  $ points1   : int  108 67 ...
 
-When working with data frames, remember to always take some time inspecting the contents, and checking how R is handling the data types. It is in these early stages of data exploration that you can catch potential issues in order to avoid (disastrous?) consequences or bugs in subsequent stages.
+This function `str()` displays the dimensions of the data frame, and then a list with the name of all the variables, and their data types (e.g. `chr` character, `num` real, etc). The argument `vec.len = 1` indicates that just the first element in each column should be displayed.
 
-To get information about how R is treating the columns in a data frame you can use the function `str()`. This function displays the dimensions of the data frame, and then a list with the name of all the variables, and their data types (e.g. `chr` character, `num` real, etc). The argument `vec.len = 1` indicates that just the first element in each column should be displayed.
+When working with data frames, remember to always take some time inspecting the contents, and checking how R is handling the data types. It is in these early stages of data exploration that you can catch potential issues in order to avoid disastrous consequences or bugs in subsequent stages.
+
+------------------------------------------------------------------------
 
 Introduction to `"dplyr"`
 -------------------------
 
-In order to use the functions in `"dplyr"`, you must load the package first. Here I'm assuming that you already installed the package. If that's not the case the run:
+In order to use the functions in `"dplyr"`, you must load the package first. Here I'm assuming that you already installed the package. If that's not the case then run:
 
 ``` r
 install.packages("dplyr")
@@ -122,7 +124,7 @@ Remember that you only need to install a package once! After a package has been 
 library(dplyr)
 ```
 
-**About loading packages:** Another rule to keep in mind is to always load any required packages at the very top of your scripts (`.R` or `.Rmd` or `.Rnw` files). Avoid calling the `library()` function in the middle of a script. Instead, load all the packages before anything else.
+**About loading packages:** Another rule to keep in mind is to always load any required packages at the very top of your script files (`.R` or `.Rmd` or `.Rnw` files). Avoid calling the `library()` function in the middle of a script. Instead, load all the packages before anything else.
 
 ### Basic `"dplyr"` verbs
 
@@ -183,7 +185,7 @@ player_height <- select(dat, player, height)
 -   subset the data by selecting the last 5 rows.
 -   select those players with height less than 70 inches tall.
 -   of those players that are centers (position `C`), select their names and salaries.
--   display the names of the lakers (`'LAL'`).
+-   display the player names of the lakers (`'LAL'`).
 
 Your Turn
 ---------
@@ -288,22 +290,3 @@ Use functions in `"dplyr"` to answer the following questions:
 ```
 
 ------------------------------------------------------------------------
-
-Solutions
----------
-
-``` r
-# selecting the last 5 rows
-slice(dat, 15:20)
-
-# individuals with height < 1.6, and of human species
-filter(dat, height < 1.6 & species == "human")
-
-# display names and jedi status of humans
-humans <- filter(dat, species == "human")
-select(humans, name, jedi)
-
-# display the names of jedis
-jedis <- filter(dat, jedi == "yes_jedi")
-select(jedis, name)
-```
