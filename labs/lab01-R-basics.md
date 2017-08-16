@@ -175,11 +175,9 @@ Your Turn
 
 ### Pythagoras formula
 
-The pythagoras formula is used to compute the length of the hypotenuse, *h*, of a right triangle with legs of length *a* and *b*:
+The pythagoras formula is used to compute the length of the hypotenuse, *c*, of a right triangle with legs of length *a* and *b*.
 
-$$
-h = \\sqrt{(a^2 + b^2)}
-$$
+![hypotenuse](https://wikimedia.org/api/rest_v1/media/math/render/svg/5fd521cee81d583ce94bf6710984cc2a9eb7c3da)
 
 Calculate the hypotenuse of a right triangle with legs of length 3 and 4. Use the `sqrt()` function, and create variables `a = 3` and `b = 4`. If you don't know what's the symbol to calculate exponents, search for the help documentation of the arithmetic operators: `?Arithmetic`.
 
