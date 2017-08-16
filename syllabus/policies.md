@@ -26,12 +26,13 @@ As Stat 133 gets larger and larger every year, running the course as smoothly as
 
 - Weekly labs are a required part of the course and they are meant to supplement lecture.
 - You must attend the discussion group you are officially registered in.
+- Do not take the class if you cannot attend the discussion you are registered in.
 - You will be encouraged to problem solve individually or in groups.
 - Each person must submit each lab independently to their github account, but you are welcome to collaborate with other students in your lab room.
 - To receive credit, you must attend lab, work on the lab assignment until you're finished or the lab period is over, and get checked off by a course staff member.
-- To receive full credit, you must be present for the entire time of the lab (partial credit for partial attendance).
+- To receive full credit, you must be present for the entire time of the lab (partial credit for partial attendance 50%).
 - After 9/18, you can miss one lab without losing points (no reasons asked).
-- Also after 9/18, if you have three absences or more, you will lose one letter grade. If you are in this situation come talk to me or reach out to me ASAP.
+- Also after 9/18, if you have three lab absences or more, you will lose one letter grade. If you are in this situation come talk to me or reach out to me ASAP.
 - There will be about 4 short quizzes given in discussion to test your understanding.
 - Your quiz scores __will NOT__ be part of your grade.
 - During lab, we will look at your work (e.g. how you code, what you are doing, how you approach problems), and we will take notes that will be used to assess part of your performance in the course.
@@ -42,6 +43,11 @@ As Stat 133 gets larger and larger every year, running the course as smoothly as
 
 - Homework assignments will be assigned almost every two weeks.
 - The first two HW will not be part of your grade. These are "warming-up" assignments.
+- Each assignment will be graded out of four points: 
+	- __completeness__: one point for making a good-faith effort at every part of the assignment.
+	- __correctness__: one point for technically-correct, working solutions to each part.
+	- __coding__: one point for clean, well-formatted, easily readable code.
+	- __description__: one point for clear descriptions, interpretations, explanations.
 - You will submit your homework to your Github repository. 
 - You should also submit the github's link of your assignment to bCourses.
 - Don't wait until the last hour to do an assignment. Plan ahead and pace yourself.
@@ -55,7 +61,7 @@ progress with the course.
 - If you collaborate with other students when working on a HW assignment, please include the names of those students in your submission.
 - You must write your own answers (using your own words). Copy and plagiarism will not be tolerated (see _Academic Honesty_ policy).
 - Learning programming is frustrating, but it can be fun.
-- Homework assignments are NOT eligible for regrades.
+- Homework assignments are __NOT__ eligible for regrades.
 
 
 
@@ -110,7 +116,7 @@ progress with the course.
 
 - No individual letter grades will be given for midterm, or final.
 - You will get a letter grade for the course that is based on your overall score.
-- The final grades tend to---roughly---follow a 30/30/30/10 (A/B/C/DF) scale. As a provisional guideline:
+- The final grades tend to---roughly---follow a 20/40/30/10 (A/B/C/DF) scale. As a provisional guideline:
     + 90%-100%: some kind of A
     + 80%-90%: some kind of B
     + 70%-80%: some kind of C
