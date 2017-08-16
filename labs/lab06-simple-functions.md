@@ -15,9 +15,8 @@ Simple Math Functions
 
 Consider the following mathematical functions:
 
-\[
-f(x) = x^2,   \quad g(x) = 2x + 5
-\]
+-   *f*(*x*)=*x*<sup>2</sup>
+-   *g*(*x*)=2*x* + 5
 
 Write two functions `f()` and `g()` based on the previous equations.
 
@@ -41,8 +40,8 @@ g(-5/2)
 
 Write code to create the following composite functions:
 
--   `fog()` for the composite function: \(f \circ g(x)\)
--   `gof()` for the composite function: \(g \circ f(x)\)
+-   `fog()` for the composite function: *f* ∘ *g*(*x*)
+-   `gof()` for the composite function: *g* ∘ *f*(*x*)
 
 ``` r
 # your function fog()
@@ -67,11 +66,11 @@ gof(-5/2)
 Pythagoras
 ----------
 
-The pythagoras formula is used to compute the length of the hypotenuse, \(h\), of a right triangle with legs of length \(a\) and \(b\).
+The pythagoras formula is used to compute the length of the hypotenuse, *h*, of a right triangle with legs of length *a* and *b*.
 
-\[
-h = \sqrt{(a^2 + b^2)}
-\]
+$$
+h = \\sqrt{(a^2 + b^2)}
+$$
 
 Write a function `pythagoras()` that takes two arguments `a` and `b`, and returns the length of the hypotenuse:
 
@@ -148,7 +147,7 @@ Use `liters2gallons()` to obtain liter conversions, in order to create a table (
 
 ### Seconds to Years
 
-According to Wikipedia, in 2015 the life expectancy of a person born in the US was 79 years. Consider the following question: Can a newborn baby in USA expect to live for one billion (\(10^9\)) seconds?
+According to Wikipedia, in 2015 the life expectancy of a person born in the US was 79 years. Consider the following question: Can a newborn baby in USA expect to live for one billion (10<sup>9</sup>) seconds?
 
 To answer this question, write a function `seconds2years()` that takes a number in seconds and returns the equivalent number of years. Test the function with `seconds2years(1000000000)`
 
@@ -163,13 +162,13 @@ Gaussian Function
 
 The Gaussian (Normal) function, given in the equation below, is one of the most widely used functions in science and statistics:
 
-\[
-f(x) = \frac{1}{\sqrt{2 \pi} s} exp \left \{ -\frac{1}{2} \left (\frac{x - m}{s} \right)^2 \right \}
-\]
+$$
+f(x) = \\frac{1}{\\sqrt{2 \\pi} s} exp \\left \\{ -\\frac{1}{2} \\left (\\frac{x - m}{s} \\right)^2 \\right \\}
+$$
 
-The parameters \(s\) and \(m\) are real numbers, where \(s\) must be greater than zero.
+The parameters *s* and *m* are real numbers, where *s* must be greater than zero.
 
-Make a function `gaussian()` that takes three arguments: `x`, `m`, and `s`. Evaluate the function with \(m = 0\), \(s = 2\), and \(x = 1\).
+Make a function `gaussian()` that takes three arguments: `x`, `m`, and `s`. Evaluate the function with *m* = 0, *s* = 2, and *x* = 1.
 
 ``` r
 # your code
@@ -207,7 +206,7 @@ Your turn:
 
 In this problem we want to see whether the graph of a given polynomial will cross or touch the *x* axis in a given interval.
 
-Let's begin with the polynomial: \(f(x) = x^2 (x - 1)\). The first thing to do is write a function for the polynomial, for instance:
+Let's begin with the polynomial: *f*(*x*)=*x*<sup>2</sup>(*x* − 1). The first thing to do is write a function for the polynomial, for instance:
 
 ``` r
 poly1 <- function(x) {
@@ -215,7 +214,7 @@ poly1 <- function(x) {
 }
 ```
 
-Once you have a function for the polynomial, you can create a set of pairs of points \(x\) and \(y = f(x)\), and then use them to graph the polynomial
+Once you have a function for the polynomial, you can create a set of pairs of points *x* and *y* = *f*(*x*), and then use them to graph the polynomial
 
 ``` r
 # set of points
@@ -232,9 +231,9 @@ title(main = expression(paste(f(x), ' = ', x^2, (x - 1))))
 
 Write functions and graph the following polynomials in the x-axis interval -4 to 4:
 
-1.  \(f(x) = x^3\)
-2.  \(f(x) = (x^2 - 1)(x + 3)^3\)
-3.  \(f(x) = (x^2 - 1)(x^2 - 9)\)
+1.  *f*(*x*)=*x*<sup>3</sup>
+2.  *f*(*x*)=(*x*<sup>2</sup> − 1)(*x* + 3)<sup>3</sup>
+3.  *f*(*x*)=(*x*<sup>2</sup> − 1)(*x*<sup>2</sup> − 9)
 
 ------------------------------------------------------------------------
 
