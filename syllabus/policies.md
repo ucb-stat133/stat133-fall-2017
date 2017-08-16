@@ -31,8 +31,11 @@ As Stat 133 gets larger and larger every year, running the course as smoothly as
 - Each person must submit each lab independently to their github account, but you are welcome to collaborate with other students in your lab room.
 - To receive credit, you must attend lab, work on the lab assignment until you're finished or the lab period is over, and get checked off by a course staff member.
 - To receive full credit, you must be present for the entire time of the lab (partial credit for partial attendance 50%).
-- After 9/18, you can miss one lab without losing points (no reasons asked).
-- Also after 9/18, if you have three lab absences or more, you will lose one letter grade. If you are in this situation come talk to me or reach out to me ASAP.
+- If you finish the lab early, we encourage you to help others with their lab.
+- After 9/18, if you miss
+    + one lab, you get full lab credit.
+    + two or three labs, you get half lab credit (you may lose one letter grade).
+    + four or more labs, you fail the class (F grade).
 - There will be about 4 short quizzes given in discussion to test your understanding.
 - Your quiz scores __will NOT__ be part of your grade.
 - During lab, we will look at your work (e.g. how you code, what you are doing, how you approach problems), and we will take notes that will be used to assess part of your performance in the course.
@@ -71,6 +74,7 @@ progress with the course.
 - Posts are mastery-oriented goals.
 - Each post is worth 5%
 - You will have the opportunity to expand your knowledge, researching a specific topic, and going further from what will be covered in the course.
+- See the [posts](posts) section to know more about them.
 
 
 
