@@ -1,12 +1,14 @@
-# Syllabus
+# Syllabus, Stat 133
 
-Tentative Calendar (Weekly Topics), Fall 2017
++ Notes:
+    - Tentative calendar (weekly topics), subject to changes depending on the pace of the course.
+    - Labs: For the covered topics in a given week, the associated lab takes place on Monday of the following week.
 
 
-## 0) Course Introduction
+## 0. Course Introduction
 
-_Aug 23-25:_ Introduction, policies/logistics, and course in a nutshell.
-
++ __Dates__: Aug 23-25
++ __Topics__: Introduction, policies/logistics, and course in a nutshell.
 + __Lecture material__
     + [About the Course](https://docs.google.com/presentation/d/1odMBh760lfSBiRhEh2cNLEq8LY8YcQTl_lLutRVbZhs/pub?start=false&loop=false&delayms=3000) (slides)
     + [Introduction: Big Picture](https://docs.google.com/presentation/d/1q8fIQ_xVo-S1awfh3qA6XqfZeyG4z3KvLgQj1L9ZuAY/pub?start=false&loop=false&delayms=3000) (slides)
@@ -21,10 +23,10 @@ _Aug 23-25:_ Introduction, policies/logistics, and course in a nutshell.
 -----
 
 
-## 1) R Survival Skills
+## 1. R Survival Skills
 
-_AugSep 28-01:_ Getting started with R, and comprehensive review of the RStudio workspace.
-
++ __Dates__: Aug 28-Sep 01:
++ __Topics__: Getting started with R, and comprehensive review of the RStudio workspace.
 + __Lecture material__
     + [About R](https://docs.google.com/presentation/d/1n4Wo6lhYIeUi6XPhE7BVhX6cgfcTHkr1_uap0GWmD5Q/pub?start=false&loop=false&delayms=3000) (slides)
     + [First contact with R](../tutorials/01-intro-to-R.md) (tutorial)
@@ -47,10 +49,10 @@ _AugSep 28-01:_ Getting started with R, and comprehensive review of the RStudio 
 
 
 
-## 2) Data Types, Vectors and Other Structues
+## 2. Data Types, Vectors and Other Structues
 
-_Sep 04-08:_ Getting to know R vectors and concepts like atomicity, vectorization, recycling, and subsetting.
-
++ __Dates__: Sep 04-08
++ __Topics__: Getting to know R vectors and concepts like atomicity, vectorization, recycling, and subsetting.
 + __Lecture material__
     + [R Vectors](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/pub?start=false&loop=false&delayms=3000) (slides)
     + [Intro to vectors](../tutorials/03-intro-to-vectors.md) (tutorial)
@@ -67,10 +69,10 @@ _Sep 04-08:_ Getting to know R vectors and concepts like atomicity, vectorizatio
 
 
 
-## 3) Housekeeping: Filesystem, Bash, Git, Github
+## 3. Housekeeping: Filesystem, Bash, Git, Github
 
-_Sep 11-15:_ Fundamental low-level stuff for the rest of the course.
-
++ __Dates__: Sep 11-15
++ __Topics__: Fundamental low-level stuff for the rest of the course.
 + __Lecture material__
     + [Filesystem](https://docs.google.com/presentation/d/1V-JPhr3Do3A7Jn-zgFSqD7R171W-G02uEmxWoHZI7bs/pub?start=false&loop=false&delayms=3000) (slides)
     + [Shell Basics](https://docs.google.com/presentation/d/1VTlxM0IrwhzSDVyqPM9a2JLG8wICVpOp3hrHvTcrA6Q/pub?start=false&loop=false&delayms=3000) (slides)
@@ -88,10 +90,10 @@ _Sep 11-15:_ Fundamental low-level stuff for the rest of the course.
 
 
 
-## 4) Basics of Tabular Data
+## 4. Basics of Tabular Data
 
-_Sep 18-22:_ Data Tables, typical storage formats, and relation with data frames.
-
++ __Dates__: Sep 18-22
++ __Topics__: Data Tables, typical storage formats, and relation with data frames.
 + __Lecture material__
     + [Data Tables](https://docs.google.com/presentation/d/1WQIrQxtNXhEEpI0Yd5Ch4r2zwIp3KG2O_BVY5nsdY4Q/pub?start=false&loop=false&delayms=3000) (slides)
     + [Importing Tables in R](https://docs.google.com/presentation/d/1vbqZoR2i8z3Zlpc8WxhA3ntKnfB8O1WVKnFVDdxZzdA/pub?start=false&loop=false&delayms=3000) (slides)
@@ -110,11 +112,11 @@ _Sep 18-22:_ Data Tables, typical storage formats, and relation with data frames
 
 
 
-## 5) Wrangling and Exploring Tables
+## 5. Wrangling and Exploring Tables
 
-_Sep 25-29:_ Data wrangling (reshaping, aggregating) with `"dplyr"`, and 
++ __Dates__: Sep 25-29
++ __Topics__: Data wrangling (reshaping, aggregating) with `"dplyr"`, and 
 graphs with `"ggplot2"`.
-
 + __Lecture Material__
     + Introduction to the R package `dplyr`
     + Introduction to the R package `ggplot2`
@@ -135,10 +137,10 @@ graphs with `"ggplot2"`.
 
 
 
-## 6) Programming Basics part 1 (for data analysis)
+## 6. Programming Basics part 1 (for data analysis)
 
-_Oct 01-05:_ Basics of Functions, R expressions, and conditionals.
-
++ __Dates__: Oct 01-05
++ __Topics__: Basics of Functions, R expressions, and conditionals.
 + __Lecture Material__
     + [Introduction to functions](../tutorials/06-intro-to-functions.md)
     + [Introduction to R expressions and conditionals](../tutorials/07-intro-to-expressions-conditionals.md)
@@ -154,10 +156,10 @@ _Oct 01-05:_ Basics of Functions, R expressions, and conditionals.
 
 
 
-## 7) Programming Basics part 2 (for data analysis)
+## 7. Programming Basics part 2 (for data analysis)
 
-_Oct 08-12:_ Basics of loops, and more about functions.
-
++ __Dates__: Oct 08-12
++ __Topics__: Basics of loops, and more about functions.
 + __Lecture Material__
     + [Introduction to loops](../tutorials/08-intro-to-loops.md)
     + [More about functions](../tutorials/09-more-functions.md)
@@ -173,10 +175,10 @@ _Oct 08-12:_ Basics of loops, and more about functions.
 
 
 
-## 8) Random Numbers and Simulations
+## 8. Random Numbers and Simulations
 
-_Oct 15-19:_ Random numbers, sampling, and monte carlo simulation.
-
++ __Dates__: Oct 15-19
++ __Topics__: Random numbers, sampling, and monte carlo simulation.
 + __Lecture Material__
     + [Introduction to random numbers](../tutorials/10-intro-to-random-numbers.md)
     + [Monte Carlo Simulations](../tutorials/11-intro-to-simulations.md)
@@ -193,10 +195,10 @@ _Oct 15-19:_ Random numbers, sampling, and monte carlo simulation.
 
 
 
-## 9) Manipulating Character Strings
+## 9. Manipulating Character Strings
 
-_Oct 22-26:_ Character strings.
-
++ __Dates__: Oct 22-26
++ __Topics__: Character strings.
 + __Lecture Material__
     + [Introduction to loops](../tutorials/08-intro-to-loops.md)
     + [More about functions](../tutorials/09-more-functions.md)
@@ -212,10 +214,10 @@ _Oct 22-26:_ Character strings.
 
 
 
-## 10) Regular Expressions
+## 10. Regular Expressions
 
-_Oct 28-01:_ Introduction to Regular Expressions.
-
++ __Dates__: Oct 28-01
++ __Topics__: Introduction to Regular Expressions.
 + __Lecture Material__
     + [Introduction to regex](../tutorials/08-intro-to-loops.md)
     + [More about functions](../tutorials/09-more-functions.md)
