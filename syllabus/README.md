@@ -54,7 +54,7 @@
 
 ## 2. Data Types, Vectors and Other Structues
 
-+ __Dates__: Sep 04-08
++ __Dates__: Sep 04-08  _(Holiday Sep-04)_
 + __Topics__: Getting to know R vectors and concepts like atomicity, vectorization, recycling, and subsetting.
 + __Lecture material__
     + [R Vectors](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/pub?start=false&loop=false&delayms=3000) (slides)
