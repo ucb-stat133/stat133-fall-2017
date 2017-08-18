@@ -73,6 +73,12 @@ progress with the course.
 
 - There will be three post assignments (due at the end of each month: Sep, Oct, Nov).
 - Posts are mastery-oriented goals.
+- You will have to write three posts based on three of the five major course themes:
+  + Data Visualization
+  + Data Manipulation (reshaping, wrangling, formatting, tidying)
+  + Programming for data analysis
+  + Data Technologies
+  + Reporting Tools
 - Each post is worth 5%
 - You will have the opportunity to expand your knowledge, researching a specific topic, and going further from what will be covered in the course.
 - See the [posts](posts) section to know more about them.
@@ -82,7 +88,7 @@ progress with the course.
 ### Tests
 
 - There will be one 50-minute in-class midterm, and one 3-hour final exam.
-- The tentative date of the midterm is TBD. 
+- The tentative date of the midterm is Friday October 6th (to be confirmed). 
 - The final exam is currently scheduled for Day, Dec ddth from time1 to time2. (classroom to be announced).
 - If you do not take the final, you will NOT pass the class.
 - Please don't cheat. It's not worth it.
