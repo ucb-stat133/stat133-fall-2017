@@ -2,7 +2,7 @@
 
 + Notes:
     - Tentative calendar (weekly topics), subject to changes depending on the pace of the course.
-    - Labs: For the covered topics in a given week, the associated lab takes place on Monday of the following week.
+    - Labs: For the covered topics in a given week, the associated lab takes place on Th/Fr of the current week.
 
 
 -----
@@ -20,7 +20,7 @@
     + [Course policies](policies.md), and [FAQs](faqs.md)
     - What is Data Science?
 + __To Do__: 
-    + Install R and RStudio
+    + Install [__R__](https://cran.cnr.berkeley.edu/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) Desktop (open source version, free)
 
 
 -----
