@@ -17,16 +17,16 @@ You can go to the office hours of __any__ GSI, not just your own.
 
 | Lab | Date       | Room         | GSI             |
 |-----|------------|--------------|-----------------|
-| 101 | Th 9-11am  | 342 Evans    | TBD   |
-| 102 | Th 11-1pm  | 342 Evans    | TBD   |
-| 103 | Th 1-3pm   | 342 Evans    | TBD   |
-| 104 | Th 3-5pm   | 342 Evans    | TBD   |
-| 105 | Fr 9-11am  | 342 Evans    | TBD   |
-| 106 | Fr 9-11am  | 340 Evans    | TBD   |
-| 107 | Fr 11-1pm  | 342 Evans    | TBD   |
-| 108 | Fr 11-1pm  | 340 Evans    | TBD   |
-| 109 | Fr 1-3pm   | 342 Evans    | TBD   |
-| 110 | Fr 1-3pm   | 340 Evans    | TBD   |
+| 101 | Th 9-11am  | 342 Evans    | Omid Shams      |
+| 102 | Th 11-1pm  | 342 Evans    | Andy Mao        |
+| 103 | Th 1-3pm   | 342 Evans    | Ningning Long   |
+| 104 | Th 3-5pm   | 342 Evans    | Xiaoqi Zhang    |
+| 105 | Fr 9-11am  | 342 Evans    | Andy Mao        |
+| 106 | Fr 9-11am  | 340 Evans    | Omid Shams      |
+| 107 | Fr 11-1pm  | 342 Evans    | Minchul Shin    |
+| 108 | Fr 11-1pm  | 340 Evans    | Ningning Long   |
+| 109 | Fr 1-3pm   | 342 Evans    | Minchul Shin    |
+| 110 | Fr 1-3pm   | 340 Evans    | Xiaoqi Zhang    |
 
 
 
