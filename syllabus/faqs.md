@@ -19,7 +19,7 @@ the learning curve less steep.
 You may find the majority of this course somewhat slow (and boring?) in terms 
 of basics concepts such as data types, data structures, conditionals, loops, 
 and functions. Please consider taking more advanced courses if what you are 
-interested in is in algorithms, computational statistics, or data bases.
+interested in is algorithms, computational statistics, or data bases.
 
 
 ### Is this course a good fit if I don't have any data analysis experience?
