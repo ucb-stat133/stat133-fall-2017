@@ -123,7 +123,7 @@ graphs with `"ggplot2"`.
 + __Lecture Material__
     + Introduction to the R package `dplyr`
     + Introduction to the R package `ggplot2`
-    + Introduction to shiny apps
+    + [Introduction to shiny apps](https://docs.google.com/presentation/d/1_XhkkhXA26izACJyoc5JYrWiF_f96a6tD9ZSI5Tm8Os/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
     + [More wrangling with data frames](../labs/lab05-more-dplyr.md)
     + [Getting started with ggplot2](../labs/04-ggplot2-basics.md)
