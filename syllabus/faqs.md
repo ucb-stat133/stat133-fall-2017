@@ -6,6 +6,25 @@ question that it's here, I'm going to kindly ask you to refer to this document.
 
 -----
 
+### I am on the waitlist. What are my chances of enrolling in the class?
+
+Stat 133 is a high-demanded course, with a waiting list continuously increasing every year.
+From my past experience, between 5-7% of enrolled students tend to drop the course in the
+first two weeks, thus allowing between 15 to 20 students in the waitlist to join the class.
+This semester (fall 2017), however, there are about 110 waitlisted students. So if you 
+are outside the first 25 on the waitlist, you have a very low chance to join the class.
+
+
+### I am a concurrent student. What are my chances of enrolling in the class?
+
+Concurrent students have the lowest priority. And looking at past trends, I don't think you
+have a chance of getting in the class.
+
+
+### What if I don't agree with all the course policies?
+
+If there is one or more policies you don't agree with, then please seriously reconsider your enrollment in the course. I am assuming that all students completely agree with the course policies.
+
 
 ### Is this course a good fit if I don't have any programming experience?
 
