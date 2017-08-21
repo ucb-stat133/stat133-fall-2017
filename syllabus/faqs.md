@@ -23,7 +23,7 @@ have a chance of getting in the class.
 
 ### What if I don't agree with all the course policies?
 
-If there is one or more policies you don't agree with, then please seriously reconsider your enrollment in the course. I am assuming that all students completely agree with the course policies.
+If there is one or more [policies](policies.md) you don't agree with, then please seriously reconsider your enrollment in the course. I am assuming that all students completely agree with the course policies.
 
 
 ### Is this course a good fit if I don't have any programming experience?
