@@ -1,14 +1,14 @@
 # Frequently Asked Questions
 
 Below are some of the questions I get asked everytime I teach Stat 133.
-Do you really need to read them? Not really, but if you ever ask me a 
+Do you have to read them? Not really, but if you ever ask me a 
 question that it's here, I'm going to kindly ask you to refer to this document.
 
 -----
 
 ### I am an undergrad student on the waitlist. What are my chances of enrolling in the class?
 
-Stat 133 is a high-demand course, with a waiting list continuously increasing every year.
+Stat 133 is a highly demanded course, with a waiting list continuously increasing every year.
 From my past experience, between 5-7% of enrolled students tend to drop the course in the
 first two weeks, thus allowing between 15 to 20 students in the waitlist to join the class.
 This semester (fall 2017), however, there are about 110 waitlisted students. So if you 
@@ -102,7 +102,7 @@ __Stat 159: Reproducible and Collaborative Statistical Data Science__.
 ### Do we need to memorize all commands?
 
 No. We don't expect that you memorize all commands. However, we do expect that 
-you learn the most common types of functions: `library()`, `function()`, etc.
+you learn the most common types of functions: e.g. `library()`, `function()`, `help()`, etc.
 
 
 ### Are we going to learn how to create an R package?
