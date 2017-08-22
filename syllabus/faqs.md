@@ -6,7 +6,7 @@ question that it's here, I'm going to kindly ask you to refer to this document.
 
 -----
 
-### I am on the waitlist. What are my chances of enrolling in the class?
+### I am an undergrad student on the waitlist. What are my chances of enrolling in the class?
 
 Stat 133 is a high-demand course, with a waiting list continuously increasing every year.
 From my past experience, between 5-7% of enrolled students tend to drop the course in the
@@ -15,10 +15,20 @@ This semester (fall 2017), however, there are about 110 waitlisted students. So 
 are outside the first 25 on the waitlist, you have a very low chance to join the class.
 
 
+### I am a grad student on the waitlist. What are my chances of enrolling in the class?
+
+If you are a grad student seriously interested in Stat 133, then you should try to schedule a meeting with me within the first two weeks of classes. While I cannot guarantee you a spot in the class, I would like to first determine if this course is a good fit for you. 
+
+
 ### I am a concurrent student. What are my chances of enrolling in the class?
 
 Concurrent students have the lowest priority. And looking at past trends, I don't think you
 have a chance of getting in the class.
+
+
+### I would like to switch lab sections with other student. Is this possible?
+
+In the past, under special circumstances, I allowed students to swap lab sections. But not anymore. Now you must attend the lab discussion you are officially registered in.
 
 
 ### What if I don't agree with all the course policies?
