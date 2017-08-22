@@ -33,7 +33,7 @@ In the past, under special circumstances, I allowed students to swap lab section
 
 ### What if I don't agree with all the course policies?
 
-If there is one or more [policies](policies.md) you don't agree with, then please seriously reconsider your enrollment in the course. I am assuming that all students completely agree with the course policies.
+If there is one or more [policies](policies.md) you don't agree with, then please reconsider your enrollment in the course. I am assuming that all students completely agree with the course policies.
 
 
 ### Is this course a good fit if I don't have any programming experience?
@@ -58,15 +58,20 @@ In this course you will be working with real data sets, as well as with
 simulated data.
 
 
+### Is this course a good fit if I don't intend to major in Statistics?
+
+Stat 133 is one of the core courses of the [Statistics Major](http://statistics.berkeley.edu/programs/undergrad/major). The way I teach the course is having Statistics majors as my target audience. However, much of the content should be helpful for any student who has to analyze data.
+
+
 ### After finishing this course, can I call myself a data scientist?
 
-No. Becoming a data scientist is not a sprint. It is a marathon. Like any other 
+Not yet. Becoming a data scientist is not a sprint. It is a marathon. Like any other 
 profession, it takes years of practice and learning. This course is just the beginning.
 
 
 ### What if I don't want to be a data scientist?
 
-That's perfect too. You don't need to be a data scientist wannabe to take this course.
+That's perfect too. You don't need to be a data scientist aspirant to take this course.
 Whether your plans are to be a consultant, life scientist, social scientist, 
 journalist, or get some analytic skills, this course should be a good choice.
 
