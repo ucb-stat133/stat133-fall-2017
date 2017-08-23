@@ -18,7 +18,7 @@
 + __Lab__: No lab
 + __Reading__:
     + [Course policies](policies.md), and [FAQs](faqs.md)
-    - What is Data Science?
+    - [What is Data Science?](../papers/what-is-data-science.pdf)
 + __To Do__: 
     + Install [__R__](https://cran.cnr.berkeley.edu/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) Desktop (open source version, free)
 
