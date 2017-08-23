@@ -81,7 +81,7 @@ progress with the course.
   + Reporting Tools
 - Each post is worth 5%
 - You will have the opportunity to expand your knowledge, researching a specific topic, and going further from what will be covered in the course.
-- See the [posts](posts) section to know more about them.
+- See the [posts](posts.md) section to know more about them.
 
 
 
