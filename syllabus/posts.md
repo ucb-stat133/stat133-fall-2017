@@ -40,9 +40,9 @@ With a class as big as Stat 133, it is possible that two or more students choose
 - Keep an ideal reader in mind when writing the post. Preferably, that ideal reader should be you.
 - You can also pretend that your audience are other Stat 133 students (the instructor is NOT your audience).
 - If you are writing the post with a very specific type of reader in mind, then please mention your assumptions about who the content is targeted to.
-- You should submit your post to your github repository ofr the Stat 133 HWs.
+- You should submit your post to your github repository for Stat 133 HWs.
 - Perhaps the simplest format for a post is using an Rmd file that generates output as a `github_document`.
-- But you could also include supporting material (slides, scripts, shiny app).
+- But you could also include supporting material (e.g. slides, scripts, shiny app).
 
 
 
@@ -52,12 +52,12 @@ Each of your posts not only will be assessed by one of the staff members, but it
 
 Each post will be graded on the following criteria:
 
-- Originality: Content of the post is original (material not covered in lecture/lab/assignments, or material extended on what has been covered).
-- Application: One ore more examples illustrating the applicability of the discussed topic(s).
-- Verbal: Communicate descriptions and findings in writing clearly, precisely, and concisely.
-- Visual: Communicate key concepts and findings graphically, clearly, and precisely.
-- Coding: Clean, well-formatted, easily readable code.
-- References: Comprehensive list of sources and references.
+- __Originality__: Content of the post is original (material not covered in lecture/lab/assignments, or material extended on what has been covered).
+- __Application__: One ore more examples illustrating the applicability of the discussed topic(s).
+- __Verbal__: Communicate descriptions and findings in writing clearly, precisely, and concisely.
+- __Visual__: Communicate key concepts and findings graphically, clearly, and precisely.
+- __Coding__: Clean, well-formatted, easily readable code.
+- __References__: Comprehensive list of sources and references.
 
 
 
