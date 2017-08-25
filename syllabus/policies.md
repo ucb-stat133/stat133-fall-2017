@@ -53,7 +53,7 @@ As Stat 133 gets larger and larger every year, running the course as smoothly as
 	- __correctness__: one point for technically-correct, working solutions to each part.
 	- __coding__: one point for clean, well-formatted, easily readable code.
 	- __description__: one point for clear descriptions, interpretations, explanations.
-- You will submit your homework to your Github repository. 
+- You will submit your homework to your private Github repository. 
 - You should also submit the github's link of your assignment to bCourses.
 - Don't wait until the last hour to do an assignment. Plan ahead and pace yourself.
 - Don't wait until the last minute to push your commits.
@@ -61,6 +61,7 @@ As Stat 133 gets larger and larger every year, running the course as smoothly as
 limited to, Internet congestion, system crashes, natural disasters, 
 theft, medical emergencies, personal crisis, theft or any extraordinary 
 circumnstances (e.g. illnes, exhaustion, mourning, loss of internet connection, bCourses is down, broken computer). Don't ask. I won't be sympathetic.
+- I will drop your lowest HW score.
 - The homework assignments will get substantially more difficult as we
 progress with the course.
 - If you collaborate with other students when working on a HW assignment, please include the names of those students in your submission.
@@ -145,7 +146,7 @@ With the obvious exception of exams, we encourage you to discuss all of the cour
 
 ### Academic Honesty
 
-Cooperation has a limit, however. You should not share your code or answers directly with other students. Doing so doesn't help them; it just sets them up for trouble on exams. Feel free to discuss the problems with others beforehand, but not the solutions. Please complete your own work and keep it to yourself. If you suspect other people may be plagiarizing you, let us know ASAP.
+Cooperation has a limit, however. You should not share your code or answers directly with other students. Doing so doesn't help them; it just sets them up for trouble on exams. Feel free to discuss the problems with others beforehand, but not the solutions. Please complete your own work and keep it to yourself. If you suspect other people may be plagiarizing you, let us know ASAP. For more information please read the [Honor Code Guide for Syllabi](http://teaching.berkeley.edu/sites/default/files/general/hc_guide_for_syllabi.pdf).
 
 I (Gaston Sanchez) expect you to do your own work and to uphold the standards of intellectual integrity. Collaborating on homework is fine and I encourage you to work together---but copying is not, nor is having somebody else submit assignments for you. __Cheating will not be tolerated__. Anyone found cheating will receive an F and will be reported to the [Center for the Student Conduct](http://sa.berkeley.edu/conduct). If you are having trouble with an assignment or studying for an exam, or if you are uncertain about permissible and impermissible conduct or collaboration, please come see me with your questions. 
 
