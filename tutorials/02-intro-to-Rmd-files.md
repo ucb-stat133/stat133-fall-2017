@@ -32,7 +32,7 @@ The main idea behind dynamic documents is simple yet very powerful: instead of w
 
 One of the main advantages of this paradigm, is that you avoid having to copy results from your computations and paste them into a report file. In fact, there are more complex ways to work with dynamic documents and source files. But the core idea is the same: combine narrative and code in a way that you let the computer do the manual, repetitive, and time consuming job.
 
-Rmd files is just one type of dynamic document that you will find in RStudio. In fact, RStudio provides other file formats that can be sued as dynamic documents: e.g. `.Rnw`, `.Rpres`, `.Rhtml`, etc.
+Rmd files is just one type of dynamic document that you will find in RStudio. In fact, RStudio provides other file formats that can be used as dynamic documents: e.g. `.Rnw`, `.Rpres`, `.Rhtml`, etc.
 
 ### Anatomy of an `Rmd` file
 
@@ -45,7 +45,7 @@ The *YAML header* consists of the first few lines at the top of the file. This h
 -   `date`
 -   `output`
 
-The *body* of the document is everything below the YAML header. It consists of a mix of narrative and R code. All the text that is narrative is written in a markup syntax called **Markdown**. In turn, all the text that is code is written in R syntax inside *blocks of code*.
+The *body* of the document is everything below the YAML header. It consists of a mix of narrative and R code. All the text that is narrative is written in a markup syntax called **Markdown** (although you can also use LaTeX math notation). In turn, all the text that is code is written in R syntax inside *blocks of code*.
 
 There are two types of blocks of code: 1) **code chunks**, and 2) **inline code**. Code chunks are lines of text separated from any lines of narrative text. Inline code is code inserted within a line of narrative text .
 
@@ -73,7 +73,7 @@ R markdown (`Rmd`) files use [markdown](https://daringfireball.net/projects/mark
 
 One of the most common sources of confusion when learning about R and Rmd files has to do with the hash symbol `#`. As you know, `#` is the character used by R to indicate comments. The issue is that the `#` character has a different meaning in markdown syntax. Hashes in markdown are used to define levels of headings.
 
-In and Rmd file, a hash `#` that is inside a code chunk will be treated as an R comment. A hash outside a code chunk, will be treated as markdown syntax, making its associated text a given type of heading.
+In an Rmd file, a hash `#` that is inside a code chunk will be treated as an R comment. A hash outside a code chunk, will be treated as markdown syntax, making its associated text a given type of heading.
 
 Code chunks
 -----------
@@ -91,11 +91,13 @@ There are dozens of options available to control the executation of the code, th
     -   `TRUE`
     -   `FALSE`
 -   `results`: how to display the output
-    -   `markdup`
+    -   `markup`
     -   `asis`
     -   `hold`
     -   `hide`
 -   `comment`: character used to indicate output lines
+    -   the default is a double hash `##`
+    -   `""` empty character (to have a cleaner display)
 
 ------------------------------------------------------------------------
 

@@ -134,7 +134,7 @@ used by R to indicate comments. The issue is that the `#` character has a
 different meaning in markdown syntax. Hashes in markdown are used to define 
 levels of headings.
 
-In and Rmd file, a hash `#` that is inside a code chunk will be treated as 
+In an Rmd file, a hash `#` that is inside a code chunk will be treated as 
 an R comment. A hash outside a code chunk, will be treated as markdown syntax, 
 making its associated text a given type of heading.
 
@@ -158,11 +158,13 @@ basic options you should become familiar with:
     + `TRUE`
     + `FALSE`
 - `results`: how to display the output
-    + `markdup`
+    + `markup`
     + `asis`
     + `hold`
     + `hide`
 - `comment`: character used to indicate output lines
+    + the default is a double hash `##`
+    + `""` empty character (to have a cleaner display)
 
 
 -----
