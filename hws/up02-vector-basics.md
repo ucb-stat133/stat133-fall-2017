@@ -1,9 +1,9 @@
-HW01 - Stat 133, Fall 2017
+Warm-Up 02 - Stat 133, Fall 2017
 ================
 
 The purpose of this assignment is to work with vectors of different data types: numeric (integer and real), character, logical, and factors.
 
-Due date: TBD
+Due date: Sep-15, 2017
 
 Introduction
 ------------
@@ -17,13 +17,13 @@ Research Question and Data
 
 As I mentioned in class, the starting research question is: "the more points a player scores, the higher his salary?"
 
-You are not going to try to answer this question in this assignment. What you have to do is start to get to know the data.
+You are NOT going to try to answer this question in this assignment. What you have to do is start to get to know the data.
 
 ### Data
 
 The data set for this assignment is data about NBA players during the regular season of 2016-2017. The corresponding file is `nba2017-salary-points.RData`. This is a binary file (native's R binary format).
 
-Read the data dictionary file `nba2017-salary-points-dictionary.md` located in the `data/` folder of the homework assignment.
+Check the data dictionary file `nba2017-salary-points-dictionary.md` located in the `data/` folder of the homework assignment. You'll find here more information about the contents in `nba2017-salary-points.RData`.
 
 To read the data in R, use the `load()` function, which allows you to import `.RData` files into R. Make sure you start with a fresh R session and no existing objects in your workspace:
 
@@ -43,7 +43,7 @@ Inspect the objects in the `.RData` file:
 
 The first step is to inspect the data. This is actullay the *first contact* stage. And to be honest, most of the work you do in this stage never gets reported. But this does not mean that it is worthless or less important. Here are various questions for you to consider while "getting to know the data":
 
--   Make sure you have all the objects described in the data disctionary.
+-   Make sure you have all the objects described in the data dictionary.
 -   What class of objects are in the file?
 -   Are there any vectors, factors, lists?
 -   What flavor is each vector (i.e. variable)?
@@ -66,9 +66,10 @@ For the selected quantitative variable, describe the overall pattern (shape, cen
     -   maximum value
     -   median
     -   quartiles
--   What's typical? What's the spread?
+-   What are the typical values in each vector?
+-   What's the spread in each vector?
 -   Look at the distribution: use `hist()` and `boxplot()`.
--   You can also try to get display a density curve (or density polygon). Find out how to do this.
+-   You can also try to get a density curve (or density polygon). Find out how to do this.
 
 ### Qualitative Variable
 
@@ -127,7 +128,7 @@ For people who want to take things further. You can try to look for:
 Submission
 ----------
 
-Name your `Rmd` file using the following structure: `hw01-first-last.Rmd` where "first" and "last" are your first and last names. E.g. `hw01-gaston-sanchez.Rmd`.
+Name your `Rmd` file using the following structure: `up02-first-last.Rmd` where "first" and "last" are your first and last names. E.g. `up02-gaston-sanchez.Rmd`.
 
 Add, push and commit the source `Rmd` file as well as the knitted `.md` file to your GitHub repository for the course assignments.
 
