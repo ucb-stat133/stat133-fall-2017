@@ -33,13 +33,15 @@ R and RStudio
 R as a scientific calculator
 ----------------------------
 
-Launch RStudio and notice the default panes:
+Launch RStudio and notice the default position of the panes:
 
 -   Console (entire left)
 -   Environment/History (tabbed in upper right)
 -   Files/Plots/Packages/Help (tabbed in lower right)
 
-FYI: you can change the default location of the panes, among many other things: [Customizing RStudio](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio).
+**FYI:** you can change the default location of the panes, among many other things: [Customizing RStudio](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio). If have no experience working with R/RStudio, you don't have to customize right now. It's better if you wait some days until you get a better feeling of the working environment. You will probably be experimenting (trial and error) with the customizing options until you find what works for you.
+
+### First contact with the R console
 
 Let's start typing basic things in the *console*, using R as a scientific calculator.
 
@@ -89,6 +91,12 @@ Assuming that Leia has the same expenses every month, how much would she spend d
 
 ``` r
 # semester expenses
+```
+
+Maintaining the same assumption about the monthly expenses, how much would Leia spend during a school "year"? (assume the academic year is 10 months)
+
+``` r
+# year expenses
 ```
 
 ### Object Names
@@ -170,35 +178,28 @@ PHONE - phone
 
     ## [1] 7920
 
-Your Turn
----------
+### Your turn
 
-### Pythagoras formula
+Take your objects (i.e. variables) `phone`, `transportation`, `groceries`, `gym`, `rent`, and `other` and pass them inside the *combine* function `c()` to create a vector `expenses`
 
-The pythagoras formula is used to compute the length of the hypotenuse, *c*, of a right triangle with legs of length *a* and *b*.
+``` r
+# your vector expenses
+```
 
-![hypotenuse](https://wikimedia.org/api/rest_v1/media/math/render/svg/5fd521cee81d583ce94bf6710984cc2a9eb7c3da)
+Now, use the graphing function `barplot()` to produce a barchart of `expenses`:
 
-Calculate the hypotenuse of a right triangle with legs of length 3 and 4. Use the `sqrt()` function, and create variables `a = 3` and `b = 4`. If you don't know what's the symbol to calculate exponents, search for the help documentation of the arithmetic operators: `?Arithmetic`.
+``` r
+barplot(expenses)
+```
+
+Find out how to use `sort()` to sort the elements in `expenses`, in order to produce a bar-chart with bars in decreasing order. Also, see if you can figure out how to display the names of the variables below each of the bars. Also optional, see if you can find out how to display the values of each variable at the top of each bar.
 
 ------------------------------------------------------------------------
 
 More about RStudio
 ------------------
 
-You will be working with RStudio a lot, and you will have time to learn most of the bells and whistles RStudio provides. Think about RStudio as your "workbench". Keep in mind that RStudio is NOT R. RStudio is an environment that makes it easier to work with R, while handling taking care of many of the little tasks than can be a hassle.
-
-### A quick tour of RStudio
-
--   Understand the **pane layout** (i.e. windows) of RStudio
-    -   Source
-    -   Console
-    -   Environment, History, etc
-    -   Files, Plots, Packages, Help, Viewer
--   Customize RStudio Appearance of source pane
--   font
--   size
--   background
+You will be working with RStudio a lot, and you will have time to learn most of the bells and whistles RStudio provides. Think about RStudio as your "workbench". Keep in mind that RStudio is NOT R. RStudio is an environment that makes it easier to work with R, while taking care of many of the little tasks than can be a hassle.
 
 ### Using an R script file
 
@@ -253,13 +254,22 @@ help.search("absolute")
 
 Notice the use of quotes surrounding the input name inside `help.search()`
 
+Your Turn
+---------
+
+### Pythagoras formula
+
+The pythagoras formula is used to compute the length of the hypotenuse, *c*, of a right triangle with legs of length *a* and *b*.
+
+![hypotenuse](https://wikimedia.org/api/rest_v1/media/math/render/svg/5fd521cee81d583ce94bf6710984cc2a9eb7c3da)
+
+Calculate the hypotenuse of a right triangle with legs of length 3 and 4. Use the `sqrt()` function, and create variables `a = 3` and `b = 4`. If you don't know what's the symbol to calculate exponents, search for the help documentation of the arithmetic operators: `?Arithmetic`.
+
 ### Binomial Formula
 
 The formula for the binomial probability is:
 
-$$
-P(k) = \\binom{n}{k} p^k (1-p)^{n-k}
-$$
+![binomial probability](https://wikimedia.org/api/rest_v1/media/math/render/svg/38d86cba65d40f015a2b807d2b736250805abe45)
 
 where:
 
@@ -271,9 +281,9 @@ where:
 Let's consider an example. A fair coin is tossed 5 times. What is the probability of getting exactly 2 heads?
 
 ``` r
-n = 5   # 5 tosses
-k = 2   # 2 heads
-p = 1/2 # probability of heads
+n <- 5   # 5 tosses
+k <- 2   # 2 heads
+p <- 1/2 # probability of heads
 
 choose(n, k) * (p^k) * (1-p)^(n-k)
 ```
@@ -388,3 +398,18 @@ Take a look at the following commands. Notice the difficulty of reading code whe
     "one number" <- 16
     `one number`
     one number
+
+### RStudio working environment
+
+Understand the **pane layout** (i.e. windows) of RStudio. What is the purpose of the following panes?
+
+-   Source
+-   Console
+-   Environment, History, etc
+-   Files, Plots, Packages, Help, Viewer
+
+Play with the customizing options of RStudio (ppearance of source pane, etc)
+
+-   font
+-   size
+-   background
