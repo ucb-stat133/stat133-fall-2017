@@ -1,11 +1,13 @@
 Warm-Up 01 - Stat 133, Fall 2017
 ================
 
+**Due date:** Saturday Sep-09, 2017 (before midnight)
+
 The purpose of this assignment is to work with an `Rmd` file and practice writing content using markdown syntax.
 
 You will be using R markdown files, aka `Rmd` files, throughout the rest of the course. So the sooner you get familiar with the markdown syntax, the better. Hopefully, after finishing the course, you will ditch (or at least minimize the use of) office-like software and switch to a combination of markdown file(s)---with R or other compatible software---to make your assignments or prepare any other type of document.
 
-Although this HW is a dummy assignment, please take it as an inexpensive opportunity to tackle any logistic problems, and make sure R, RStudio, bCourses, Git, Github, and your computer work nicely---without being penalized.
+Although this HW is a *dummy* assignment (i.e. it won't count towards your final grade), please take it as an inexpensive opportunity to tackle any logistic problems, and make sure R, RStudio, bCourses, and your computer work nicely---without being penalized. Later on you will also include version control tools such as Git and Github.
 
 Here are some useful resources that you can consult to complete this assignment:
 
@@ -69,7 +71,7 @@ Reflect on what was hard/easy, problems you solved, helpful tutorials you read, 
 
 -   What things were hard, even though you saw them in class?
 -   What was easy(-ish) even though we haven't done it in class?
--   Was this the first time you were using markdown?
+-   Was this the first time you were using markdown? If yes, how do you feel about it?
 -   If you have used markdown before, was there something new you learned while doing this assignment?
 -   Did you need help to complete the assignment? If so, what kind of help? Who helped you?
 -   How much time did it take to complete this HW?
@@ -82,4 +84,6 @@ Submission
 
 Name your `Rmd` file using the following structure: `up01-first-last.Rmd` where "first" and "last" are your first and last names. E.g. `up01-gaston-sanchez.Rmd`.
 
-Please submit the knitted (i.e. compiled) html file to bCourses, and include your GitHub username.
+Please submit your source `.Rmd` file, as well as the knitted (i.e. compiled) html file to bCourses.
+
+*Note: later (in a week or so) you will have to upload your `.Rmd` file to your github repository (don't worry if you don't know what this means).*
