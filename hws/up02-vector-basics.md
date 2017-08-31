@@ -33,7 +33,7 @@ There is also a data dictionary file `nba2017-salary-points-dictionary.md` that 
 
 ### Download the data file
 
-To read the data in R, we recommend that you download the `.RData` to your computer. You can use the function `download.file()` to do this. The file will be downloaded to specified detination (`destfile`). In the code below, the binary file woud be downloaded to your working directory:
+To read the data in R, we recommend that you download the `.RData` to your computer. You can use the function `download.file()` to do this. The file will be downloaded to the specified destination (`destfile`). In the code below, the binary file woud be downloaded to your [working directory](https://www.computerhope.com/jargon/c/currentd.htm):
 
 ``` r
 download.file(
@@ -41,7 +41,7 @@ download.file(
   destfile = "nba2017-salary-points.RData")
 ```
 
-You only have to download the file once. By the way, there is NO need to include these command in your source `.Rmd` file. Otherwise, everytime you knit the file, R will download the file.
+You only have to download the file once. By the way, there is NO need to include the previous command in your source `.Rmd` file. Otherwise, everytime you knit the file, R will download the file.
 
 ### Importing the data
 
@@ -96,13 +96,12 @@ For the selected quantitative variable, describe the overall pattern (shape, cen
 -   Find out how to use the obtained frequency table to calculate relative frequencies (proportions).
 -   Use the frequencies (counts) and relative frequencies (proportions) to describe the overall distribution.
 -   Use `barplot()` to display the frequencies with a barchart.
--   How would you get the **relative** frequencies (i.e. proportions)?
--   Use `barplot()` to visualize the frequencies
 
 What are we looking for from your work?
 ---------------------------------------
 
--   Feel free to use summary stats, tables, figures.
+-   Recall that this is a \_warm-up\_assignment, meaning it won't count for your final score.
+-   Feel free to use a variety of summary stats, tables, figures.
 -   We're NOT expecting high production value (yet). Aesthetics, design elements, and grammar are not very important right now.
 -   Make observations about shape, center, spread and outliers (if there are any).
 -   Try to explain why your observations are important or interesting.
@@ -113,8 +112,6 @@ What are we looking for from your work?
 -   Add transitions to your narrative that help tie your observations.
 -   Use lots of inline code! Especially when writing paragraphs describing data and related values. Try not to hard-code values---this breaks computational reproducibility.
 -   Keep practicing with Markdown syntax: use bullet/itemized lists, embed bullets within lists, italics, bold, links, headings of different levels, pre-format (i.e. code), horizontal rules, etc.
--   Keep getting familiar with git and github. Commit early and often.
--   Above all, avoid waiting till your work is almost done to commit and push to your github repository.
 
 If this (and future) assignment looks more like an English (writing) assignment, you are right. We want to remind you that *Computing with Data* (CwD) is not just about computations, solving problems, and obtaining results. CwD also involves making sense of the computed results. Whether you work as a consultant, scientist, analyst, journalist, programmer, etc, you will have to explain your findings, report your work, and communicate it to several audiences.
 
@@ -147,6 +144,6 @@ Submission
 
 Name your `Rmd` file using the following structure: `up02-first-last.Rmd` where "first" and "last" are your first and last names. E.g. `up02-gaston-sanchez.Rmd`.
 
-Add, push and commit the source `Rmd` file as well as the knitted `.md` file to your GitHub repository for the course assignments.
+Please submit your source `.Rmd` file, as well as the knitted (i.e. compiled) html file to bCourses.
 
-Please also include the link of your github repo---the corresponding hw folder---to bCourses.
+In addition to submitting files to bCourses, try adding, committing and pushing (i.e. uploading) your `.Rmd` file and html knitted file to your GitHub repository.\_
