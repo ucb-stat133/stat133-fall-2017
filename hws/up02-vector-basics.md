@@ -1,38 +1,55 @@
 Warm-Up 02 - Stat 133, Fall 2017
 ================
 
-The purpose of this assignment is to work with vectors of different data types: numeric (integer and real), character, logical, and factors.
+**Due date:** Saturday Sep-16, 2017 (before midnight)
 
-Due date: Sep-15, 2017
+The purpose of this assignment is to work with vectors of different data types: numeric (integer and real), character, logical, and factors.
 
 Introduction
 ------------
 
 In this assignment you will summarize quantitative and qualitative variables graphically and numerically. These tasks are often the first step in analyzing most data sets. Technically, this involves performing a univariate analysis, that is, analyzing one variable at a time. In future assignments you will work on analyzing two or more variables simultaneously.
 
-Keep in mind that summarizing and describing data, as simple as it may sound, can be tricky. Why? Because there is not one right way to analyze data, but there are wrong ways. Do your best to describe what you see. Jot down notes to capture your thinking as you go. It takes practice to learn to describe distributions and write an analysis. You will work on these skills over the rest of the semester.
+Keep in mind that summarizing and describing data, as simple as it may sound, can be tricky. Why? Because there is not one right way to analyze data, but there are wrong ways. Do your best to describe what you see. Jot down notes to capture your thinking as you go. It does not matter if you lack the technical terminology to write such descriptions: use your own words. It takes practice to learn to describe distributions and write an analysis. You will work on these skills over the rest of the semester.
+
+This HW is the second *dummy* or warming-up assignment (i.e. it won't count towards your final grade). Tackle any logistic problems, and make sure R, RStudio, bCourses, and your computer work nicely---without being penalized. Later on you will also include version control tools such as Git and Github.
 
 Research Question and Data
 --------------------------
 
-As I mentioned in class, the starting research question is: "the more points a player scores, the higher his salary?"
+As I mentioned in class, the starting research question is: **"the more points a player scores, the higher his salary?"**
 
 You are NOT going to try to answer this question in this assignment. What you have to do is start to get to know the data.
 
 ### Data
 
-The data set for this assignment is data about NBA players during the regular season of 2016-2017. The corresponding file is `nba2017-salary-points.RData`. This is a binary file (native's R binary format).
+The data set for this assignment is data about NBA players during the regular season of 2016-2017. The corresponding files are in a github repo specifically created for HW assignments:
 
-Check the data dictionary file `nba2017-salary-points-dictionary.md` located in the `data/` folder of the homework assignment. You'll find here more information about the contents in `nba2017-salary-points.RData`.
+<https://github.com/ucb-stat133/stat133-hws-fall17/tree/master/warmup02/data>
 
-To read the data in R, use the `load()` function, which allows you to import `.RData` files into R. Make sure you start with a fresh R session and no existing objects in your workspace:
+You will find a data file `nba2017-salary-points.RData`. This is a binary file (native's R binary format), which means that you won't be able to see its contents with a text editor (only R knows how to open this type of files).
+
+There is also a data dictionary file `nba2017-salary-points-dictionary.md` that provides more information about the contents in `nba2017-salary-points.RData`. Please read the contents of the data dictionary.
+
+### Download the data file
+
+To read the data in R, we recommend that you download the `.RData` to your computer. You can use the function `download.file()` to do this. The file will be downloaded to specified detination (`destfile`). In the code below, the binary file woud be downloaded to your working directory:
 
 ``` r
-# remove any existing objects
-rm(list = ls())
+download.file(
+  url = "https://github.com/ucb-stat133/stat133-hws-fall17/tree/master/warmup02/data",
+  destfile = "nba2017-salary-points.RData")
+```
 
+You only have to download the file once. By the way, there is NO need to include these command in your source `.Rmd` file. Otherwise, everytime you knit the file, R will download the file.
+
+### Importing the data
+
+Open a new `.Rmd` file (this will be your source file). Once you have `nba2017-salary-points.RData` in your computer, use the `load()` function, which allows you to import `.RData` files into R:
+
+``` r
 # load the objects
-load("data/nba2017-salary-points.RData")
+load("nba2017-salary-points.RData")
 
 # list the available objects
 ls()
