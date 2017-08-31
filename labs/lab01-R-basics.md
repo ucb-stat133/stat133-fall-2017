@@ -277,33 +277,46 @@ where:
 -   *p* is the probability of success on each trial
 -   1 − *p* is the probability of failure on each trial
 -   *k* is a variable that represents the number of successes out of *n* trials
+-   the first term in parenthesis is not a fraction, it is the number of combinations in which *k* success can occur in *n* trials
 
-Let's consider an example. A fair coin is tossed 5 times. What is the probability of getting exactly 2 heads?
+R provides the `choose()` function to compute the number of combinations:
 
-``` r
-n <- 5   # 5 tosses
-k <- 2   # 2 heads
-p <- 1/2 # probability of heads
+![combinations](https://wikimedia.org/api/rest_v1/media/math/render/svg/08bdf0fff474c26293414f9eb01ab4bc73ef941f)
 
-choose(n, k) * (p^k) * (1-p)^(n-k)
-```
-
-    ## [1] 0.3125
-
-Now consider rolling a fair die 10 times. What is the probability of getting exactly 3 sixes?
+For instance, the number of combinations in which *k* = 2 success can occur in *n* = 5 trials is:
 
 ``` r
-# give values for n, k, p
-# and then compute the binomial formula
+choose(n = 5, k = 2)
 ```
 
-Now look for help documentation using the keyword binomial: `??binomial`. You should get a list of topics related with the searched term `binomial`. Choose the one related with the *Binomial Distribution*, which is part of the R package `stats` (i.e. `stats::Binomial`).
+    ## [1] 10
 
-Read the documentation and figure out how to use the `dbinom()` function to obtain the above probabilities: 2 heads in 5 coin tosses, and 3 sixes in 3 rolls of a die.
+Combinations are typically expressed in terms of factorials as:
+
+![combs](https://wikimedia.org/api/rest_v1/media/math/render/svg/813f7124a61dac205542db3f8491b36cb306453a)
+
+Conveniently, R also provides the function `factorial()` to calculate the factorial of an integer:
 
 ``` r
-# use R's native binomial formula
+factorial(4)
 ```
+
+    ## [1] 24
+
+Let's consider a simple example. A fair coin is tossed 5 times. What is the probability of getting exactly 2 heads?
+
+-   Create the objects `n`, `k`, and `p` for the number of trials, the number of success, and the probability of success, respectively.
+-   Use `factorial()` to compute the number of combinations "*n choose k*"
+-   Apply the binomial formula, using `factorial()`, to calculate the probability of getting exactly 2 heads out of 5 tosses.
+-   Recalculate the same probability but now using `choose()` (instead of `factorial()`)
+-   Consider rolling a fair die 10 times. What is the probability of getting exactly 3 sixes?
+
+-   Now look for help documentation (e.g. `help.search()` or `??`) using the keyword binomial: `binomial`.
+-   You should get a list of topics related with the searched term `binomial`.
+-   Choose the one related with the *Binomial Distribution*, which is part of the R package `stats` (i.e. `stats::Binomial`).
+-   Read the documentation and figure out how to use the `dbinom()` function to obtain the above probabilities: 2 heads in 5 coin tosses, and 3 sixes in 3 rolls of a die.
+-   How would you modify the previous binomial function to calculate the same probability (2 heads in 5 tosses) of a **biased** coin with a chance of heads of 35%?
+-   Finally, obtain the probability of getting more than 3 heads in 5 tosses with a biased coin of 35% chance of heads.
 
 ------------------------------------------------------------------------
 
@@ -333,11 +346,15 @@ library(knitr)
 
 ### Your turn
 
--   Install packages `"stringr"`, `"RColorBrewer"`
+-   Install packages `"stringr"`, `"RColorBrewer"`, and "`XML`"
 -   Calculate: 3*x*<sup>2</sup> + 4*x* + 8 when *x* = 2
--   Look for the manual (i.e. help) documentation of the function `exp`
--   Find out how to look for information about binary operators like `+` or `^` (without using `?Arithmetic`).
+-   Calculate: 3*x*<sup>2</sup> + 4*x* + 8 but now with a numeric sequence for *x* using `x <- -3:3`
+-   Find out how to look for information about math binary operators like `+` or `^` (without using `?Arithmetic`).
 -   There are several tabs in the pane `Files, Plots, Packages, Help, Viewer`. Find what does the tab **Files** is good for?
+-   What about the tab **Help**?
+-   In the tab **Help**, what happens when you click the button with a House icon?
+-   Now go to the tab **History**. What is it good for? and what about the buttons of its associated menu bar?
+-   Likewise, what can you say about the tab **Environment**?
 
 ------------------------------------------------------------------------
 
@@ -408,7 +425,7 @@ Understand the **pane layout** (i.e. windows) of RStudio. What is the purpose of
 -   Environment, History, etc
 -   Files, Plots, Packages, Help, Viewer
 
-Play with the customizing options of RStudio (ppearance of source pane, etc)
+Play with the customizing options of RStudio (appearance of source pane, etc)
 
 -   font
 -   size
