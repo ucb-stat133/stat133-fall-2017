@@ -34,7 +34,7 @@
     + [About R](https://docs.google.com/presentation/d/1n4Wo6lhYIeUi6XPhE7BVhX6cgfcTHkr1_uap0GWmD5Q/pub?start=false&loop=false&delayms=3000) (slides)
     + [First contact with R](../tutorials/01-intro-to-R.md) (tutorial)
     + [Intro to Rmd files](../tutorials/02-intro-to-Rmd-files.md) (tutorial)
-    + [Data Types](https://docs.google.com/presentation/d/1TZRjIvfBfG_3vjj7bmb6B_oyR7k0lxge7V_Ih2B1mwo/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Data Types and Vectors](https://docs.google.com/presentation/d/e/2PACX-1vTyI7ymGK8e8G-lXUkYHx7vSfN1bQN39k6MoQwOx0npaoVYyLUixFuQNmt32sr-G2sjtgtnr3mGcOYp/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
     + [Getting started with R](../labs/lab01-R-basics.md)
 + __Reading__:
@@ -57,7 +57,7 @@
 + __Dates__: Sep 04-08  _(Holiday Sep-04)_
 + __Topics__: Getting to know R vectors and concepts like atomicity, vectorization, recycling, and subsetting.
 + __Lecture material__
-    + [R Vectors](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Arrays and Factors](https://docs.google.com/presentation/d/e/2PACX-1vSyy1gkP4eG1z_TXMAnY_23HWDW1GQAPFaQll1EQVXMyaOfCiH_bEYQch47ZkywDJoc8T-Ct14vlZby/pub?start=false&loop=false&delayms=3000) (slides)
     + [Intro to vectors](../tutorials/03-intro-to-vectors.md) (tutorial)
     + [Lists and Data Frames](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
