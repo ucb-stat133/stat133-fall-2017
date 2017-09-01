@@ -100,18 +100,18 @@ For the selected quantitative variable, describe the overall pattern (shape, cen
 What are we looking for from your work?
 ---------------------------------------
 
--   Recall that this is a \_warm-up\_assignment, meaning it won't count for your final score.
+-   Recall that this is a *warm-up* assignment, meaning it won't count for your final score.
 -   Feel free to use a variety of summary stats, tables, figures.
 -   We're NOT expecting high production value (yet). Aesthetics, design elements, and grammar are not very important right now.
--   Make observations about shape, center, spread and outliers (if there are any).
--   Try to explain why your observations are important or interesting.
+-   Examine your graphs and summary statistics in order to make observations about shape, center, spread and outliers (if there are any).
 -   Try to describe the graphs in a comprehensive way:
     -   What is the overall shape?
     -   What is the typical center?
     -   Overall range, along with an interval of typical measurements.
+-   Try to explain why your observations are important or interesting.
 -   Add transitions to your narrative that help tie your observations.
--   Use lots of inline code! Especially when writing paragraphs describing data and related values. Try not to hard-code values---this breaks computational reproducibility.
--   Keep practicing with Markdown syntax: use bullet/itemized lists, embed bullets within lists, italics, bold, links, headings of different levels, pre-format (i.e. code), horizontal rules, etc.
+-   Use lots of [inline code](http://rmarkdown.rstudio.com/lesson-4.html)! Especially when writing paragraphs describing data and related values. Try not to hard-code values---this breaks computational reproducibility.
+-   Keep practicing with [Markdown](http://rmarkdown.rstudio.com/lesson-1.html) syntax: use bullet/itemized lists, embed bullets within lists, italics, bold, links, headings of different levels, pre-format (i.e. code), horizontal rules, etc.
 
 If this (and future) assignment looks more like an English (writing) assignment, you are right. We want to remind you that *Computing with Data* (CwD) is not just about computations, solving problems, and obtaining results. CwD also involves making sense of the computed results. Whether you work as a consultant, scientist, analyst, journalist, programmer, etc, you will have to explain your findings, report your work, and communicate it to several audiences.
 
@@ -143,6 +143,8 @@ Submission
 ----------
 
 Name your `Rmd` file using the following structure: `up02-first-last.Rmd` where "first" and "last" are your first and last names. E.g. `up02-gaston-sanchez.Rmd`.
+
+All your code chunks should be visible. In other words, please do NOT use code chunk options like: `results = 'hide'`, `echo = FALSE`, `eval = FALSE`
 
 Please submit your source `.Rmd` file, as well as the knitted (i.e. compiled) html file to bCourses.
 
