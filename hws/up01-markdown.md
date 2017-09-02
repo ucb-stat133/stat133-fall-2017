@@ -61,7 +61,11 @@ Write about your favorite cooking recipe (or any other recipe). You can write a 
 
 Visit the wikipedia page for the quadratic equation: <https://en.wikipedia.org/wiki/Quadratic_equation>
 
-Write the general form of a quadratic equation, and provide a brief description for it. Also, write the quadratic formula for the roots of the general quadratic equation.
+Write the general form of a quadratic equation, and provide a brief description for it. Also, write the quadratic formula for the roots of the general quadratic equation. This will require that you use latex syntax. Here are a couple of resources about writing math symbols with Latex notation:
+
+-   <https://www.sharelatex.com/learn/Mathematical_expressions>
+
+-   <https://en.wikibooks.org/wiki/LaTeX/Mathematics>
 
 If you feel the quadratic is not enough, feel free to find other math equations and formulas to play with.
 
