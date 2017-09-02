@@ -148,4 +148,6 @@ All your code chunks should be visible. In other words, please do NOT use code c
 
 Please submit your source `.Rmd` file, as well as the knitted (i.e. compiled) html file to bCourses.
 
-In addition to submitting files to bCourses, try adding, committing and pushing (i.e. uploading) your `.Rmd` file and html knitted file to your GitHub repository.\_
+In addition to submitting files to bCourses, try adding, committing and pushing (i.e. uploading) your `.Rmd` file and html knitted file to your GitHub repository.
+
+*Note: later (in a week or so) you will have to upload your `.Rmd` file to your github repository (don't worry if you don't know what this means).*

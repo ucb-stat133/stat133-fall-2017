@@ -90,4 +90,4 @@ Name your `Rmd` file using the following structure: `up01-first-last.Rmd` where 
 
 Please submit your source `.Rmd` file, as well as the knitted (i.e. compiled) html file to bCourses.
 
-*Note: later (in a week or so) you will have to upload your `.Rmd` file to your github repository (don't worry if you don't know what this means).*
+*Note: later (in two weeks or so) you will have to upload your `.Rmd` file to your github repository (don't worry if you don't know what this means).*
