@@ -26,7 +26,7 @@ In this lab, you are going to work with a handful of variables about NBA players
 -   `points2`: number of 2-point field goals, worth 2 points each.
 -   `points3`: number of 3-point field goals, worth 3 points each.
 
-The data is in the file `nba2017-salary-points.RData`, located in the `data/` folder. The original source of the data is the website [www.basketball-reference.com](http://www.basketball-reference.com/)
+The data is in the file `nba2017-salary-points.RData`, located in the `data/` folder of this github repository. The original source of the data is the website [www.basketball-reference.com](http://www.basketball-reference.com/)
 
 Open a new session in Rstudio, and make sure you have a clean workspace:
 
@@ -35,25 +35,12 @@ Open a new session in Rstudio, and make sure you have a clean workspace:
 rm(list = ls())
 ```
 
-Assuming that your **working directory** is the `labs/` directory like in the github repository of the course, you can use the `load()` function to read its contents in R:
-
-``` r
-# load data in your R session
-load('../data/nba2017-salary-points.RData')
-```
-
-Alternatively, you can first download the `.RData` file to your working directory, and then `load()` it like this:
+You can download the `.RData` file to your working directory, and then `load()` it with the code below. Do NOT include these commands in your source Rmd file; simply type them sirectly on the console:
 
 ``` r
 # download RData file into your working directory
 rdata <- "https://github.com/ucb-stat133/stat133-fall-2017/raw/master/data/nba2017-salary-points.RData"
 download.file(url = rdata, destfile = 'nba2017-salary-points.RData')
-
-# load data in your R session
-load('nba2017-salary-points.RData')
-
-# list the available objects with ls()
-ls()
 ```
 
 ### What's happening in the code above?
@@ -62,7 +49,23 @@ The function `download.file()` allows you to download any type of file from the 
 
 Where does the file is downloaded? The file `nba2017-salary-points.RData` gets downloaded to your **working directory**. If you are curious about what is the current directory to which R is paying attention, simply type the function `getwd()`---which stands for *get the working directory*.
 
-To load the contents of the binary file into R's session you use `load()`. Finally, `ls()` allows you to **list** all the available R objects.
+### Loading the data file
+
+To load the contents of the binary file into R's session you use `load()`. This function allows you to import R binary files. This time, include the code below in your `Rmd` file:
+
+``` r
+# load data in your R session
+load('nba2017-salary-points.RData')
+```
+
+Note: the code above will only work as long as your `Rmd` file lives in the same directory of the `.RData` file. So far I'm assuming that you have both files in the working directory. If you run into problems, ask the GSI or any of the lab assistants.
+
+Once you imported (or loaded) the data, use the function `ls()` which allows you to **list** all the available R objects:
+
+``` r
+# list the available objects with ls()
+ls()
+```
 
 Check that the following objects are available in your session:
 
@@ -72,7 +75,9 @@ Check that the following objects are available in your session:
 -   `salary`
 -   `points`
 
-**A note on `.RData` files.** Most of the data sets you are going to be working with in real life are going to be stored in some sort of text file. So you probably won't be handling many R binary files (i.e. `.RData` files). However, R binary files are an interesting option for saving intermediate results, and/or for saving R objects (as R objects).
+### About `.RData` files
+
+Most of the data sets you are going to be working with in real life are going to be stored in some sort of text file. So you probably won't be handling many R binary files (i.e. `.RData` files). However, R binary files are an interesting option for saving intermediate results, and/or for saving R objects (as R objects).
 
 ### Inspecting the data objects
 
@@ -107,13 +112,17 @@ Vectors in R
 
 Vectors are the most basic type of data structures in R. Learning how to manipulate data structures in R requires you to start learning how to manipulate vectors.
 
-How do you know if any of the loaded objects is a vector? Using `class()` does not explicitly tell you whether an R object is a vector or not. A more explicit way to check if `state` or `capital` are vectors is with the function `is.vector()`.
+How do you know if any of the loaded objects is a vector? Using `class()` does not explicitly tell you whether an R object is a vector or not. A more explicit way to check if `player` or `position` are vectors is with the function `is.vector()`.
 
 ``` r
 # check whether the loaded objects are vectors
 ```
 
-Remember that R vectors are **atomic structures**, which is just the fancy name to indicate that all the elements of a vector must be of the same type, either all numbers, all characters, or all logical values.
+Remember that R vectors are **atomic structures**, which is just the fancy name to indicate that all the elements of a vector must be of the same type, either all numbers, all characters, or all logical values. To test is an object is *atomic*, i.e. has all its elements of the same type, use `is.atomic()`
+
+``` r
+# check whether the loaded objects are atomic objects
+```
 
 How do you know that a given vector is of a certain data type? One function to answer this question is `typeof()`
 
@@ -122,6 +131,8 @@ typeof(player)
 typeof(position)
 typeof(points)
 ```
+
+You should know that among the R community, most useRs don't talk about *types*. Instead, because of historical reasons related to the S language, we talk about *modes*.
 
 Manipulating Vectors: Subsetting
 --------------------------------
@@ -179,12 +190,13 @@ Now try these. What happens if you specify:
 
 Often, you will need to generate vectors of numeric sequences, like the first five elements `1:5`, or from the first till the last element `1:length(player)`. R provides the colon operator `:`, and the functions `seq()`, and `rep()` to create various types of sequences.
 
-Figure out how to use `seq()`, `rep()` to subtract:
+Figure out how to use `seq()`, `rep()` to extract:
 
 -   all the even elements in `player`
 -   all the odd elements in `salary`
 -   all multiples of 5 (e.g. 5, 10, 15, etc) of `team`
 -   elements in positions 10, 20, 30, 40, etc of `points`
+-   all the even elements in `team` but this time in reverse order
 
 ### Subsetting with Logical Indices
 
@@ -202,7 +214,11 @@ a[c(TRUE, FALSE, TRUE, FALSE)]
 
     ## [1] 5 7
 
-To do logical subsetting, the vector that you put inside the brackets, must match the length of the manipulated vector. The elements of the vector that are subset are those which match the logical value `TRUE`.
+Logical subsetting occurs when the vector of indices that pass inside the brackets is a logical vector.
+
+To do logical subsetting, the vector that you put inside the brackets, should match the length of the manipulated vector. If you pass a shorter vector inside brackets, R will apply its recycling rules.
+
+Notice that the elements of the vector that are subset are those which match the logical value `TRUE`.
 
 ``` r
 # your turn
@@ -211,6 +227,10 @@ four[c(TRUE, TRUE, FALSE, FALSE)]
 four[c(FALSE, FALSE, TRUE, TRUE)]
 four[c(TRUE, FALSE, TRUE, FALSE)]
 four[c(FALSE, FALSE, FALSE, FALSE)]
+
+# recycling
+four[TRUE]
+four[c(TRUE, FALSE)]
 ```
 
 When subsetting a vector logically, most of the times you won't really be providing an explicit vector of `TRUE`'s and `FALSE`s. Just imagine having a vector of 100 or 1000 or 1000000 elements, and trying to do logical subsetting by manually creating a logical vector of the same length. That would be very boring. Instead, you will be providing a logical condition or a comparison operation that returns a logical vector.
@@ -238,7 +258,7 @@ a != 6
 
     ## [1]  TRUE FALSE  TRUE  TRUE
 
-Notice that a comparison operation always returns a logical vector. Here's how you actually extract the values of a vector based on a logical indexing:
+Notice that a comparison operation always returns a logical vector. Here's how you actually extract the values of a vector based on logical indexing:
 
 ``` r
 points_four <- points[1:4]
@@ -309,13 +329,19 @@ player[points > 1000 & points < 1200]
 
 ### Your turn
 
-Write commands to answer the following questions:
+Write commands, using bracket notation, to answer the following questions (you may need to use `min()`, `max()`, `which()`, `which.min()`, `which.max()`):
 
 ``` r
-# subset Centers of Warriors (GSW)
+# players in position Center, of Warriors (GSW)
 
 
-# subset Shooting Guards and Point Guards of Lakers (LAL) 
+# players of both GSW (warriors) and LAL (lakers)
+
+
+# players in positions Shooting Guard and Point Guards, of Lakers (LAL) 
+
+
+# subset Small Forwards of GSW and LAL
 
 
 # name of the player with largest salary
@@ -325,6 +351,12 @@ Write commands to answer the following questions:
 
 
 # name of the player with largest number of points
+
+
+# salary of the player with largest number of points
+
+
+# largest salary of all Centers
 
 
 # team of the player with the largest number of points
@@ -343,13 +375,16 @@ None of the vectors `player`, `position`, `points`, and `salary` have names. You
 names(player)
 ```
 
-Create a vector `warriors` by selecting the players of `team == 'GSW'`; then create a vector `warriors_salary` with their salaries, and then assign `warriors` as the names of `warriors_salary`
+Create a vector `warriors_player` by selecting the players of `team == 'GSW'`; then create a vector `warriors_salary` with their salaries, and another vector `warriors_points` with their `points`. Assign `warriors_player` as the names of `warriors_salary`.
 
 ``` r
-# create warriors
+# create warriors_player
 
 
 # create warriors_salary
+
+
+# create warriors_points
 
 ```
 
@@ -369,7 +404,7 @@ Use the function `plot()` to make a scatterplot of `points` and `salary`
 plot(points, salary)
 ```
 
-Keep in mind tht `plot()` is a generic function. This means that the behavior of `plot()` depends on the type of input. When you pass two numeric vectors to `plot()` it will create a scatter plot.
+Keep in mind that `plot()` is a generic function. This means that the behavior of `plot()` depends on the type of input. When you pass two numeric vectors, `plot()` will attempt to create a scatter plot.
 
 Looking at the generated plot, can you see any issues?
 
@@ -386,19 +421,21 @@ Make another scatterplot but now use the log-transformed vectors:
 plot(log_points, log_salary)
 ```
 
-To add the names of the states in the plot, you can use `text()`:
+To add the names of the players in the plot, you can use the low-level graphing function `text()`:
 
 ``` r
 plot(log_points, log_salary)
 text(log_points, log_salary, labels = player)
 ```
 
-Now we have another problem. The labels in the plot are a bit messy. A quick and dirty fix is to use `abbreviate()` to shorten the displayed names:
+Now we have another problem. The labels in the plot are very messy. A quick and dirty fix is to use `abbreviate()` to shorten the displayed names:
 
 ``` r
 plot(log_points, log_salary)
 text(log_points, log_salary, labels = abbreviate(player))
 ```
+
+**Your Turn**: create a scatterplot of points and salary for the Warriors (GSW), displaying the names of the players. Generate two scatterplots, one with raw values (original scale, and another plot with log-transformations).
 
 Vectorization
 -------------
@@ -427,13 +464,13 @@ Recycling
 
 Closely related with the concept of *vectorization* we have the notion of **Recycling**. To explain *recycling* let's see an example.
 
-`salary` is given in dollars, but what if you need to obtain the salaries in millions of dollars?. Create a new vector `salary_mill` with the converted values in millions of dollars.
+`salary` is given in dollars, but what if you need to obtain the salaries in millions of dollars?. Create a new vector `salary_millions` with the converted values in millions of dollars.
 
 ``` r
 # your code here
 ```
 
-Take the values in `height`, given in inches, to create a new vector `height_cms` that show the values in centimeters; use the conversion of 1 inch = 2.54 centimeters.
+Take the values in `height`, given in inches, to create a new vector `height_cms` that shows the values in centimeters; use the conversion of 1 inch = 2.54 centimeters.
 
 ``` r
 # your code here
@@ -486,7 +523,7 @@ Use `factor()` to create an object `position_fac` by converting `position` into 
 position_fac <- factor(position)
 ```
 
-If you have a factor, you can invoke `table()` to get a the frequencies (i.e. counts) of its categories or *levels*:
+If you have a factor, you can invoke `table()` to get a table with the frequencies (i.e. counts) of the factor categories or *levels*:
 
 ``` r
 table(position_fac)
@@ -609,12 +646,37 @@ player[team == 'GSW' & position == "C"]
     ## [5] "Zaza Pachulia"
 
 ``` r
+# players of both GSW and LAL
+player[team == "GSW" | team == "LAL"]
+```
+
+    ##  [1] "Andre Iguodala"       "Damian Jones"         "David West"          
+    ##  [4] "Draymond Green"       "Ian Clark"            "James Michael McAdoo"
+    ##  [7] "JaVale McGee"         "Kevin Durant"         "Kevon Looney"        
+    ## [10] "Klay Thompson"        "Matt Barnes"          "Patrick McCaw"       
+    ## [13] "Shaun Livingston"     "Stephen Curry"        "Zaza Pachulia"       
+    ## [16] "Brandon Ingram"       "Corey Brewer"         "D'Angelo Russell"    
+    ## [19] "David Nwaba"          "Ivica Zubac"          "Jordan Clarkson"     
+    ## [22] "Julius Randle"        "Larry Nance Jr."      "Luol Deng"           
+    ## [25] "Metta World Peace"    "Nick Young"           "Tarik Black"         
+    ## [28] "Thomas Robinson"      "Timofey Mozgov"       "Tyler Ennis"
+
+``` r
 # Shooting Guards and Point Guards of Lakers (LAL) 
 player[team == 'LAL' & (position == "SG" | position == "PG")]
 ```
 
     ## [1] "D'Angelo Russell" "David Nwaba"      "Jordan Clarkson" 
     ## [4] "Nick Young"       "Tyler Ennis"
+
+``` r
+# Small Forwards of GSW and LAL
+player[position == "SF" & (team == "GSW" | team == "LAL")]
+```
+
+    ## [1] "Andre Iguodala"    "Kevin Durant"      "Matt Barnes"      
+    ## [4] "Brandon Ingram"    "Corey Brewer"      "Luol Deng"        
+    ## [7] "Metta World Peace"
 
 ``` r
 # name of the player with largest salary
@@ -624,7 +686,19 @@ player[salary == max(salary)]
     ## [1] "LeBron James"
 
 ``` r
+player[which.max(salary)]
+```
+
+    ## [1] "LeBron James"
+
+``` r
 # name of the player with smallest salary
+player[salary == min(salary)]
+```
+
+    ## [1] "Edy Tavares"
+
+``` r
 player[which.min(salary)]
 ```
 
@@ -632,13 +706,46 @@ player[which.min(salary)]
 
 ``` r
 # name of the player with largest number of points
+player[points == max(points)]
+```
+
+    ## [1] "Russell Westbrook"
+
+``` r
 player[which.max(points)]
 ```
 
     ## [1] "Russell Westbrook"
 
 ``` r
+# salary of the player with largest number of points
+salary[points == max(points)]
+```
+
+    ## [1] 26540100
+
+``` r
+salary[which.max(points)]
+```
+
+    ## [1] 26540100
+
+``` r
+# largest salary of all Centers
+max(salary[position == "C"])
+```
+
+    ## [1] 26540100
+
+``` r
 # team of the player with the largest number of points
+team[points == max(points)]
+```
+
+    ## [1] OKC
+    ## 30 Levels: ATL BOS BRK CHI CHO CLE DAL DEN DET GSW HOU IND LAC LAL ... WAS
+
+``` r
 team[which.max(points)]
 ```
 
@@ -647,10 +754,36 @@ team[which.max(points)]
 
 ``` r
 # name of the player with the largest number of 3-pointers
+player[points3 == max(points3)]
+```
+
+    ## [1] "Stephen Curry"
+
+``` r
 player[which.max(points3)]
 ```
 
     ## [1] "Stephen Curry"
+
+``` r
+warriors_players <- player[team == "GSW"]
+warriors_salary <- salary[team == "GSW"]
+warriors_points <- points[team == "GSW"]
+
+# scatterplot original scale
+plot(warriors_points, warriors_salary)
+text(warriors_points, warriors_salary, labels = warriors_players)
+```
+
+![](lab02-vector-basics_files/figure-markdown_github/unnamed-chunk-22-1.png)
+
+``` r
+# scatterplot with log-scale
+plot(log(warriors_points), log(warriors_salary))
+text(log(warriors_points), log(warriors_salary), labels = warriors_players)
+```
+
+![](lab02-vector-basics_files/figure-markdown_github/unnamed-chunk-22-2.png)
 
 ``` r
 # positions of Warriors
