@@ -1,4 +1,4 @@
-Lab 3: Bash and Git Basic Workflow
+Lab 3: Github repo for Stat 133
 ================
 Gaston Sanchez
 
@@ -109,12 +109,19 @@ Pushing `README.md` to GitHub
 -----------------------------
 
 -   So far you should have a local repository (in your computer), and an empty remote repository (in your github).
--   Let's add and commit the `README.md` file
+-   Let's add the changes in `README.md` file
 
     ``` bash
     git add README.md
-    git commit -m "readme: customize with personal information"
     ```
+
+-   As it is customary, after adding changes, you check the status of your repository (You should see a git message telling you about the *"Changes to be committed"*):
+
+        git status
+
+-   Now let's commit those changes, including a commit message:
+
+        git commit -m "readme: customize with personal information"
 
 -   Now let's push your commit to the remote branch (`origin`) from the local branch (`master`):
 
@@ -127,15 +134,16 @@ Pushing `README.md` to GitHub
 Pushing Warm-Up 01 assignment
 -----------------------------
 
--   As you can tell, you have a folder (i.e. directory) `warmup01` in your local repo. This foder contains its own `README.md` file.
+-   As you can tell, you have a folder (i.e. directory) `warmup01` in your local repo. This folder contains its own `README.md` file.
 -   Somewhere in your computer you should have the `.Rmd` file of your first warm-up assignment: it should be named `up01-first-last.Rmd` where `first` and `last` are your first and last names.
 -   Copy your `up01-first-last.Rmd` file to the directory `warmup01`.
 -   Open `up01-first-last.Rmd` (e.g. open it with RStudio).
 -   In the yaml header of `up01-first-last.Rmd`, change the **output** field from `html_document` to `github_document`.
 -   Knit the file; the output file should be a markdown file with `.md` extension (e.g. `up01-first-last.md`).
--   Let's add and commit both the source `.Rmd` file, as well as the knitted `.md` file; remember to use your *first* and *last* names:
+-   In the terminal, make sure you are inside the directory `warmup01`.
+-   Let's add and commit all the files in `warmup01`: the `README.md` file, the source `.Rmd` file, and the knitted `.md` file; remember to use your *first* and *last* names:
 
-        git add up01-first-last.Rmd up01-first-last.md
+        git add README.md up01-first-last.Rmd up01-first-last.md
         git commit -m "warmup01: generate github document"
 
 -   Now, let's push the committed changes to the remote repo in github:
@@ -144,7 +152,7 @@ Pushing Warm-Up 01 assignment
     git push origin master
     ```
 
--   Go to your github repo, and check the contents of the folder `warmup01`, you whould be able to see the `.Rmd` and `.md` files.
+-   Go to your github repo, and check the contents of the folder `warmup01`, you should be able to see the `.Rmd` and `.md` files.
 -   Take a look at the `.md` file, it should be rendered nicely by github.
 
 Pushing Warm-Up 02 assignment
@@ -152,12 +160,13 @@ Pushing Warm-Up 02 assignment
 
 -   Follow the previous instructions to push your second warm-up assignment to Github.
 -   Copy `up02-first-last.Rmd` to the directory `warmup02`
--   Open `up02-first-last.Rmd` and change the **output** field as: `github_document`
+-   Open `up02-first-last.Rmd` and change the yaml **output** field as: `github_document`
 -   Knit the file to get an `.md` document
--   Add and commit both the `.Rmd` and the `.md` files
+-   Make sure you are inside the directory `warmup02`.
+-   Add and commit the`README.md` file, the source `.Rmd`, and the `.md` file; remember to use your *first* and *last* names:
 
     ``` bash
-    git add up02-first-last.Rmd up02-first-last.md
+    git add README.md up02-first-last.Rmd up02-first-last.md
     git commit -m "warmup02: generate github document"
     ```
 
@@ -167,5 +176,25 @@ Pushing Warm-Up 02 assignment
     git push origin master
     ```
 
--   Go to your github repo, and check the contents of the folder `warmup02`, you whould be able to see the `.Rmd` and `.md` files.
+-   Go to your github repo, and check the contents of the folder `warmup02`, you should be able to see the `.Rmd` and `.md` files.
 -   Take a look at the `.md` file, it should be rendered nicely by github.
+
+Make your repository private
+----------------------------
+
+-   Right now your `stat133-hws-fall17` repository is public, and everybody can see its contents.
+-   To reduce the temptation of students taking a peek at other classmates repositories, we are going to ask you to make your repo private.
+-   Go to your github repository, and locate the **Settings** tab in the manu bar (at the top). Click on **Settings**.
+-   Scroll down until you see the **Danger Zone**.
+-   Select the option **Make this repository private**.
+-   Go to **Settings** again, but now click on the **Collaborators & teams** (in the left sidebar).
+-   You will have to add the instructor and your GSI as collaborators. Here's the list of staff usernames:
+    -   Instructor: `gastonstat`
+    -   Xiaoqi: `xz0416`
+    -   Minchul: `mshin03`
+    -   Omid: `osolari`
+    -   Andy:
+    -   Ningning:
+-   Please keep your repository in private mode until the semester is over (Dec-18th).
+-   I don't recommend deleting your repo after the semester is over. Why not? Because it is your work, and you will put many hours of effort on it. And I bet you will eventually come back to check its content to see how something was done (data reshaping, a plot, a function, slides, a shiny app, etc).
+-   Keep your repo part of your (code) portfolio.
