@@ -57,8 +57,8 @@
 + __Dates__: Sep 04-08  _(Holiday Sep-04)_
 + __Topics__: Getting to know R vectors and concepts like atomicity, vectorization, recycling, and subsetting.
 + __Lecture material__
-    + [Arrays and Factors](https://docs.google.com/presentation/d/e/2PACX-1vSyy1gkP4eG1z_TXMAnY_23HWDW1GQAPFaQll1EQVXMyaOfCiH_bEYQch47ZkywDJoc8T-Ct14vlZby/pub?start=false&loop=false&delayms=3000) (slides)
     + [Intro to vectors](../tutorials/03-intro-to-vectors.md) (tutorial)
+    + [Arrays and Factors](https://docs.google.com/presentation/d/e/2PACX-1vSyy1gkP4eG1z_TXMAnY_23HWDW1GQAPFaQll1EQVXMyaOfCiH_bEYQch47ZkywDJoc8T-Ct14vlZby/pub?start=false&loop=false&delayms=3000) (slides)
     + [Lists and Data Frames](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
     + [Getting started with vectors, factors, and lists](../labs/lab02-vector-basics.md)
@@ -81,7 +81,8 @@
     + [Shell Basics](https://docs.google.com/presentation/d/1VTlxM0IrwhzSDVyqPM9a2JLG8wICVpOp3hrHvTcrA6Q/pub?start=false&loop=false&delayms=3000) (slides)
     + [Git Basics](https://docs.google.com/presentation/d/1szPjE9eDD23YdZiq3-Tk85ZprY7d31uRtVxgTXSS_rc/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
-    + [Minimal Git](../labs/lab03-minimal-bash-git.md)
+    + [Minimal Bash and Git](../labs/lab03-minimal-bash-git.md)
+    + [GitHub repo for your assignments](../labs/lab03-hws-repository.md)
 + __Reading__:
     + [Installing Git and Github](http://happygitwithr.com/installation-pain.html) from 
     _Happy Git and GitHub for the useR_ by Jenny Bryan et al.
