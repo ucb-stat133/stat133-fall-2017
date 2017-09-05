@@ -33,7 +33,8 @@ from the regular season 2016-2017:
 The data is in the file `nba2017-salary-points.RData`, located in the `data/` folder of this github repository.
 The original source of the data is the website [www.basketball-reference.com](http://www.basketball-reference.com/)
 
-Open a new session in Rstudio, and make sure you have a clean workspace:
+Open a new session in Rstudio, and make sure you have a clean workspace by
+typing this command on the console:
 
 ```r
 # remove existing objects
@@ -42,7 +43,7 @@ rm(list = ls())
 
 You can download the `.RData` file to your working directory, and then `load()` 
 it with the code below. Do NOT include these commands in your source Rmd file; 
-simply type them sirectly on the console:
+simply type them directly on the console:
 
 ```r
 # download RData file into your working directory
@@ -60,16 +61,26 @@ which is located in the github repository of the course. This file is a binary
 file. To be more precise, the file extension `.RData` is the default extension 
 used by R for its binary native format.
 
-Where does the file is downloaded? The file `nba2017-salary-points.RData` 
+Where does the file get downloaded? Bby default, the file `nba2017-salary-points.RData` 
 gets downloaded to your __working directory__. If you are curious about what 
 is the current 
-directory to which R is paying attention, simply type the function 
+directory to which R is paying attention to, simply type the function 
 `getwd()`---which stands for _get the working directory_.
+
+If you want to specify a specific location for the downloaded file, then modify
+the `destfile` parameter. For instance, if you are using Mac, and you want the
+file to be downloaded to your desktop, you can use:
+
+```r
+# download RData file to your Desktop (assuming you use Mac)
+rdata <- "https://github.com/ucb-stat133/stat133-fall-2017/raw/master/data/nba2017-salary-points.RData"
+download.file(url = rdata, destfile = '~/Desktop/nba2017-salary-points.RData')
+```
 
 
 ### Loading the data file
 
-To load the contents of the binary file into R's session you use `load()`. 
+To load or import the contents of the binary file into your R session you use `load()`. 
 This function allows you to import R binary files. This time, include the code
 below in your `Rmd` file:
 
@@ -118,7 +129,7 @@ results, and/or for saving R objects (as R objects).
 ### Inspecting the data objects
 
 Once you have some data objects to work with, the first step is to
-inspect some of their characteristics. R has various of functions that
+inspect some of their characteristics. R has various functions that
 allow you to examine objects: 
 
 - `typeof()` type of storage of any object
@@ -164,7 +175,7 @@ way to check if `player` or `position` are vectors is with the function
 
 Remember that R vectors are __atomic structures__, which is just the fancy
 name to indicate that all the elements of a vector must be of the same type,
-either all numbers, all characters, or all logical values. To test is an object
+either all numbers, all characters, or all logical values. To test if an object
 is _atomic_, i.e. has all its elements of the same type, use `is.atomic()`
 
 ```{r}
@@ -272,7 +283,7 @@ a <- c(5, 6, 7, 8)
 a[c(TRUE, FALSE, TRUE, FALSE)]
 ```
 
-Logical subsetting occurs when the vector of indices that pass inside the 
+Logical subsetting occurs when the vector of indices that you pass inside the 
 brackets is a logical vector.
 
 To do logical subsetting, the vector that you put inside the brackets,
@@ -329,7 +340,7 @@ points_four <- points[1:4]
 # elements greater than 100
 points_four[points_four > 100]
 
-# elements less then 100
+# elements less than 100
 points_four[points_four < 100]
 
 # elements less than or equal to 10
@@ -667,6 +678,27 @@ Practice manipulating `position_fac` to get:
 
 #
 ```
+
+### More Plots
+
+Let's go back to the scatterplot of `points` and `salary`
+
+```r
+plot(points, salary)
+```
+
+But now use your factor `position_fac` to add some color to the dots in the
+scatterplot. Pass the factor to the `col = ` parameter inside `plot()`
+
+```{r}
+# your colored scatterplot
+
+```
+
+Experiment with other `plot()` arguments like the _point character_ `pch =`, 
+the _size of dots_ with the parameter `cex = `, the axes labels `xlab` and 
+`ylab` and so on. 
+
 
 -----
 

@@ -28,14 +28,14 @@ In this lab, you are going to work with a handful of variables about NBA players
 
 The data is in the file `nba2017-salary-points.RData`, located in the `data/` folder of this github repository. The original source of the data is the website [www.basketball-reference.com](http://www.basketball-reference.com/)
 
-Open a new session in Rstudio, and make sure you have a clean workspace:
+Open a new session in Rstudio, and make sure you have a clean workspace by typing this command on the console:
 
 ``` r
 # remove existing objects
 rm(list = ls())
 ```
 
-You can download the `.RData` file to your working directory, and then `load()` it with the code below. Do NOT include these commands in your source Rmd file; simply type them sirectly on the console:
+You can download the `.RData` file to your working directory, and then `load()` it with the code below. Do NOT include these commands in your source Rmd file; simply type them directly on the console:
 
 ``` r
 # download RData file into your working directory
@@ -47,11 +47,19 @@ download.file(url = rdata, destfile = 'nba2017-salary-points.RData')
 
 The function `download.file()` allows you to download any type of file from the Web. In this case you are downloading the file called `nba2017-salary-points.RData` which is located in the github repository of the course. This file is a binary file. To be more precise, the file extension `.RData` is the default extension used by R for its binary native format.
 
-Where does the file is downloaded? The file `nba2017-salary-points.RData` gets downloaded to your **working directory**. If you are curious about what is the current directory to which R is paying attention, simply type the function `getwd()`---which stands for *get the working directory*.
+Where does the file get downloaded? Bby default, the file `nba2017-salary-points.RData` gets downloaded to your **working directory**. If you are curious about what is the current directory to which R is paying attention to, simply type the function `getwd()`---which stands for *get the working directory*.
+
+If you want to specify a specific location for the downloaded file, then modify the `destfile` parameter. For instance, if you are using Mac, and you want the file to be downloaded to your desktop, you can use:
+
+``` r
+# download RData file to your Desktop (assuming you use Mac)
+rdata <- "https://github.com/ucb-stat133/stat133-fall-2017/raw/master/data/nba2017-salary-points.RData"
+download.file(url = rdata, destfile = '~/Desktop/nba2017-salary-points.RData')
+```
 
 ### Loading the data file
 
-To load the contents of the binary file into R's session you use `load()`. This function allows you to import R binary files. This time, include the code below in your `Rmd` file:
+To load or import the contents of the binary file into your R session you use `load()`. This function allows you to import R binary files. This time, include the code below in your `Rmd` file:
 
 ``` r
 # load data in your R session
@@ -81,7 +89,7 @@ Most of the data sets you are going to be working with in real life are going to
 
 ### Inspecting the data objects
 
-Once you have some data objects to work with, the first step is to inspect some of their characteristics. R has various of functions that allow you to examine objects:
+Once you have some data objects to work with, the first step is to inspect some of their characteristics. R has various functions that allow you to examine objects:
 
 -   `typeof()` type of storage of any object
 -   `class()` gives you the class of the object
@@ -118,7 +126,7 @@ How do you know if any of the loaded objects is a vector? Using `class()` does n
 # check whether the loaded objects are vectors
 ```
 
-Remember that R vectors are **atomic structures**, which is just the fancy name to indicate that all the elements of a vector must be of the same type, either all numbers, all characters, or all logical values. To test is an object is *atomic*, i.e. has all its elements of the same type, use `is.atomic()`
+Remember that R vectors are **atomic structures**, which is just the fancy name to indicate that all the elements of a vector must be of the same type, either all numbers, all characters, or all logical values. To test if an object is *atomic*, i.e. has all its elements of the same type, use `is.atomic()`
 
 ``` r
 # check whether the loaded objects are atomic objects
@@ -214,7 +222,7 @@ a[c(TRUE, FALSE, TRUE, FALSE)]
 
     ## [1] 5 7
 
-Logical subsetting occurs when the vector of indices that pass inside the brackets is a logical vector.
+Logical subsetting occurs when the vector of indices that you pass inside the brackets is a logical vector.
 
 To do logical subsetting, the vector that you put inside the brackets, should match the length of the manipulated vector. If you pass a shorter vector inside brackets, R will apply its recycling rules.
 
@@ -270,7 +278,7 @@ points_four[points_four > 100]
     ## [1] 952 520 894
 
 ``` r
-# elements less then 100
+# elements less than 100
 points_four[points_four < 100]
 ```
 
@@ -562,6 +570,22 @@ Practice manipulating `position_fac` to get:
 #
 ```
 
+### More Plots
+
+Let's go back to the scatterplot of `points` and `salary`
+
+``` r
+plot(points, salary)
+```
+
+But now use your factor `position_fac` to add some color to the dots in the scatterplot. Pass the factor to the `col =` parameter inside `plot()`
+
+``` r
+# your colored scatterplot
+```
+
+Experiment with other `plot()` arguments like the *point character* `pch =`, the *size of dots* with the parameter `cex =`, the axes labels `xlab` and `ylab` and so on.
+
 ------------------------------------------------------------------------
 
 Solutions
@@ -775,7 +799,7 @@ plot(warriors_points, warriors_salary)
 text(warriors_points, warriors_salary, labels = warriors_players)
 ```
 
-![](lab02-vector-basics_files/figure-markdown_github/unnamed-chunk-22-1.png)
+![](lab02-vector-basics_files/figure-markdown_github/unnamed-chunk-23-1.png)
 
 ``` r
 # scatterplot with log-scale
@@ -783,7 +807,7 @@ plot(log(warriors_points), log(warriors_salary))
 text(log(warriors_points), log(warriors_salary), labels = warriors_players)
 ```
 
-![](lab02-vector-basics_files/figure-markdown_github/unnamed-chunk-22-2.png)
+![](lab02-vector-basics_files/figure-markdown_github/unnamed-chunk-23-2.png)
 
 ``` r
 # positions of Warriors
