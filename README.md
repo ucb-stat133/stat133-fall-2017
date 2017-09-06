@@ -9,7 +9,7 @@ __Statistics 133: Concepts in Computing with Data__ at UC Berkeley.
 - __Session Dates:__ 08/23/17 - 12/08/17
 - __Code #:__ 21287
 - __Units:__ 3 (more info [here](http://classes.berkeley.edu/content/2017-fall-stat-133-001-lec-001))
-- __Office Hours:__ TBA in 309 Evans (or by appointment)
+- __Office Hours:__ See [bCourses](https://bcourses.berkeley.edu/courses/1464347/pages/office-hours)
 - __Final:__ Friday Dec-15th, 8-11am
 - __GSIs:__ Office hours of the GSIs will be posted on the bCourses page. 
 You can go to the office hours of __any__ GSI, not just your own.
