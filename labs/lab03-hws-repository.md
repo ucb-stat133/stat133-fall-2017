@@ -10,8 +10,8 @@ Gaston Sanchez
 
 ------------------------------------------------------------------------
 
-1) Directory for Stat 133
--------------------------
+1 Directory for Stat 133
+------------------------
 
 The first thing you'll have to do is to create a directory for the course. I recommend using the name `stat133` but you can choose a different title. The location of this directory is entirely up to you (e.g. your home directory, your Desktop, or your Dropbox folder, for instance).
 
@@ -29,8 +29,8 @@ The first thing you'll have to do is to create a directory for the course. I rec
     cd stat133
     ```
 
-2) Cloning the Assignments Repository
--------------------------------------
+2 Cloning the Assignments Repository
+------------------------------------
 
 Once you created a directory for Stat 133, the next step involves cloning (i.e. copying) the `stat133-hws-fall17` repository from GitHub. First, make sure you are inside `stat133` (or the name that you chose); you can check your working directory with `pwd`
 
@@ -53,8 +53,8 @@ The command `git clone ...` will download and create your own copy of the templa
 
 *Note*: If you have followed the previous instructions, you should be fine. But just in case, here's a brief important notice. Please, do NOT fork the repository `stat133-hws-fall17`. Forking and Cloning are two different things.
 
-3) Customizing the `README.md` file
------------------------------------
+3 Customizing the `README.md` file
+----------------------------------
 
 Now that you have your own repository `stat133-hws-fall17`, you need to customize some of the contents of the `README.md` file.
 
@@ -109,8 +109,8 @@ Now that you have your own repository `stat133-hws-fall17`, you need to customiz
 
         git commit -m "readme: customize with personal information"
 
-4) Adding your own remote repository
-------------------------------------
+4 Adding your own remote repository
+-----------------------------------
 
 -   Right now you have a (local) git repository in your computer.
 -   Because you cloned the repo from Github, your local repository is linked to the remote `https://github.com/ucb-stat133/stat133-hws-fall17` (but this remote is not really yours).
@@ -146,8 +146,8 @@ git remote add origin https://github.com/username/stat133-hws-fall17.git
         origin  https://github.com/username/stat133-hws-fall17.git (fetch)
         origin  https://github.com/username/stat133-hws-fall17.git (push)
 
-5) Pushing `README.md` to GitHub
---------------------------------
+5 Pushing `README.md` to GitHub
+-------------------------------
 
 -   Now that you have linked your local repo with your remote repo, you can start pushing (i.e. uploading) commits to github.
 -   As part of the basic workflow with git and github, you want to constantly check the status of your repo"
@@ -162,8 +162,8 @@ git remote add origin https://github.com/username/stat133-hws-fall17.git
 
 -   Go to your Github repository and refresh the browser. If everything went fine, you should be able to see the contents of your customized `README.md` file.
 
-6) Pushing Warm-Up 01 assignment
---------------------------------
+6 Pushing Warm-Up 01 assignment
+-------------------------------
 
 -   As you can tell, you have a folder (i.e. directory) `warmup01` in your local repo. This folder contains its own `README.md` file.
 -   Somewhere in your computer you should have the `.Rmd` file of your first warm-up assignment: it should be named `up01-first-last.Rmd` where `first` and `last` are your first and last names.
@@ -203,8 +203,8 @@ git remote add origin https://github.com/username/stat133-hws-fall17.git
 -   Go to your github repo, and check the contents of the folder `warmup01`, you should be able to see the `.Rmd` and `.md` files.
 -   Take a look at the `.md` file, it should be rendered nicely by github.
 
-7) Pushing Warm-Up 02 assignment
---------------------------------
+7 Pushing Warm-Up 02 assignment
+-------------------------------
 
 -   Follow the previous instructions to push your second warm-up assignment to Github.
 -   Copy `up02-first-last.Rmd` to the directory `warmup02`
@@ -229,8 +229,8 @@ git remote add origin https://github.com/username/stat133-hws-fall17.git
 -   Go to your github repo, and check the contents of the folder `warmup02`, you should be able to see the `.Rmd` and `.md` files.
 -   Take a look at the `.md` file, it should be rendered nicely by github.
 
-8) Make your repository private
--------------------------------
+8 Make your repository private
+------------------------------
 
 -   Right now your github `stat133-hws-fall17` repository is public, and everybody can see its contents.
 -   To reduce the temptation of students taking a peek at other classmates' repositories, we are going to ask you to make your repo private.
