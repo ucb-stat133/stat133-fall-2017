@@ -42,7 +42,13 @@ Assuming that you are inside the directory `stat133`, now you can clone `stat133
 git clone https://github.com/ucb-stat133/stat133-hws-fall17.git
 ```
 
-The previous command will download and create your own copy of the template repository. This is the repository that you will be using to upload ALL your assignments: warm-up assignments, HW assignments, and posts.
+I'st possible that you encounter some error message, e.g. Mac users may get a message related with a missing component for `CommandLineTools`. If this your case, then type in the terminal console:
+
+``` bash
+xcode-select --install
+```
+
+The command `git clone ...` will download and create your own copy of the template repository. This is the repository that you will be using to upload ALL your assignments: warm-up assignments, HW assignments, and posts.
 
 *Note*: If you have followed the previous instructions, you should be fine. But just in case, here's a brief important notice. Please, do NOT fork the repository `stat133-hws-fall17`. Forking and Cloning are two different things.
 
@@ -79,17 +85,53 @@ Now that you have your own repository `stat133-hws-fall17`, you need to customiz
     -   your github username
     -   your lab section
     -   the name of your section's GSI
--   Save the changes
-
-Adding a remote repository
---------------------------
-
--   Right now you have a (local) git repository in your computer. But you don't have a remote repository in GitHub.
--   In order to have a repo in github, you need to first add a remote. Use the command below **with your own username**:
+-   Save the changes made in `README.md`.
+-   So far the content in `README.md` has been update, but these changes have not been recorded by Git. You can confirm this by checking the status of the repo:
 
     ``` bash
-    git remote add origin https://github.com/username/stat133-hws-fall17.git
+    git status
     ```
+
+-   Notice that Git knows that `README.md` has changed, but the changes have not been staged.
+-   Let's add the changes in `README.md` so that Git can record them in its database:
+
+    ``` bash
+    git add README.md
+    ```
+
+-   As it is customary, after adding changes, you check the status of your repository (You should see a git message telling you about the *"Changes to be committed"*):
+
+        git status
+
+-   You should see a git message telling you about the *"Changes to be committed"*
+-   Now let's commit those changes, including a commit message:
+
+        git commit -m "readme: customize with personal information"
+
+Adding your own remote repository
+---------------------------------
+
+-   Right now you have a (local) git repository in your computer.
+-   Because you cloned the repo from Github, your local repository is linked to the remote `https://github.com/ucb-stat133/stat133-hws-fall17` (but this remote is not really yours).
+-   So let's remove the current remote repository:
+
+    ``` bash
+    git remote rm origin
+    ```
+
+-   In order to have your own github repo, you need to first create a repository in your github account.
+-   Go to your Github account and look for the icon-button with the `+` sign (at the top of the page), which is the button to *Create new repository*.
+-   Click the option *Create new repository*.
+-   Name your repository: `stat133-hws-fall17`
+-   Click on the green button `Create repository` at the bottom of the page (don't change any of the default options).
+
+Now you have the local repository (with the content of the template), as well as the empty github repository. The next step is to link (or connect) your local repo with the one that you just created in github. Follow these steps:
+
+To add a remote repository use the command below **with your own username**:
+
+``` bash
+git remote add origin https://github.com/username/stat133-hws-fall17.git
+```
 
 -   Verify your new remote
 
@@ -103,33 +145,21 @@ Adding a remote repository
         origin  https://github.com/username/stat133-hws-fall17.git (fetch)
         origin  https://github.com/username/stat133-hws-fall17.git (push)
 
--   Go to your Github repository and check that you have a repo `stat133-hws-fall17.git` (it will be empty, but don't worry).
-
 Pushing `README.md` to GitHub
 -----------------------------
 
--   So far you should have a local repository (in your computer), and an empty remote repository (in your github).
--   Let's add the changes in `README.md` file
-
-    ``` bash
-    git add README.md
-    ```
-
--   As it is customary, after adding changes, you check the status of your repository (You should see a git message telling you about the *"Changes to be committed"*):
+-   Now that you have linked your local repo with your remote repo, you can start pushing (i.e. uploading) commits to github.
+-   As part of the basic workflow with git and github, you want to constantly check the status of your repo"
 
         git status
 
--   Now let's commit those changes, including a commit message:
-
-        git commit -m "readme: customize with personal information"
-
--   Now let's push your commit to the remote branch (`origin`) from the local branch (`master`):
+-   Now let's push your recent commit to the remote branch (`origin`) from the local branch (`master`):
 
     ``` bash
     git push origin master
     ```
 
--   Go to your Github repository and refresh the browser. If everything went fine, you should be able to see the contents of the `README.md` file.
+-   Go to your Github repository and refresh the browser. If everything went fine, you should be able to see the contents of your customized `README.md` file.
 
 Pushing Warm-Up 01 assignment
 -----------------------------
@@ -141,10 +171,27 @@ Pushing Warm-Up 01 assignment
 -   In the yaml header of `up01-first-last.Rmd`, change the **output** field from `html_document` to `github_document`.
 -   Knit the file; the output file should be a markdown file with `.md` extension (e.g. `up01-first-last.md`).
 -   In the terminal, make sure you are inside the directory `warmup01`.
--   Let's add and commit all the files in `warmup01`: the `README.md` file, the source `.Rmd` file, and the knitted `.md` file; remember to use your *first* and *last* names:
+-   Check the status of the repo:
 
-        git add README.md up01-first-last.Rmd up01-first-last.md
-        git commit -m "warmup01: generate github document"
+    ``` bash
+    git status
+    ```
+
+-   Let's add the source `.Rmd` file, and the knitted `.md` file; remember to use your *first* and *last* names:
+
+        git add up01-first-last.Rmd up01-first-last.md
+
+-   Check the status again (so you get into this habit):
+
+    ``` bash
+    git status
+    ```
+
+-   Commit the added modifications, and include a message:
+
+    ``` bash
+    git commit -m "warmup01: generate github document"
+    ```
 
 -   Now, let's push the committed changes to the remote repo in github:
 
@@ -166,7 +213,9 @@ Pushing Warm-Up 02 assignment
 -   Add and commit the`README.md` file, the source `.Rmd`, and the `.md` file; remember to use your *first* and *last* names:
 
     ``` bash
+    git status
     git add README.md up02-first-last.Rmd up02-first-last.md
+    git status
     git commit -m "warmup02: generate github document"
     ```
 
@@ -182,8 +231,8 @@ Pushing Warm-Up 02 assignment
 Make your repository private
 ----------------------------
 
--   Right now your `stat133-hws-fall17` repository is public, and everybody can see its contents.
--   To reduce the temptation of students taking a peek at other classmates repositories, we are going to ask you to make your repo private.
+-   Right now your github `stat133-hws-fall17` repository is public, and everybody can see its contents.
+-   To reduce the temptation of students taking a peek at other classmates' repositories, we are going to ask you to make your repo private.
 -   Go to your github repository, and locate the **Settings** tab in the manu bar (at the top). Click on **Settings**.
 -   Scroll down until you see the **Danger Zone**.
 -   Select the option **Make this repository private**.
@@ -197,4 +246,4 @@ Make your repository private
     -   Ningning:
 -   Please keep your repository in private mode until the semester is over (Dec-18th).
 -   I don't recommend deleting your repo after the semester is over. Why not? Because it is your work, and you will put many hours of effort on it. And I bet you will eventually come back to check its content to see how something was done (data reshaping, a plot, a function, slides, a shiny app, etc).
--   Keep your repo part of your (code) portfolio.
+-   Keep your repo as part of your (code) portfolio.
