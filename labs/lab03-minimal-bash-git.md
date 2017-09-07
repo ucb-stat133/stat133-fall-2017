@@ -8,13 +8,14 @@ Gaston Sanchez
 > -   Learn basic commands to navigate the file-system
 > -   Learn how to express file paths: absolute and relative
 > -   To gain familiarity with Git
-> -   Configuration settings
-> -   Understand the basic Git workflow
+> -   Creating your assignments repo in Github
 
 ------------------------------------------------------------------------
 
 Before we start
 ---------------
+
+This lab has two parts. The first part (30-40 mins) involves a first contact with the command line terminal (doing basic navigation of the filesystem). The second part, in turn, has to do with creating your github repository for the Stat 133 assignments.
 
 -   Make sure everybody has installed **Git**
     -   Git for Mac: <https://git-scm.com/download/mac>
@@ -25,8 +26,8 @@ Before we start
 
 ------------------------------------------------------------------------
 
-1) Bash and the Command Line
-----------------------------
+1 Bash and the Command Line
+---------------------------
 
 We are going to start this lab talking about very simple bash commands. If you are a Linux user, I'm assuming that you already know how to open the command line and move around the filesystem.
 
@@ -36,22 +37,32 @@ We are going to start this lab talking about very simple bash commands. If you a
 -   Then, go to `Utilities`
 -   And then click on the `Terminal`
 
-**Bash for Windows**. If you are a Windows user, I recommend using Git-Bash. Git for Windows provides a Bash emulator used to run Git from the command line. If you have installed Git (for Windows), you should also have its associated Bash.
+**Bash for Windows**. If you are a Windows user, I recommend using Git-Bash. Git for Windows provides a Bash emulator. If you have installed Git (for Windows), you should also have its associated Bash.
 
 ### Command Line Practice
 
-During the first hour of the lab, work on the first 3 sections of the workshop [The Unix Shell](http://swcarpentry.github.io/shell-novice/) by *Software Carpentry*
+During the first 30-40 mins of the lab, work on sections 2 and 3 of the workshop [The Unix Shell](http://swcarpentry.github.io/shell-novice/) by *Software Carpentry*
 
-1.  [Introducing the Shell](http://swcarpentry.github.io/shell-novice/01-intro/)
-2.  [Files and Directories](http://swcarpentry.github.io/shell-novice/02-filedir/)
-3.  [Creating Things](http://swcarpentry.github.io/shell-novice/03-create/)
+1.  [Files and Directories](http://swcarpentry.github.io/shell-novice/02-filedir/)
+2.  [Creating Things](http://swcarpentry.github.io/shell-novice/03-create/)
+
+You may need to download a zip file to follow the lessons of the workshop, available here: <http://swcarpentry.github.io/shell-novice/setup/>
 
 ------------------------------------------------------------------------
 
-2) Git Practice
----------------
+2 Git & Github Practice
+-----------------------
 
-During the second hour of the lab, work on the [Version Control with Git](http://swcarpentry.github.io/git-novice/) workshop by *Software Carpentry*, especifically parts 3 to 7 (I'm assuming that you have Git setup in your machine).
+During the second part of the lab, follow the instructions in the lab file [lab03-hws-repository.md](lab03-hws-repository.md) "Github repo for Stat 133".
+
+(I'm assuming that you have Git setup in your machine).
+
+------------------------------------------------------------------------
+
+3 Optional: Git Workshop
+------------------------
+
+If you are new to Git and GitHub, you may want to work on the [Version Control with Git](http://swcarpentry.github.io/git-novice/) workshop by *Software Carpentry*, especifically parts 3 to 7 (I'm assuming that you have Git setup in your machine).
 
 1.  [Creating a Repository](http://swcarpentry.github.io/git-novice/03-create/)
 2.  [Tracking Changes](http://swcarpentry.github.io/git-novice/04-changes/)
