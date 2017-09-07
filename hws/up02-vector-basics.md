@@ -36,8 +36,12 @@ There is also a data dictionary file `nba2017-salary-points-dictionary.md` that 
 To read the data in R, we recommend that you download the `.RData` to your computer. You can use the function `download.file()` to do this. The file will be downloaded to the specified destination (`destfile`). In the code below, the binary file woud be downloaded to your [working directory](https://www.computerhope.com/jargon/c/currentd.htm):
 
 ``` r
+# assembling url (so it fits on the screen)
+github <- 'https://github.com/ucb-stat133/stat133-hws-fall17/'
+repo <- 'raw/master/warmup02/data/nba2017-salary-points.RData'
+
 download.file(
-  url = "https://github.com/ucb-stat133/stat133-hws-fall17/tree/master/warmup02/data",
+  url = paste0(github, repo),
   destfile = "nba2017-salary-points.RData")
 ```
 
