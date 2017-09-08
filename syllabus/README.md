@@ -59,7 +59,7 @@
 + __Lecture material__
     + [Intro to vectors](../tutorials/03-intro-to-vectors.md) (tutorial)
     + [Arrays and Factors](https://docs.google.com/presentation/d/e/2PACX-1vSyy1gkP4eG1z_TXMAnY_23HWDW1GQAPFaQll1EQVXMyaOfCiH_bEYQch47ZkywDJoc8T-Ct14vlZby/pub?start=false&loop=false&delayms=3000) (slides)
-    + [Lists](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Lists](https://docs.google.com/presentation/d/e/2PACX-1vRQsS5XHV4wyzMgTRXgtYXm7GoF6XLYPB-hFWvT_IvsMEBM1S_zsaPMEKd5wy2b9Uk7oARM29YxdsK7/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
     + [Getting started with vectors, factors, and lists](../labs/lab02-vector-basics.md)
 + __Reading__:
