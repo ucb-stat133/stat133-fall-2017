@@ -59,7 +59,7 @@
 + __Lecture material__
     + [Intro to vectors](../tutorials/03-intro-to-vectors.md) (tutorial)
     + [Arrays and Factors](https://docs.google.com/presentation/d/e/2PACX-1vSyy1gkP4eG1z_TXMAnY_23HWDW1GQAPFaQll1EQVXMyaOfCiH_bEYQch47ZkywDJoc8T-Ct14vlZby/pub?start=false&loop=false&delayms=3000) (slides)
-    + [Lists and Data Frames](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Lists](https://docs.google.com/presentation/d/1dJxAJxKxzLecxQwJUxUBlJ_T243Qtvi-gyiEVO6eMvw/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
     + [Getting started with vectors, factors, and lists](../labs/lab02-vector-basics.md)
 + __Reading__:
@@ -100,6 +100,7 @@
 + __Topics__: Data Tables, typical storage formats, and relation with data frames.
 + __Lecture material__
     + [Data Tables](https://docs.google.com/presentation/d/1WQIrQxtNXhEEpI0Yd5Ch4r2zwIp3KG2O_BVY5nsdY4Q/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Data Frames](https://docs.google.com/presentation/d/e/2PACX-1vQe6DvbQATpBwuDvebpqetMnDEZyGPFtjllqkNpkKlQ07BM9jIJPpTwg-o0o_YSoO2PZkwaaezU6zaz/pub?start=false&loop=false&delayms=3000) (slides)
     + [Importing Tables in R](https://docs.google.com/presentation/d/1vbqZoR2i8z3Zlpc8WxhA3ntKnfB8O1WVKnFVDdxZzdA/pub?start=false&loop=false&delayms=3000) (slides)
     + [Basic manipulation of data frames](https://docs.google.com/presentation/d/1OsxnIgNTZG-gnD0rdTXzqf162_gNqnok_suMHG5KxpU/edit?usp=sharing) (slides)
 + __Lab material__:
