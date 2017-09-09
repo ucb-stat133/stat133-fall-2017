@@ -150,6 +150,6 @@ Name your `Rmd` file using the following structure: `up02-first-last.Rmd` where 
 
 All your code chunks should be visible. In other words, please do NOT use code chunk options like: `results = 'hide'`, `echo = FALSE`, `eval = FALSE`
 
-Please submit your source `.Rmd` file, as well as the knitted (i.e. compiled) html file to bCourses.
+Please submit your knitted (i.e. compiled) html file to bCourses (no need to submit the Rmd file).
 
 *Note: later (in a week or so) you will have to upload your `.Rmd` file to your github repository (don't worry if you don't know what this means).*
