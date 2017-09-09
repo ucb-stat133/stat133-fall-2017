@@ -77,7 +77,7 @@
 + __Dates__: Sep 11-15
 + __Topics__: Fundamental low-level stuff for the rest of the course.
 + __Lecture material__
-    + [Filesystem](https://docs.google.com/presentation/d/1V-JPhr3Do3A7Jn-zgFSqD7R171W-G02uEmxWoHZI7bs/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Filesystem Basics](https://docs.google.com/presentation/d/1V-JPhr3Do3A7Jn-zgFSqD7R171W-G02uEmxWoHZI7bs/pub?start=false&loop=false&delayms=3000) (slides)
     + [Shell Basics](https://docs.google.com/presentation/d/1VTlxM0IrwhzSDVyqPM9a2JLG8wICVpOp3hrHvTcrA6Q/pub?start=false&loop=false&delayms=3000) (slides)
     + [Git Basics](https://docs.google.com/presentation/d/1szPjE9eDD23YdZiq3-Tk85ZprY7d31uRtVxgTXSS_rc/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
@@ -88,6 +88,8 @@
     _Happy Git and GitHub for the useR_ by Jenny Bryan et al.
 + __Cheat sheet__:
     + [git cheat sheet](../cheat-sheets/git-cheatsheet.pdf)
++ __HW 1__: due Sep-23
+    + More Vectors (TBA)
 
 
 -----
