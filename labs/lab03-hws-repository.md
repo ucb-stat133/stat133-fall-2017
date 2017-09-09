@@ -243,8 +243,8 @@ git remote add origin https://github.com/username/stat133-hws-fall17.git
     -   Xiaoqi: `xz0416`
     -   Minchul: `mshin03`
     -   Omid: `osolari`
-    -   Andy:
-    -   Ningning:
+    -   Andy: `supermao10`
+    -   Ningning: `ningning1992`
 -   Please keep your repository in private mode until the semester is over (Dec-18th).
 -   I don't recommend deleting your repo after the semester is over. Why not? Because it is your work, and you will put many hours of effort on it. And I bet you will eventually come back to check its content to see how something was done (data reshaping, a plot, a function, slides, a shiny app, etc).
 -   Keep your repo as part of your (code) portfolio.
