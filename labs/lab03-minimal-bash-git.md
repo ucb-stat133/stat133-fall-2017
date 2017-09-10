@@ -15,7 +15,7 @@ Gaston Sanchez
 Before we start
 ---------------
 
-This lab has two parts. The first part (30-40 mins) involves a first contact with the command line terminal (doing basic navigation of the filesystem). The second part, in turn, has to do with creating your github repository for the Stat 133 assignments.
+This lab has two parts. The first part (30-40 mins) involves a first contact with the command line terminal (doing basic navigation of the filesystem). The [second part](lab03-hws-repository.md), in turn, has to do with creating your github repository for the Stat 133 assignments.
 
 -   Make sure everybody has installed **Git**
     -   Git for Mac: <https://git-scm.com/download/mac>
