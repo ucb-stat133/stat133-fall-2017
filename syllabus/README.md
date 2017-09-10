@@ -44,7 +44,7 @@
 + __Cheat sheet__: 
     + [RStudio cheat sheet](../cheat-sheets/rstudio-IDE-cheatsheet.pdf)
     + [R markdown cheat sheet](../cheat-sheets/rmarkdown-cheatsheet-2.0.pdf)
-+ __WARM-UP__: due Sep-09
++ __WARM-UP 1__: due Sep-09
     + [Markdown practice](../hws/up01-markdown.md)
 
 
@@ -64,7 +64,7 @@
     + [Getting started with vectors, factors, and lists](../labs/lab02-vector-basics.md)
 + __Reading__:
     + [chapter 20: Vectors](http://r4ds.had.co.nz/vectors.html) from _R for Data Science_ by Grolemund and Wickham.
-+ __WARM-UP__: due Sep-16
++ __WARM-UP 2__: due Sep-16
     + [Vectors and Factors](../hws/up02-vector-basics.md)
 
 
