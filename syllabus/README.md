@@ -84,8 +84,7 @@
     + [Minimal Bash and Git](../labs/lab03-minimal-bash-git.md)
     + [GitHub repo for your assignments](../labs/lab03-hws-repository.md)
 + __Reading__:
-    + [Installing Git and Github](http://happygitwithr.com/installation-pain.html) from 
-    _Happy Git and GitHub for the useR_ by Jenny Bryan et al.
+    + Read sections 4 to 9 in Part I [Installation](http://happygitwithr.com/installation-pain.html) from _Happy Git and GitHub for the useR_ by Jenny Bryan et al.
 + __Cheat sheet__:
     + [git cheat sheet](../cheat-sheets/git-cheatsheet.pdf)
 + __HW 1__: due Sep-23
