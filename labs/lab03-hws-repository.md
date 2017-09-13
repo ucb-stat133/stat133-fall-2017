@@ -87,7 +87,7 @@ Now that you have your own repository `stat133-hws-fall17`, you need to customiz
     -   your lab section
     -   the name of your section's GSI
 -   Save the changes made in `README.md`.
--   So far the content in `README.md` has been update, but these changes have not been recorded by Git. You can confirm this by checking the status of the repo:
+-   So far the content in `README.md` has been updated, but these changes have not been recorded by Git. You can confirm this by checking the status of the repo:
 
     ``` bash
     git status
@@ -104,8 +104,7 @@ Now that you have your own repository `stat133-hws-fall17`, you need to customiz
 
         git status
 
--   You should see a git message telling you about the *"Changes to be committed"*
--   Now let's commit those changes, including a commit message:
+-   Now let's commit those changes, including a [commit message](https://wiki.openstack.org/wiki/GitCommitMessages):
 
         git commit -m "readme: customize with personal information"
 
@@ -113,7 +112,7 @@ Now that you have your own repository `stat133-hws-fall17`, you need to customiz
 -----------------------------------
 
 -   Right now you have a (local) git repository in your computer.
--   Because you cloned the repo from Github, your local repository is linked to the remote `https://github.com/ucb-stat133/stat133-hws-fall17` (but this remote is not really yours).
+-   Because you cloned the repo from Github, your local repository is linked to the remote `https://github.com/ucb-stat133/stat133-hws-fall17` (but this remote is not really part of your github repositories).
 -   So let's remove the current remote repository:
 
     ``` bash
