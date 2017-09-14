@@ -88,7 +88,7 @@
 + __Cheat sheet__:
     + [git cheat sheet](../cheat-sheets/git-cheatsheet.pdf)
 + __HW 1__: due Sep-23
-    + More Vectors (TBA)
+    + [More Vectors](../hws/hw01-more-vectors.pdf)
 
 
 -----
