@@ -106,7 +106,7 @@
     + [Basic manipulation of data frames](https://docs.google.com/presentation/d/1OsxnIgNTZG-gnD0rdTXzqf162_gNqnok_suMHG5KxpU/edit?usp=sharing) (slides)
 + __Lab material__:
     + [Reading in tables in R](../labs/lab04-reading-tables.md)
-    + [Getting started with dplyr](../labs/lab04-dplyr-basics.md)
+    + [Manipulating data frames](../labs/lab04-data-frame-basics.md)
 + __Reading__:
     + [Organizing data in spreadsheets](http://kbroman.org/dataorg/) by Karl Broman
     + [Introduction to dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) introductory vignette by Hadley Wickham
