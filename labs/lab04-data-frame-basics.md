@@ -583,14 +583,126 @@ Use `sort()`, `order()`, `rev()`, together with data frame manipulations, to:
 
 -   Sort data by species in increasing order
 
-### Group by
+Group By
+--------
 
 Group-by operations are very common in data analytics. Without dedicated functions, these operations tend to be very hard (labor intensive).
 
 **Quick try**: Using just bracket notation, try to create a data frame with two columns: the team name, and the team payroll (addition of all player salaries).
 
-So what functions can you use in R to perform group by operations? In base R, there are two major functions: `aggregate()` and `tapply()`
+So what functions can you use in R to perform group by operations? In base R, the main function for group-by operations is `aggregate()`.
 
--   Create a data frame with the the average height, average weight, and average age per team.
+Here's an example using `aggregate()` to get the median salary, grouped by team:
+
+``` r
+aggregate(dat$salary, by = list(dat$team), FUN = median)
+```
+
+    ##    Group.1       x
+    ## 1      ATL 3279291
+    ## 2      BOS 4743000
+    ## 3      BRK 1790902
+    ## 4      CHI 2112480
+    ## 5      CHO 6000000
+    ## 6      CLE 5239437
+    ## 7      DAL 2898000
+    ## 8      DEN 3500000
+    ## 9      DET 4625000
+    ## 10     GSW 1551659
+    ## 11     HOU 1508400
+    ## 12     IND 4000000
+    ## 13     LAC 3500000
+    ## 14     LAL 5281680
+    ## 15     MEM 3332940
+    ## 16     MIA 3449000
+    ## 17     MIL 4184870
+    ## 18     MIN 3650000
+    ## 19     NOP 3789125
+    ## 20     NYK 2898000
+    ## 21     OKC 3140517
+    ## 22     ORL 5000000
+    ## 23     PHI 2318280
+    ## 24     PHO 2941440
+    ## 25     POR 4943123
+    ## 26     SAC 5200000
+    ## 27     SAS 2898000
+    ## 28     TOR 5300000
+    ## 29     UTA 2433334
+    ## 30     WAS 4365326
+
+The same example above can also be obtained with `aggreagte()` using formula notation like this:
+
+``` r
+aggregate(salary ~ team, data = dat, FUN = median)
+```
+
+    ##    team  salary
+    ## 1   ATL 3279291
+    ## 2   BOS 4743000
+    ## 3   BRK 1790902
+    ## 4   CHI 2112480
+    ## 5   CHO 6000000
+    ## 6   CLE 5239437
+    ## 7   DAL 2898000
+    ## 8   DEN 3500000
+    ## 9   DET 4625000
+    ## 10  GSW 1551659
+    ## 11  HOU 1508400
+    ## 12  IND 4000000
+    ## 13  LAC 3500000
+    ## 14  LAL 5281680
+    ## 15  MEM 3332940
+    ## 16  MIA 3449000
+    ## 17  MIL 4184870
+    ## 18  MIN 3650000
+    ## 19  NOP 3789125
+    ## 20  NYK 2898000
+    ## 21  OKC 3140517
+    ## 22  ORL 5000000
+    ## 23  PHI 2318280
+    ## 24  PHO 2941440
+    ## 25  POR 4943123
+    ## 26  SAC 5200000
+    ## 27  SAS 2898000
+    ## 28  TOR 5300000
+    ## 29  UTA 2433334
+    ## 30  WAS 4365326
+
+Here's another example using `aggregate()` to get the average height and average weight, grouped by position:
+
+``` r
+aggregate(dat[ ,c('height', 'weight')], by = list(dat$position), FUN = mean)
+```
+
+    ##   Group.1   height   weight
+    ## 1       C 83.25843 250.7978
+    ## 2      PF 81.50562 235.8539
+    ## 3      PG 74.30588 188.5765
+    ## 4      SF 79.63855 220.4699
+    ## 5      SG 77.02105 204.7684
+
+The same example above can also be obtained with `aggreagte()` using formula notation like this:
+
+``` r
+aggregate(. ~ position, data = dat[ ,c('position', 'height', 'weight')],
+          FUN = mean)
+```
+
+    ##   position   height   weight
+    ## 1        C 83.25843 250.7978
+    ## 2       PF 81.50562 235.8539
+    ## 3       PG 74.30588 188.5765
+    ## 4       SF 79.63855 220.4699
+    ## 5       SG 77.02105 204.7684
+
+### Your turn
+
+-   Create a data frame with the average height, average weight, and average age, grouped by position
+
+-   Create a data frame with the average height, average weight, and average age, grouped by team
+
+-   Create a data frame with the average height, average weight, and average age, grouped by team and position.
+
+-   Difficult: Create a data frame with the minimum salary, median salary, mean salary, and maximum salary, grouped by team and position.
 
 ------------------------------------------------------------------------
