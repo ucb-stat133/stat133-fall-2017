@@ -13,18 +13,18 @@ Gaston Sanchez
 Manipulating Data Frames
 ------------------------
 
-The most common format/structure for a data set is in a tabular format (with row and columns). When your data is in this shape, most of the times you will work with R data frames (or similar structures like a `"matrix"`, `"table"`, etc).
+The most common format/structure for a data set is a tabular format: with row and columns (like a spreadsheet). When your data is in this shape, most of the time you will work with R **data frames** (or similar rectangular structures like a `"matrix"`, `"table"`, etc).
 
 Learning how to manipulate data tables is among the most important *data computing* basic skills. The traditional way of manipulating data frames in R is based on bracket notation, e.g. `dat[ , ]`, to select specific rows, columns, or cells. Also, the use of the dollar `$` operator to handle columns is fundamental. In this part of the lab, you will practice a wide array of data wrangling tasks with the so-called bracket notation, and the dollar operator.
 
-I should say that there are alternative ways for manipulating tables in R Among the most recent paradigms, there is the **plying** framework devised by Hadley Wickham. From his doctoral research, the first tools were available in the packages `"plyr"` and `"reshape"`. Nowadays we have the `"reshape2"` package, and the extremely popular package `"dplyr"` (among other packages). You will have time to learn more about `"dplyr"` in the next weeks. In the meantime, take some time to understand more about the bracket notation.
+I should say that there are alternative ways for manipulating tables in R. Among the most recent paradigms, there is the **plying** framework devised by Hadley Wickham. From his doctoral research, the first *plyr* tools were available in the packages `"plyr"` and `"reshape"`. Nowadays we have the `"reshape2"` package, and the extremely popular package `"dplyr"` (among other packages). You will have time to learn more about `"dplyr"` in the next weeks. In the meantime, take some time to understand more about the bracket notation.
 
 Creating data frames
 --------------------
 
 Most of the (raw) data tables you will be working with will already be in some data file. However, from time to time you will face the need of creating some sort of data table in R. In these situations, you will likely have to create such table with a data frame. So let's look at various ways to "manually"" create a data frame.
 
-**Option 1**: The primary option to build a data frame is with `data.frame()`. You pass a series of vectors (or factors), of the same length, separated by commas. Each vector (or factor) will become a column. Preferably, give names to each column, like `col1`, `col2`, and `col3`, in the example below:
+**Option 1**: The primary option to build a data frame is with `data.frame()`. You pass a series of vectors (or factors), of the same length, separated by commas. Each vector (or factor) will become a column in the generated data frame. Preferably, give names to each column, like `col1`, `col2`, and `col3`, in the example below:
 
 ``` r
 # creating a basic data frame
@@ -44,10 +44,10 @@ my_table1
     ## 4    D   40  TRUE
     ## 5    E   50 FALSE
 
-**Option 2**: Another way to create data frames is with a `list` (of vectors or factors) converted to a data.frame with `data.frame()`.
+**Option 2**: Another way to create data frames is with a `list` containing vectors or factors (of the same length), which then you convert to a data.frame with `data.frame()`:
 
 ``` r
-# creating a basic data frame
+# another way to create a basic data frame
 my_list <- list(
   col1 = LETTERS[1:5],
   col2 = seq(from = 10, to = 50, by = 10),
@@ -111,7 +111,7 @@ Here's a table with the starting lineup of the Golden State Warriors:
 | Pachulia | C        | 2,898,000  | 426    | 6.1  | FALSE  |
 
 -   Start by creating vectors for each of the columns.
--   Create a first data frame with `data.frame()`.
+-   Use the vectors to create a first data frame with `data.frame()`.
 -   Check that this data frame is of class `"data.frame"`, and that it is also a list.
 -   Create another data frame by first starting with a `list()`, and then passing the list to `data.frame()`.
 -   What would you do to obtain a data frame such that when you check its structure `str()` the variables are:
@@ -121,15 +121,17 @@ Here's a table with the starting lineup of the Golden State Warriors:
     -   *Points* as integer
     -   *PPG* as numeric or real
     -   *Rookie* as logical
--   Find out how to use the *column binding* function `cbind()` to create a tabular object (see what is the class of this object) with your vectors.
+-   Find out how to use the *column binding* function `cbind()` to create a tabular object with the vectors created in step 1 (inspect what class of object is obtained with `cbind()`).
 -   How could you convert the object in the previous step into a data frame?
 
-Basic Operations
-----------------
+------------------------------------------------------------------------
 
-Now that you have seen some ways to create data frames, let's discuss a number of basic manipulations of data frames. I will show some examples and then you'll have the chance to put in practice the following operations:
+Basic Operations with Data Frames
+---------------------------------
 
--   Selecting table elements
+Now that you have seen some ways to create data frames, let's discuss a number of basic manipulations of data frames. I will show you some examples and then you'll have the chance to put in practice the following operations:
+
+-   Selecting table elements:
     -   select a given cell
     -   select a set of cells
     -   select a given row
@@ -270,7 +272,7 @@ tbl
 
 #### Renaming a column
 
-What if you want to rename a column? There are various options to do this. One way is by changing the column names attribute:
+What if you want to rename a column? There are various options to do this. One way is by changing the column`names` attribute:
 
 ``` r
 # attributes
@@ -299,10 +301,10 @@ names(tbl)
 
 Notice that `tbl` has a list of attributes. The element `names` is the vector of column names.
 
-You can directly modified the vector of `names`; for example let's change `rookie` to `rooky`:
+You can directly modify the vector of `names`; for example let's change `rookie` to `rooky`:
 
 ``` r
-# changing `rookie` to `rooky`
+# changing rookie to rooky
 attributes(tbl)$names[6] <- "rooky"
 
 # display column names
@@ -335,10 +337,10 @@ tbl
 
 #### Transforming a column
 
-A more common operation than deleting or moving a column, is to transform the values in a column. THis can be easily accomplished with the `$` operator. For instance, let's say that we want to transform `salary` from dollars to millions of dollars:
+A more common operation than deleting or moving a column, is to transform the values in a column. This can be easily accomplished with the `$` operator. For instance, let's say that we want to transform `salary` from dollars to millions of dollars:
 
 ``` r
-# salary in millions of dollars
+# converting salary in millions of dollars
 tbl$salary <- tbl$salary / 1000000
 tbl
 ```
@@ -350,7 +352,7 @@ tbl
     ## 4   Durant       SF   1555 25.1 FALSE    240 26.54010
     ## 5 Pachulia        C    426  6.1 FALSE    270  2.89800
 
-Likewise, instead of using the `$` operator, you can refer to the column with bracket notation. Here's how to transform weight from pounds to kilograms (1 pound = 0.453592 kilograms):
+Likewise, instead of using the `$` operator, you can refer to the column using bracket notation. Here's how to transform weight from pounds to kilograms (1 pound = 0.453592 kilograms):
 
 ``` r
 # weight in kilograms
@@ -413,7 +415,9 @@ tbl
 NBA Players Data
 ----------------
 
-The data file for this lab is `nba2017-players.csv`, located in the `data/` folder of the course github repository. This file contains 15 variables measured on 441 players. Download a copy of the csv file to your computer.
+Now that you've seen some of the most basic operations to maipulate data frames, let's apply them on a data set about NBA players. The corresponding data file is `nba2017-players.csv`, located in the `data/` folder of the course github repository. This file contains 15 variables measured on 441 players.
+
+First download a copy of the csv file to your computer.
 
 ``` r
 # download csv file into your working directory
@@ -543,17 +547,23 @@ Use bracket notation, the dollar operator, as well as concepts of logical subset
 
 -   Who is the oldest player?
 
--   What is the median salary?
+-   What is the median salary of all players?
+
+-   What is the median salary of the players with 10 years of experience or more?
+
+-   What is the median salary of Shooting Guards (SG) and Point Guards (PG)?
+
+-   What is the median salary of Power Forwards (PF), 29 years or older, and 74 inches tall or less?
 
 -   How many players scored 4 points or less?
 
--   Who are those players (who scored 4 points or less)?
+-   Who are those players who scored 4 points or less?
 
 -   Who is the player with 0 points?
 
--   Are there any players from "University of California, Berkeley"? If so how many and who are they?
+-   How many players are from "University of California, Berkeley"?
 
--   Are there any players from "University of California, Los Angeles"? If so how many and who are they?
+-   Are there any players from "University of Notre Dame"? If so how many and who are they?
 
 -   Are there any players with weight greater than 260 pounds? If so how many and who are they?
 
@@ -566,6 +576,16 @@ Use bracket notation, the dollar operator, as well as concepts of logical subset
 -   Who is the player with the maximum rate of two-points per minute?
 
 -   Who is the player with the maximum rate of one-points (free-throws) per minute?
+
+-   Create a data frame `gsw` with the name, height, weight of Golden State Warriors (GSW)
+
+-   Display the data in `gsw` sorted by height in increasing order (hint: see `?sort` and `?order`)
+
+-   Display the data in gsw by weight in decreasing order (hint: see `?sort` and `?order`)
+
+-   Display the player name, team, and salary, of the top 5 highest-paid players (hint: see `?sort` and `?order`)
+
+-   Display the player name, team, and points3, of the top 10 three-point players (hint: see `?sort` and `?order`)
 
 Group By
 --------
