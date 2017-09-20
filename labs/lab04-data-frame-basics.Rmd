@@ -445,13 +445,13 @@ logical subsetting and indexing to:
 
 - Create a data frame `durant` with Kevin Durant's information (i.e. row).
 
-- Create a data frame `ucla` with the data of players from college UCLA.
+- Create a data frame `ucla` with the data of players from college UCLA ("University of California, Los Angeles").
 
 - Create a data frame `rookies` with those players with 0 years of experience. 
 
 - Create a data frame `rookie_centers` with the data of Center rookie players. 
 
-- Create a data frame for players with more than 50 games and more than 100 minutes played.
+- Create a data frame `top_players` for players with more than 50 games and more than 100 minutes played.
 
 - What's the largest height value?
 
@@ -493,23 +493,6 @@ logical subsetting and indexing to:
 
 - Who is the player with the maximum rate of one-points (free-throws) per minute?
 
-
-### Sorting
-
-Use `sort()`, `order()`, `rev()`, together with data frame manipulations, 
-to:
-
-- Obtain height values in increasing order
-
-- Obtain weight values in decreasing order
-
-- Sort data by height in increasing order
-
-- Sort data by weight in decreasing order
-
-- Sort data by gender in increasing order
-
-- Sort data by species in increasing order
 
 
 ## Group By
