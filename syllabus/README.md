@@ -109,7 +109,6 @@
     + [Manipulating data frames](../labs/lab04-data-frame-basics.md)
 + __Reading__:
     + [Organizing data in spreadsheets](http://kbroman.org/dataorg/) by Karl Broman
-    + [Introduction to dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) introductory vignette by Hadley Wickham
 + __Cheat sheet__:
     + [Data import cheat sheet](../cheat-sheets/data-import-cheatsheet.pdf)
  
@@ -128,11 +127,11 @@ graphs with `"ggplot2"`.
     + Introduction to the R package `ggplot2`
     + [Introduction to shiny apps](https://docs.google.com/presentation/d/1_XhkkhXA26izACJyoc5JYrWiF_f96a6tD9ZSI5Tm8Os/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
-    + [More wrangling with data frames](../labs/lab05-more-dplyr.md)
-    + [Getting started with ggplot2](../labs/04-ggplot2-basics.md)
-    + [Getting started with shiny apps](../labs/lab05-shiny-basics.md)
+    + [Getting started with dplyr](../labs/lab05-dplyr-basics.md)
+    + [Getting started with ggplot2](../labs/05-ggplot2-basics.md)
 + __Reading__:
     + [Tidy Data](http://vita.had.co.nz/papers/tidy-data.pdf) by Hadley Wickham
+    + [Introduction to dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) introductory vignette by Hadley Wickham
 + __Cheat sheet__:
     + [Data transformation cheat sheet](../cheat-sheets/data-transformation-cheatsheet.pdf)
     + [Data visualization with ggplot2](../cheat-sheets/ggplot2-cheatsheet-2.1.pdf)
