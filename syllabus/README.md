@@ -87,8 +87,6 @@
     + Read sections 4 to 9 in Part I [Installation](http://happygitwithr.com/installation-pain.html) from _Happy Git and GitHub for the useR_ by Jenny Bryan et al.
 + __Cheat sheet__:
     + [git cheat sheet](../cheat-sheets/git-cheatsheet.pdf)
-+ __HW 1__: due Sep-23
-    + [More Vectors](../hws/hw01-more-vectors.pdf)
 
 
 -----
@@ -111,6 +109,8 @@
     + [Organizing data in spreadsheets](http://kbroman.org/dataorg/) by Karl Broman
 + __Cheat sheet__:
     + [Data import cheat sheet](../cheat-sheets/data-import-cheatsheet.pdf)
++ __HW 1__: due Sep-24
+    + [More Vectors](../hws/hw01-more-vectors.pdf)
  
 
 -----
@@ -135,7 +135,8 @@ graphs with `"ggplot2"`.
 + __Cheat sheet__:
     + [Data transformation cheat sheet](../cheat-sheets/data-transformation-cheatsheet.pdf)
     + [Data visualization with ggplot2](../cheat-sheets/ggplot2-cheatsheet-2.1.pdf)
-+ __HOMEWORK:__ Problem set 2
++ __HW 2__: due Oct-01
+    + [Data Frame Basics](../hws/hw02-data-frame-basics.pdf)
 
 
 -----
