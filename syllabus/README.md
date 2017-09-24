@@ -117,15 +117,14 @@
 
 
 
-## 5. Wrangling and Exploring Tables
+## 5. Wrangling and Exploring Tables (part 1)
 
 + __Dates__: Sep 25-29
 + __Topics__: Data wrangling (reshaping, aggregating) with `"dplyr"`, and 
 graphs with `"ggplot2"`.
 + __Lecture Material__
-    + Introduction to the R package `dplyr`
-    + Introduction to the R package `ggplot2`
-    + [Introduction to shiny apps](https://docs.google.com/presentation/d/1_XhkkhXA26izACJyoc5JYrWiF_f96a6tD9ZSI5Tm8Os/pub?start=false&loop=false&delayms=3000) (slides)
+    + Introduction to the R package `"dplyr"`
+    + Introduction to the R package `"ggplot2"`
 + __Lab material__:
     + [Getting started with dplyr](../labs/lab05-dplyr-basics.md)
     + [Getting started with ggplot2](../labs/05-ggplot2-basics.md)
@@ -143,9 +142,28 @@ graphs with `"ggplot2"`.
 
 
 
-## 6. Programming Basics (for data analysis) part 1
+## 6. More Wrangling and Graphics (part 2), and Shiny Apps
 
 + __Dates__: Oct 02-06
++ __Topics__: More `"dplyr"`, `"ggplot2"`. and intro to `"shiny"` apps
++ __Lecture Material__
+    + Data pipelines in `"dplyr"`
+    + [Introduction to shiny apps](https://docs.google.com/presentation/d/1_XhkkhXA26izACJyoc5JYrWiF_f96a6tD9ZSI5Tm8Os/pub?start=false&loop=false&delayms=3000) (slides)
++ __Lab material__:
+    + TBA
++ __Reading__: 
+    + [How to Start Shiny tutorial](https://shiny.rstudio.com/tutorial/) from by Garret Grolemund (RStudio).
++ __Cheat sheet__: 
+    + [Shiny Web Apps cheat sheet](../cheat-sheets/shiny-cheatsheet.pdf)
+
+
+-----
+
+
+
+## 7. Programming Basics (for data analysis) part 1
+
++ __Dates__: Oct 09-13
 + __Topics__: Basics of Functions, R expressions, and conditionals.
 + __Lecture Material__
     + [Introduction to functions](../tutorials/06-intro-to-functions.md)
@@ -155,16 +173,16 @@ graphs with `"ggplot2"`.
     + [Getting started with expressions and conditionals](../labs/lab06-simple-conditionals.md)
 + __Reading__: 
     + [chapter 19: Functions](http://r4ds.had.co.nz/functions.html) from _R for Data Science_ by Grolemund and Wickham.
-+ __Cheat sheet__: 
++ __MIDTERM 1__: Fri Oct-13 
 
 
 -----
 
 
 
-## 7. Programming Basics (for data analysis) part 2
+## 8. Programming Basics (for data analysis) part 2
 
-+ __Dates__: Oct 09-13
++ __Dates__: Oct 16-20
 + __Topics__: Basics of loops, and more about functions.
 + __Lecture Material__
     + [Introduction to loops](../tutorials/08-intro-to-loops.md)
@@ -181,9 +199,9 @@ graphs with `"ggplot2"`.
 
 
 
-## 8. Random Numbers and Simulations
+## 9. Random Numbers and Simulations
 
-+ __Dates__: Oct 16-20
++ __Dates__: Oct 23-27
 + __Topics__: Random numbers, sampling, and monte carlo simulation.
 + __Lecture Material__
     + [Introduction to random numbers](../tutorials/10-intro-to-random-numbers.md)
@@ -201,9 +219,9 @@ graphs with `"ggplot2"`.
 
 
 
-## 9. Manipulating Character Strings
+## 10. Manipulating Character Strings
 
-+ __Dates__: Oct 23-27
++ __Dates__: Oct 30-Nov 03
 + __Topics__: Character strings.
 + __Lecture Material__
     + [Introduction to loops](../tutorials/08-intro-to-loops.md)
@@ -220,9 +238,9 @@ graphs with `"ggplot2"`.
 
 
 
-## 10. Regular Expressions
+## 11. Regular Expressions
 
-+ __Dates__: Oct 30-Nov 03
++ __Dates__: Nov 06-10
 + __Topics__: Introduction to Regular Expressions.
 + __Lecture Material__
     + [Introduction to regex](../tutorials/08-intro-to-loops.md)
@@ -240,9 +258,9 @@ graphs with `"ggplot2"`.
 
 
 
-## 11. XML
+## 12. XML
 
-+ __Dates__: Nov 06-10
++ __Dates__: Nov 13-17
 + __Topics__: Extensible Markup Language (XML) and related formats.
 
 
@@ -250,9 +268,9 @@ graphs with `"ggplot2"`.
 
 
 
-## 12. Data Visualization
+## 13. Data Visualization
 
-+ __Dates__: Nov 13-17
++ __Dates__: Nov 27-Dec 01
 + __Topics__: Visual Perception, Colors, Effective Statistical Graphics
 
 
@@ -260,7 +278,7 @@ graphs with `"ggplot2"`.
 
 
 
-## 13. TBA
+## 14. TBA
 
-+ __Dates__: Nov 27-Dec 01
++ __Dates__: Dec 04-08
 + __Topics__: TBA
