@@ -75,14 +75,15 @@ progress with the course.
 ### Assignments Grading
 
 - The primary way that the homework will be graded is by yourselves.
-- Usually, you need to turn in both your code and outputs in the form of an `.Rmd` file and the corresponding knitted file (.`html` or `.pdf` format), or any other required files.
-- Any homework submissions that are turned in without both the `.Rmd` file and the knitted file (or any other required output file), will receive a zero.
+- Usually, you need to "turn in" (via github) both your code and outputs in the form of an `.Rmd` file and the corresponding knitted file (.`html` or `.pdf` format), or any other required files.
+- Any homework submissions  without both the `.Rmd` file and the knitted file (or any other required output file), will receive a zero.
 - You should grade the work as it appears in the _status_ of the closest commit before the deadline, of your github repository. 
 - __No late submission:__ you should NOT grade any pushed commits after 11:59 PM of the HW deadline.
 - After the HW deadline, a rubric with the solutions will be posted on bCourses (in the __Files__ section). You will then be expected to read them and enter your own scores and comments for (every part) of every problem in the homework on a simple coarse scale:
     + __0__ = Didn't attempt or very wrong,
     + __half credit__ = Mostly right but a minor thing missing or somewhat wrong,
     + __full credit__ = 100% correct.
+- In case there is a cascading error, you don't need to penalize multiple times. Just indicate the source of the error, and then give full credit for the other dependent parts as long as your work and code are consistent.
 - To submit your grade, use the _Assignment Comments_ section (associated to the corresponding assignment on bCourses) to enter the grade for each part justified with a comment, and a total score. 
 ![](../images/assignment-comments-bcourses.png)
 - Note: If you are really confused about how to grade a particular problem, you should post on [Piazza](https://piazza.com/class/j6nzkfrb2p724n). This is not supposed to be a stressful process.
