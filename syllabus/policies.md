@@ -8,6 +8,7 @@ As Stat 133 gets larger and larger every year, running the course as smoothly as
 
 - [Labs](#labs)
 - [Homework](#homework)
+- [Assignments Grading](#assignments-grading)
 - [Posts](#posts)
 - [Tests](#tests)
 - [Oral Evaluation](#oral-evaluation)
@@ -71,17 +72,38 @@ progress with the course.
 
 
 
+### Assignments Grading
+
+- The primary way that the homework will be graded is by yourselves.
+- Usually, you need to turn in both your code and outputs in the form of an `.Rmd` file and the corresponding knitted file (.`html` or `.pdf` format), or any other required files.
+- Any homework submissions that are turned in without both the `.Rmd` file and the knitted file (or any other required output file), will receive a zero.
+- You should grade the work as it appears in the _status_ of the closest commit before the deadline, of your github repository. 
+- __No late submission:__ you should NOT grade any pushed commits after 11:59 PM of the HW deadline.
+- After the HW deadline, a rubric with the solutions will be posted on bCourses (in the __Files__ section). You will then be expected to read them and enter your own scores and comments for (every part) of every problem in the homework on a simple coarse scale:
+    + __0__ = Didn't attempt or very wrong,
+    + __half credit__ = Mostly right but a minor thing missing or somewhat wrong,
+    + __full credit__ = 100% correct.
+- To submit your grade, use the _Assignment Comments_ section (associated to the corresponding assignment on bCourses) to enter the grade for each part justified with a comment, and a total score. 
+![](../images/assignment-comments-bcourses.png)
+- Note: If you are really confused about how to grade a particular problem, you should post on [Piazza](https://piazza.com/class/j6nzkfrb2p724n). This is not supposed to be a stressful process.
+- Your self-grades will be due three days after the homework deadline at 11:59 PM sharp.
+- If you don't enter a proper grade by this deadline, you are giving yourself a zero on that assignment.
+- We will review your grade and adjust it if necessary.
+- Merely doing the homework is not enough, you must do the homework; turn it in on time; read the solutions; do the self-grade; and turn it in on time. Unless all of these steps are done, you will get a zero for that assignment.
+
+
+
 ### Posts
 
-- There will be three post assignments (due at the end of each month: Sep, Oct, Nov).
+- There will be two post assignments (due at the end of October and November).
 - Posts are mastery-oriented goals.
-- You will have to write three posts based on three of the five major course themes:
+- You will have to write two posts based on one or more of the five major course themes:
   + Data Visualization
   + Data Manipulation (reshaping, wrangling, formatting, tidying)
   + Programming for data analysis
   + Data Technologies
   + Reporting Tools
-- Each post is worth 5%
+- Each post is worth 7.5%
 - You will have the opportunity to expand your knowledge, researching a specific topic, and going further from what will be covered in the course.
 - See the [posts](posts.md) section to know more about them.
 
