@@ -134,7 +134,7 @@ graphs with `"ggplot2"`.
 + __Cheat sheet__:
     + [Data transformation cheat sheet](../cheat-sheets/data-transformation-cheatsheet.pdf)
     + [Data visualization with ggplot2](../cheat-sheets/ggplot2-cheatsheet-2.1.pdf)
-+ __HW 2__: due Oct-01
++ __HW 2__: due Oct-02
     + [Data Frame Basics](../hws/hw02-data-frame-basics.pdf)
 
 
