@@ -1,5 +1,5 @@
 ---
-title: "Lab 5: Manipulating data frames with dplyr"
+title: "Lab 5: First contact with dplyr and ggplot2"
 subtitle: "Stat 133, Fall 2017"
 author: "Gaston Sanchez"
 output: github_document
@@ -8,28 +8,76 @@ urlcolor: blue
 
 > ### Learning Objectives:
 >
-> - Get started with `dplyr`
+> - Get started with `"dplyr"`
 > - Get to know the basic dplyr verbs:
 > - `slice()`, `filter()`, `select()`
 > - `mutate()`
 > - `arrange()`
 > - `summarise()`
 > - `group_by()`
+> - Get started with `"ggplot2"`
+> - Produce basic plots with `ggplot()`
 
 ------
 
-## Manipulating Data Frames
+## Manipulating and Visualizing Data Frames
 
 Last week you started to manipulate data tables 
 (under the class of `"data.frame"` objects) using bracket notation, 
 `dat[ , ]`, and the dollar operator, `dat$name`, in order to select specific 
-rows, columns, or cells.
+rows, columns, or cells. In addition, you have been creating charts with 
+functions like `plot()`, `boxplot()`, and `barplot()`, which are part of the
+`"graphics"` package.
 
-In this lab, you will start learning about another approach to manipulate tables
-in R using the functionality of the package `"dplyr"`. This is a fairly recent
-paradigm introduced a couple of years ago, but it is based on more than a decade 
-of research and work lead by Hadley Wickham.
+In this lab, you will start learning about other approaches to manipulate tables
+and create statistical charts. We are going to use the functionality of the 
+package `"dplyr"` to work with tabular data in a more consistent way. This is a 
+fairly recent package introduced a couple of years ago, but it is based on more
+than a decade of research and work lead by Hadley Wickham.
 
+Likewise, to create graphics in a more consistent and visually pleasing way, 
+we are going to use the package `"ggplot2"`, also originally authored by 
+Hadley Wickham, and developed as part of his PhD more than a decade ago.
+
+Use the first hour of the lab to get as far as possible with the material 
+associated to `"dplyr"`. Then use the second hour of the lab to work on 
+graphics with `"ggplot2"` (all the material is in this file).
+
+While you follow this lab, you may want to open these cheat sheets:
+
+- [dplyr cheatsheet](../cheat-sheets/data-transformation-cheatsheet.pdf)
+- [ggplot2 cheatsheet](../cheat-sheets/ggplot2-cheatsheet-2.1.pdf)
+
+
+### Installing packages
+
+I'm assuming that you already installed the packages `"dplyr"` and `"ggplot2"`. 
+If that's not the case then run on the console the command below 
+(do NOT include this in your `Rmd`):
+
+```r
+# don't worry too much if you get a warning message
+install.packages(c("dplyr", "ggplot2"))
+```
+
+Remember that you only need to install a package once! After a package has been 
+installed in your machine, there is no need to call `install.packages()` again on 
+the same package. What you should always invoke in order to use the functions 
+in a package is the `library()` function:
+
+```{r warning=FALSE, message=FALSE}
+# don't forget to load the packages
+library(dplyr)
+library(ggplot2)
+```
+
+__About loading packages:__ Another rule to keep in mind is to always load any 
+required packages at the very top of your script files (`.R` or `.Rmd` or `.Rnw` files). 
+Avoid calling the `library()` function in the middle of a script. Instead, 
+load all the packages before anything else.
+
+
+-----
 
 ## NBA Players Data
 
@@ -63,33 +111,7 @@ dat <- read_csv('nba2017-players.csv')
 
 -----
 
-
-## Introduction to `"dplyr"`
-
-I'm assuming that you already installed the package `"dplyr"`. If that's not the 
-case then run on the console the command below (do NOT include this in your `Rmd`):
-
-```r
-install.packages("dplyr")
-```
-
-Remember that you only need to install a package once! After a package has been 
-installed in your machine, there is no need to call `install.packages()` again on 
-the same package. What you should always invoke in order to use the functions 
-in a package is the `library()` function:
-
-```{r warning=FALSE, message=FALSE}
-library(dplyr)
-```
-
-__About loading packages:__ Another rule to keep in mind is to always load any 
-required packages at the very top of your script files (`.R` or `.Rmd` or `.Rnw` files). 
-Avoid calling the `library()` function in the middle of a script. Instead, 
-load all the packages before anything else.
-
------
-
-### Basic `"dplyr"` verbs
+## Basic `"dplyr"` verbs
 
 To make the learning process of `"dplyr"` gentler, Hadley Wickham proposes 
 beginning with a set of five _basic verbs_ or operations for data frames 
@@ -106,7 +128,7 @@ I've modified Hadley's list of verbs a little bit:
 - `filter()`, `slice()`, and `select()`: subsetting and selecting rows and columns
 - `mutate()`: add new variables
 - `arrange()`: reorder rows
-- `summarise()`: reduce variablles to values
+- `summarise()`: reduce variables to values
 - `group_by()`: grouped (aggregate) operations
 
 -----
@@ -117,14 +139,17 @@ I've modified Hadley's list of verbs a little bit:
 
 ```{r}
 # first three rows
-slice(dat, 1:3)
+three_rows <- slice(dat, 1:3)
+three_rows
 ```
 
 `filter()` allows you to select rows by condition:
 
 ```{r}
 # subset rows given a condition
-filter(dat, height > 85)
+# (height greater than 85 inches)
+gt_85 <- filter(dat, height > 85)
+gt_85
 ```
 
 `select()` allows you to select columns by name:
@@ -180,12 +205,6 @@ You can also give a new name, like: `ht_wt = height / weight`:
 
 ```{r}
 mutate(gsw, ht_wt = height / weight)
-```
-
-And add more columns, for example height in meters, and weight in kilograms:
-
-```{r}
-mutate(gsw, ht_m = height * 0.0254, wt_kg = weight * 0.4536)
 ```
 
 In order to permanently change the data, you need to assign the changes to 
@@ -245,10 +264,6 @@ player name, experience, and `min_per_game` (minutes per game), sorted by `min_p
 -----
 
 ## Summarizing values with `summarise()`
-
-So far we've seen the basic verbs to select (or get access to) the elements in a 
-data frame, such as cells, rows, and columns. We've also covered how to add 
-new columns, and rearranging rows.
 
 The next verb is `summarise()`. Conceptually, this involves applying a function
 on one or more columns, in order to summarize values. This is probably easier 
@@ -353,3 +368,136 @@ bottom-5 teams (worst 3pointer teams)
 and 10 years (including) years of experience.
 
 -----
+
+## First contact with `ggplot()`
+
+The package `"ggplot2"` is probably the most popular package in R to create
+_beautiful_ graphics. In contrast to the functions in the base package 
+`"graphcics"`, the package `"ggplot2`" follows a somewhat different philosophy, 
+and it tries to be more consistent and modular as possible.
+
+- The main function in `"ggplot2"` is `ggplot()`
+- The main input to `ggplot()` is a data frame object.
+- You can use the internal function `aes()` to specify what columns of the data 
+frame will be used for the graphical elements of the plot.
+- You must specify what kind of _geometric objects_ or __geoms__ will be
+displayed: e.g. `geom_point()`, `geom_bar()`, `geom_boxpot()`.
+- Pretty much anything else that you want to add to your plot is controlled 
+by auxiliary functions, especially those things that have to with the format,
+rather than the underlying data.
+- The construction of a ggplot is done by _adding layers_ with the `+` operator.
+
+
+### Scatterplots
+
+Let's start with a scatterplot of `salary` and `points`
+
+```{r}
+# scatterplot (option 1)
+ggplot(data = dat) +
+  geom_point(aes(x = points, y = salary))
+```
+
+- `ggplot()` creates an object of class `"ggplot"`
+- the main input for `ggplot()` is `data` which must be a data frame
+- then we use the `"+"` operator to add a layer
+- the geometric object (geom) are points: `geom_points()`
+- `aes()` is used to specify the `x` and `y` coordinates, by taking columns
+`points` and `salary` from the data frame
+
+The same scatterplot can also be created with this alternative, and more 
+common use of `ggplot()`
+
+```{r eval = FALSE}
+# scatterplot (option 2)
+ggplot(data = dat, aes(x = points, y = salary)) +
+  geom_point()
+```
+
+Say you want to color code the points in terms of the `position`
+
+```{r}
+# colored scatterplot 
+ggplot(data = dat, aes(x = points, y = salary)) +
+  geom_point(aes(color = position))
+```
+
+Maybe you wan to modify the size of the dots in terms of `points3`:
+
+```{r}
+# sized and colored scatterplot 
+ggplot(data = dat, aes(x = points, y = salary)) +
+  geom_point(aes(color = position, size = points3))
+```
+
+To add some transparency effect to the dots, you can use the `alpha` parameter
+
+```{r}
+# sized and colored scatterplot 
+ggplot(data = dat, aes(x = points, y = salary)) +
+  geom_point(aes(color = position, size = points3), alpha = 0.7)
+```
+
+Notice that `alpha` was specified outside `aes()`. This is because we are not 
+using any column for the `alpha` transparency values.
+
+
+### Your turn:
+
+- Use the data frame `gsw` to make a scatterplot of `height` and `weight`
+- Find out how to make another scatterplot of `height` and `weight`, 
+ using `geom_text()` to display the names of the players
+- Get a scatter plot of `height` and `weight`, for ALL the warriors, displaying
+their names with `geom_label()`
+- Get a density plot of `salary` (for all NBA players)
+- Get a histogram of `points2` with binwidth of 50 (for all NBA players)
+- Get a barchart of the `position` frequencies (for all NBA players)
+- Make a scatterplot of `experience` and `salary` of all centers, and use 
+`geom_smooth()` to add a regression line
+- Repeat the same scatterplot of `experience` and `salary` of all centers, but 
+now use `geom_smooth()` to add a loess line
+
+
+## Faceting
+
+One of the most attractive features of `"ggplot2"` is the ability to display
+multiple __facets__. The idea of facets is to divide a plot into subplots 
+based on the values of one or more categorical (or discrete) variables.
+
+Here's an example. What if you want to get scatterplots of `points` and `salary` 
+separated (or grouped) by `position`? This is where faceting comes handy,
+and you can use `facet_warp()` for this purpose:
+
+```{r}
+# scatterplot by position
+ggplot(data = dat, aes(x = points, y = salary)) +
+  geom_point() +
+  facet_wrap(~ position)
+```
+
+The other faceting function is `facet_grid()`, which allows you to control the
+layout of the facets (by rows, by columns, etc)
+
+```{r}
+# scatterplot by position
+ggplot(data = dat, aes(x = points, y = salary)) +
+  geom_point(aes(color = position), alpha = 0.7) +
+  facet_grid(~ position) +
+  geom_smooth(method = loess)
+
+
+# scatterplot by position
+ggplot(data = dat, aes(x = points, y = salary)) +
+  geom_point(aes(color = position), alpha = 0.7) +
+  facet_grid(position ~ .) +
+  geom_smooth(method = loess)
+```
+
+### Your turn:
+
+- Make scatterplots of `experience` and `salary` faceting by `position`
+- Make scatterplots of `experience` and `salary` faceting by `team`
+- Make density plots of `age` faceting by `team`
+- Make scatterplots of `height` and `weight` faceting by `position`
+- Make scatterplots of `height` and `weight`, with a 2-dimensional density, 
+`geom_density2d()`, faceting by `position`
