@@ -75,7 +75,7 @@ progress with the course.
 ### Assignments Grading
 
 - The primary way that the homework will be graded is by yourselves.
-- Usually, you need to "turn in" (via github) both your code and outputs in the form of an `.Rmd` file and the corresponding knitted file (.`html` or `.pdf` format), or any other required files.
+- Usually, you need to "turn in" (via github) both your code and outputs in the form of an `.Rmd` file and the corresponding knitted file (.`md` or `.pdf` format), or any other required files.
 - Any homework submissions  without both the `.Rmd` file and the knitted file (or any other required output file), will receive a zero.
 - You should grade the work as it appears in the _status_ of the closest commit before the deadline, of your github repository. 
 - __No late submission:__ you should NOT grade any pushed commits after 11:59 PM of the HW deadline.
