@@ -1,5 +1,5 @@
 ---
-title: "Introduction to dplyr and ggplot2"
+title: "Introduction to dplyr"
 subtitle: "Stat 133, Fall 2017"
 author: "Gaston Sanchez"
 output: github_document
@@ -9,100 +9,66 @@ urlcolor: blue
 
 > ### Learning Objectives:
 >
-> - Get started with `dplyr`
-> - Understand basic verbs
-> - Understand the pipe `%>%` operator
-> - How to install packages
+> - Get started with `"dplyr"`
+> - Get to know the basic dplyr verbs:
+> - `slice()`, `filter()`, `select()`
+> - `mutate()`
+> - `arrange()`
+> - `summarise()`
+> - `group_by()`
 
 ------
 
 ## Manipulating Data Frames
 
-The most common format/structure for a data set is in a tabular format, 
-with row and columns. When your data is in this shape, most of the times 
-you will work with R data frames (or similar structures).
+Last week you started to manipulate data tables 
+(under the class of `"data.frame"` objects) using bracket notation, 
+`dat[ , ]`, and the dollar operator, `dat$name`, in order to select specific 
+rows, columns, or cells.
 
-You need to learn how to manipulate data tables. In the past (before 2014), 
-R users manipulated data frames using bracket notation, e.g. `dat[ , ]`,
-in order to select specific rows, columns, or cells. This is still possible
-and it is a good skill to learn. But nowadays there is an interesting alternative 
-for _data wrangling_ provided with the functionality of the package `"dplyr"`.
+Now you will start learning about another approach to manipulate tables
+in R using the functionality of the package `"dplyr"`. This is a fairly recent
+paradigm introduced a couple of years ago, but it is based on more than a decade 
+of research and work lead by Hadley Wickham.
 
 
-## Star Wars Data
+## NBA Players Data
 
-```{r sw, echo = FALSE}
-dat <- read.csv('../data/starwars.csv', stringsAsFactors = FALSE)
+```{r nba, echo = FALSE}
+dat <- read.csv('../data/nba2017-players.csv', stringsAsFactors = FALSE)
 ```
 
-The data for this lab is in the file `starwars.csv`, which as you may guess, 
-contains `r ncol(dat)` variables measured on `r nrow(dat)` famous characters of the Star Wars universe.
+The data file for this tutorial is: `nba2017-players.csv`, 
+which is located in the `data/` folder of the course github repository. 
+You can download a copy of the csv file to your computer""
 
-To import the data in R you can use the function `read.csv()`:
-
-```{r sw, eval = FALSE}
+```r
+# download RData file into your working directory
+github <- "https://github.com/ucb-stat133/stat133-fall-2017/raw/master/"
+csv <- "data/nba2017-players.csv"
+download.file(url = paste0(github, csv), destfile = 'nba2017-players.csv')
 ```
 
-Notice that I'm spcifying the argument `stringsAsFactors = FALSE` to avoid 
-the conversion of characters into R factors. Why do you think this is a good 
-practice?
+To import the data in R you can use the base function `read.csv()`, or you 
+can also use `read_csv()` from the package `"readr"`:
 
-All the default reading table functions generate a data frame. Typically, 
-everytime I read new data set which I'm not familiar with, or a data set 
-that I haven't worked on in a long time, I always like to call a couple of 
-functions to inspect its contents:
+```{r read, eval = FALSE}
+# with "base" read.csv()
+dat <- read.csv('nba2017-players.csv', stringsAsFactors = FALSE)
 
-- `dim()`
-- `head()`
-- `tail()`
-- `str()`
-- `summary()`
-
-A first check-up is to examine the dimensions of the data frame with `dim()`:
-
-```{r}
-# dimensions (# of rows, # of columns)
-dim(dat)
+# with "readr" read_csv()
+dat <- read_csv('nba2017-players.csv')
 ```
 
-If you know in advanced how many rows and columns are in the data table, this 
-is a good way to make sure that R was able to read all the records.
 
-Then, depending on the size of the data, you may want to take a peek 
-at its contents with `head()` or `tail()`, just to get an idea of what the data 
-looks like:
-
-```{r}
-# display first few rows
-head(dat)
-```
-
-For a more detailed description of how R is treating the data type in each 
-column, you should use the structure function `str()`
-
-```{r}
-# check the structure
-str(dat, vec.len = 1)
-```
-
-When working with data frames, remember to always take some time inspecting 
-the contents, and checking how R is handling the data types. It is in these 
-early stages of data exploration that you can catch potential issues in order 
-to avoid (disastrous?) consequences or bugs in subsequent stages.
-
-To get information about how R is treating the columns in a data frame 
-you can use the function `str()`. This function displays the dimensions of the 
-data frame, and then a list with the name of all the 
-variables, and their data types (e.g. `chr` character, `num` real, etc). 
-The argument `vec.len = 1` indicates that just the first element in each 
-column should be displayed.
+-----
 
 
 ## Introduction to `"dplyr"`
 
 In order to use the functions in `"dplyr"`, you must load the package first.
 Here I'm assuming that you already installed the package. If that's not the 
-case the run:
+case then run on the console the command below (do NOT include this in your `Rmd`):
 
 ```r
 install.packages("dplyr")
@@ -117,173 +83,217 @@ in a package is the `library()` function:
 library(dplyr)
 ```
 
-__About loading packages:__ Another rule to keep in mind is to always load any 
-required packages at the very top of your scripts (`.R` or `.Rmd` or `.Rnw` files). 
-Avoid calling the `library()` function in the middle of a script. Instead, 
-load all the packages before anything else.
-
 
 ### Basic `"dplyr"` verbs
 
-The first _verbs_ to learn about `"dplyr"` are `filter()`, `slice()`, and 
+To make the learning process of `"dplyr"` gentler, Hadley Wickham proposes 
+beginning with a set of five _basic verbs_ or operations for data frames 
+(each verb corresponds to a function in `"dplyr"`):
+
+- __filter__: keep rows matching criteria
+- __select__: pick columns by name
+- __arrange__: reorder rows
+- __mutate__: add new variables
+- __summarise__: reduce variables to values
+
+-----
+
+## Filtering, slicing, and selecting
+
+I've modified Hadley's list of verbs a little bit. The first _verbs_ I want you 
+to learn about `"dplyr"` are `filter()`, `slice()`, and 
 `select()`. Why? Because these are the functions to select a subset of rows 
 and columns, which are the most essential type of operations when wrangling data 
 frames.
 
-Select rows by position with `slice()`
+
+### Slicing rows: `slice()`
+
+`slice()` allows you to select rows by position:
 
 ```{r}
+# first three rows
 slice(dat, 1:3)
 ```
 
-Select rows by condition with `filter()`
+
+### Filtering rows by condition: `filter()`
+
+`filter()` allows you to select rows by condition:
 
 ```{r}
-filter(dat, height > 1.9)
+# subset rows given a condition
+filter(dat, height > 85)
 ```
 
-Select columns by name with `select()`
+
+### Selecting columns: `select()`
+
+`select()` allows you to select columns by name:
 
 ```{r}
-select(dat, name, height)
+# columns by name
+player_height <- select(dat, player, height)
 ```
-
-
-### Your turn:
-
-- subset the data by selecting the last 5 rows
-- select those individuals with height less than 1.6 meters tall, and of human species
-- of those individuals that are human, select their names and jedi status
-- display the names of jedis
-
-
-## Your Turn
-
-Use functions in `"dplyr"` to answer the following questions:
-
-- What's the largest height value?
-
-- What's the minimum height value?
-
-- What's the overall average height?
-
-- Who has the smallest height?
-
-- Who has the largest height?
-
-- What are the unique weapons?
-
-- How many different species?
-
-- Who is the individual with the shortest height?
-
-- Are there any subjects with weapon "knife"? If so how many and who are they?
-
-- Are there any subjects with height > 2 meters? If so how many and who are they?
-
-
-### Sorting
-
-- Obtain height values in increasing order
-
-- Obtain weight values in decreasing order
-
-- Sort data by height in increasing order
-
-- Sort data by weight in decreasing order
-
-- Sort data by gender in increasing order
-
-- Sort data by species in increasing order
-
 
 -----
 
+## Adding new variables: `mutate()`
+
+Another basic verb is `mutate()` which allows you to add new variables.
+Let's create a small data frame for the warriors with three columns: 
+`player`, `height`, and `weight`:
+
 ```{r}
-# =====================================================
-# Subsetting operations
-# =====================================================
-
-# create a data frame `han` with Han Solo's information (i.e. row)
-
-
-# create a data frame `males` with the data of male subjects
-
-
-# get the data for those subjects 
-# with height less than 1.7 
-
-
-# get the data for subjects with 
-# height less than 1.7 and weight less than 50
-
-
-# create a data frame `droids_humans` with the data of droids or humans
-
-
-# create a data frame `non_humans` with the data of non-humans
-
-
-#
+# creating a small data frame step by step
+gsw <- filter(dat, team == 'GSW')
+gsw <- select(gsw, player, height, weight)
+gsw <- slice(gsw, c(4, 8, 10, 14, 15))
+gsw
 ```
 
+Now, let's use `mutate()` to (temporarily) add a column with the ratio 
+`height / weight`:
+
+```{r}
+mutate(gsw, height / weight)
+```
+
+You can also give a new name, like: `ht_wt = height / weight`:
+
+```{r}
+mutate(gsw, ht_wt = height / weight)
+```
+
+And add more columns, for example height in meters, and weight in kilograms:
+
+```{r}
+mutate(gsw, ht_m = height * 0.0254, wt_kg = weight * 0.4536)
+```
+
+In order to permanently change the data, you need to assign the changes to 
+an object:
+
+```{r}
+gsw2 <- mutate(gsw, ht_m = height * 0.0254, wt_kg = weight * 0.4536)
+gsw2
+```
+
+
+## Reordering rows: `arrange()`
+
+The next basic verb of `"dplyr"` is `arrange()` which allows you to reorder 
+rows. For example, here's how to arrange the rows of `gsw` by `height`
+
+```{r}
+# order rows by height (increasingly)
+arrange(gsw, height)
+```
+
+By default `arrange()` sorts rows in increasing. To arrande rows in 
+descending order you need to use the auxiliary function `desc()`.
+
+```{r}
+# order rows by height (decreasingly)
+arrange(gsw, desc(height))
+```
+
+```{r}
+# order rows by height, and then weight
+arrange(gsw, height, weight)
+```
 
 -----
 
+## Summarizing values with `summarise()`
+
+So far we've seen the basic verbs to select (or get access to) the elements in a 
+data frame, such as cells, rows, and columns. We've also covered how to add 
+new columns, and rearranging rows.
+
+The next verb is `summarise()`. Conceptually, this involves applying a function
+on one or more columns, in order to summarize values. This is probably easier 
+to understand with one example.
+
+Say you are interested in calculating the average salary of all NBA players.
+To do this "a la dplyr" you use `summarise()`, or its synonym function 
+`summarize()`:
+
 ```{r}
-# =====================================================
-# More Wrangling
-# =====================================================
+# average salary of NBA players
+summarise(dat, avg_salary = mean(salary))
+```
 
-# get the data of those above the average weight?
+Calculating an average like this seems a bit _verbose_, especially
+when you can directly use `mean()` like this:
 
+```{r}
+mean(dat$salary)
+```
 
-# how many unarmed humans?
+So let's make things a bit more interessting. What if you want to calculate some 
+summary statistics for `salary`: min, median, mean, and max?
 
+```{r}
+# some stats for salary (dplyr)
+summarise(
+  dat, 
+  min = min(salary),
+  median = median(salary),
+  avg = mean(salary),
+  max = max(salary)
+)
+```
 
-# standard deviation of weight in non-humans 
+Well, this may still look like not much. You can do the same in base R 
+(there are actually better ways to do this):
 
-
-# which humans use a lightsaber
-
-
-# median height of unarmed non-humans
-
-
-# get the square weight of non-jedis
-
-
-# get the log of height for subjects
-# with blaster or bowcaster weapons
-
-
-# create a new variable "newvar": height divided by weight
-
-
-# add 'newvar' to the data frame sw
-
-
-#
+```{r}
+# some stats for salary (base R)
+c(min = min(dat$salary), 
+  median = median(dat$salary),
+  median = mean(dat$salary),
+  max = max(dat$salary))
 ```
 
 
------
+## Grouped operations
 
+To actually appreciate the power of `summarise()`, we need to introduce the 
+other major basic verb in `"dplyr"`: `group_by()`. This is the function that 
+allows you to do perform data aggregations, or _grouped operations_.
 
-## Solutions
+Let's see the combination of `summarise()` and `group_by()` to calculate the
+average salary by team:
 
 ```{r}
-# selecting the last 5 rows
-slice(dat, 15:20)
-
-# individuals with height < 1.6, and of human species
-filter(dat, height < 1.6 & species == "human")
-
-# display names and jedi status of humans
-humans <- filter(dat, species == "human")
-select(humans, name, jedi)
-
-# display the names of jedis
-jedis <- filter(dat, jedi == "yes_jedi")
-select(jedis, name)
+# average salary, grouped by team
+summarise(
+  group_by(dat, team),
+  avg_salary = mean(salary)
+)
 ```
+
+Here's a similar example with the average salary by position:
+
+```{r}
+# average salary, grouped by position
+summarise(
+  group_by(dat, position),
+  avg_salary = mean(salary)
+)
+```
+
+Here's a more fancy example: average weight and height, by position, displayed
+in desceding order by average height:
+
+```{r}
+arrange(
+  summarise(
+    group_by(dat, position),
+    avg_height = mean(height),
+    avg_weight = mean(weight)),
+  desc(avg_height)
+)
+```
+
