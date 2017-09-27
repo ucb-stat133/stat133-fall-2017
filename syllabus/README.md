@@ -124,11 +124,11 @@
 graphs with `"ggplot2"`.
 + __Lecture Material__
     + [Introduction to the R package `"dplyr"`](../slides/12-dplyr-introduction.pdf) (slides by Hadley Wickham)
+    + [Introduction to `"dplyr"`](../tutorials/05-intro-to-dplyr.md) (tutorial)
     + [Introduction to the R package `"ggplot2"`](https://docs.google.com/presentation/d/e/2PACX-1vTGKt6asJIPfSXbuO5Jn1qtAOTQbOcWmE0TVXr67z7DOkOUHPj43Vi1Q7hqw-xYTy3pzD2985H9It0T/pub?start=false&loop=false&delayms=3000)
     + ["ggplot2" lecture](../slides/14-ggplot-lecture) (slides by Karthik Ram)
 + __Lab material__:
-    + [Getting started with dplyr](../labs/lab05-dplyr-basics.md)
-    + [Getting started with ggplot2](../labs/05-ggplot2-basics.md)
+    + [Getting started with dplyr and ggplot2](../labs/lab05-dplyr-ggplot-basics.md)
 + __Reading__:
     + [Introduction to dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) introductory vignette by Hadley Wickham
 + __Cheat sheet__:
