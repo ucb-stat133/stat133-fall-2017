@@ -48,7 +48,7 @@ dat <- read_csv('nba2017-players.csv')
 Introduction to `"dplyr"`
 -------------------------
 
-In order to use the functions in `"dplyr"`, you must load the package first. Here I'm assuming that you already installed the package. If that's not the case then run on the console the command below (do NOT include this in your `Rmd`):
+I'm assuming that you already installed the package `"dplyr"`. If that's not the case then run on the console the command below (do NOT include this in your `Rmd`):
 
 ``` r
 install.packages("dplyr")
@@ -62,22 +62,30 @@ library(dplyr)
 
 **About loading packages:** Another rule to keep in mind is to always load any required packages at the very top of your script files (`.R` or `.Rmd` or `.Rnw` files). Avoid calling the `library()` function in the middle of a script. Instead, load all the packages before anything else.
 
+------------------------------------------------------------------------
+
 ### Basic `"dplyr"` verbs
 
 To make the learning process of `"dplyr"` gentler, Hadley Wickham proposes beginning with a set of five *basic verbs* or operations for data frames (each verb corresponds to a function in `"dplyr"`):
 
 -   **filter**: keep rows matching criteria
 -   **select**: pick columns by name
--   **arrange**: reorder rows
 -   **mutate**: add new variables
+-   **arrange**: reorder rows
 -   **summarise**: reduce variables to values
+
+I've modified Hadley's list of verbs a little bit:
+
+-   `filter()`, `slice()`, and `select()`: subsetting and selecting rows and columns
+-   `mutate()`: add new variables
+-   `arrange()`: reorder rows
+-   `summarise()`: reduce variablles to values
+-   `group_by()`: grouped (aggregate) operations
 
 ------------------------------------------------------------------------
 
 Filtering, slicing, and selecting
 ---------------------------------
-
-I've modified Hadley's list of verbs a little bit. The first *verbs* I want you to learn about `"dplyr"` are `filter()`, `slice()`, and `select()`. Why? Because these are the functions to select a subset of rows and columns, which are the most essential type of operations when wrangling data frames.
 
 `slice()` allows you to select rows by position:
 
