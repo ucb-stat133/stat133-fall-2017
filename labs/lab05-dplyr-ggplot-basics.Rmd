@@ -86,7 +86,7 @@ dat <- read.csv('../data/nba2017-players.csv', stringsAsFactors = FALSE)
 ```
 
 The data file for this lab is the same you used last week: `nba2017-players.csv`, 
-whic is located in the `data/` folder of the course github repository. 
+which is located in the `data/` folder of the course github repository. 
 I assume that you already downloaded a copy of the csv file to your computer. 
 If that is not the case, here's one option to get your own copy:
 
@@ -383,7 +383,7 @@ frame will be used for the graphical elements of the plot.
 - You must specify what kind of _geometric objects_ or __geoms__ will be
 displayed: e.g. `geom_point()`, `geom_bar()`, `geom_boxpot()`.
 - Pretty much anything else that you want to add to your plot is controlled 
-by auxiliary functions, especially those things that have to with the format,
+by auxiliary functions, especially those things that have to do with the format,
 rather than the underlying data.
 - The construction of a ggplot is done by _adding layers_ with the `+` operator.
 
@@ -444,6 +444,7 @@ using any column for the `alpha` transparency values.
 
 ### Your turn:
 
+- If you didn't before, now it's time to open the [ggplot2 cheatsheet](../cheat-sheets/ggplot2-cheatsheet-2.1.pdf)
 - Use the data frame `gsw` to make a scatterplot of `height` and `weight`
 - Find out how to make another scatterplot of `height` and `weight`, 
  using `geom_text()` to display the names of the players
@@ -501,3 +502,6 @@ ggplot(data = dat, aes(x = points, y = salary)) +
 - Make scatterplots of `height` and `weight` faceting by `position`
 - Make scatterplots of `height` and `weight`, with a 2-dimensional density, 
 `geom_density2d()`, faceting by `position`
+- Make a scatterplot of `experience` and `salary` for the Warriors, but this time add a layer with `theme_bw()` to get a simpler background
+- Repeat any of the previous plots but now adding a leyer with another 
+theme e.g. `theme_minimal()`, `theme_dark()`, `theme_classic()`

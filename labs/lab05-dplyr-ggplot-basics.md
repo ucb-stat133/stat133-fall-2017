@@ -56,7 +56,7 @@ library(ggplot2)
 NBA Players Data
 ----------------
 
-The data file for this lab is the same you used last week: `nba2017-players.csv`, whic is located in the `data/` folder of the course github repository. I assume that you already downloaded a copy of the csv file to your computer. If that is not the case, here's one option to get your own copy:
+The data file for this lab is the same you used last week: `nba2017-players.csv`, which is located in the `data/` folder of the course github repository. I assume that you already downloaded a copy of the csv file to your computer. If that is not the case, here's one option to get your own copy:
 
 ``` r
 # download RData file into your working directory
@@ -440,7 +440,7 @@ The package `"ggplot2"` is probably the most popular package in R to create *bea
 -   The main input to `ggplot()` is a data frame object.
 -   You can use the internal function `aes()` to specify what columns of the data frame will be used for the graphical elements of the plot.
 -   You must specify what kind of *geometric objects* or **geoms** will be displayed: e.g. `geom_point()`, `geom_bar()`, `geom_boxpot()`.
--   Pretty much anything else that you want to add to your plot is controlled by auxiliary functions, especially those things that have to with the format, rather than the underlying data.
+-   Pretty much anything else that you want to add to your plot is controlled by auxiliary functions, especially those things that have to do with the format, rather than the underlying data.
 -   The construction of a ggplot is done by *adding layers* with the `+` operator.
 
 ### Scatterplots
@@ -503,6 +503,7 @@ Notice that `alpha` was specified outside `aes()`. This is because we are not us
 
 ### Your turn:
 
+-   If you didn't before, now it's time to open the [ggplot2 cheatsheet](../cheat-sheets/ggplot2-cheatsheet-2.1.pdf)
 -   Use the data frame `gsw` to make a scatterplot of `height` and `weight`
 -   Find out how to make another scatterplot of `height` and `weight`, using `geom_text()` to display the names of the players
 -   Get a scatter plot of `height` and `weight`, for ALL the warriors, displaying their names with `geom_label()`
@@ -557,3 +558,5 @@ ggplot(data = dat, aes(x = points, y = salary)) +
 -   Make density plots of `age` faceting by `team`
 -   Make scatterplots of `height` and `weight` faceting by `position`
 -   Make scatterplots of `height` and `weight`, with a 2-dimensional density, `geom_density2d()`, faceting by `position`
+-   Make a scatterplot of `experience` and `salary` for the Warriors, but this time add a layer with `theme_bw()` to get a simpler background
+-   Repeat any of the previous plots but now adding a leyer with another theme e.g. `theme_minimal()`, `theme_dark()`, `theme_classic()`
