@@ -68,7 +68,7 @@ destination <- 'abalone.data'
 download.file(origin, destination)
 ```
 
-Now that you have a local copy of the dataset, you can read it with `read.table()` like so:
+Now that you have a local copy of the dataset, you can read it in R with `read.table()` like so:
 
 ``` r
 # reading data from your working directory
@@ -113,6 +113,7 @@ According to the description of the Abalone data set, the columns represent thes
 Let's create a vector of columns names, and another vector of data types:
 
 ``` r
+# vector of column names
 col_names <- c(
     'sex',
     'length',
@@ -125,6 +126,7 @@ col_names <- c(
     'rings'
 )
 
+# vector of data types (for each column)
 col_types <- c(
     'factor',
     'numeric',
@@ -137,6 +139,8 @@ col_types <- c(
     'integer'   
 )
 ```
+
+Because the variable `sex` is supposed to be in nominal scale (i.e. it is a categorical variables), we can choose an R `factor` for it. Also note that the variable `rings` is supposed to be integers, therefore we can choose an `integer` vector for this column.
 
 Now we can re-read the table in a more complete (and usually more efficient) way:
 
@@ -165,7 +169,7 @@ str(abalone, vec.len = 1)
     Mean   0.524  0.408 0.140   0.829    0.359    0.181    0.239    9.934
     SD     0.120  0.099 0.042   0.490    0.222    0.110    0.139    3.224
 
-### Basic Plots
+### Optional: Basic Plots
 
 As you can tell, the Abalone data contains 9 variables. To start exploring the content, we begin by producing charts for each single variable, focused on looking at their distributions:
 
@@ -200,7 +204,7 @@ boxplot(abalone$diameter, horizontal = TRUE)
 Pittsburgh Bridges Data Set
 ---------------------------
 
-The data set is part of the UCI Machine Learning Repository:
+This data set is part of the UCI Machine Learning Repository:
 
 <http://archive.ics.uci.edu/ml/datasets/Pittsburgh+Bridges>
 
@@ -239,9 +243,6 @@ Read the description, and take a look at the data set:
 
 
 # reading the data with 'read.table()'
-
-
-# reading the data with 'read.csv()'
 ```
 
 ### Using `read.csv()`
@@ -249,7 +250,7 @@ Read the description, and take a look at the data set:
 Now use the function `read.csv()` to re-read the bridges data
 
 ``` r
-# your code
+# reading the data with 'read.csv()'
 ```
 
 ### Basic Inspection
@@ -268,6 +269,8 @@ Use functions to start examining the `bridges` data frame:
 ``` r
 # your code
 ```
+
+------------------------------------------------------------------------
 
 ### Want to do more?
 
