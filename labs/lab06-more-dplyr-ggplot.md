@@ -100,14 +100,15 @@ To help you better prepare for HW03, we want you to practice working with a more
 ------------------------------------------------------------------------
 
 R script
---------
+========
 
 -   Once you have the filestructure for this lab, go to RStudio and open a new `R` script file (do NOT confuse with an `Rmd` file).
 -   Save the `R` script file as `lab06-script.R` in the `code/` folder of `lab06/`
 
 R script files are used to write R code only, using R syntax. In other words, you should NOT use Markdown syntax or LaTeX inside an R script file. Why? Because if you run the entire script, R will try to execute all the commands, and won't be able to recognize Markdown, LaTeX, yaml, or other syntaxes.
 
-### File Header
+File Header
+-----------
 
 Let's start with some good coding practices by adding a header to the `R` script file in the form of R comments. In general, the header section should contain a title, a description of what the script is about, what are the inputs, and what are the main outputs produced when executing the code in the script. Optionally, you can also include the name of the author, the date, and other details. Something like this:
 
@@ -137,7 +138,8 @@ Another good coding practice is to avoid writing very long lines of code. Most c
 
 **Your turn**: Include a header in your R script file, respecting the width limit of 80 characters.
 
-### Required Packages
+Required Packages
+-----------------
 
 The next thing that you need to include in your script file are the required packages. Not all script files need packages, but many do. When this is the case, loading the packages should be the first lines of code to be executed.
 
@@ -152,7 +154,8 @@ library(ggplot2)  # graphics
 
 In addition to loading the packages, sometimes you will also need to load code from other script files. We won't do that today, but you should know that this is very common as the complexity and size of your projects grow.
 
-### Exporting some data tables
+Exporting some data tables
+--------------------------
 
 After the header, and the loading-packages sections, the next part in your script involves importing the data.
 
@@ -163,7 +166,8 @@ After the header, and the loading-packages sections, the next part in your scrip
 -   Now use the function `write_csv()` to export (or save) the data frame `lakers` to a data file `lakers.csv` in the `folder/` directory. You will also need to use a relative path to specify the `file` argument.
 -   Inspect the contents of the `data/` folder and confirm that the csv files are there.
 
-### Exporting some R output
+Exporting some R output
+-----------------------
 
 After exporting the tables to the corresponding csv files, you will produce some summary statistics, and then save the generated output to external text files. To do this, you will have to learn about the `sink()` function, which sends R output to a specified file.
 
@@ -181,7 +185,7 @@ summary(dat[ ,c('height', 'weight')])
     ##  3rd Qu.:82.00   3rd Qu.:240.0  
     ##  Max.   :87.00   Max.   :290.0
 
-One naive option would be to manually copy the text displayed on the console, and then paste it to a text file. While this may work, it is labor intensive, error prone, and highly irreproducible. A better way to achieve this task is with the `sink()` function:
+One naive option would be to manually copy the text displayed on the console, and then paste it to a text file. While this may work, it is labor intensive, error prone, and highly irreproducible. A better way to achieve this task is with the `sink()` function. Here's how:
 
 ``` r
 # divert output to the specified file
@@ -192,7 +196,51 @@ sink()
 
 The fist call to `sink()` opens a connection to the specified file, and then all outputs are diverted to that location. The second call to `sink()`, i.e. the one without any arguments, closes the connection.
 
+While you are `sink()`ing output to a specified file, all the results will be send to such file. In other words, nothing will be printed on the console. Only adter the sinking process has finished and the connection is closed, you will be able to execute commands and see results displayed on R's console.
+
+### Why sinking?
+
+Why would you ever want to `sink()` R outputs to a file? Why not simply display them as part of your `Rmd` file? One good reason for diverting output to an external file is for convenience. In practice, the reports and documents (e.g. papers, executive summaries, slides) of a data analysis project won't contain everything that you tried, explored, analyzed, and graphed. There will be many intermediate results that while relevant for a specific stage of the analysis cycle, they are innecessary for the final report. So a good way to keep these intermediate outputs is by exporting them with `sink()`.
+
 **Your turn:**
 
--   Export the `summary()` of the entire data frame `warriors` to a text file `summary-warriors.txt`
--   Export another `summary()` of the entire data frame `lakers` to a text file `summary-lakers.txt`
+-   Export the output `str()` on the data frame with all the players to a text file `data-structure.txt`, in the `data/` folder.
+-   Export the `summary()` of the entire data frame `warriors` to a text file `summary-warriors.txt`, in the `data/` folder.
+-   Export another `summary()` of the entire data frame `lakers` to a text file `summary-lakers.txt`, in the `data/` folder.
+
+Exporting some graphs
+---------------------
+
+In the same way that R output as it appears on the console can be exported to some files, you can do the same with graphics and plots. Actually, saving plot images is much more common than `sink()`ing output.
+
+Base R provides a wide array of functions to save images in most common formats:
+
+-   `png()`
+-   `jpeg()`
+-   `tiff()`
+-   `bmp()`
+-   `svg()`
+-   `pdf()`
+
+Like the writing table functions such as `write.table()` or `write.csv()`, and the `sink()` function, the graphics device functions require a file name to be provided. Here's how to save a simple scatterpot of `height` and `weight` in png format:
+
+``` r
+# saving a scatterplot in png format
+png(filename = "scatterplot-height-weight.png")
+plot(dat$height, dat$weight, pch = 20, 
+     xlab = 'Height', ylab = 'Height')
+dev.off()
+```
+
+-   The function `png()` tells R to save the image in PNG format, using the provided filename.
+-   Invoking `png()` will open a graphics device; not the graphics device of RStudio, so you won't be able to see the graphic.
+-   The `plot()` function produces the scatterplot.
+-   The function `dev.off()` closes the graphics device.
+
+**Your turn**:
+
+-   Use `png()` to save a scatterplot of `height` and `weight` in the `images/` folder.
+-   Read the documentation of `png()` and related graphic devices.
+-   Save another version of the scatterplot between `height` and `weight`, but now try to get an image with higher resolution. Save the plot in `images/`.
+-   Save a histogram in JPEG format of `age` with dimensions (width x height) 600 x 400 pixels. Save the plot in `images/`.
+-   Use `pdf()` to save a scatterplot of `points` and `salary` in PDF format, with dimensions (width x height) 7 x 5 inches. Save the plot in `images/`.
