@@ -130,7 +130,7 @@ graphs with `"ggplot2"`.
 + __Lab material__:
     + [Getting started with dplyr and ggplot2](../labs/lab05-dplyr-ggplot-basics.md)
 + __Reading__:
-    + [Introduction to dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) introductory vignette by Hadley Wickham
+    + [Introduction to dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html) introductory vignette by Hadley Wickham
 + __Cheat sheet__:
     + [Data transformation cheat sheet](../cheat-sheets/data-transformation-cheatsheet.pdf)
     + [Data visualization with ggplot2](../cheat-sheets/ggplot2-cheatsheet-2.1.pdf)
