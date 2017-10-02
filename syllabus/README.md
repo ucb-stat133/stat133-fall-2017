@@ -145,9 +145,10 @@ graphs with `"ggplot2"`.
 ## 6. More Wrangling and Graphics (part 2), and Shiny Apps
 
 + __Dates__: Oct 02-06
-+ __Topics__: More `"dplyr"`, `"ggplot2"`. and intro to `"shiny"` apps
++ __Topics__: More `"dplyr"`, `"ggplot2"`, and intro to `"shiny"` apps
 + __Lecture Material__
     + Data pipelines in `"dplyr"`
+    + [Mini project](https://docs.google.com/presentation/d/e/2PACX-1vTMRMIlfZM01jAzaEyrbdar-Qxqips_KZii5hM7Ef90h1gMcDL4APl5LpCYlIQGoBEJNUL6CFrXHckp/pub?start=false&loop=false&delayms=3000) (slides)
     + [Introduction to shiny apps](https://docs.google.com/presentation/d/1_XhkkhXA26izACJyoc5JYrWiF_f96a6tD9ZSI5Tm8Os/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
     + TBA
