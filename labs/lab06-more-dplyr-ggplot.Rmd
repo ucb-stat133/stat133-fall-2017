@@ -47,6 +47,7 @@ necessary subdirectories like those depicted in this scheme:
       README.md
       data/
       code/
+      output/
       images/
 ```
 
@@ -61,9 +62,9 @@ mkdir lab06
 ```bash
 cd lab06
 ```
-- Make other subdirectories: `data`, `code`, and `images`
+- Make other subdirectories: `data`, `code`, `output`, `images`
 ```bash
-mkdir data code images
+mkdir data code output images
 ```
 - List the contents of `lab06` to confirm that you have all the subdirectories
 ```bash
@@ -97,7 +98,7 @@ tail -n 5 nba2017-players.csv
 
 -----
 
-# R script
+# R script file
 
 - Once you have the filestructure for this lab, go to RStudio and open a new 
 `R` script file (do NOT confuse with an `Rmd` file).
@@ -177,15 +178,18 @@ that this is very common as the complexity and size of your projects grow.
 ## Exporting some data tables
 
 After the header, and the loading-packages sections, the next part in your 
-script involves importing the data.
+lab script involves importing the data. In addition to importing a data table,
+you are also going to practice exporting tables. That is, writing data tables
+to external files.
 
 - Use `read_csv()` from the package `"readr"` to import the data `nba2017-players.csv` in R.
 - Create one data frame `warriors` by selecting rows---e.g. `filter()`---of 
 Golden State Warriors, arranging rows by salary (increasingly).
 - Use the function `write.csv()` to export (or save) the data frame `warriors`
 to a data file `warriors.csv` in the `folder/` directory. You will need to 
-use a relative path to specify the `file` argument.
-- Create another data frame `lakers` by selecting rows of Los Angeles Lakers, this time arranging rows by experience.
+use a relative path to specify the `file` argument. Also, see how to use 
+the argument `row.names` to avoid including a first column of numbers.
+- Create another data frame `lakers` by selecting rows of Los Angeles Lakers, this time arranging rows by experience (decreasingly).
 - Now use the function `write_csv()` to export (or save) the data frame 
 `lakers` to a data file `lakers.csv` in the `folder/` directory. You will also 
 need to use a relative path to specify the `file` argument.
@@ -201,7 +205,7 @@ text files. To do this, you will have to learn about the `sink()` function,
 which sends R output to a specified file.
 
 Say you are interested in exporting the summary statistics of `height` and 
-`weight`, exactly in the same way they appear on the console:
+`weight`, exactly in the same way they are displayed by R:
 
 ```{r}
 summary(dat[ ,c('height', 'weight')])
@@ -214,7 +218,7 @@ with the `sink()` function. Here's how:
 
 ```r
 # divert output to the specified file
-sink(file = 'summary-height-weight.txt`)
+sink(file = 'summary-height-weight.txt')
 summary(dat[ ,c('height', 'weight')])
 sink()
 ```
@@ -245,14 +249,14 @@ to keep these intermediate outputs is by exporting them with `sink()`.
 __Your turn:__
 
 - Export the output `str()` on the data frame with all the players to a 
-text file `data-structure.txt`, in the `data/` folder.
+text file `data-structure.txt`, in the `output/` folder.
 - Export the `summary()` of the entire data frame `warriors` to a text file
-`summary-warriors.txt`, in the `data/` folder.
+`summary-warriors.txt`, in the `output/` folder.
 - Export another `summary()` of the entire data frame `lakers` to a text file
-`summary-lakers.txt`, in the `data/` folder.
+`summary-lakers.txt`, in the `output/` folder.
 
 
-## Exporting some graphs
+## Exporting some "base" graphs
 
 In the same way that R output as it appears on the console can be exported 
 to some files, you can do the same with graphics and plots. Actually, 
@@ -290,12 +294,22 @@ RStudio, so you won't be able to see the graphic.
 
 __Your turn__:
 
-- Use `png()` to save a scatterplot of `height` and `weight` in the `images/` 
-folder.
-- Read the documentation of `png()` and related graphic devices.
+- Open the help documentation of `png()` and related graphic devices.
+- Use `png()` to save a scatterplot of `height` and `weight` with `plot()`.
+Save the graph in the `images/` folder.
 - Save another version of the scatterplot between `height` and `weight`, but
 now try to get an image with higher resolution. Save the plot in `images/`.
 - Save a histogram in JPEG format of `age` with dimensions (width x height) 
 600 x 400 pixels. Save the plot in `images/`.
-- Use `pdf()` to save a scatterplot of `points` and `salary` in PDF format,
+- Use `pdf()` to save the previous histogram of `age` in PDF format,
+with dimensions (width x height) 7 x 5 inches.
+
+
+## Exporting some ggplots
+
+The package `"ggplot2"` comes with a wrapper function `ggsave()` that allows
+you to save ggplot graphics to a specified file. By default, `ggsave()` saves
+images in PDF format.
+
+- Use `ggsave()` to save a scatterplot of `points` and `salary` in PDF format,
 with dimensions (width x height) 7 x 5 inches. Save the plot in `images/`.
