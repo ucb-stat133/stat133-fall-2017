@@ -8,19 +8,20 @@ urlcolor: blue
 
 > ### Learning Objectives:
 >
+> - Work with a more complex file structure
+> - Practice exporting tables
+> - Practice exporting R output (as is)
+> - Practice exporting plot images
 > - Learn about `"dplyr"` pipelines
 > - Get to know the pipe operator `%>%`
 > - Chain dplyr operations with the piper
-> - Produce basic plots with `ggplot()`
-> - Saving plot images
-> - Exporting R output (as is)
-> - Exporting tables
 
 ------
 
-```{r read, echo = FALSE}
+```{r read, echo = FALSE, message = FALSE}
 # with "base" read.csv()
 dat <- read.csv('../data/nba2017-players.csv', stringsAsFactors = FALSE)
+library(dplyr)
 ```
 
 
@@ -311,5 +312,98 @@ The package `"ggplot2"` comes with a wrapper function `ggsave()` that allows
 you to save ggplot graphics to a specified file. By default, `ggsave()` saves
 images in PDF format.
 
-- Use `ggsave()` to save a scatterplot of `points` and `salary` in PDF format,
-with dimensions (width x height) 7 x 5 inches. Save the plot in `images/`.
+- Use `ggplot()` to make a scatterplot of `points` and `salary`,
+and store it in a ggplot object named `gg_pts_salary`.
+Then use `ggsave()` to save the plot with dimensions (width x height) 
+7 x 5 inches; in the `images/` folder as `points_salary.pdf`
+
+- Use `ggplot()` to create a scatterplot of `height` and `weight`, 
+faceting by `position`. Store this in a ggplot object `gg_ht_wt_positions`
+Then use `ggsave()` to save the plot with dimensions (width x height) 
+6 x 4 inches; in the `images/` folder as `height_weight_by_position.pdf`
+
+
+-----
+
+# More `"dplyr"`
+
+The last part of this lab involves working the pipe operator `%>%` which 
+allows you write function calls in a more human-readable way. This becomes
+extremely useful in `"dplyr"` operations that require many steps.
+
+The behavior of `"dplyr"` is functional in the sense that function calls don't 
+have side-effects. You must always save their results in order to keep them 
+in an object (in memory). This doesn't lead to particularly elegant code, 
+especially if you want to do many operations at once. 
+You either have to do it step-by-step:
+
+```{r}
+# manipulation step-by-step
+dat1 <- group_by(dat, team)
+dat2 <- select(dat1, team, height, weight)
+dat3 <- summarise(dat2,
+  avg_height = mean(height, na.rm = TRUE),
+  avg_weight = mean(weight, na.rm = TRUE))
+dat4 <- arrange(dat3, avg_height)
+dat4
+```
+
+Or if you don't want to name the intermediate results, you need to wrap the 
+function calls inside each other:
+
+```{r}
+# inside-out style (hard to read)
+arrange(
+  summarise(
+    select(
+      group_by(dat, team),
+      team, height, weight
+    ),
+    avg_height = mean(height, na.rm = TRUE),
+    avg_weight = mean(weight, na.rm = TRUE)    
+  ),
+  avg_height
+)
+```
+
+This is difficult to read because the order of the operations is from inside 
+to out. Thus, the arguments are a long way away from the function. 
+To get around this problem, `"dplyr"` provides the `%>%` operator from 
+`"magrittr"`.
+
+`x %>% f(y)` turns into `f(x, y)` so you can use it to rewrite multiple 
+operations that you can read left-to-right, top-to-bottom:
+
+```{r}
+# using %>%
+dat %>% 
+  group_by(team) %>%
+  select(team, height, weight) %>%
+  summarise(
+    avg_height = mean(height, na.rm = TRUE),
+    avg_weight = mean(weight, na.rm = TRUE)) %>%
+  arrange(avg_height)
+```
+
+
+Use the piper operator `"%>%"` to perform the following operations:
+
+- display the player names of Lakers `'LAL'`
+
+- display the name and salary of GSW point guards 'PG'
+
+- dislay the name, age, and team, of players with more than 10 years 
+of experience, making 10 million dollars or less.
+
+- select the name, team, height, and weight, of rookie players, 
+20 years old, displaying only the first five occurrences (i.e. rows)
+
+- create a data frame `gsw_mpg` of GSW players, that contains variables for 
+`player` name, `experience`, and `min_per_game` (minutes per game), 
+sorted by `min_per_game` (in descending order)
+
+- display the average triple points by team, in ascending order, of the 
+bottom-5 teams (worst 3pointer teams)
+
+- obtain the mean and standard deviation of `age`, for Power Forwards, with 5 
+and 10 years (including) years of experience
