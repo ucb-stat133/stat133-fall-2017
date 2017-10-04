@@ -152,7 +152,7 @@ graphs with `"ggplot2"`.
     + [Introduction to PCA](../slides/15-principal-components1.pdf) (slides)
     + [Introduction to shiny apps](https://docs.google.com/presentation/d/1_XhkkhXA26izACJyoc5JYrWiF_f96a6tD9ZSI5Tm8Os/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__:
-    + TBA
+    + [More dplyr, ggplot2, and files' stuff](../labs/lab06-more-dplyr-ggplot.md)
 + __Reading__: 
     + [Tidy Data](http://vita.had.co.nz/papers/tidy-data.pdf) by Hadley Wickham
     + [How to Start Shiny tutorial](https://shiny.rstudio.com/tutorial/) from by Garret Grolemund (RStudio).
