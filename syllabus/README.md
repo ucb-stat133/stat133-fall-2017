@@ -176,7 +176,9 @@ graphs with `"ggplot2"`.
     + [Getting started with expressions and conditionals](../labs/lab06-simple-conditionals.md)
 + __Reading__: 
     + [chapter 19: Functions](http://r4ds.had.co.nz/functions.html) from _R for Data Science_ by Grolemund and Wickham.
-+ __MIDTERM 1__: Fri Oct-13 
++ __HW 3__: due Oct-15
+    + [More Vectors](../hws/hw03-ranking-teams.pdf)
+ + __MIDTERM 1__: Fri Oct-13 
 
 
 -----
