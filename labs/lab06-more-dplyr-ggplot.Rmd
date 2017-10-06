@@ -81,7 +81,7 @@ cd data
 ```
 - Download the data file with the command `curl`, and the `-O` option (letter O)
 ```bash
-curl -O https://github.com/ucb-stat133/stat133-fall-2017/raw/master/data/nba2017-players.csv
+curl -O https://raw.githubusercontent.com/ucb-stat133/stat133-fall-2017/master/data/nba2017-players.csv
 ```
 - Use `ls` to confirm that the csv file is in `data/`
 - Use _word count_ `wc` to count the lines of the csv file

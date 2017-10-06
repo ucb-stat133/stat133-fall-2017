@@ -76,7 +76,7 @@ To help you better prepare for HW03, we want you to practice working with a more
 -   Download the data file with the command `curl`, and the `-O` option (letter O)
 
     ``` bash
-    curl -O https://github.com/ucb-stat133/stat133-fall-2017/raw/master/data/nba2017-players.csv
+    curl -O https://raw.githubusercontent.com/ucb-stat133/stat133-fall-2017/master/data/nba2017-players.csv
     ```
 
 -   Use `ls` to confirm that the csv file is in `data/`
