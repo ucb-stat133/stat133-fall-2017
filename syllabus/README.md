@@ -142,20 +142,19 @@ graphs with `"ggplot2"`.
 
 
 
-## 6. More Wrangling and Graphics (part 2), and Shiny Apps
+## 6. More Wrangling and Graphics (part 2) and PCA
 
 + __Dates__: Oct 02-06
-+ __Topics__: More `"dplyr"`, `"ggplot2"`, and intro to `"shiny"` apps
++ __Topics__: More `"dplyr"`, `"ggplot2"`, and file structure
 + __Lecture Material__
     + Data pipelines in `"dplyr"`
     + [Mini project](https://docs.google.com/presentation/d/e/2PACX-1vTMRMIlfZM01jAzaEyrbdar-Qxqips_KZii5hM7Ef90h1gMcDL4APl5LpCYlIQGoBEJNUL6CFrXHckp/pub?start=false&loop=false&delayms=3000) (slides)
-    + [Introduction to PCA](../slides/15-principal-components1.pdf) (slides)
-    + [Introduction to shiny apps](https://docs.google.com/presentation/d/1_XhkkhXA26izACJyoc5JYrWiF_f96a6tD9ZSI5Tm8Os/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Introduction to PCA](../slides/15-principal-components1.pdf) (slides) and live demo.
 + __Lab material__:
     + [More dplyr, ggplot2, and files' stuff](../labs/lab06-more-dplyr-ggplot.md)
 + __Reading__: 
     + [Tidy Data](http://vita.had.co.nz/papers/tidy-data.pdf) by Hadley Wickham
-    + [How to Start Shiny tutorial](https://shiny.rstudio.com/tutorial/) from by Garret Grolemund (RStudio).
+RStudio).
 + __Cheat sheet__: 
     + [Shiny Web Apps cheat sheet](../cheat-sheets/shiny-cheatsheet.pdf)
 
@@ -169,11 +168,11 @@ graphs with `"ggplot2"`.
 + __Dates__: Oct 09-13
 + __Topics__: Basics of Functions, R expressions, and conditionals.
 + __Lecture Material__
-    + [Introduction to functions](../tutorials/06-intro-to-functions.md)
-    + [Introduction to R expressions and conditionals](../tutorials/07-intro-to-expressions-conditionals.md)
+    + [Introduction to functions](../tutorials/06-intro-to-functions.md) (tutorial)
+    + [Introduction to R expressions and conditionals](../tutorials/07-intro-to-expressions-conditionals.md) (tutorial)
 + __Lab material__:
-    + [Getting started with functions](../labs/lab06-simple-functions.md)
-    + [Getting started with expressions and conditionals](../labs/lab06-simple-conditionals.md)
+    + [Getting started with functions](../labs/lab07-simple-functions.md)
+    + [Getting started with expressions and conditionals](../labs/lab07-simple-conditionals.md)
 + __Reading__: 
     + [chapter 19: Functions](http://r4ds.had.co.nz/functions.html) from _R for Data Science_ by Grolemund and Wickham.
 + __HW 3__: due Oct-15
@@ -188,16 +187,18 @@ graphs with `"ggplot2"`.
 ## 8. Programming Basics (for data analysis) part 2
 
 + __Dates__: Oct 16-20
-+ __Topics__: Basics of loops, and more about functions.
++ __Topics__: Basics of loops, and intro to `"shiny"` apps.
 + __Lecture Material__
-    + [Introduction to loops](../tutorials/08-intro-to-loops.md)
-    + [More about functions](../tutorials/09-more-functions.md)
+    + [Introduction to loops](../tutorials/08-intro-to-loops.md) (tutorial)
+    + [More about functions](../tutorials/09-more-functions.md) (tutorial)
+    + [Introduction to shiny apps](https://docs.google.com/presentation/d/1_XhkkhXA26izACJyoc5JYrWiF_f96a6tD9ZSI5Tm8Os/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__: 
-    + [Getting started with loops](../labs/lab07-simple-loops.md)
+    + [Getting started with loops](../labs/lab08-simple-loops.md)
 + __Reading__:
     + [chapter 21: Iteration](http://r4ds.had.co.nz/iteration.html) from _R for Data Science_ by Grolemund and Wickham.
+    + [How to Start Shiny tutorial](https://shiny.rstudio.com/tutorial/) by Garret Grolemund
 + __Cheat sheet__: 
-+ __HOMEWORK:__ Problem set 3
+    + [Shiny Web Apps cheat sheet](../cheat-sheets/shiny-cheatsheet.pdf)
 
 
 -----
@@ -207,7 +208,7 @@ graphs with `"ggplot2"`.
 ## 9. Random Numbers and Simulations
 
 + __Dates__: Oct 23-27
-+ __Topics__: Random numbers, sampling, and monte carlo simulation.
++ __Topics__: R andom numbers, sampling, and monte carlo simulation.
 + __Lecture Material__
     + [Introduction to random numbers](../tutorials/10-intro-to-random-numbers.md)
     + [Monte Carlo Simulations](../tutorials/11-intro-to-simulations.md)
@@ -217,7 +218,7 @@ graphs with `"ggplot2"`.
 + __Reading__:
     + TBA.
 + __Cheat sheet__: 
-+ __HOMEWORK:__ Problem set 3
++ __HOMEWORK:__ Problem set 4
 
 
 -----
