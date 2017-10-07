@@ -17,8 +17,7 @@ Motivation
 -   R comes with many functions (and packages) that let us perform a wide variety of tasks.
 -   Most of the things we do in R is via calling some function.
 -   Sometimes, however, there's no function to do what we want to achieve.
--   Now we want to write functions ourselves
--   Idea: avoid repetitive coding (errors will creep in)
+-   When that's the case, you will want to write your own functions.
 
 ### Anatomy of a function
 
@@ -313,6 +312,8 @@ $$
 var(x) = \\frac{1}{n-1} \\sum\_{i = 1}^{n} (x\_i - \\bar{x})
 $$
 
+![sample variance](../images/sample-variance.png)
+
 Let's create a `variance()` function that computes the sample variance. The first step should always be writing the code that will become the body of the function:
 
 ``` r
@@ -353,19 +354,21 @@ Before doing any further changes to `variance()`, you should test it with a hand
 variance(runif(10))
 ```
 
-    ## [1] 0.0776688
+    ## [1] 0.05717327
 
 ``` r
-variance(c(1:9, NA))
-```
-
-    ## [1] NA
-
-``` r
+# what about atypical cases?
 variance(rep(0, 10))
 ```
 
     ## [1] 0
+
+``` r
+# what if there are missing values?
+variance(c(1:9, NA))
+```
+
+    ## [1] NA
 
 You can then start gradually adapting your function to make it more robust, more flexible, more user friendly, etc. For instance, `variance()` returns `NA` when the provided vector contains missing values. But you can include an argument that removes any missing values. Many functions in R have this feature, like `sum()`, `mean()`, `median()`. They all use the so-called `na.rm` argument to specify if missing values should be removed before any computation is done:
 
