@@ -1,4 +1,4 @@
-Lab 6: Simple Functions
+Lab 7: Simple Functions
 ================
 Gaston Sanchez
 
@@ -82,7 +82,7 @@ Test your `pythagoras()` with two leg values: `pythagoras(3, 4)`
 # your test
 ```
 
-Test `pythagoras()` with just one leg value: `pythagoras(5)`
+Modify your function `pythagoras()` so that argument `b` takes the same value of argument `a`. Test it with just one leg value: `pythagoras(5)`
 
 ``` r
 # your test
@@ -188,7 +188,7 @@ y_values <- dnorm(x_values, mean = 0, sd = 2)
 plot(x_values, y_values, las = 1, type = "l", lwd = 2)
 ```
 
-![](lab06-simple-functions_files/figure-markdown_github/unnamed-chunk-14-1.png)
+![](lab07-simple-functions_files/figure-markdown_github/unnamed-chunk-14-1.png)
 
 Your turn:
 
@@ -223,7 +223,7 @@ abline(h = 0, v = 0, col = '#888888aa', lwd = 1.5)
 title(main = expression(paste(f(x), ' = ', x^2, (x - 1))))
 ```
 
-![](lab06-simple-functions_files/figure-markdown_github/unnamed-chunk-17-1.png)
+![](lab07-simple-functions_files/figure-markdown_github/unnamed-chunk-17-1.png)
 
 Write functions and graph the following polynomials in the x-axis interval -4 to 4:
 
@@ -257,66 +257,3 @@ descriptive <- function() {
 ```
 
 ------------------------------------------------------------------------
-
-Solutions
----------
-
-``` r
-# pythagoras
-pythagoras <- function(a, b = a) {
-  sqrt(a^2 + b^2)
-}
-
-
-# miles to kilometers
-miles2kms <- function(mi = 1) {
-  1.6 * mi
-}
-
-
-# gallons to liters
-gallons2liters <- function(gal = 1) {
-  3.78541 * gal
-}
-
-
-# liters to gallons
-liters2gallons <- function(lit = 1) {
-  1 / gallons2liters(lit)
-}
-
-
-# seconds to years
-seconds2years <- function(sec = 1) {
-  sec / (365 * 24 * 60 * 60)
-}
-
-
-# gaussian
-gaussian <- function(x = 1, m = 0, s = 1) {
-  constant <- 1/(s * sqrt(2*pi))
-  constant * exp(-1/2 * ((x - m) /s)^2)
-}
-
-
-# polynomials
-poly_a <- x^3
-poly_b <- (x^2 - 1) * (x + 3)^3
-poly_c <- (x^2 - 1) * (x^2 - 9)
-
-
-# descriptive statistics function
-descriptive <- function(x, na.rm = FALSE) {
-  c(
-    "min" = min(x, na.rm = na.rm),
-    "q1" = quantile(x, probs = 0.25, na.rm = na.rm),
-    "median" = median(x, na.rm = na.rm),
-    "mean" = mean(x, na.rm = na.rm),
-    "q3" = quantile(x, probs = 0.75, na.rm = na.rm),
-    "max" = max(x, na.rm = na.rm),
-    "range" = max(x, na.rm = na.rm) - min(x, na.rm = na.rm),
-    "iqr" = IQR(x, na.rm = na.rm),
-    "sd" = sd(x, na.rm = na.rm)
-  )
-}
-```

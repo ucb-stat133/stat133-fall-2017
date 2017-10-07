@@ -155,8 +155,6 @@ graphs with `"ggplot2"`.
 + __Reading__: 
     + [Tidy Data](http://vita.had.co.nz/papers/tidy-data.pdf) by Hadley Wickham
 RStudio).
-+ __Cheat sheet__: 
-    + [Shiny Web Apps cheat sheet](../cheat-sheets/shiny-cheatsheet.pdf)
 
 
 -----
