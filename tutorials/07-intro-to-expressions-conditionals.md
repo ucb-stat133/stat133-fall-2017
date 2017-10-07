@@ -7,7 +7,7 @@ Gaston Sanchez
 > -   Understand the concept of R Expressions
 > -   Learn the difference between simple and compound expressions
 > -   Understand the use of braces to group expressions
-> -   Conditional structures: if-then-else, switch
+> -   Conditional structures: if-then-else, and `switch()`
 
 ------------------------------------------------------------------------
 
@@ -60,7 +60,13 @@ I discourage you from grouping multiple expressions with semicolons because it m
 
 ### Every expression has a value
 
-A fundamental notion about expressions is that **every expression in R has a value**. If you have a simple expression like `a <- 5`, then `a` has the value 5. In contrast, the value of a compound expression is the value of the last evaluated expression.
+A fundamental notion about expressions is that **every expression in R has a value**. If you have a simple expression like:
+
+``` r
+a <- 5
+```
+
+then `a` has the value 5. In contrast, the value of a compound expression is the value of the last evaluated expression.
 
 Here's one example of a compund expression. Note that the entire expression is assigned to `x`:
 
@@ -94,12 +100,14 @@ To make sure you don't forget it, repeat this mantra:
 > -   Every expression in R has a value: the value of the last evaluated statement.
 > -   Every expression in R has a value: the value of the last evaluated statement.
 
+------------------------------------------------------------------------
+
 ### Assignments within Compound Expressions
 
 It is possible to have assignments within compound expressions and the values of the variables which this produces can be used in later expressions.
 
 ``` r
-# simple expressions separated by newlines
+# simple expressions (made up of assignments) separated by newlines
 {
   one <- 1
   pie <- pi
@@ -417,17 +425,6 @@ switch(day_num,
 ```
 
     ## [1] "Tuesday"
-
-#### Your turn again!
-
-Write a switch statement to determine if a given lowercase letter is a vowel. Assume that "y" is not a vowel.
-
-``` r
-letter <- "e" # Change this value!
-
-switch(letter,
-  a = "vowel") # Modify as necessary.
-```
 
 ### Function `stop()`
 
