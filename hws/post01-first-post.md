@@ -10,7 +10,7 @@ Guidelines
 
 You can talk about any of the things that we've covered so far in the first six weeks of the course. Or you could also choose a topic you are very interested in, but that hasn't been covered yet.
 
-Regardless of your chosen topic(s), you should write beyond the extent of what was covered in lecture/labs. For example, if you decide to talk about vectors, don't just simply regurgitate the notions of atomicity, coercion, vectorization, recycling, and sudscripting with bracket notation. Instead, show an interesting example(s) in which you describe your audience the application of such notions.
+Regardless of your chosen topic(s), you should write beyond the extent of what was covered in lecture/labs. For example, if you decide to talk about vectors, don't just simply regurgitate the notions of atomicity, coercion, vectorization, recycling, and subscripting with bracket notation. Instead, show an interesting example(s) in which you describe your audience the application of such notions.
 
 Likewise, you should do some research, and include at least seven references. These could be data sets, posts, videos, books, articles, websites, etc.
 
@@ -54,7 +54,7 @@ Here's a list of general specifications:
 
 -   **Length**: How long should your post be? There is not really a unique answer for this question. It depends on what you decide to write about. Try writing a post no shorter than 1,000 words, and preferably no longer than 5,000 words (these values are just a recommendation).
 
--   **Audience**: Think of your audience as other Stat 133 students, or students interested in data analysis but with (almots) no experience in this area. BTW: the instructor is NOT your audience.
+-   **Audience**: Think of your audience as other Stat 133 students, or students interested in data analysis but with (almost) no experience in this area. BTW: the instructor is NOT your audience.
 
 -   **Style**: Write the content as a post. In other words, this is NOT an academic paper. You can actually use some slang, and express ideas in the same way you would verbally explain things to a classmate.
 
