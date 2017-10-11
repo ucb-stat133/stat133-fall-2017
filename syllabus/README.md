@@ -142,7 +142,7 @@ graphs with `"ggplot2"`.
 
 
 
-## 6. More Wrangling and Graphics (part 2) and PCA
+## 6. More Wrangling, Graphics (part 2) and PCA
 
 + __Dates__: Oct 02-06
 + __Topics__: More `"dplyr"`, `"ggplot2"`, and file structure
@@ -161,7 +161,7 @@ RStudio).
 
 
 
-## 7. Programming Basics (for data analysis) part 1
+## 7. Programming Basics for data analysis (part 1)
 
 + __Dates__: Oct 09-13
 + __Topics__: Basics of Functions, R expressions, and conditionals.
@@ -169,8 +169,7 @@ RStudio).
     + [Introduction to functions](../tutorials/06-intro-to-functions.md) (tutorial)
     + [Introduction to R expressions and conditionals](../tutorials/07-intro-to-expressions-conditionals.md) (tutorial)
 + __Lab material__:
-    + [Getting started with functions](../labs/lab07-simple-functions.md)
-    + [Getting started with expressions and conditionals](../labs/lab07-simple-conditionals.md)
+    + [Getting started with functions and conditionals](../labs/lab07-simple-functions.md)
 + __Reading__: 
     + [chapter 19: Functions](http://r4ds.had.co.nz/functions.html) from _R for Data Science_ by Grolemund and Wickham.
 + __HW 3__: due Oct-15
@@ -182,7 +181,7 @@ RStudio).
 
 
 
-## 8. Programming Basics (for data analysis) part 2
+## 8. Programming Basics for data analysis (part 2)
 
 + __Dates__: Oct 16-20
 + __Topics__: Basics of loops, and intro to `"shiny"` apps.
