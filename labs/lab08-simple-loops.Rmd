@@ -1,5 +1,5 @@
 ---
-title: "Lab 7: Simple Loops"
+title: "Lab 8: Simple Loops"
 subtitle: "Stat 133, Fall 2017"
 author: "Gaston Sanchez"
 output: github_document
@@ -88,6 +88,8 @@ $$
 ### Arithmetic Series
 
 Write a for loop to compute the following arithmetic series $a_n = a_1 + (n-1)d$ 
+
+![arithmetic series](lab08-images/arith_series.png)
 
 $$
 a_n = a_1 + (n-1)d

@@ -69,6 +69,8 @@ $$
 
 Write a for loop to compute the following arithmetic series *a*<sub>*n*</sub> = *a*<sub>1</sub> + (*n* − 1)*d*
 
+![arithmetic series](lab08-images/arith_series.png)
+
 *a*<sub>*n*</sub> = *a*<sub>1</sub> + (*n* − 1)*d*
 
 when *a*<sub>1</sub> = 3, and *d* = 3. For instance: 3 + 6 + 12 + 24 + …. Test your code with different values for *n*. Does the series converge as *n* increase?
