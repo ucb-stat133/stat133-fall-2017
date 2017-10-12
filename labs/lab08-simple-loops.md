@@ -49,33 +49,41 @@ for (j in c()) { # Replace c() with an appropriate sequence.
 Summation Series
 ----------------
 
-Write a for loop to compute the following series. Test your code with different values for \(n\). Does the series converge as \(n\) increase?
+Write a for loop to compute the following series. Test your code with different values for *n*. Does the series converge as *n* increase?
 
-\[
-\sum_{k=0}^{n} \frac{1}{2^k} = 1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \dots + \frac{1}{2^n}
-\]
+![series1](lab08-images/sum_series1.png)
 
-Write a for loop to compute the following series. Test your code with different values for \(n\). Does the series converge as \(n\) increase?
+$$
+\\sum\_{k=0}^{n} \\frac{1}{2^k} = 1 + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\dots + \\frac{1}{2^n}
+$$
 
-\[
-\sum_{k=0}^{n} \frac{1}{9^k} =1 + \frac{1}{9} + \frac{1}{81} + \dots + \frac{1}{9^n}
-\]
+Write a for loop to compute the following series. Test your code with different values for *n*. Does the series converge as *n* increase?
+
+![series2](lab08-images/sum_series2.png)
+
+$$
+\\sum\_{k=0}^{n} \\frac{1}{9^k} =1 + \\frac{1}{9} + \\frac{1}{81} + \\dots + \\frac{1}{9^n}
+$$
 
 ### Arithmetic Series
 
-Write a for loop to compute the following arithmetic series \(a_n = a_1 + (n-1)d\) when \(a_1 = 3\), and \(d = 3\). For instance: \(3 + 6 + 12 + 24 + \dots\). Test your code with different values for \(n\). Does the series converge as \(n\) increase?
+Write a for loop to compute the following arithmetic series *a*<sub>*n*</sub> = *a*<sub>1</sub> + (*n* − 1)*d*
+
+*a*<sub>*n*</sub> = *a*<sub>1</sub> + (*n* − 1)*d*
+
+when *a*<sub>1</sub> = 3, and *d* = 3. For instance: 3 + 6 + 12 + 24 + …. Test your code with different values for *n*. Does the series converge as *n* increase?
 
 ### Geometric Sequence
 
-A sequence such as \(3, 6, 12, 24, 48\) is an example of a geometric sequence. In this type of sequence, the \(n\)-th term is obtained as:
+A sequence such as 3, 6, 12, 24, 48 is an example of a geometric sequence. In this type of sequence, the *n*-th term is obtained as:
 
-\[
-a_n = a_1 \times r^{n-1}
-\]
+![geometric sequence](lab08-images/geo_seq.png)
 
-where: \(a_1\) is the first term, \(r\) is the common ratio, and \(n\) is the number of terms.
+*a*<sub>*n*</sub> = *a*<sub>1</sub> × *r*<sup>*n* − 1</sup>
 
-Write a for loop to compute the sum of the first \(n\) terms of: \(3 + 6 + 12 + 24 + \dots\). Test your code with different values for \(n\). Does the series converge as \(n\) increase?
+where: *a*<sub>1</sub> is the first term, *r* is the common ratio, and *n* is the number of terms.
+
+Write a for loop to compute the sum of the first *n* terms of: 3 + 6 + 12 + 24 + …. Test your code with different values for *n*. Does the series converge as *n* increase?
 
 ``` r
 a1 <- 3
@@ -105,13 +113,15 @@ for (n in 1:10) {
 Sine Approximation
 ------------------
 
-Consider the following series that is used to approximate the function \(sin(x)\):
+Consider the following series that is used to approximate the function *s**i**n*(*x*):
 
-\[
-sin(x) \approx x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dots
-\]
+![sine approximation](lab08-images/sine_series.png)
 
-Write a `for` loop to approximate \(sin(x)\). Try different number of terms, \(n = 5, 10, 50, 100\). Compare your loop with the `sin()` function.
+$$
+sin(x) \\approx x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\frac{x^7}{7!} + \\dots
+$$
+
+Write a `for` loop to approximate *s**i**n*(*x*). Try different number of terms, *n* = 5, 10, 50, 100. Compare your loop with the `sin()` function.
 
 ``` r
 # Your for loop
@@ -200,32 +210,38 @@ reduce(898128000)
 Average
 -------
 
-The average of \(n\) numbers \(x_1, x_2, \dots, x_n\) is given by the following formula:
+The average of *n* numbers *x*<sub>1</sub>, *x*<sub>2</sub>, …, *x*<sub>*n*</sub> is given by the following formula:
 
-\[
-\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i = \frac{x_1 + x_2 + \dots + x_n}{n}
-\]
+![arithmetic mean](lab08-images/arith_mean.png)
+
+$$
+\\bar{x} = \\frac{1}{n} \\sum\_{i=1}^{n} x\_i = \\frac{x\_1 + x\_2 + \\dots + x\_n}{n}
+$$
 
 Write R code, using each type of loop (e.g. `for`, `while`, `repeat`) to implement the arithmetic mean of the vector `x = 1:100`
 
 Standard Deviation
 ------------------
 
-The sample standard deviation of a list of \(n\) numbers \(x_1, x_2, \dots, x_n\) is given by the following formula:
+The sample standard deviation of a list of *n* numbers *x*<sub>1</sub>, *x*<sub>2</sub>, …, *x*<sub>*n*</sub> is given by the following formula:
 
-\[
-SD = \sqrt{ \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2 }
-\]
+![standard deviation](lab08-images/std_dev.png)
+
+$$
+SD = \\sqrt{ \\frac{1}{n-1} \\sum\_{i=1}^{n} (x\_i - \\bar{x})^2 }
+$$
 
 Write R code, using each type of loop (e.g. `for`, `while`, `repeat`) to implement the sample standard deviation of the vector `x = 1:100`
 
 Geometric Mean
 --------------
 
-The geometric mean of \(n\) numbers \(x_1, x_2, \dots, x_n\) is given by the following formula:
+The geometric mean of *n* numbers *x*<sub>1</sub>, *x*<sub>2</sub>, …, *x*<sub>*n*</sub> is given by the following formula:
 
-\[
-\bar{x} = \left ( \prod_{i=1}^{n} x_i \right )^{1/n}
-\]
+![geometric mean](lab08-images/geom_mean.png)
+
+$$
+\\bar{x} = \\left ( \\prod\_{i=1}^{n} x\_i \\right )^{1/n}
+$$
 
 Write R code, using each type of loop (e.g. `for`, `while`, `repeat`) to implement the geometric mean of the vector `x = 1:50`
