@@ -1,4 +1,4 @@
-Lab 7: Simple Loops
+Lab 8: Simple Loops
 ================
 Gaston Sanchez
 
