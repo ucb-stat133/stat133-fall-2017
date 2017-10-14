@@ -48,7 +48,7 @@ g(0)
 g(-5/2)
 ```
 
-Write code to create the following composite functions:
+Use your functions `f()` and `g()` to create the following composite functions:
 
 - `fog()` for the composite function: $f \circ g(x)$
 - `gof()` for the composite function: $g \circ f(x)$
@@ -95,15 +95,123 @@ returns the length of the hypotenuse:
 Test your `pythagoras()` with two leg values: `pythagoras(3, 4)`
 
 ```{r}
-# your test
+# test pythagoras(3, 4)
 
 ```
 
 Modify your function `pythagoras()` so that argument `b` takes the same value of argument `a`. Test it with just one leg value: `pythagoras(5)`
 
 ```{r}
-# your test
+# test pythagoras(5)
 
+```
+
+
+-----
+
+## Area of a circle
+
+Consider a circle with `radius = 2`. The area of this circle can be computed
+in R as:
+
+```{r}
+# area of circle with radius 2
+r <- 2
+area <- pi * r^2
+area
+```
+
+Write a function `circle_area()` that calculates the area of a circle. This 
+function must take one argument `radius`. Give `radius` a default value of 1.
+
+For example:
+```{r eval = FALSE}
+# default (radius 1)
+circle_area()
+
+# radius 3
+circle_area(radius = 3)
+```
+
+Modify your `circle_area()` function in order to include a `stop()` statement.
+If `radius` is negative, then the function should stop with a message like:
+`"radius cannot be negative"`.
+
+Test your modified `circle_area()` with `radius = -2`; the function should 
+return a stop message:
+```{r, eval = FALSE}
+# bad radius
+circle_area(radius = -2)
+```
+
+
+
+## Area of a cylinder
+
+For a given cylinder of radius $r$ and height $h$ the area $A$ is:
+$$
+A = 2 \pi r h + 2 \pi r^2
+$$
+
+For example. Say you have a cylinder with radius = 2, and height = 3. 
+```{r}
+# cylinder variables
+r = 2  # radius
+h = 3  # height
+
+# area of cylinder
+2 * pi * r * h + 2 * pi * r^2
+```
+
+
+Notice that the formula of the area of a cylinder includes the area of a 
+circle: $\pi r^2$. Write a function `cylinder_area()`, that calls `circle_area()`, 
+to compute the area of a cylinder. 
+
+This function must take two arguments: `radius` and `height`. Give both 
+arguments a default value of 1. In addition, the function should stop if any
+of `radius` or `height` are negative.
+
+For instance:
+```{r eval = FALSE}
+# default (radius 1, height 1)
+cylinder_area()
+
+# radius 2, height 3
+cylinder_area(radius = 2, height = 3)
+```
+
+These should return an error message:
+```{r, eval = FALSE}
+# bad radius
+cylinder_area(radius = -2, height = 1)
+
+# bad height
+cylinder_area(radius = 2, height = -1)
+
+# bad radius and height
+cylinder_area(radius = -2, height = -1)
+```
+
+
+## Volume of a cylinder
+
+For a given cylinder of radius $r$ and height $h$ the volume $V$ is:
+$$
+V = \pi r^2 h
+$$
+
+Write a function `cylinder_volume()`, that calls `circle_area()`, to compute the 
+volume of a cylinder. This function must take two arguments: 
+`radius` and `height`. Give both arguments a default value of 1.
+
+For example:
+```{r eval = FALSE}
+# default (radius 1, height 1)
+cylinder_volume()
+
+cylinder_volume(radius = 3, height = 10)
+cylinder_volume(height = 10, radius = 3)
 ```
 
 
@@ -222,7 +330,7 @@ dnorm(x = 1, mean = 0, sd = 2)
 Now try `gaussian()` with a vector `seq(-4.5, 4.5, by = 0.1)`, and pass the values
 to `plot()` to get a normal curve. Here's code with values obtained from `dnorm()`
 
-```{r}
+```{r gaussian_plot}
 # you should get a plot like this one
 x_values <- seq(from = -4.5, to = 4.5, by = 0.1)
 y_values <- dnorm(x_values, mean = 0, sd = 2)
@@ -256,7 +364,7 @@ poly1 <- function(x) {
 Once you have a function for the polynomial, you can create a set of pairs of
 points $x$ and $y = f(x)$, and then use them to graph the polynomial
 
-```{r}
+```{r polynomial_plot}
 # set of points
 x <- seq(-4, 4, length.out = 20)
 y <- poly1(x)

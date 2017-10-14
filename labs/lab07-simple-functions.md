@@ -39,7 +39,7 @@ g(0)
 g(-5/2)
 ```
 
-Write code to create the following composite functions:
+Use your functions `f()` and `g()` to create the following composite functions:
 
 -   `fog()` for the composite function: *f* ∘ *g*(*x*)
 -   `gof()` for the composite function: *g* ∘ *f*(*x*)
@@ -80,13 +80,114 @@ Write a function `pythagoras()` that takes two arguments `a` and `b`, and return
 Test your `pythagoras()` with two leg values: `pythagoras(3, 4)`
 
 ``` r
-# your test
+# test pythagoras(3, 4)
 ```
 
 Modify your function `pythagoras()` so that argument `b` takes the same value of argument `a`. Test it with just one leg value: `pythagoras(5)`
 
 ``` r
-# your test
+# test pythagoras(5)
+```
+
+------------------------------------------------------------------------
+
+Area of a circle
+----------------
+
+Consider a circle with `radius = 2`. The area of this circle can be computed in R as:
+
+``` r
+# area of circle with radius 2
+r <- 2
+area <- pi * r^2
+area
+```
+
+    ## [1] 12.56637
+
+Write a function `circle_area()` that calculates the area of a circle. This function must take one argument `radius`. Give `radius` a default value of 1.
+
+For example:
+
+``` r
+# default (radius 1)
+circle_area()
+
+# radius 3
+circle_area(radius = 3)
+```
+
+Modify your `circle_area()` function in order to include a `stop()` statement. If `radius` is negative, then the function should stop with a message like: `"radius cannot be negative"`.
+
+Test your modified `circle_area()` with `radius = -2`; the function should return a stop message:
+
+``` r
+# bad radius
+circle_area(radius = -2)
+```
+
+Area of a cylinder
+------------------
+
+For a given cylinder of radius *r* and height *h* the area *A* is:
+*A* = 2*π**r**h* + 2*π**r*<sup>2</sup>
+
+For example. Say you have a cylinder with radius = 2, and height = 3.
+
+``` r
+# cylinder variables
+r = 2  # radius
+h = 3  # height
+
+# area of cylinder
+2 * pi * r * h + 2 * pi * r^2
+```
+
+    ## [1] 62.83185
+
+Notice that the formula of the area of a cylinder includes the area of a circle: *π**r*<sup>2</sup>. Write a function `cylinder_area()`, that calls `circle_area()`, to compute the area of a cylinder.
+
+This function must take two arguments: `radius` and `height`. Give both arguments a default value of 1. In addition, the function should stop if any of `radius` or `height` are negative.
+
+For instance:
+
+``` r
+# default (radius 1, height 1)
+cylinder_area()
+
+# radius 2, height 3
+cylinder_area(radius = 2, height = 3)
+```
+
+These should return an error message:
+
+``` r
+# bad radius
+cylinder_area(radius = -2, height = 1)
+
+# bad height
+cylinder_area(radius = 2, height = -1)
+
+# bad radius and height
+cylinder_area(radius = -2, height = -1)
+```
+
+Volume of a cylinder
+--------------------
+
+For a given cylinder of radius *r* and height *h* the volume *V* is:
+*V* = *π**r*<sup>2</sup>*h*
+
+Write a function `cylinder_volume()`, that calls `circle_area()`, to compute the volume of a cylinder. This function must take two arguments: `radius` and `height`. Give both arguments a default value of 1.
+
+For example:
+
+``` r
+# default (radius 1, height 1)
+cylinder_volume()
+
+cylinder_volume(radius = 3, height = 10)
+cylinder_volume(height = 10, radius = 3)
 ```
 
 ------------------------------------------------------------------------
@@ -189,7 +290,7 @@ y_values <- dnorm(x_values, mean = 0, sd = 2)
 plot(x_values, y_values, las = 1, type = "l", lwd = 2)
 ```
 
-![](lab07-simple-functions_files/figure-markdown_github/unnamed-chunk-14-1.png)
+![](lab07-simple-functions_files/figure-markdown_github/gaussian_plot-1.png)
 
 Your turn:
 
@@ -224,7 +325,7 @@ abline(h = 0, v = 0, col = '#888888aa', lwd = 1.5)
 title(main = expression(paste(f(x), ' = ', x^2, (x - 1))))
 ```
 
-![](lab07-simple-functions_files/figure-markdown_github/unnamed-chunk-17-1.png)
+![](lab07-simple-functions_files/figure-markdown_github/polynomial_plot-1.png)
 
 Write functions and graph the following polynomials in the x-axis interval -4 to 4:
 
