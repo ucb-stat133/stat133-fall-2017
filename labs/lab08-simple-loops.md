@@ -22,16 +22,31 @@ In order to learn about loops and iterations, it's good to forget about vectoriz
 For loops
 ---------
 
-Let's start with a super simple example. Write a `for` loop to add 1 to every element of a vector.
+Let's start with a super simple example. Consider a vector `vec <- c(3, 1, 4)`. And suppose you want to add 1 to every element of `vec`. You know that this can be easily achieved using vectorized code:
+
+``` r
+vec <- c(3, 1, 4) 
+
+vec + 1
+```
+
+    ## [1] 4 2 5
+
+Now, pretend that R does not have vectorized functions. In order to add 1 to the elements in `vec` you would need to write some sort of loop. So let's do that here with a `for` loop:
 
 ``` r
 vec <- c(3, 1, 4) # Change this value!
 
-for (j in c()) { # Replace c() with an appropriate sequence.
-  # Fill in.
-  
+for (j in 1:3) { # Replace c() with an appropriate sequence.
+  print(vec[j] + 1)
 }
 ```
+
+    ## [1] 4
+    ## [1] 2
+    ## [1] 5
+
+In the code above we are taking each element `vec[j]` and adding 1 to it, and printing the outcome so you can visualize the additions.
 
 Now rewrite the code, using a `for` loop, in order to triple every element in `vec`
 
@@ -43,6 +58,20 @@ for (j in c()) { # Replace c() with an appropriate sequence.
   
 }
 ```
+
+What if you want to create a vector `vec2`, in which you store the values produced at each iteration of the loop? Here's one possibility:
+
+``` r
+vec <- c(3, 1, 4)  
+vec2 <- rep(0, 3)  # empty vector
+
+for (j in 1:3) {
+  vec2[j] <- vec[j] + 1
+}
+vec2
+```
+
+    ## [1] 4 2 5
 
 ------------------------------------------------------------------------
 
@@ -127,6 +156,70 @@ Write a `for` loop to approximate *s**i**n*(*x*). Try different number of terms,
 
 ``` r
 # Your for loop
+```
+
+------------------------------------------------------------------------
+
+For loop with a matrix
+----------------------
+
+Consider the following matrix `A`:
+
+``` r
+A <- matrix(1:20, nrow = 5, ncol = 4)
+A
+```
+
+    ##      [,1] [,2] [,3] [,4]
+    ## [1,]    1    6   11   16
+    ## [2,]    2    7   12   17
+    ## [3,]    3    8   13   18
+    ## [4,]    4    9   14   19
+    ## [5,]    5   10   15   20
+
+Say we want to add 1 to all elements in row 1, add 2 to all elements in row 2, add 3 to all elements in row 3, and so on. To do this without using vectorized coe, you need to work with two `for()` loops. One loop will control how you traverse the matrix by rows, the other loop will control how you traverse the matrix by columns. Here's how:
+
+``` r
+# empty matrix B
+B <- matrix(NA, nrow = 5, ncol = 4)
+
+# for loop to get matrix B
+for (i in 1:nrow(A)) {
+  for (j in 1:ncol(A)) {
+    B[i,j] <- A[i,j] + i
+  }
+}
+
+B
+```
+
+    ##      [,1] [,2] [,3] [,4]
+    ## [1,]    2    7   12   17
+    ## [2,]    4    9   14   19
+    ## [3,]    6   11   16   21
+    ## [4,]    8   13   18   23
+    ## [5,]   10   15   20   25
+
+### Your turn
+
+Consider the following matrix `X`:
+
+``` r
+set.seed(123)
+X <- matrix(rnorm(12), nrow = 4, ncol = 3)
+X
+```
+
+    ##             [,1]       [,2]       [,3]
+    ## [1,] -0.56047565  0.1292877 -0.6868529
+    ## [2,] -0.23017749  1.7150650 -0.4456620
+    ## [3,]  1.55870831  0.4609162  1.2240818
+    ## [4,]  0.07050839 -1.2650612  0.3598138
+
+Write code in R, using loops, to get a matrix `Y` such that the negative numbers in `A` are transformed into squared values, while the positive numbers in `A` are transformed into square root values
+
+``` r
+# for loops to get Y
 ```
 
 ------------------------------------------------------------------------
