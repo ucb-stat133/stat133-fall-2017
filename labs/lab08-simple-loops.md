@@ -4,6 +4,7 @@ Gaston Sanchez
 
 > ### Learning Objectives
 >
+> -   Forget about vectorized code (pretend it doesn't exist)
 > -   Practice writing simple loops
 > -   Get familiar with the syntax of a `for` loop
 > -   Get familiar with the syntax of a `while` loop
@@ -17,12 +18,12 @@ Introduction
 
 The majority of functions that work with vectors are vectorized. Remember that vectorized operations are calculations that are applied to all the elements in a vector (element-wsie operations).
 
-In order to learn about loops and iterations, it's good to forget about vectorized operations in R. This means that you will be asked to write code, using some sort of loop structure, to perform tasks for which there is already a vectorized implementation. For example, in this lab you will have to write code with various types of loops to calculate the mean of a numeric vector. This can easily be done using the function `mean()`. But we don't want you to use `mean()`. We want to think about control-flow structures, which are essential in any programming activity.
+In order to learn about loops and iterations, it's good to forget about vectorized operations in R. This means that you will be asked to write code, using some sort of loop structure, to perform tasks for which there is already a vectorized implementation. For example, in this lab you will have to write code with various types of loops to calculate the mean of a numeric vector. This can easily be done using the function `mean()`. But we don't want you to use `mean()`. We want you to think about control-flow structures, which are essential in any programming activity.
 
 For loops
 ---------
 
-Let's start with a super simple example. Consider a vector `vec <- c(3, 1, 4)`. And suppose you want to add 1 to every element of `vec`. You know that this can be easily achieved using vectorized code:
+Let's start with a super simple example. Consider a vector `vec <- c(3, 1, 4)`. And suppose you want to add 1 to every element of `vec`. You know that this can easily be achieved using vectorized code:
 
 ``` r
 vec <- c(3, 1, 4) 
@@ -32,7 +33,21 @@ vec + 1
 
     ## [1] 4 2 5
 
-Now, pretend that R does not have vectorized functions. In order to add 1 to the elements in `vec` you would need to write some sort of loop. So let's do that here with a `for` loop:
+In order to learn about loops, I'm going to ask you to forget about the notion of vectorized code in R. That is, pretend that R does not have vectorized functions.
+
+Think about what you would manually need to do in order to add 1 to the elements in `vec`. This addition would involve taking the first element in `vec` and add 1, then taking the second element in `vec` and add 1, and finally the third element in `vec` and add 1, something like this:
+
+``` r
+vec[1] + 1
+vec[2] + 1
+vec[3] + 1
+```
+
+The code above does the job. From a purely arithmetic standpoint, the three lines of code reflect the operation that you would need to carry out to add 1 to all the elements in `vec`.
+
+From a programming point of view, you are performing the same type of operation three times: selecting an element in `vec` and adding 1 to it. But there's a lot of (unnecessary) repetition.
+
+This is where loops come very handy. Here's how to use a `for ()` loop to add 1 to each element in `vec`:
 
 ``` r
 vec <- c(3, 1, 4) # Change this value!
@@ -46,9 +61,9 @@ for (j in 1:3) { # Replace c() with an appropriate sequence.
     ## [1] 2
     ## [1] 5
 
-In the code above we are taking each element `vec[j]` and adding 1 to it, and printing the outcome so you can visualize the additions.
+In the code above we are taking each `vec` element `vec[j]`, adding 1 to it, and printing the outcome with `print()` so you can visualize the additions at each iteration of the loop.
 
-Now rewrite the code, using a `for` loop, in order to triple every element in `vec`
+**Your turn**: rewrite the `for` loop in order to triple every element in `vec`, and printing the output at each step of the loop:
 
 ``` r
 vec <- c(3, 1, 4) # Change this value!
@@ -63,10 +78,10 @@ What if you want to create a vector `vec2`, in which you store the values produc
 
 ``` r
 vec <- c(3, 1, 4)  
-vec2 <- rep(0, 3)  # empty vector
+vec2 <- rep(0, 3)  # "empty" of zeros vector to be filled in the loop
 
-for (j in 1:3) {
-  vec2[j] <- vec[j] + 1
+for (i in 1:3) {
+  vec2[i] <- vec[i] + 1
 }
 vec2
 ```
@@ -115,29 +130,6 @@ A sequence such as 3, 6, 12, 24, 48 is an example of a geometric sequenc
 where: *a*<sub>1</sub> is the first term, *r* is the common ratio, and *n* is the number of terms.
 
 Write a for loop to compute the sum of the first *n* terms of: 3 + 6 + 12 + 24 + …. Test your code with different values for *n*. Does the series converge as *n* increase?
-
-``` r
-a1 <- 3
-r <- 2
-summ <- 0
-
-for (n in 1:10) {
-  an = a1 * r^(n-1)
-  summ = summ + an
-  print(an)
-}
-```
-
-    ## [1] 3
-    ## [1] 6
-    ## [1] 12
-    ## [1] 24
-    ## [1] 48
-    ## [1] 96
-    ## [1] 192
-    ## [1] 384
-    ## [1] 768
-    ## [1] 1536
 
 ------------------------------------------------------------------------
 
@@ -227,7 +219,7 @@ Write code in R, using loops, to get a matrix `Y` such that the negative numbers
 Dividing a number by 2 multiple times
 -------------------------------------
 
-The following exercises involve dividing a number by 2 until it becomes odd.
+The following examples involve dividing a number by 2 until it becomes odd.
 
 ### Using a `repeat` loop
 
@@ -289,16 +281,11 @@ Now generalize the above code to create a function `reduce()` which performs the
 # your reduce() function
 reduce <- function(x) {
   # Fill in.
-  while(x %% 2 == 0) {
-    x <- x / 2
-  }
-  return(x)
+  
 }
 
 reduce(898128000)
 ```
-
-    ## [1] 7016625
 
 ------------------------------------------------------------------------
 

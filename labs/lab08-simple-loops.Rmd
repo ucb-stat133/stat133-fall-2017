@@ -31,7 +31,7 @@ using some sort of loop structure, to perform tasks for which there is
 already a vectorized implementation. For example, in this lab you will have 
 to write code with various types of loops to calculate the mean of a numeric
 vector. This can easily be done using the function `mean()`. But we don't
-want you to use `mean()`. We want to think about control-flow structures,
+want you to use `mean()`. We want you to think about control-flow structures,
 which are essential in any programming activity.
 
 
@@ -50,8 +50,27 @@ vec + 1
 In order to learn about loops, I'm going to ask you to forget about the notion
 of vectorized code in R. That is, pretend that R does not have vectorized functions. 
 
-In order to add 1 to the elements in `vec` you would need to write some sort of 
-loop. So let's do that here with a `for` loop: 
+Think about what you would manually need to do in order to add 1 to the elements 
+in `vec`. This addition would involve taking the first element in `vec` and 
+add 1, then taking the second element in `vec` and add 1, and finally the third
+element in `vec` and add 1, something like this: 
+
+```{r eval = FALSE}
+vec[1] + 1
+vec[2] + 1
+vec[3] + 1
+```
+
+The code above does the job. From a purely arithmetic standpoint, the three 
+lines of code reflect the operation that you would need to carry out to add 
+1 to all the elements in `vec`.
+
+From a programming point of view, you are performing the same type of operation
+three times: selecting an element in `vec` and adding 1 to it. But there's
+a lot of (unnecessary) repetition.
+
+This is where loops come very handy. Here's how to use a `for ()` loop
+to add 1 to each element in `vec`: 
 
 ```{r}
 vec <- c(3, 1, 4) # Change this value!
@@ -82,7 +101,7 @@ produced at each iteration of the loop? Here's one possibility:
 
 ```{r}
 vec <- c(3, 1, 4)  
-vec2 <- rep(0, 3)  # empty vector to be filled in the loop
+vec2 <- rep(0, 3)  # "empty" of zeros vector to be filled in the loop
 
 for (i in 1:3) {
   vec2[i] <- vec[i] + 1
@@ -229,7 +248,7 @@ numbers in `A` are transformed into square root values
 
 ## Dividing a number by 2 multiple times
 
-The following exercises involve dividing a number by 2 until it becomes odd.
+The following examples involve dividing a number by 2 until it becomes odd.
 
 ### Using a `repeat` loop
 
@@ -268,14 +287,11 @@ print(val_while)
 Now generalize the above code to create a function `reduce()` which performs
 the same operation. (You should change very little.)
 
-```{r}
+```{r eval = FALSE}
 # your reduce() function
 reduce <- function(x) {
   # Fill in.
-  while(x %% 2 == 0) {
-    x <- x / 2
-  }
-  return(x)
+  
 }
 
 reduce(898128000)
