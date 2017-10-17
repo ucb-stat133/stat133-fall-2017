@@ -191,6 +191,7 @@ RStudio).
     + [Introduction to shiny apps](https://docs.google.com/presentation/d/1_XhkkhXA26izACJyoc5JYrWiF_f96a6tD9ZSI5Tm8Os/pub?start=false&loop=false&delayms=3000) (slides)
 + __Lab material__: 
     + [Getting started with loops](../labs/lab08-simple-loops.md)
+    + [Practice Programming Basics](../hws/practice-programming-basics.pdf) (exercises)
 + __Reading__:
     + [chapter 21: Iteration](http://r4ds.had.co.nz/iteration.html) from _R for Data Science_ by Grolemund and Wickham.
     + [How to Start Shiny tutorial](https://shiny.rstudio.com/tutorial/) by Garret Grolemund
