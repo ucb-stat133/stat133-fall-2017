@@ -16,7 +16,7 @@ Gaston Sanchez
 Introduction
 ------------
 
-The majority of functions that work with vectors are vectorized. Remember that vectorized operations are calculations that are applied to all the elements in a vector (element-wsie operations).
+The majority of functions that work with vectors are vectorized. Remember that vectorized operations are calculations that are applied to all the elements in a vector (element-wise operations).
 
 In order to learn about loops and iterations, it's good to forget about vectorized operations in R. This means that you will be asked to write code, using some sort of loop structure, to perform tasks for which there is already a vectorized implementation. For example, in this lab you will have to write code with various types of loops to calculate the mean of a numeric vector. This can easily be done using the function `mean()`. But we don't want you to use `mean()`. We want you to think about control-flow structures, which are essential in any programming activity.
 
@@ -50,9 +50,9 @@ From a programming point of view, you are performing the same type of operation 
 This is where loops come very handy. Here's how to use a `for ()` loop to add 1 to each element in `vec`:
 
 ``` r
-vec <- c(3, 1, 4) # Change this value!
+vec <- c(3, 1, 4)
 
-for (j in 1:3) { # Replace c() with an appropriate sequence.
+for (j in 1:3) {
   print(vec[j] + 1)
 }
 ```
@@ -77,31 +77,26 @@ for (j in c()) { # Replace c() with an appropriate sequence.
 What if you want to create a vector `vec2`, in which you store the values produced at each iteration of the loop? Here's one possibility:
 
 ``` r
-vec <- c(3, 1, 4)  
-vec2 <- rep(0, 3)  # "empty" of zeros vector to be filled in the loop
+vec <- c(3, 1, 4)  # Change this value!
+vec2 <- rep(0, length(vec))  # "empty" of zeros vector to be filled in the loop
 
-for (i in 1:3) {
-  vec2[i] <- vec[i] + 1
+for (i in c()) {# Replace c() with an appropriate sequence.
+  # Fill in.
 }
-vec2
 ```
-
-    ## [1] 4 2 5
 
 ------------------------------------------------------------------------
 
 Summation Series
 ----------------
 
-Write a for loop to compute the following series. Test your code with different values for *n*. Does the series converge as *n* increase?
+Write a for loop to compute the following two series. Your loop should start at step *k* = 0 and stop at step *n*. Test your code with different values for *n*. And store each k-th term at each iteration. Does the series converge as *n* increase?
 
 ![series1](lab08-images/sum_series1.png)
 
 $$
 \\sum\_{k=0}^{n} \\frac{1}{2^k} = 1 + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\dots + \\frac{1}{2^n}
 $$
-
-Write a for loop to compute the following series. Test your code with different values for *n*. Does the series converge as *n* increase?
 
 ![series2](lab08-images/sum_series2.png)
 
@@ -111,13 +106,13 @@ $$
 
 ### Arithmetic Series
 
-Write a for loop to compute the following arithmetic series *a*<sub>*n*</sub> = *a*<sub>1</sub> + (*n* − 1)*d*
+Write a for loop to compute the following arithmetic series *a*<sub>*n*</sub> = *a*<sub>1</sub> + (*n* − 1)*d* when *a*<sub>1</sub> = 3, and *d* = 3. For instance: 3 + 6 + 12 + 24 + ….
 
 ![arithmetic series](lab08-images/arith_series.png)
 
 *a*<sub>*n*</sub> = *a*<sub>1</sub> + (*n* − 1)*d*
 
-when *a*<sub>1</sub> = 3, and *d* = 3. For instance: 3 + 6 + 12 + 24 + …. Test your code with different values for *n*. Does the series converge as *n* increase?
+Test your code with different values for *n*. And store each n-th term at each iteration. Does the series converge as *n* increase?
 
 ### Geometric Sequence
 
