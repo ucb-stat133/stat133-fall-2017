@@ -37,6 +37,11 @@ Submission
 
 -   You will also have to submit your `html` file to bCourses.
 
+Keep Mastery in mind ...
+------------------------
+
+The post assignments have an underlying goal of being *mastery oriented* tasks, as opposed to *performance oriented goals*. Here's a pdf by [Mark Girod](http://www.wou.edu/~girodm/vita.html) that compares both types of goals: **[Mastery vs Performance](../papers/mastery_vs_performance_goals.pdf)**
+
 Specs
 -----
 
