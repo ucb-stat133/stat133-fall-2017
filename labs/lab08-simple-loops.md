@@ -328,4 +328,4 @@ Write R code, using each type of loop (e.g. `for`, `while`, `repeat`) to impleme
 More Practice
 -------------
 
-To keep working with the basic programming concepts, take a look at the file [../hws/practice-programming-basics.pdf](practice-programming-basics.pdf)
+To keep working with the basic programming concepts, take a look at the file [practice-programming-basics.pdf](../hws/practice-programming-basics.pdf)
