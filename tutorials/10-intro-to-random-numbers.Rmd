@@ -21,7 +21,7 @@ urlcolor: blue
 
 Random numbers have many applications in science and computer programming,
 especially when there are significant uncertainties in a phenomenon of interest.
-The goal of this unit is to look at some practical problmes involving working
+In this tutorial we'll look at some practical problems that involve working
 with random numbers and creating simulations.
 
 The key idea in computer simulations with random numbers is first to formulate
