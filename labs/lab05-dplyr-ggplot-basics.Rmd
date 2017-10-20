@@ -20,6 +20,7 @@ urlcolor: blue
 
 ------
 
+
 ## Manipulating and Visualizing Data Frames
 
 Last week you started to manipulate data tables 
