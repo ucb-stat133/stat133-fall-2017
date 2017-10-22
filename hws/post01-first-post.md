@@ -75,3 +75,115 @@ Peer Grading
 -   The course staff will review your post and the peer-grades, and determine the final score.
 
 -   More instructions on the reviewing process will be posted on bCourses.
+
+Rubric
+------
+
+Here's the rubric that peer graders will be using to assess a post. The reviewer is expected enter scores for every graded aspect on a simple coarse scale (0, 0.5, and 1 points).
+
+As a reviewer, please take some time to thoroughly read the posts you were assigned to review. This means that you may need to read a post at least twice. Read it first from begining to end, and then a second reading in which you evaluate the aspects of the rubric.
+
+As a reviewer, you should test any code or examples to check whether you can obtain the same results. Likewise, check any provided references in order to make sure that they are valid: e.g. a you tube video really exists, a website or post is active, a stackoverflow Q/A is legit.
+
+Last but not least: please keep in mind the diversity of student backgrounds in Stat 133: students intending majoring in stats, applied math, computer science, biology, chemistry, economics, political sciences, environmental sciences, etc. It is possible that someone has decided to write about a topic that you are completely ignorant about. If that's the case, focus on the rubric aspects as objectively as possible.
+
+<table>
+<thead>
+    <tr>
+      <th align="left">Aspect</th>
+      <th align="left">1 point</th>
+      <th align="left">0.5 points</th>
+      <th align="left">0 points</th>
+    </tr>
+
+</thead>
+<tbody>
+    <tr>
+      <td><b>1) Title</b></td>
+      <td>Clear title about what the post is about.</td>
+      <td>There is a (non-dummy) title but it does not really reflect what the post is about.</td>
+      <td>Dummy title like "Post 01" or no title at all.</td>  
+    </tr>
+    <tr>
+      <td><b>2) Introduction</b></td>
+      <td>The post begins with an introductory section that introduces or describes 
+        the motivation behind the post content.</td>
+      <td>Vague introduction.</td>
+      <td>Non-sense introduction.</td>  
+    </tr>
+    <tr>
+      <td><b>3) Visuals</b></td>
+      <td>Each graph has a title, axis are labeled, used of legends when necessary, 
+        and well explained.</td>
+      <td>Graphs are somewhat well displayed but have poor descriptions.</td>
+      <td>There are no visual, or they don't have explanations or descriptions.</td> 
+    </tr>
+    <tr>
+      <td><b>4) Code</b></td>
+      <td>Code is easy to read, well commented, names of objects are descriptive, preferably without lines 
+        exceeding 80-90 characters width.</td>
+      <td>Code is hard to read (e.g. no blank spaces), cryptic names of objects,
+        contains almost no comments, some lines are too long and require horizontal scrolling.</td>
+      <td>There is no code, or code is impossible to understand, with no comments.</td>
+    </tr>
+    <tr>
+      <td><b>5) Grammar</b></td>
+      <td>There are no typos or just a few (e.g. a handful of them).</td>
+      <td>Several typos and/or errors, but they don't interfer with the reading.</td>
+      <td>The typos and/or errors make the post difficult to read 
+        (e.g. reader has to spend some time deciphering the meaning of a sentence).</td>
+    </tr>
+    <tr>
+      <td><b>6) References</b></td>
+      <td>There are at least 7 references, all valid (the reviewer must spend time making
+        sure that the references do exist).</td>
+      <td>There are at least 7 references, but one or two of them are suspicious or invalid
+        (e.g. a link does not work, a video does not exist).</td>
+      <td>There are less than 7 references, or three or more references are suspicious or invalid
+        (e.g. a link does not work, a video does not exist).</td>
+    </tr>
+    <tr>
+      <td><b>7) Organization</b></td>
+      <td>The content is well organized, with identifiable sections and subsections,
+        logical structure, it flows adequately.</td>
+      <td>The content is somewhat organized, but some parts lack structure.</td>
+      <td>Random content poorly organized, lacking overall structure. Gives the impression that it was
+        written "one hour before the deadline".</td>
+    </tr>
+    <tr>
+      <td><b>8) Original</b></td>
+      <td>The post presents material beyond what was covered in lecture, lab, slides, and tutorials. There is added value to it.</td>
+      <td>The post is an ellaborated remix of already covered material, but it adds personal opinions, reflections, and interesting examples.</td>
+      <td>The post is a simplistic remix of what has been covered in lecture, lab, slides, and tutorials,
+        without adding any personal opinion and reflections.</td>
+    </tr>
+    <tr>
+      <td><b>9) Audience</b></td>
+      <td>The post adresses a (diverse) audience like that of Stat 133 students.</td>
+      <td>The post targets a very specific audience that is irrelevant to Stat 133.</td>
+      <td>The post does not .</td>
+    </tr>
+    <tr>
+      <td><b>10) Message</b></td>
+      <td>After reading the post, there is an (implicit or explicit) take home message.</td>
+      <td>The post somewhat summarizes concepts but fails to condese them in one single idea.</td>
+      <td>There is no (implicit or explicit) take home message.</td>
+    </tr>
+
+</tbody>
+</table>
+### Extra Comments
+
+In addition to the rubric, here's a list of 6 questions to be answered by the reviewer:
+
+-   What things did you like about the post? Mention at least two of them.
+
+-   What things could potentially be improved? Provide respectful constructive criticism.
+
+-   By reading the post, did you learn anything new? If yes, what did you learn? If not, why not?
+
+-   Would you give a *"thums-up"* to the post? In other words, would you endorse its reading on your social media apps (e.g. facebook, twitter, etc)?
+
+-   Would you make the post part of the reading material for future editions of Stat 133?
+
+-   Do you believe there is some suspicious of plagiarism? Do you think the post's author has not given proper credit? If yes, what makes you think that?
