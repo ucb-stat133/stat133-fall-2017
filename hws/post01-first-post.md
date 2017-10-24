@@ -164,7 +164,7 @@ Last but not least: please keep in mind the diversity of student backgrounds in 
 <h3>
 Extra Comments
 </h3>
-In addition to the rubric, here's a list of 6 questions to be answered by the reviewer:
+In addition to the rubric, here's a list of 8 questions to be answered by the reviewer:
 
 -   What things did you like about the post? Mention at least two of them.
 
