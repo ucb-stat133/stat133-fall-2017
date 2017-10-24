@@ -7,29 +7,135 @@ Gaston Sanchez
 > -   How to use R to simulate chance processes
 > -   Getting to know the function `sample()`
 > -   Simulate flipping a coin
-> -   Simulate rolling a die
-> -   Simulate drawing tickets from a box
+> -   Visualize relative frequencies
 
 ------------------------------------------------------------------------
 
-Random Numebrs
+Introduction
+------------
+
+Random numbers have many applications in science and computer programming, especially when there are significant uncertainties in a phenomenon of interest. In this tutorial we'll look at a basic problem that involves working with random numbers and creating simulations.
+
+More specifically, let's see how to use R to simulate basic chance processes like tossing a coin.
+
+Let's flip a coin
+-----------------
+
+Chance processes, also referred to as chance experiments, have to do with actions in which the resulting outcome turns out to be different in each occurrence.
+
+Typical examples of basic chance processes are tossing one or more coins, rolling one or more dice, selecting one or more cards from a deck of cards, and in general, things that can be framed in terms of drawing tickets out of a box (or any other type of container: bag, urn, etc.).
+
+You can use your computer, and R in particular, to simulate chances processes. In order to do that, the first step consists of learning how to create a virtual coin, or die, or box with tickets.
+
+### Creating a coin
+
+The simplest way to create a coin with two sides, `"heads"` and `"tails"`, is with an R vector via the *combine* function `c()`
+
+``` r
+coin <- c("heads", "tails")
+```
+
+You can also create a *numeric* coin that shows `1` and `0` instead of `"heads"` and `"tails"`:
+
+``` r
+num_coin <- c(0, 1)
+```
+
+Likewise, you can also create a *logical* coin that shows `TRUE` and `FALSE` instead of `"heads"` and `"tails"`:
+
+``` r
+log_coin <- c(TRUE, FALSE)
+```
+
+Tossing a coin
 --------------
 
-Random numbers have many applications in science and computer programming, especially when there are significant uncertainties in a phenomenon of interest. In this tutorial we'll look at some practical problems that involve working with random numbers and creating simulations.
+Once you have an object that represents the *coin*, the next step involves learning how to simulate tossing the coin. One way to simulate the action of tossing a coin in R is with the function `sample()` which lets you draw random samples, with or without replacement, from an input vector.
 
-The key idea in computer simulations with random numbers is first to formulate an algorithmic description of the phenomenon we want to study. This description frequently maps directly onto a simple R script, where we use random numbers to mimic the uncertain features of the phenomenon. The script needs to perform a large number of repeated calculations, and the final answers are only approximate, but the accuracy can usually be made good enough for practical purposes.
+To toss the coin use `sample()` like this:
 
-Generating Random Numbers
-=========================
+``` r
+coin <- c('heads', 'tails')
 
-R has several functions that allows you to generate random numbers following a certain distribution.
+# toss the coin
+sample(coin)
+```
 
-The function `sample()` takes a random sample from the input vector.
+    ## [1] "tails" "heads"
+
+The call to `sample()` is equivalent to:
+
+``` r
+sample(coin, size = 1)
+```
+
+    ## [1] "heads"
+
+with the argument `size =`, specifying that we want to take a sample of size 1 from the input vector `coin`.
+
+The function `sample()` is one of the functions that allow you to generate random numbers. R has a familiy of functions that generates random numbers following a certain distribution. You can find more information by checking the help documentation of `?Distributions`
+
+### Function `sample.int()`
+
+Another function related to `sample()` is `sample.int()` which simulates drawing random integers. The main argument is `n`, which represents the maximum integer to sample from: `1, 2, 3, ..., n`
+
+``` r
+sample.int(10)
+```
+
+    ##  [1]  8  9  7 10  6  1  3  2  5  4
+
+### Random Samples
+
+By default, `sample()` draws each element in `coin` with the same probability. In other words, each element is assigned the same probability of being chosen. Another default behavior of `sample()` is to take a sample of the specified `size` **without replacement**. If `size = 1`, it does not really matter whether the sample is done with or without replacement.
+
+To draw two elements WITHOUT replacement, use `sample()` like this:
+
+``` r
+# draw 2 elements without replacement
+sample(coin, size = 2)
+```
+
+    ## [1] "tails" "heads"
+
+What if we try to toss the coin three or four times?
+
+``` r
+# trying to toss coin 3 times
+sample(coin, size = 3)
+```
+
+    ## Error in sample.int(length(x), size, replace, prob): cannot take a sample larger than the population when 'replace = FALSE'
+
+Notice that R produced an error message. This is because the default behavior of `sample()` cannot draw more elements that the length of the input vector.
+
+To be able to draw more elements, we need to sample WITH replacement, which is done by specifying the argument `replace = TRUE`, like this:
+
+``` r
+# draw 4 elements with replacement
+sample(coin, size = 4, replace = TRUE)
+```
+
+    ## [1] "heads" "tails" "tails" "heads"
+
+The Random Seed
+---------------
+
+The way `sample()` works is by taking a random sample from the input vector. This means that every time you invoke `sample()` you will likely get a different output.
+
+In order to make the examples replicable (so you can get the same output as me), you need to specify what is called a **random seed**. This is done with the function `set.seed()`. By setting a *seed*, every time you use one of the random generator functions, like `sample()`, you will get the same values.
+
+``` r
+# set random seed
+set.seed(1257)
+
+# toss a coin with replacement
+sample(coin, size = 4, replace = TRUE)
+```
+
+    ## [1] "heads" "tails" "heads" "heads"
 
 All computations of random numbers are based on deterministic algorithms, so the sequence of numbers is not truly random. However, the sequence of numbers appears to lack any systematic pattern, and we can therefore regard the numbers as random.
-
-The Seed
---------
 
 Every time you use one of the random generator functions in R, the call produces different numbers. For replication and debugging purposes, it is useful to get the same sequence of random numebrs every time we run the script. This functionality is obtained by setting a **seed** before we start generating the numebrs. The seed is an integer and set by the function `set.seed()`
 
@@ -51,112 +157,144 @@ runif(4)
 
 If we don't specify a seed, the random generator functions set a seed based on the current time. That is, the seed will be different each time we run the script and consequently the sequence of random numbers will also be different.
 
-Uniformly Distributed Random Numebrs
-====================================
+Sampling with different probabilities
+-------------------------------------
 
-The numbers generated by `runif()` tend to be equally distributed between 0 and 1, which means that there is no part of the interval \[0, 1\] with more random numbers than other parts.
+Last but not least, `sample()` comes with the argument `prob` which allows you to provide specific probabilities for each element in the input vector.
 
-``` r
-set.seed(345)
-n <- 500
-x <- 1:n
-y <- runif(n, min = -1, max = 1)
+By default, `prob = NULL`, which means that every element has the same probability of being drawn. In the example of tossing a coin, the command `sample(coin)` is equivalent to `sample(coin, prob = c(0.5, 0.5))`. In the latter case we explicitly specify a probability of 50% chance of heads, and 50% chance of tails:
 
-plot(x, y, las = 1, pch = 19, col = "#88888855")
-```
+    ## [1] "tails" "heads"
 
-![](10-intro-to-random-numbers_files/figure-markdown_github/unnamed-chunk-3-1.png)
+    ## [1] "heads" "tails"
 
-The previous figure shows the values of 500 random uniformly distributed numbers between -1 and 1. Another interesting visualization involves looking at how the random numbers are distributed in the given interval.
+However, you can provide different probabilities for each of the elements in the input vector. For instance, to simulate a **loaded** coin with chance of heads 20%, and chance of tails 80%, set `prob = c(0.2, 0.8)` like so:
 
 ``` r
-hist(y, las = 1, col = "gray80")
+# tossing a loaded coin (20% heads, 80% tails)
+sample(coin, size = 5, replace = TRUE, prob = c(0.2, 0.8))
 ```
 
-![](10-intro-to-random-numbers_files/figure-markdown_github/unnamed-chunk-4-1.png)
+    ## [1] "tails" "tails" "heads" "tails" "tails"
 
-Drawing Integers
+------------------------------------------------------------------------
+
+Simulating tossing a coin
+-------------------------
+
+Now that we have all the elements to toss a coin with R, let's simulate flipping a coin 100 times, and use the function `table()` to count the resulting number of `"heads"` and `"tails"`:
+
+``` r
+# number of flips
+num_flips <- 100
+
+# flips simulation
+coin <- c('heads', 'tails')
+flips <- sample(coin, size = num_flips, replace = TRUE)
+
+# number of heads and tails
+freqs <- table(flips)
+freqs
+```
+
+    ## flips
+    ## heads tails 
+    ##    55    45
+
+In my case, I got 55 heads and 45 tails. Your results will probably be different than mine. Some of you will get more `"heads"`, some of you will get more `"tails"`, and some will get exactly 50 `"heads"` and 50 `"tails"`.
+
+Run another series of 100 flips, and find the frequency of `"heads"` and `"tails"`:
+
+``` r
+# one more 100 flips
+flips <- sample(coin, size = num_flips, replace = TRUE)
+freqs <- table(flips)
+freqs
+```
+
+    ## flips
+    ## heads tails 
+    ##    52    48
+
+Tossing function
 ----------------
 
-To simulate drawing random integers, you can use the function `sample.int()`. The main argument is `n`, which represents the maximum integer to sample from: `1, 2, 3, ..., n`
+Let's make things a little bit more complex but also more interesting. Instead of calling `sample()` every time we want to toss a coin, we can write a `toss()` function:
 
 ``` r
-sample.int(10)
-```
-
-    ##  [1]  7  6  1  5  8  4  9  2  3 10
-
-Computing Probabilities
-=======================
-
-With the mathematical rules from probability theory we can compute the probability that a certain event happens, say the probability that you get one blue ball when drawing three balls from a box with four blue balls, five white balls, and three yellow balls. Unfortunately, theoretical calculations of probabilities may soon become hard or impossible if the problem is slightly changed. There is a simple numerical way of computing probabilities that is generally applicable to problems with uncertainty: Monte Carlo Simulation.
-
-Principles of Monte Carlo Simulation
-------------------------------------
-
-Assume that we perform *N* experiments where the outcome of each experiment is random. Suppose that some event takes place *M* times in these *N* experiments. An estimate of the probability of the event is then *M*/*N*. The estimate becomes more accurate as *N* increases, and the exact probability is assumed to be reached in the limit as *N* → ∞.
-
-Programs that run a large number of experiments and record the outcome of events are often called simulation programs. The mathematical technique of letting the computer perform lots of experiments based on drawing random numbers is commonly called **Monte Carlo simulation**. Many probabilistic problems can be calculated exactly by mathematics from probability theory, but very often Monte Carlo simulation is the only way to solve statistical problems.
-
-Example: Drawing balls from a box
----------------------------------
-
-Suppose there are 11 balls in a box: four blue, five white, and three yellow. We want to write R code that draws three balls at random without replacement from the box, and compute the probability of drawing two or more blue balls.
-
-``` r
-# colored balls in a box
-box <- c(rep('blue', 4), rep('white', 5), rep('yellow', 3))
-box
-```
-
-    ##  [1] "blue"   "blue"   "blue"   "blue"   "white"  "white"  "white" 
-    ##  [8] "white"  "white"  "yellow" "yellow" "yellow"
-
-``` r
-# drawing three balls without replacement
-sample(box, 3)
-```
-
-    ## [1] "blue" "blue" "blue"
-
-In this example you can apply the probability rules to find the probability of getting at least two blue balls from drawing three balls out of the box. But let's see how to use Monte Carlo simulation to find an approximate value for such probability. We are going to simulate 1000 repetitions of the experiment. Each repetition involves drawing three balls. To store the outputs we can use a matrix of 1000 rows and three columns:
-
-``` r
-# number of balls drawn, and repetitions
-draw <- 3
-reps <- 1000
-
-outputs <- matrix("", nrow = reps, ncol = draw)
-set.seed(123)
-for (i in 1:reps) {
-  outputs[i,] <- sample(box, draw)
+# x: coin object (a vector)
+# times: number of tosses
+toss <- function(x, times = 1) {
+  sample(x, size = times, replace = TRUE)
 }
-head(outputs)
+
+# basic call
+toss(coin)
 ```
 
-    ##      [,1]     [,2]     [,3]   
-    ## [1,] "blue"   "white"  "white"
-    ## [2,] "yellow" "yellow" "blue" 
-    ## [3,] "white"  "yellow" "white"
-    ## [4,] "white"  "yellow" "white"
-    ## [5,] "white"  "white"  "blue" 
-    ## [6,] "yellow" "blue"   "blue"
-
-Now that we have our 1000 repetitions, let's compute the number of blue balls for each row in `outputs`:
+    ## [1] "tails"
 
 ``` r
-# number of blue balls in each experiment
-blues <- apply(outputs, 1, function(x) sum(x == "blue"))
-
-# number of at least two blue balls
-sum(blues >= 2)
+# toss 5 times
+toss(coin, 5)
 ```
 
-    ## [1] 241
+    ## [1] "heads" "tails" "heads" "heads" "tails"
+
+We can make the function more versatile by adding a `prob` argument that let us specify different probabilities for `heads` and `tails`
 
 ``` r
-# approx probability of two or more blue balls
-sum(blues >= 2) / reps
+# x: coin object (a vector)
+# times: number of tosses
+toss <- function(x, times = 1, prob = NULL) {
+  sample(x, size = times, replace = TRUE, prob = prob)
+}
+
+# toss a loaded coin 10 times
+toss(coin, times = 10, prob = c(0.8, 0.2))
 ```
 
-    ## [1] 0.241
+    ##  [1] "tails" "heads" "tails" "heads" "heads" "heads" "heads" "heads"
+    ##  [9] "heads" "heads"
+
+Counting Frequencies
+--------------------
+
+The next step is to toss a coin several times, and count the frequency of `heads` and `tails`
+
+``` r
+tosses <- toss(coin, times = 100)
+table(tosses)
+```
+
+    ## tosses
+    ## heads tails 
+    ##    54    46
+
+We can also count the relative frequencies:
+
+``` r
+table(tosses) / length(tosses)
+```
+
+    ## tosses
+    ## heads tails 
+    ##  0.54  0.46
+
+To make things more interesting, let's consider of the frequency of `heads` evolves of a series of `n` tosses.
+
+``` r
+n <- 500
+tosses <- toss(coin, times = n)
+heads_freq <- cumsum(tosses == 'heads') / 1:n
+```
+
+In this case, we can make a plot of the relative frequencies:
+
+``` r
+plot(heads_freq, type = 'l', lwd = 2, col = 'tomato', las = 1,
+     ylim = c(0, 1))
+abline(h = 0.5, col = 'gray50')
+```
+
+![](10-intro-to-random-numbers_files/figure-markdown_github/head_freqs_plot-1.png)
