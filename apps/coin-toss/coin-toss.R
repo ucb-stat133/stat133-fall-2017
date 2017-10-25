@@ -1,4 +1,5 @@
 # Shiny app for tossing coin
+# Author: Gaston Sanchez
 
 library(shiny)
 library(ggplot2)
