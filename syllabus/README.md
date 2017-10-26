@@ -211,13 +211,12 @@ RStudio).
     + [Introduction to random numbers](../tutorials/10-intro-to-random-numbers.md)
     + [Monte Carlo Simulations](../tutorials/11-intro-to-simulations.md)
 + __Lab material__:
-    + [Running Monte Carlo simulations](../labs/lab08-random-numbers.md)
-    + [More shiny apps](../labs/08-shiny-simulations.md)
+    + [Running Monte Carlo simulations](../labs/lab09-random-simulations/lab09-random-simulation.md)
 + __Reading__:
-    + TBA.
+    + [Part 1 - How to build a Shiny app](https://shiny.rstudio.com/tutorial/)
 + __Cheat sheet__: 
-+ __HOMEWORK:__ Problem set 4
-
+    + [Shiny Web Apps cheat sheet](../cheat-sheets/shiny-cheatsheet.pdf)
+    
 
 -----
 
@@ -236,6 +235,7 @@ RStudio).
     + [Strings in R](gastonsanchez.com/r4strings) by Gaston Sanchez.
     + [chapter 14: Strings](http://r4ds.had.co.nz/strings.html) from _R for Data Science_ by Grolemund and Wickham.
 + __Cheat sheet__: 
++ __HOMEWORK:__ Post 1 due Oct-31
 
 
 -----
