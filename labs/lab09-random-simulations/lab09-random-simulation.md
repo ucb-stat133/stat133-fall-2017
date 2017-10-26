@@ -139,6 +139,39 @@ App scripts
 
 Instead of using the default `app.R` script, you will be playing with your own scripts to simulate the random experiment of drawing 4 balls from the boxes.
 
+While working on this part of the lab, you may want to look at the [Shiny Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
+
+### App version 1
+
+Try to create a shiny app that replicates the image below:
+
+-   there is only one widget input: slider that controls the number of repetitions
+
+<img src="app1.png" width="80%" style="display: block; margin: auto;" />
+
+### App version 2
+
+Modify the first app to create a second shiny app that replicates the image below:
+
+-   widget input: slider that controls the number of repetitions
+-   widget input: slider that controls the probability threshold for choosing the boxes.
+
+<img src="app2.png" width="80%" style="display: block; margin: auto;" />
+
+### App version 3
+
+Modify the second app to create a third shiny app that replicates the image below:
+
+-   widget input: slider that controls the number of repetitions
+-   widget input: slider that controls the probability threshold for choosing the boxes.
+-   widget input: numeric input that controls the random seed.
+
+<img src="app3.png" width="80%" style="display: block; margin: auto;" />
+
+------------------------------------------------------------------------
+
+### App R scripts
+
 In the folder of this lab, you will find several app R scripts: `app1.R`, `app2.R`, `app3.R`, and `app4.R`. Each of them adds a new element to the sidebar, so that your app becomes more flexible.
 
 -   `app1.R`: basic skeleton that includes input for number of repetitions
