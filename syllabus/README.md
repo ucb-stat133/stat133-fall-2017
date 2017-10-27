@@ -209,14 +209,14 @@ RStudio).
 + __Topics__: R andom numbers, sampling, and monte carlo simulation.
 + __Lecture Material__
     + [Introduction to random numbers](../tutorials/10-intro-to-random-numbers.md)
-    + [Monte Carlo Simulations](../tutorials/11-intro-to-simulations.md)
+    + [More Simulations](../tutorials/11-more-simulations.md)
 + __Lab material__:
     + [Running Monte Carlo simulations](../labs/lab09-random-simulations/lab09-random-simulation.md)
 + __Reading__:
     + [Part 1 - How to build a Shiny app](https://shiny.rstudio.com/tutorial/)
 + __Cheat sheet__: 
     + [Shiny Web Apps cheat sheet](../cheat-sheets/shiny-cheatsheet.pdf)
-    
+
 
 -----
 
@@ -227,14 +227,12 @@ RStudio).
 + __Dates__: Oct 30-Nov 03
 + __Topics__: Character strings.
 + __Lecture Material__
-    + [Introduction to loops](../tutorials/08-intro-to-loops.md)
-    + [More about functions](../tutorials/09-more-functions.md)
+    + [String Basics](../slides/16-strings-basics.pdf)
 + __Lab material__: 
-    + [Getting started with loops](../labs/07-simple-loops.md)
+    + [Basic strings manipulations](../labs/10-strings-basics.md)
 + __Reading__:
-    + [Strings in R](gastonsanchez.com/r4strings) by Gaston Sanchez.
+    + [Strings in R](http://www.gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf) by GS.
     + [chapter 14: Strings](http://r4ds.had.co.nz/strings.html) from _R for Data Science_ by Grolemund and Wickham.
-+ __Cheat sheet__: 
 + __HOMEWORK:__ Post 1 due Oct-31
 
 
@@ -250,9 +248,9 @@ RStudio).
     + [Introduction to regex](../tutorials/08-intro-to-loops.md)
     + [More about functions](../tutorials/09-more-functions.md)
 + __Lab material__: 
-    + [Getting started with loops](../labs/07-simple-loops.md)
+    + TBA
 + __Reading__:
-    + [Strings in R](gastonsanchez.com/r4strings) by Gaston Sanchez.
+    + [Strings in R](http://www.gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf) by GS.
 + __Cheat sheet__:
     + [Regular Expressions cheat sheet](../cheat-sheets/regular-expressions-cheatsheet.pdf)
 + __HOMEWORK:__ Problem set 4
