@@ -246,8 +246,8 @@ RStudio).
 + __Dates__: Nov 06-10
 + __Topics__: Introduction to Regular Expressions.
 + __Lecture Material__
-    + [Introduction to regex](../tutorials/08-intro-to-loops.md)
-    + [More about functions](../tutorials/09-more-functions.md)
+    + Introduction to regular expressions.
+    + [Regexpal](http://regexpal.com.s3-website-us-east-1.amazonaws.com/) tester tool.
 + __Lab material__: 
     + TBA
 + __Reading__:
