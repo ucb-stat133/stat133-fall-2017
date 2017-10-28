@@ -210,6 +210,7 @@ RStudio).
 + __Lecture Material__
     + [Introduction to random numbers](../tutorials/10-intro-to-random-numbers.md)
     + [More Simulations](../tutorials/11-more-simulations.md)
+    + [Shiny Tutorial](../slides/16-shiny-tutorial.pdf) by Gerret Grolemund
 + __Lab material__:
     + [Running Monte Carlo simulations](../labs/lab09-random-simulations/lab09-random-simulation.md)
 + __Reading__:
@@ -225,9 +226,9 @@ RStudio).
 ## 10. Manipulating Character Strings
 
 + __Dates__: Oct 30-Nov 03
-+ __Topics__: Character strings.
++ __Topics__: Introduction to character strings and basic manipulations.
 + __Lecture Material__
-    + [String Basics](../slides/16-strings-basics.pdf)
+    + [String Basics](../slides/17-strings-basics.pdf)
 + __Lab material__: 
     + [Basic strings manipulations](../labs/10-strings-basics.md)
 + __Reading__:
