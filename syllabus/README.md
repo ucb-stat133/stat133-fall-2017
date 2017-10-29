@@ -226,15 +226,15 @@ RStudio).
 ## 10. Manipulating Character Strings
 
 + __Dates__: Oct 30-Nov 03
-+ __Topics__: Introduction to character strings and basic manipulations.
++ __Topics__: Introduction to character strings and their basic manipulations.
 + __Lecture Material__
     + [String Basics](../slides/17-strings-basics.pdf)
 + __Lab material__: 
-    + [Basic strings manipulations](../labs/10-strings-basics.md)
+    + [Basic strings manipulations](../labs/lab10-strings-basics.md)
 + __Reading__:
-    + [Strings in R](http://www.gastonsanchez.com/r4strings) by GS.
+    + [Handling Strings in R](http://www.gastonsanchez.com/r4strings) by GS.
     + [chapter 14: Strings](http://r4ds.had.co.nz/strings.html) from _R for Data Science_ by Grolemund and Wickham.
-+ __HOMEWORK:__ Post 1 due Oct-31
++ __HOMEWORK:__ [Post 1](../hws/post01-first-post.md) due Oct-31
 
 
 -----
@@ -251,7 +251,7 @@ RStudio).
 + __Lab material__: 
     + TBA
 + __Reading__:
-    + [Strings in R](http://www.gastonsanchez.com/r4strings) by GS.
+    + [Handling Strings in R](http://www.gastonsanchez.com/r4strings) by GS.
 + __Cheat sheet__:
     + [Regular Expressions cheat sheet](../cheat-sheets/regular-expressions-cheatsheet.pdf)
 + __HOMEWORK:__ Problem set 4
