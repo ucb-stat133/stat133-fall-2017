@@ -232,7 +232,7 @@ RStudio).
 + __Lab material__: 
     + [Basic strings manipulations](../labs/10-strings-basics.md)
 + __Reading__:
-    + [Strings in R](http://www.gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf) by GS.
+    + [Strings in R](http://www.gastonsanchez.com/r4strings) by GS.
     + [chapter 14: Strings](http://r4ds.had.co.nz/strings.html) from _R for Data Science_ by Grolemund and Wickham.
 + __HOMEWORK:__ Post 1 due Oct-31
 
@@ -251,7 +251,7 @@ RStudio).
 + __Lab material__: 
     + TBA
 + __Reading__:
-    + [Strings in R](http://www.gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf) by GS.
+    + [Strings in R](http://www.gastonsanchez.com/r4strings) by GS.
 + __Cheat sheet__:
     + [Regular Expressions cheat sheet](../cheat-sheets/regular-expressions-cheatsheet.pdf)
 + __HOMEWORK:__ Problem set 4
