@@ -283,7 +283,9 @@ RStudio).
 
 
 
-## 14. TBA
+## 14. RRR week
 
 + __Dates__: Dec 04-08
-+ __Topics__: TBA
++ __Topics__: Prepare for final examination
++ __FINAL:__ Friday Dec-15th, 8-11am (room TBA)
+
