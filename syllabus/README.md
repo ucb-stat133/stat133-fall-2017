@@ -229,6 +229,7 @@ RStudio).
 + __Topics__: Introduction to character strings and their basic manipulations.
 + __Lecture Material__
     + [String Basics](../slides/17-strings-basics.pdf)
+    + [Intro to Strings](../tutorials/12-intro-to-strings.md)
 + __Lab material__: 
     + [Basic strings manipulations](../labs/lab10-strings-basics.md)
 + __Reading__:
@@ -275,6 +276,7 @@ RStudio).
 
 + __Dates__: Nov 27-Dec 01
 + __Topics__: Visual Perception, Colors, Effective Statistical Graphics
++ __HOMEWORK:__ [Post 2](../hws/post02-second-post.md) due Nov-30
 
 
 -----
