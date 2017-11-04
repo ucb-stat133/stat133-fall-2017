@@ -223,13 +223,14 @@ RStudio).
 
 
 
-## 10. Manipulating Character Strings
+## 10. Manipulating Character Strings and Testing Functions
 
 + __Dates__: Oct 30-Nov 03
 + __Topics__: Introduction to character strings and their basic manipulations.
 + __Lecture Material__
-    + [String Basics](../slides/17-strings-basics.pdf)
-    + [Intro to Strings](../tutorials/12-intro-to-strings.md)
+    + [String Basics](../slides/17-strings-basics.pdf) (slides)
+    + [Intro to Strings](../tutorials/12-intro-to-strings.md) (tutorial)
+    + [Getting started with testing](../papers/testthat-wickham.pdf) by Wickham
 + __Lab material__: 
     + [Basic strings manipulations](../labs/lab10-strings-basics.md)
 + __Reading__:
