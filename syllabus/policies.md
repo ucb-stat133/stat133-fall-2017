@@ -113,8 +113,8 @@ progress with the course.
 ### Tests
 
 - There will be one 50-minute in-class midterm, and one 3-hour final exam.
-- The tentative date of the midterm is Friday October 6th (to be confirmed). 
-- The final exam is currently scheduled for Day, Dec ddth from time1 to time2. (classroom to be announced).
+- The date of the midterm is Friday October 13th. 
+- The final exam is currently scheduled for Day, Dec 15th from 8am to 11am. (classroom to be announced).
 - If you do not take the final, you will NOT pass the class.
 - Please don't cheat. It's not worth it.
 - If I see you doing something that looks like cheating (e.g. moving your lips, talking, looking at someone else's paper, acting suspiciously), I will take it AS cheating and give you a zero (No questions asked).
