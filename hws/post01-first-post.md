@@ -35,7 +35,7 @@ Submission
 
 -   Write your post using an `Rmd` file, and knit it in both `md` and `html` versions. Both versions should be pushed to your repo.
 
--   You will also have to submit your `html` file to bCourses.
+-   You will also have to submit your `html` file to bCourses, and to a Box folder.
 
 Keep Mastery in mind ...
 ------------------------
@@ -68,7 +68,7 @@ Here's a list of general specifications:
 Peer Grading
 ------------
 
--   Your post will be peer-graded. This means that two of your lab-mates will read the content, and greade your work following a provided rubric.
+-   Your post will be peer-graded. This means that one class mate will read the content, and greade your work following a provided rubric.
 
 -   We will randomly assign peer reviewers. Failing to peer review will negatively affect the reviewer's grade.
 
