@@ -8,9 +8,9 @@ The purpose of this assignment is to write a second blog post about one or more 
 A Reproducible Blog Post
 ------------------------
 
-Compared to the first post, this time you will be required to write a blog post that can be **computationally reproduced** by a *competent* reader. What does this mean? It means that the reader (i.e. reviewer) should be able to replicate all the results, graphics, or analysis, described in your post.
+Compared to the first post, this time you will be required to write a blog post that can be **computationally reproduced** by a *competent* reader. What does this mean? It means that the reader (i.e. reviewer), following the content of your post, should be able to replicate all the results, graphics, or analysis, described in your post.
 
-In order to make your blog post reproducible, any data set(s), and code that you use in your post should be publicly available. This implies that may need to use data sets that already come in R, or data sets that are publicly available online, or create your own data set(s) as part of your post.
+In order to make your blog post reproducible, any data set(s) that you use in your post should be publicly available. This implies that you may need to use data sets that already come in R, or data sets that are publicly available online, or create your own data set(s) as part of your post.
 
 You should also list all the packages that the reader will require; if you decide to do some simulations involving random numbers, you must provide the random seed---e.g. `set.seed()`. Likewise, describe specific instructions to rerun and replicate your results, tables, graphics, etc., and disclose details about the version of the tools you are using (e.g. version of R, version of RStudio, version of packages).
 
@@ -46,15 +46,17 @@ What to submit and where?
 
 -   Create a folder `post02` and put everything there.
 
--   You have total freedom to determine the file structure of `post02`.
+-   You have total freedom to determine the file structure of `post02`. But keep in mind that the `html` file will be the only file reviewed by one of your classmates.
 
 -   Write your post using an `Rmd` file, and knit it in both `md` and `html` versions. Name the files: `post02-first-last.md` and `post02-first-last.html` with your own *first* and *last* names.
 
--   You will also have to submit your `html` file to bCourses, and to a Box folder **before the deadline**.
+-   You will also have to submit your `html` file to bCourses, and to a Box folder **before the deadline (11/30)**.
 
 -   Late submissions to Box will be penalized with a score of 0 (zero). No exceptions.
 
--   The reviewer will grade the version on Box that is the closest **before** the deadline. No exceptions.
+-   The reviewer will grade the version on Box that is the closest to the deadline (before the deadline). No exceptions.
+
+-   Updating the version of your html file on Box **after the deadline** will also be penalized (-1 point for each update). Do NOT update your html file on Box after the deadline: it's not worth it (i.e. won't be reviewed), and you will only lose points.
 
 ------------------------------------------------------------------------
 
@@ -79,7 +81,7 @@ Here's a list of general specifications:
 
 -   **Style**: Write the content as a blogpost. In other words, this is NOT an academic paper. You can actually use some slang, and express ideas in the same way you would verbally explain things to a classmate.
 
--   **References**: You need to do more research, and include at least ten references. These could be data sets, posts, videos, books, articles, websites, etc.
+-   **References**: You need to do more research, and include at least seven references. These could be data sets, posts, videos, books, articles, websites, etc.
 
 -   **Be respectful**: Pretend that your post is public and thus could be read by ANYONE. So don't write things (or use language) you wouldn't like your future boss, or recruiters, to read about. Follow this rule of thumb: don't write things that you could later regret.
 
@@ -92,7 +94,9 @@ Here's the rubric to be used for grading the post. The reviewer is expected to e
 
 As a reviewer, please take some time to thoroughly read the posts you were assigned to review. This means that you may need to read a post at least twice. Read it first from begining to end, and then a second time in which you evaluate the aspects of the rubric.
 
-As a reviewer, you should test any code or examples to check whether you can obtain the same results. Likewise, check any provided references in order to make sure that they are valid: e.g. a you tube video really exists, a website or post is active, a stackoverflow Q/A is legit.
+As a reviewer, you should test all code examples to check whether you can obtain the same results displayed or described in the post.
+
+Likewise, check any provided references in order to make sure that they are valid: e.g. a you tube video really exists, a website or post is active, a stackoverflow Q/A is legit.
 
 Last but not least: please keep in mind the diversity of student backgrounds in Stat 133: students intending majoring in stats, applied math, computer science, biology, chemistry, economics, political sciences, environmental sciences, etc. It is possible that someone has decided to write about a topic that you are completely ignorant about. If that's the case, focus on the rubric aspects as objectively as possible.
 
@@ -108,10 +112,10 @@ Last but not least: please keep in mind the diversity of student backgrounds in 
 </thead>
 <tbody>
     <tr>
-      <td><b>1) Timestamp</b></td>
+      <td><b>1) Title</b></td>
       <td>Title is clear and describes what the post is about.</td>
       <td>There is a title but it does not reflect what the post is about.</td>
-      <td>There is an uninformative title, e.g.  "Post 01" or no title whatsoever. (0 points)</td>  
+      <td>There is an uninformative title, e.g.  "Post 02" or no title whatsoever.</td>  
     </tr>
     <tr>
       <td><b>2) Introduction</b></td>
@@ -120,16 +124,16 @@ Last but not least: please keep in mind the diversity of student backgrounds in 
       <td>Very poor or nonsensical introduction.</td>  
     </tr>
     <tr>
-      <td><b>3) Visuals</b></td>
-      <td>Each graph has a title, labeled axes, used of legends when necessary, and well explained.</td>
-      <td>Graphs are (well) displayed but have poor descriptions.</td>
-      <td>There are no visuals and/or they don't have explanations or descriptions.</td> 
-    </tr>
-    <tr>
-      <td><b>4) Code</b></td>
+      <td><b>3) Code Style</b></td>
       <td>Code is easy to read, well commented, names of objects are descriptive, preferably without lines exceeding 80-90 characters.</td>
       <td>Code is hard to read (e.g. no blank spaces), cryptic names of objects, contains almost no comments, some lines are too long and require horizontal scrolling.</td>
       <td>There is no code, or code is impossible to understand, there are no comments.</td>
+    </tr>
+    <tr>
+      <td><b>4) Reproducibility</b></td>
+      <td>All results (e.g. tables, graphs, outputs) are computationally reproducible</td>
+      <td>Between one and three results are impossile to reproduce</td>
+      <td>More than half of the results are irreproducible</td> 
     </tr>
     <tr>
       <td><b>5) Spelling</b></td>
@@ -156,12 +160,6 @@ Last but not least: please keep in mind the diversity of student backgrounds in 
       <td>The post is a simplistic remix of what has been covered in lecture, lab, slides, and tutorials, without adding any new data, personal opinions and reflections.</td>
     </tr>
     <tr>
-      <td><b>9) Audience</b></td>
-      <td>The post addresses a (diverse) audience like that of Stat 133 students.</td>
-      <td>The post targets a very specific audience that is irrelevant to Stat 133.</td>
-      <td>The post does not addresses any audience.</td>
-    </tr>
-    <tr>
       <td><b>10) Message</b></td>
       <td>After reading the post, there is an (implicit or explicit) take home message.</td>
       <td>The post somewhat summarizes concepts but fails to condense them in one single idea.</td>
@@ -175,11 +173,11 @@ Extra Comments
 </h3>
 In addition to the rubric, here's a list of 8 questions to be answered by the reviewer:
 
+-   If you were not able to reproduce all the results (e.g. outputs, tables, graphs) of the post, why was that?
+
 -   What things did you like about the post? Mention at least two of them.
 
 -   What things could potentially be improved? Provide respectful constructive criticism.
-
--   By reading the post, did you learn anything new? If yes, what did you learn? If not, why not?
 
 -   Would you endorse reading the post on your social media apps (e.g. facebook, twitter, etc)?
 
