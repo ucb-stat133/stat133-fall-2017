@@ -36,7 +36,7 @@ __Concepts in Computing with Data__ presents computing tools and basic concepts
 for the main stages of the _Data Analysis Cycle_ (DAC): 1) data preparation, 
 2) actual analysis, and 3) reporting of results. 
 
-![Data by the numbers](images/data-by-the-numbers.png)
+<img src="images/data-by-the-numbers.png" width="600" height="300">
 
 Traditionally, teaching has been focused on the actual analysis part of a data 
 set (e.g. description, hypothesis testing, modeling, validation) while leaving 
@@ -136,7 +136,7 @@ You will also use a terminal emulator to work with command line.
 - Please read the course [logistics and policies](syllabus/policies.md) for mode details
 about the structure of the course, DO's and DONT's, etc.
 
-<img src="images/it-is-in-the-syllabus.png" width="350" height="190">
+<a href="syllabus/policies.md"><img src="images/it-is-in-the-syllabus.png" width="580" height="330"></a>
 
 - I've prepared a list of [Frequently Asked Questions](syllabus/faqs.md) that I get asked 
 every semester.
