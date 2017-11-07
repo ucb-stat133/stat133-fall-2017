@@ -53,6 +53,7 @@ ui <- fluidPage(
 server <- function(input, output) {
 
   sixes <- reactive({
+    die <- 1:6
     set.seed(input$seed)
     sixes <- rep(0, input$games)
     for (g in 1:input$games) {
