@@ -136,6 +136,8 @@ You will also use a terminal emulator to work with command line.
 - Please read the course [logistics and policies](syllabus/policies.md) for mode details
 about the structure of the course, DO's and DONT's, etc.
 
+<img src="images/it-is-in-the-syllabus.png" width="350" height="190">
+
 - I've prepared a list of [Frequently Asked Questions](syllabus/faqs.md) that I get asked 
 every semester.
 
