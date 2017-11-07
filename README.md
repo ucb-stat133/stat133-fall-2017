@@ -36,7 +36,7 @@ __Concepts in Computing with Data__ presents computing tools and basic concepts
 for the main stages of the _Data Analysis Cycle_ (DAC): 1) data preparation, 
 2) actual analysis, and 3) reporting of results. 
 
-<img src="images/data-by-the-numbers.png" width="600" height="300">
+<img src="images/data-by-the-numbers.png" width="700" height="300">
 
 Traditionally, teaching has been focused on the actual analysis part of a data 
 set (e.g. description, hypothesis testing, modeling, validation) while leaving 
