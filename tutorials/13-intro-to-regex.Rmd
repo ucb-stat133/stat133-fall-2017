@@ -1,0 +1,268 @@
+---
+title: "Introduction to Regular Expresions"
+subtitle: "Stat 133, Fall 2017"
+author: "Gaston Sanchez"
+output: github_document
+fontsize: 11pt
+urlcolor: blue
+---
+
+> ### Learning Objectives:
+>
+> - First contact with Regex
+> - Regex functions in package `"stringr"`
+> - Text file with log common format
+
+------
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(stringr)
+```
+
+## Getting started with Regex in R
+
+In this tutorial we'll be mainly using functions from the R package `"stringr"`:
+
+```{r string, eval = FALSE}
+# install.packages(stringr)
+library(stringr)
+```
+
+Although R has built-in functios to perform regex operations, I've found that
+functions from `"stringr"` are more user friendly (i.e. they have a more 
+consistent naming style).
+
+
+## Data Log File
+
+In this tutorial, we'll be using the text file `may-logs.txt` located in the 
+`data/` folder of the course github repo:
+
+[https://raw.githubusercontent.com/ucb-stat133/stat133-fall-2017/master/data/may-logs.txt](https://raw.githubusercontent.com/ucb-stat133/stat133-fall-2017/master/data/may-logs.txt)
+
+This file is a __server log file__ that contains the recorded events taking place 
+in a web server. The content of the file is in a special format known as 
+_common log format_. According to [wikipedia](https://en.wikipedia.org/wiki/Common_Log_Format): 
+
+"The Common Log Format is a standardized text file format used by web servers when generating server log files."
+
+Here's an example of a log recordt (the text should in one line of code, but
+I've split it into 2 lines for readibility purposes)
+
+```
+pd9049dac.dip.t-dialin.net - - [01/May/2001:01:51:25 -0700] 
+"GET /accesswatch/accesswatch-1.33/ HTTP/1.0" 200 1004
+```
+
+- A `"-"` in a field indicates missing data.
+- `pd9049dac.dip.t-dialin.net` is the IP address of the client (remote host) which made the request to the server.
+- `[01/May/2001:01:51:25 -0700]` is the date, time, and time zone that the request was received, by default in strftime format` %d/%b/%Y:%H:%M:%S %z`.
+- `"GET /accesswatch/accesswatch-1.33/ HTTP/1.0"` is the request line from the client. 
+- The method `GET, /accesswatch/accesswatch-1.33/` is the resource requested, and `HTTP/1.0` is the HTTP protocol.
+- `200` is the HTTP status code returned to the client. 
+    + `2xx` is a successful response
+    + `3xx` a redirection
+    + `4xx` a client error, and 
+    + `5xx` a server error
+- `1004` is the size of the object returned to the client, measured in bytes.
+
+If you want to download a copy of the text file to your working directory:
+
+```{r eval = FALSE}
+# download file
+github <- "https://raw.githubusercontent.com/ucb-stat133/stat133-fall-2017"
+textfile <- "/master/data/may-logs.txt"
+download.file(url = paste0(github, textfile), destfile = "may-logs.txt")
+```
+
+
+```{r echo = FALSE}
+# one option is to read in the content with 'readLines()'
+logs <- readLines('../data/may-logs.txt')
+```
+
+-----
+
+
+## Reading the text file
+
+The first step involves reading the data in R. How can you do this? One option
+is with the `readLines()` function which reads any text file into a character 
+vector:
+
+```{r eval = FALSE}
+# one option is to read in the content with 'readLines()'
+logs <- readLines('may-logs.txt')
+```
+
+Let's check how the content looks like:
+
+```{r}
+# take a peek at the contents in logs
+head(logs)
+```
+
+Because the file contains `r length(logs)` lines (or elements), let's get a
+subset by taking a random sample of size 50:
+
+```{r}
+# subset a sample of lines
+set.seed(98765)
+s <- sample(1:length(logs), size = 50)
+sublogs <- logs[s]
+```
+
+
+### JPG File requests
+
+To begin our regex experiments, let's try to find out how many requests 
+involved a JPG file.
+
+One way to answer the previous question is by counting how many log lines 
+contain the pattern `"jpg"`. We can use `grep()` to match or detect the 
+this pattern:
+
+```{r}
+# matching "jpg" (which lements)
+grep("jpg", sublogs)
+
+# showing value of matches
+grep("jpg", sublogs, value = TRUE)
+```
+
+We can try to be more specific by defining a pattern `".jpg"` in which the 
+`.` corresponds to the _literal_ dot character. To match the dot, we need to 
+escape it with `"\\."`:
+
+```{r}
+# we could try to be more precise and match ".jpg"
+grep("\\.jpg ", sublogs, value = TRUE)
+```
+
+
+### Function `str_detect()`
+
+A similar output of `grep()` can be obtained with `str_detect()`, which allows
+you to _detect_ what elements contain a match to the specified pattern:
+
+```{r}
+# matching "jpg" (which lements)
+str_detect(string = sublogs, pattern = "\\.jpg")
+```
+
+We can do the same for PNG extensions:
+
+```{r}
+# matching "png" (which lements)
+str_detect(string = sublogs, pattern = "\\.png")
+```
+
+
+### Function `str_extract()`
+
+Another common task when working with regular expressions has to do with pattern extraction. In other words, when you want to extract a matched pattern. For this purposes, we can use `str_extract()`
+
+```{r}
+# extracting "jpg" (which lements)
+str_extract(string = sublogs, pattern = "\\.jpg")
+```
+
+`str_extract()` actually let us confirm that we are matching the desired patterns. Notice that when there is no match, `str_extract()` returns a missing value `NA`.
+
+
+### Image files
+
+Now let's try to detect all types of image files: JPG, PNG, GIF, ICO
+
+```{r}
+# looking for image file extensions
+jpgs <- str_detect(logs, pattern = "\\.jpg ")
+sum(jpgs)
+
+pngs <- str_detect(logs, pattern = "\\.png ")
+sum(pngs)
+
+gifs <- str_detect(logs, pattern = "\\.gif")
+sum(gifs)
+
+icos <- str_detect(logs, pattern = "\\.ico ")
+sum(icos)
+```
+
+
+### How to match image files with one regex pattern?
+
+We can use character sets to define a more generic pattern. For instance, to
+match `"jpg"` or `"png"`, we could join three character sets: `"[jp][pn][g]"`.
+The first set `[jp]` looks for `j` or `p`, the second set `[pn]` looks for
+`p` or `n`, and the third set simply looks for `g`.
+
+```{r}
+# matching "jpg" or "png"
+jpg_png_lines <- str_detect(sublogs, "[jp][pn][g]")
+sum(jpg_png_lines)
+```
+
+Including the dot, we can use: `"\\.[jp][pn][g]"`
+
+```{r}
+# matching "jpg" or "png"
+jpg_png_lines <- str_detect(sublogs, "\\.[jp][pn][g]")
+sum(jpg_png_lines)
+```
+
+We could generalize the pattern to include the GIF and ICO extensions:
+
+```{r}
+# matching "jpg" or "png" or "gif"
+image_lines1 <- str_detect(sublogs, "[jpgi][pnic][gfo]")
+sum(image_lines1)
+```
+
+To confirm that we are actually matching `jpg`, `png`, `gif` and `ico`, let's
+use `str_extract()`
+
+```{r}
+# are we correctly extracting image file extensions?
+str_extract(sublogs, "[jpgi][pnic][gfo]")
+```
+
+The previous pattern does not quite work: note that we are matching the pattern
+frmed by `"ing"` which does not correspond to a file extension.
+
+An alternative way to detect JPG and PNG is by grouping patterns inside
+parentheses, and separating them with the metacharacter `"|"` which means _OR_:
+
+```{r}
+# detecting .jpg OR .png
+jpg_png <- str_detect(sublogs, "(\\.jpg)|(\\.png)")
+sum(jpg_png)
+```
+
+Here's how to detect all the extension in one single pattern:
+
+```{r}
+# matching "jpg" or "png" or "gif" or "ico"
+image_lines <- str_detect(sublogs, "(\\.jpg)|(\\.png)|(\\.gif)|(\\.ico)")
+sum(image_lines)
+```
+
+To make sure our regex operation is successful, let's see the output of 
+`str_extract()`:
+
+```{r}
+images_output <- str_extract(sublogs, "(\\.jpg)|(\\.png)|(\\.gif)|(\\.ico)")
+images_output
+```
+
+Let's aply the search on the entire log file and count how many files of each
+type:
+
+```{r}
+# frequencies
+img_extensions <- str_extract(logs, "(\\.jpg)|(\\.png)|(\\.gif)|(\\.ico)")
+table(img_extensions)
+```
+
