@@ -133,7 +133,7 @@ You will also use a terminal emulator to work with command line.
 
 ### Other
 
-- Please read the course [logistics and policies](syllabus/policies.md) for mode details
+- Please read the course [logistics and policies](syllabus/policies.md) for more details
 about the structure of the course, DO's and DONT's, etc.
 
 <a href="syllabus/policies.md"><img src="images/it-is-in-the-syllabus.png" width="580" height="330"></a>
