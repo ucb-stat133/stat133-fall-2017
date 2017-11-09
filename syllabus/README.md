@@ -248,15 +248,14 @@ RStudio).
 + __Dates__: Nov 06-10
 + __Topics__: Introduction to Regular Expressions.
 + __Lecture Material__
-    + Introduction to regular expressions.
+    + [Introduction to regular expressions](../tutorials/13-intro-to-regex.md)
     + [Regexpal](http://regexpal.com.s3-website-us-east-1.amazonaws.com/) tester tool.
 + __Lab material__: 
-    + TBA
+    + No lab (veteran's day)
 + __Reading__:
     + [Handling Strings in R](http://www.gastonsanchez.com/r4strings) by GS.
 + __Cheat sheet__:
     + [Regular Expressions cheat sheet](../cheat-sheets/regular-expressions-cheatsheet.pdf)
-+ __HOMEWORK:__ Problem set 4
 
 
 -----
@@ -267,6 +266,7 @@ RStudio).
 
 + __Dates__: Nov 13-17
 + __Topics__: Extensible Markup Language (XML) and related formats.
++ __HOMEWORK:__ [Problem Set 4](../hws/hw04-grades-visualizer.pdf) due Nov-19
 
 
 -----
