@@ -243,7 +243,7 @@ RStudio).
 
 
 
-## 11. Regular Expressions
+## 11. Regular Expressions (part 1)
 
 + __Dates__: Nov 06-10
 + __Topics__: Introduction to Regular Expressions.
@@ -262,10 +262,16 @@ RStudio).
 
 
 
-## 12. XML
+## 12. Regular Expressions (part 2)
 
 + __Dates__: Nov 13-17
-+ __Topics__: Extensible Markup Language (XML) and related formats.
++ __Topics__: More about Regular Expressions and working with strings.
++ __Lab material__: 
+    + [Regex basics](../labs/lab11-regex-basics.md)
++ __Reading__:
+    + [Handling Strings in R](http://www.gastonsanchez.com/r4strings) by GS.
++ __Cheat sheet__:
+    + [Regular Expressions cheat sheet](../cheat-sheets/regular-expressions-cheatsheet.pdf)
 + __HOMEWORK:__ [Problem Set 4](../hws/hw04-grades-visualizer.pdf) due Nov-19
 
 
