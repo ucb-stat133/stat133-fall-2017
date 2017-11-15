@@ -1,13 +1,14 @@
-Lab 11: Manipulating strings, part 2
+Lab 11: Regular Expressions
 ================
 Gaston Sanchez
 
 > ### Learning Objectives
 >
+> -   Work with the package `"stringr"`
 > -   String manipulation
-> -   Base R functions
-> -   R package `"stringr"`
+> -   More regular expressions
 > -   A bit of data cleaning
+> -   Making some maps
 
 ------------------------------------------------------------------------
 
@@ -35,7 +36,7 @@ download.file(paste0(github, datafile), destfile = "mobile-food-sf.csv")
 Once you've downloaded the data file, you can read it in R:
 
 ``` r
-dat <- read.csv('data/mobile-food-sf.csv', stringsAsFactors = FALSE)
+dat <- read.csv('mobile-food-sf.csv', stringsAsFactors = FALSE)
 ```
 
 The variables are:
@@ -153,18 +154,18 @@ periods <- str_sub(times, start = -2)
 
 ------------------------------------------------------------------------
 
-Lat and Long Coordinates
-------------------------
+Latitude and Longitude Coordinates
+----------------------------------
 
-Another interesting column in the data is `Location`. If you look at this column, you will see values like the string below `loc1`
+Another interesting column in the data is `Location`. If you look at this column, you will see values like the following string `loc1`
 
 ``` r
 loc1 <- "(37.7651967350509,-122.416451692902)"
 ```
 
-The goal is to split `Location` into latitude and longitude.
+The goal is to split `Location` into latitude and longitude. The first value corresponds to latitude, while the second value corresponds to longitude.
 
-First we need to remove the parenthesis. The issue here is that the characters `(` and `)` have special meanings; recall they are metacharacters. So you need to **escape** them by pre-appending two backslashes: `\\(` and `\\)`
+First we need to remove the parenthesis. The issue here is that the characters `(` and `)` have special meanings; recall they are metacharacters. So you need to **escape** in R them by pre-appending two backslashes: `\\(` and `\\)`
 
 ``` r
 # "remove" opening parenthesis 
@@ -180,7 +181,7 @@ str_replace(loc1, pattern = '\\)', replacement = '')
 
     ## [1] "(37.7651967350509,-122.416451692902"
 
-You can also combine both patterns in one single call. But be careful:
+You can also combine both patterns in a single call. But be careful:
 
 ``` r
 str_replace(loc1, pattern = '\\(|\\)', replacement = '')
@@ -199,9 +200,9 @@ str_replace_all(loc1, pattern = '\\(|\\)', replacement = '')
 Now we need to get rid of the comma `,`. You could replace it with an empty string, but then you will end up with one long string like this:
 
 ``` r
-lat_long <- str_replace_all(loc1, pattern = '\\(|\\)', replacement = '')
+lat_lon <- str_replace_all(loc1, pattern = '\\(|\\)', replacement = '')
 
-str_replace(lat_long, pattern = ',', replacement = '')
+str_replace(lat_lon, pattern = ',', replacement = '')
 ```
 
     ## [1] "37.7651967350509-122.416451692902"
@@ -210,7 +211,7 @@ Instead of replacing the comma, what we need to use is `str_split()`
 
 ``` r
 # string split in stringr
-str_split(lat_long, pattern = ',')
+str_split(lat_lon, pattern = ',')
 ```
 
     ## [[1]]
@@ -232,29 +233,181 @@ locs <- c(
 )
 ```
 
--   create a list `lat_long` containing the latitude and the longitude values of `locs`
+-   create a list `lat_lon` containing the latitude and the longitude values of `locs`
 
-Assuming that you have `lat_long`, to retrieve the latitude and longitude values, you can use the `lapply()` function, and then specify an *anonymous* function to get the first element (for the latitude) and the second element (for the longitude):
-
-``` r
-lat <- lapply(lat_long, function(x) x[1])
-long <- lapply(lat_long, function(x) x[2])
-```
-
-Finally, to convert from list to a vector, use `unlist()`
+Assuming that you have `lat_lon`, to retrieve the latitude and longitude values, you can use the `lapply()` function, and then specify an *anonymous* function to get the first element (for the latitude):
 
 ``` r
-latitute <- as.numeric(unlist(lat))
-longitude <- as.numeric(unlist(long))
+lat <- lapply(lat_lon, function(x) x[1])
 ```
 
 ### Your Turn
 
-Add two more columns: `Latitude` and `Longitude` to `dat`
+Create a list `lon` by using `lapply()` with an anonymous function to extract longitude value (i.e. the second element):
+
+To convert from list to a vector, use `unlist()`
+
+``` r
+latitute <- as.numeric(unlist(lat))
+longitude <- as.numeric(unlist(lon))
+```
+
+Add two more columns: `lat` and `lon` to the data frame `dat`
 
 ``` r
 # your code
 ```
+
+------------------------------------------------------------------------
+
+Plotting locations on a map
+---------------------------
+
+Now that you have two vectors `latitude` and `longitude`, and the corrsponding columns `lat` and `lon` in the data frame `dat`, let's try to plot those coordinates on a map.
+
+A naive option would be to graph the locations with `plot()`
+
+``` r
+plot(dat$lon, dat$lat, pch = 19, col = "#77777744")
+```
+
+![](lab11-images/ugly_map-1.png)
+
+R has several packages and functions to plot maps. One of those packages is `"RgoogleMaps"`
+
+``` r
+# install.packages("RgoogleMaps")
+library(RgoogleMaps)
+```
+
+To get a map you use the function `GetMap()` which requiresa `center` and a `zoom` specifications. The `center` is vector with the latitude and longitude coordinates. The argument `zoom` refers to the zoom level.
+
+``` r
+# coordinates for center of the map
+center <- c(mean(dat$lat, na.rm = TRUE), mean(dat$lon, na.rm = TRUE))
+
+# zoom value
+zoom <- min(MaxZoom(range(dat$lat, na.rm = TRUE), 
+                    range(dat$lon, na.rm = TRUE)))
+
+# san francisco map
+map1 <- GetMap(center=center, zoom=zoom, destfile = "san-francisco.png")
+```
+
+The code above downloads a static map from the Google server and saves it in the specified destination file. To make a plot you have to use `PlotOnStaticMap()`
+
+``` r
+PlotOnStaticMap(map1, dat$lat, dat$lon, col = "#ed4964", pch=20)
+```
+
+![](lab11-images/san-francisco-map-1.png)
+
+------------------------------------------------------------------------
+
+Maps with `"ggmap"`
+-------------------
+
+Another useful package for plotting maps is `"ggmap"`. As you may guess, `"ggmap"` follows the graphing approach of `"ggplot2"`.
+
+As usual, you need to install the package:
+
+``` r
+# remember to install ggmap
+install.packages("ggmap")
+library(ggmap)
+```
+
+It is possible that you run into some issues with `"ggmap"` (and `"ggplot2"`). Apparently, there are a couple of conflicting bugs in some versions of these packages. If you encounter some cryptic errors, you may switch to an older version of `"ggplot2"`
+
+``` r
+# skip this part (come back if you run into some error messages)
+# (go back to a previous version of ggplot)
+devtools::install_github("hadley/ggplot2@v2.2.0")
+```
+
+Here I'm assuming that the data frame `dat` already includes columns `lat` and `lon`:
+
+``` r
+# add variables 'lat' and 'lon' to the data frame
+dat$lat <- lat
+dat$lon <- lon
+```
+
+Because some rows have missing values in the geographical coordinates, we can get rid of them with `'na.omit()`:
+
+``` r
+# let's get rid of rows with missing values
+dat <- na.omit(dat)
+```
+
+In order to plot a map with `ggmap()`, we need to define the region of the map via the function `make_bbox()`:
+
+``` r
+# ggmap typically asks you for a zoom level, 
+# but we can try using ggmap's make_bbox function:
+sbbox <- make_bbox(lon = dat$lon, lat = dat$lat, f = .1)
+sbbox
+```
+
+    ##       left     bottom      right        top 
+    ## -122.48867   37.69985 -122.36281   37.81595
+
+Now that you have the object `sbbox`, the next step is to get a map with `get_map()`. This function gets a map from Google by default.
+
+``` r
+# get a 'terrain' map
+sf_map <- get_map(location = sbbox, maptype = "terrain", source = "google")
+```
+
+    ## Warning: bounding box given to google - spatial extent only approximate.
+
+    ## converting bounding box to center/zoom specification. (experimental)
+
+    ## Source : https://maps.googleapis.com/maps/api/staticmap?center=37.757897,-122.425744&zoom=13&size=640x640&scale=2&maptype=terrain&language=en-EN
+
+Having obtained the `sf_map` object, we can finally use `ggmap()` to plot some dots with out `lat` and `lon` coordinates:
+
+``` r
+ggmap(sf_map) + 
+  geom_point(data = dat, 
+             mapping = aes(x = lon, y = lat), 
+             color = "red", alpha = 0.2, size = 1)
+```
+
+    ## Warning: Removed 98 rows containing missing values (geom_point).
+
+![](lab11-images/sf_map-1.png)
+
+------------------------------------------------------------------------
+
+Let's look for specific types of food
+-------------------------------------
+
+The data table contains a column `optionaltext` describing the types of food and meals served by the food trucks. Let's take a look at the first 3 elements:
+
+``` r
+dat$optionaltext[1:3]
+```
+
+    ## [1] "Tacos, Burritos, Tortas, Quesadillas, Mexican Drinks, Aguas Frescas"   
+    ## [2] "Cold Truck: sandwiches, drinks, snacks, candy, hot coffee"             
+    ## [3] "Cold Truck: Pre-packaged Sandwiches, Various Beverages, Salads, Snacks"
+
+Notice that the first element (i.e. the first food truck) prepares *Tacos, Burritos, Tortas, Quesadillas*, etc.
+
+What if you want to identify all locations that have burritos? This is where regular expressions comes very handy. Again, always start small: select the first 10 elements of `optionaltext`
+
+``` r
+foods <- dat$optionaltext[1:10]
+```
+
+-   Use `str_detect()` (or equivalently `grep()`) to match `"Burritos"` and `"burritos"`.
+-   If you use `grepl()`, you can use `ignore.case = TRUE` to match for both/
+-   Try another pattern: e.g. `"tacos"`, or `quesadillas`
+-   Now create a data frame `burritos` by subsetting (i.e. filtering) the data frame to get only those rows that match `"burritos"`
+-   Use the `lat` and `lon` corrdinates in `burritos` to display a map of locations with *burritos* (see map below).
+
+![](lab11-images/sf_map_burritos-1.png)
 
 ------------------------------------------------------------------------
 
@@ -273,8 +426,8 @@ Select the columns:
 -   `optionaltext`
 -   `ColdTruck`
 -   `Applicant`
--   `Latitude`
--   `Longitude`
+-   `lat`
+-   `lon`
 
 Save the data with the selected columns as a csv file called `food-mobile-clean.csv` (save it in your working directory)
 
