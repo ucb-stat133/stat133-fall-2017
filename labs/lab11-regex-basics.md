@@ -273,7 +273,7 @@ plot(dat$lon, dat$lat, pch = 19, col = "#77777744")
 
 ![](lab11-images/ugly_map-1.png)
 
-Althouth the previous call shows the dots with the right latitude and longitude coordinates, there's no visual cues that let us perceive the information in *geographical* way.
+Althouth the previous call shows the dots with the right latitude and longitude coordinates, there's no visual cues that let us perceive the information in a *geographical* way.
 
 Instead of displaying a *naked* `plot()`, we can use the package `"RgoogleMaps"` which is one the several packages available in R to plot maps.
 
@@ -331,8 +331,8 @@ Here I'm assuming that the data frame `dat` already includes columns `lat` and `
 
 ``` r
 # add variables 'lat' and 'lon' to the data frame
-dat$lat <- lat
-dat$lon <- lon
+dat$lat <- latitude
+dat$lon <- longitude
 ```
 
 Because some rows have missing values in the geographical coordinates, we can get rid of them with `'na.omit()`:
@@ -367,7 +367,7 @@ sf_map <- get_map(location = sbbox, maptype = "terrain", source = "google")
 
     ## Source : https://maps.googleapis.com/maps/api/staticmap?center=37.757897,-122.425744&zoom=13&size=640x640&scale=2&maptype=terrain&language=en-EN
 
-Having obtained the `sf_map` object, we can finally use `ggmap()` to plot some dots with out `lat` and `lon` coordinates:
+Having obtained the `sf_map` object, we can finally use `ggmap()` to plot some dots with our `lat` and `lon` coordinates:
 
 ``` r
 ggmap(sf_map) + 
@@ -385,7 +385,7 @@ ggmap(sf_map) +
 Let's look for specific types of food
 -------------------------------------
 
-The data table contains a column `optionaltext` describing the types of food and meals served by the food trucks. Let's take a look at the first 3 elements:
+The data table `dat` contains a column `optionaltext` describing the types of food and meals served by the food trucks. Let's take a look at the first 3 elements:
 
 ``` r
 dat$optionaltext[1:3]
@@ -404,8 +404,8 @@ foods <- dat$optionaltext[1:10]
 ```
 
 -   Use `str_detect()` (or equivalently `grep()`) to match `"Burritos"` and `"burritos"`.
--   If you use `grepl()`, you can use `ignore.case = TRUE` to match for both/
--   Try another pattern: e.g. `"tacos"`, or `quesadillas`
+-   If you use `grepl()`, you can use `ignore.case = TRUE` to match for both.
+-   Try another pattern: e.g. `"tacos"`, or `"quesadillas"`
 -   Now create a data frame `burritos` by subsetting (i.e. filtering) the data frame to get only those rows that match `"burritos"`
 -   Use the `lat` and `lon` corrdinates in `burritos` to display a map of locations with *burritos* (see map below).
 -   Experiment with other types of foods
