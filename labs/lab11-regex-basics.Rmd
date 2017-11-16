@@ -309,22 +309,23 @@ dat$lon <- as.numeric(unlist(lon))
 
 Now that you have two vectors `latitude` and `longitude`, and the corrsponding columns `lat` and `lon` in the data frame `dat`, let's try to plot those coordinates on a map.
 
-A naive option would be to graph the locations with `plot()`
+A naive option would be to graph the locations with `plot()`:
 
 ```{r ugly_map}
 plot(dat$lon, dat$lat, pch = 19, col = "#77777744")
 ```
 
 
-R has several packages and functions to plot maps. One of those packages is 
-`"RgoogleMaps"`
+Althouth the previous call shows the dots with the right latitude and longitude coordinates, there's no visual cues that let us perceive the information in _geographical_ way.
+
+Instead of displaying a _naked_ `plot()`, we can use the package `"RgoogleMaps"` which is one the several packages available in R to plot maps.
 
 ```{r}
 # install.packages("RgoogleMaps")
 library(RgoogleMaps)
 ```
 
-To get a map you use the function `GetMap()` which requiresa `center` and a `zoom` specifications. The `center` is vector with the latitude and longitude coordinates. The argument `zoom` refers to the zoom level.
+To get a map you use the function `GetMap()` which requires a `center` and a `zoom` specifications. The `center` is a vector with the latitude and longitude coordinates. The argument `zoom` refers to the zoom level.
 
 ```{r san-francisco, echo = FALSE}
 # coordinates for center of the map
@@ -442,6 +443,8 @@ foods <- dat$optionaltext[1:10]
 - Try another pattern: e.g. `"tacos"`, or `quesadillas`
 - Now create a data frame `burritos` by subsetting (i.e. filtering) the data frame to get only those rows that match `"burritos"`
 - Use the `lat` and `lon` corrdinates in `burritos` to display a map of locations with _burritos_ (see map below).
+- Experiment with other types of foods
+- Challenge: try use facetting to show a type of food per facet (e.g. one facet for burritos, another for quesadillas, another one for tacos, etc)
 
 ```{r sf_map_burritos, echo = FALSE, warning = FALSE}
 burros <- grepl("burritos", dat$optionaltext, ignore.case = TRUE)
@@ -456,30 +459,113 @@ ggmap(sf_map) +
 
 -----
 
-## Exporting the cleaned data
 
-Now that you've pre-processed some of the columns in `dat`, it's time to create
-a clean version of the data set.
+## Practice more Regex patterns
 
-Select the columns:
-
-- `DayOfWeekStr`
-- `start`
-- `end`
-- `duration`
-- `PermitLocation`
-- `optionaltext`
-- `ColdTruck`
-- `Applicant`
-- `lat`
-- `lon`
-
-Save the data with the selected columns as a csv file called 
-`food-mobile-clean.csv` (save it in your working directory)
+Here's a vector with some character strings:
 
 ```{r}
-# export the clean data
-
+# vector of strings
+animals <- c('dog', 'cat', 'bird', 'dolphin', 'lion',
+             'zebra', 'tiger', 'wolf', 'whale', 'eagle',
+             'pig', 'osprey', 'kangaroo', 'koala')
 ```
 
+Let's match the pattern `dog` with `grep()`
+
+```{r}
+grep('dog', animals)
+```
+
+To _extract_ the matched pattern, you can use `grep()` with the argument `value = TRUE`:
+
+```{r}
+grep('dog', animals, value = TRUE)
+```
+
+Using `"stringr"` functions, you can use `str_detect()` to check if there is a match:
+
+```{r}
+str_detect(animals, 'dog')
+```
+
+To extract the matched pattern, you use `str_extract()`:
+
+```{r}
+str_extract(animals, 'dog')
+```
+
+What if you just want to extract the matched pattern and nothing else? Then use logical subsetting:
+
+```{r}
+animals[str_detect(animals, 'dog')]
+```
+
+
+### Your turn
+
+Use `str_extract()`, and logical subsetting with `str_detect()`, to find the names of animals with:
+
+- zero or more `o` 
+- zero or one `o`
+- at least 1 `o`: `"dog" "dolphin" "lion" "wolf" "osprey" "kangaroo" "koala"`
+- exactly 2 `o`'s together: `"kangaroo"`
+- one `o`, but not two `o`'s together: `"dog" "dolphin" "lion"    "wolf" "osprey"  "koala"`
+- two vowels together: `"lion" "eagle" "kangaroo" "koala"`
+- two consonants together: `"bird" "dolphin"  "zebra" "wolf"     "whale" "eagle" "osprey" "kangaroo"`
+- three consonants together: `"dolphin" "osprey"`
+- three letters only: `"dog" "cat" "pig"`
+- four letters only: `"bird" "lion" "wolf"`
+
 -----
+
+## File Names
+
+Here's another character vector with some file names and their extensions:
+
+```{r}
+files <- c('sales1.csv', 'orders.csv', 'sales2.csv',
+           'sales3.csv', 'europe.csv', 'usa.csv', 'mex.csv',
+           'CA.csv', 'FL.csv', 'NY.csv', 'TX.csv',
+           'sales-europe.csv', 'sales-usa.csv', 'sales-mex.csv')
+```
+
+### Your turn
+
+- Find the file names containing numbers
+- Find the file names containing no numbers
+- Find the file names containing lower case letters
+- Find the file names containing upper case letters
+- Find the file names containing a dash
+- Find the file names containing no dash
+- Create a vector of files by replacing the 'csv' extension into 'txt' extension
+- Separate file name from file extension
+
+-----
+
+## Some Functions
+
+Create a function `split_chars()` that splits a character string into one single character elements. The output must be a single character vector. For example, `split_chars('Go Bears!')` should return
+
+```
+"G" "o" " " "B" "e" "a" "r" "s" "!"
+```
+
+Here's another exmaple, `split_chars('Expecto Patronum')` should return:
+
+```
+"E" "x" "p" "e" "c" "t" "o" " " "P" "a" "t" "r" "o" "n" "u" "m"
+```
+
+Write a function `reverse_chars()` that reverses a string by characters. For instance: `reverse_chars("gattaca")` should return
+
+```
+"acattag"
+```
+
+and `reverse_chars("Lumox Maxima")` should return
+
+```
+"amixaM xomuL"
+```
+
