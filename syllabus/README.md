@@ -265,7 +265,9 @@ RStudio).
 ## 12. Regular Expressions (part 2)
 
 + __Dates__: Nov 13-17
-+ __Topics__: More about Regular Expressions and working with strings.
++ __Topics__: More about Regular Expressions and coding habits.
++ __Lecture Material__
+    + [Coding habits](../tutorials/18-good-habits.pdf)     
 + __Lab material__: 
     + [Regex basics](../labs/lab11-regex-basics.md)
 + __Reading__:
