@@ -325,6 +325,7 @@ It is possible that you run into some issues with `"ggmap"` (and `"ggplot2"`). A
 # skip this part (come back if you run into some error messages)
 # (go back to a previous version of ggplot)
 devtools::install_github("hadley/ggplot2@v2.2.0")
+devtools::install_github("dkahle/ggmap")
 ```
 
 Here I'm assuming that the data frame `dat` already includes columns `lat` and `lon`:

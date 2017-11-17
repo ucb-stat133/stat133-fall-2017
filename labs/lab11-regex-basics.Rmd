@@ -30,6 +30,8 @@ sets require a pre-processing phase, and most of the time in any data analysis
 project will be spent on getting the data in the right shape. So it is 
 extremely important that you gain skills to help you clean raw data.
 
+While you work on this lab you may want to look at the [regex cheatsheet](https://github.com/ucb-stat133/stat133-fall-2017/blob/master/cheat-sheets/regular-expressions-cheatsheet.pdf)
+
 
 ### Mobile Food Schedule Data
 
@@ -378,6 +380,7 @@ packages. If you encounter some cryptic errors, you may switch to an older versi
 # skip this part (come back if you run into some error messages)
 # (go back to a previous version of ggplot)
 devtools::install_github("hadley/ggplot2@v2.2.0")
+devtools::install_github("dkahle/ggmap")
 ```
 
 Here I'm assuming that the data frame `dat` already includes columns `lat` and `lon`:
