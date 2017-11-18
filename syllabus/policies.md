@@ -62,7 +62,7 @@ As Stat 133 gets larger and larger every year, running the course as smoothly as
 limited to, Internet congestion, system crashes, natural disasters, 
 theft, medical emergencies, personal crisis, theft or any extraordinary 
 circumnstances (e.g. illnes, exhaustion, mourning, loss of internet connection, bCourses is down, broken computer). Don't ask. I won't be sympathetic.
-- I will drop your lowest HW score.
+- I will drop the lowest score among the first three assignments (HW01, HW02, and HW03).
 - The homework assignments will get substantially more difficult as we
 progress with the course.
 - If you collaborate with other students when working on a HW assignment, please include the names of those students in your submission.
