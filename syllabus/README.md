@@ -274,7 +274,7 @@ RStudio).
     + [Handling Strings in R](http://www.gastonsanchez.com/r4strings) by GS.
 + __Cheat sheet__:
     + [Regular Expressions cheat sheet](../cheat-sheets/regular-expressions-cheatsheet.pdf)
-+ __HOMEWORK:__ [Problem Set 4](../hws/hw04-grades-visualizer.pdf) due Nov-19
++ __HOMEWORK:__ [Problem Set 4](../hws/hw04-grades-visualizer.pdf) due Nov-26
 
 
 -----
