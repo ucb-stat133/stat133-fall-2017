@@ -285,6 +285,8 @@ RStudio).
 
 + __Dates__: Nov 27-Dec 01
 + __Topics__: Visual Perception, Colors, Effective Statistical Graphics
++ __Lecture Material__
+    + Datavis and the Data Analysis Cycle (chalk and talk)  
 + __HOMEWORK:__ [Post 2](../hws/post02-second-post.md) due Nov-30
 
 
