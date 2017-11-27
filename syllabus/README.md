@@ -281,12 +281,25 @@ RStudio).
 
 
 
-## 13. Data Visualization
+## 13. Thanksgiving Week
+
++ __Dates__: Nov 20-24
++ __Topics__: Data visualization and the DAC
++ __Lecture Material__
+    + Comments on Data Visualization and the Data Analysis Cycle (chalk and talk).
+
+
+-----
+
+
+
+## 14. Data Technologies: XML
 
 + __Dates__: Nov 27-Dec 01
-+ __Topics__: Visual Perception, Colors, Effective Statistical Graphics
++ __Topics__: Introduction to XML and webscraping
 + __Lecture Material__
-    + Datavis and the Data Analysis Cycle (chalk and talk)  
+    + [Introduction to XML](../slides/19-xml.pdf)
+    + [HTML and Web Scraping](../tutorials/12-web-scraping.md) (tutorial)
 + __HOMEWORK:__ [Post 2](../hws/post02-second-post.md) due Nov-30
 
 
@@ -294,9 +307,11 @@ RStudio).
 
 
 
-## 14. RRR week
+## 15. RRR week
 
 + __Dates__: Dec 04-08
 + __Topics__: Prepare for final examination
++ __Lecture Material__
+    + No lecture. Instructor will hold OH (4-5pm in 309 Evans)   
 + __FINAL:__ Friday Dec-15th, 8-11am (room TBA)
 
