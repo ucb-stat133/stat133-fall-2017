@@ -1,7 +1,7 @@
 Post 2 - Stat 133, Fall 2017
 ================
 
-**Due date:** Thursday Nov-30, 2017 (before midnight)
+**Due date:** Sunday Dec-03, 2017 (before midnight)
 
 The purpose of this assignment is to write a second blog post about one or more topics covered so far in the course.
 
@@ -50,7 +50,7 @@ What to submit and where?
 
 -   Write your post using an `Rmd` file, and knit it in both `md` and `html` versions. Name the files: `post02-first-last.md` and `post02-first-last.html` with your own *first* and *last* names.
 
--   You will also have to submit your `html` file to bCourses, and to a Box folder **before the deadline (11/30)**.
+-   You will also have to submit your `html` file to bCourses, and to a Box folder **before the deadline (12/03)**.
 
 -   Late submissions to Box will be penalized with a score of 0 (zero). No exceptions.
 
