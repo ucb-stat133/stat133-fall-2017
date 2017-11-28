@@ -130,34 +130,40 @@ Last but not least: please keep in mind the diversity of student backgrounds in 
       <td>There is no code, or code is impossible to understand, there are no comments.</td>
     </tr>
     <tr>
-      <td><b>4) Reproducibility</b></td>
-      <td>All results (e.g. tables, graphs, outputs) are computationally reproducible</td>
-      <td>Between one and three results are impossile to reproduce</td>
-      <td>More than half of the results are irreproducible</td> 
+      <td><b>4) Instructions</b></td>
+      <td>The author has provided specific instructions and details that are easy to follow in order to rerun all examples: e.g. packages, dependencies, functions, random seeds, etc.</td>
+      <td>Some of the provided instructions are confusing, hard to understand, or difficult to follow.</td>
+      <td>The author provided NO specific instructions whatsoever: e.g. no information about required packages, dependencies, functions, random seeds.</td>
     </tr>
     <tr>
-      <td><b>5) Spelling</b></td>
+      <td><b>5) Reproducibility</b></td>
+      <td>After carefully following the provided instructions, ALL results (e.g. tables, graphs, outputs) are computationally reproducible.</td>
+      <td>After carefully following the provided instructions, between one and three results are impossible to reproduce.</td>
+      <td>After carefully following the provided instructions, more than half of the results are irreproducible.</td> 
+    </tr>
+    <tr>
+      <td><b>6) Spelling</b></td>
       <td>There are basically no typos or spelling errors.</td>
       <td>Several typos and/or errors, but they don't interfere with the reading.</td>
       <td>The typos and/or errors make the post difficult to read (e.g. reader has to spend some time deciphering the meaning of a sentence).</td>
     </tr>
     <tr>
-      <td><b>6) References</b></td>
+      <td><b>7) References</b></td>
       <td>There are at least 7 references, all valid.</td>
       <td>There are at least 7 references, but one or two of them are suspicious or invalid; e.g. a link does not work, a video does not exist.</td>
       <td>There are less than 7 references, or three or more references are suspicious or invalid; e.g. a link does not work, a video does not exist.</td>
     </tr>
     <tr>
-      <td><b>7) Organization</b></td>
+      <td><b>8) Organization</b></td>
       <td>Content is well organized, with identifiable sections and subsections, logical structure, it flows adequately.</td>
       <td>Content is somewhat organized, but some parts lack structure.</td>
       <td>Content poorly organized, lacking overall structure. Gives the impression that it was written "one hour before the deadline".</td>
     </tr>
     <tr>
-      <td><b>8) Originality</b></td>
-      <td>The post presents material beyond what was covered in lecture, lab, slides, and tutorials. There is added value to it.</td>
-      <td>The post is an elaborated remix of already covered material, but it considers new data set(s), adds personal opinions, reflections, and interesting examples.</td>
-      <td>The post is a simplistic remix of what has been covered in lecture, lab, slides, and tutorials, without adding any new data, personal opinions and reflections.</td>
+      <td><b>9) Originality</b></td>
+      <td>The post presents material: e.g. data, graphs, commands, concepts; beyond what was covered in lecture, lab, slides, and tutorials.</td>
+      <td>The post is an elaborated remix of already covered material, but it expands on what has been covered in a very limited way: a new function is introduced, a modified version of a data set already seen, a modified version of commands already used.</td>
+      <td>The post is basically a copy/repetition of what has been covered in lecture, lab, slides, and tutorials: e.g. same data, same commands, same graphs, same functions; and it does not add personal opinions or reflections.</td>
     </tr>
     <tr>
       <td><b>10) Message</b></td>
@@ -171,15 +177,13 @@ Last but not least: please keep in mind the diversity of student backgrounds in 
 <h3>
 Extra Comments
 </h3>
-In addition to the rubric, here's a list of 8 questions to be answered by the reviewer:
+In addition to the rubric, here's a list of 7 questions to be answered by the reviewer:
 
 -   If you were not able to reproduce all the results (e.g. outputs, tables, graphs) of the post, why was that?
 
 -   What things did you like about the post? Mention at least two of them.
 
 -   What things could potentially be improved? Provide respectful constructive criticism.
-
--   Would you endorse reading the post on your social media apps (e.g. facebook, twitter, etc)?
 
 -   Would you make the post part of the reading material for future editions of Stat 133?
 
