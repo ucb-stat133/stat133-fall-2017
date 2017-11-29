@@ -299,6 +299,7 @@ RStudio).
 + __Topics__: Introduction to XML and webscraping
 + __Lecture Material__
     + [Introduction to XML](../slides/19-xml.pdf)
+    + [Introduction to "rvest"](../tutorials/14-intro-to-rvest.md)
 + __Lab material__: 
     + [HTML and Web Scraping](../labs/lab12-web-scraping.md)
 + __HOMEWORK:__ [Post 2](../hws/post02-second-post.md) due Nov-30
