@@ -58,10 +58,10 @@ gsw <- "/teams/GSW/2017.html"
 gsw_url <- paste0(basket, gsw)
 
 # download HTML file to your working directory
-download.file(gsw_url, 'gsw-2017.html')
+download.file(gsw_url, 'gsw-roster-2017.html')
 
 # Read GSW Roster html table
-gsw_roster <- readHTMLTable('gsw-2017.html')
+gsw_roster <- readHTMLTable('gsw-roster-2017.html')
 ```
 
 If you inspect the contents of `gsw_roster` you should be able to see some 
@@ -154,7 +154,7 @@ xml_doc <- read_html(nba_html)
 ```
 
 The object `xml_doc` is an object of class `"xml_document"`. If you are 
-curoius about extracting all the content in a character vector, then use 
+curious about extracting all the content in a character vector, then use 
 the function `html_text()`, chained with the pipe `%>%` operator:
 
 ```{r eval = FALSE}
@@ -168,7 +168,7 @@ the html file.
 ### Extracting elements `h2`
 
 Before attempting extracting the href attributes, let's begin with something
-simpler. For example, extracting the value of all the HTML elements __h2__ 
+simpler. For example, let's see how to extract the value of all the HTML elements __h2__ 
 (i.e. headings of level 2). This can be done with the function `html_nodes()`, 
 and then `html_text()`
 
@@ -220,16 +220,44 @@ xml_doc %>%
   html_text()
 ```
 
+
+## XPath
+
 In order to specify HTML elements that are embeded inside other HTML elements,
-you need to use _X paths_. Xpaths are expressions (similar to file paths) that
-allow you to indicate the specific _path_ that must be taken to arrive at a given node.
-The previous `p.listhead` nodes can also be extracted with an Xpath expression:
+you need to use __XPaths__. 
+
+XPath expressions have a syntax similar to the way files are located in a 
+hierarchy of directories/folders in a computer file system. To be more precise,
+Xpath expressions allow you to indicate the 
+specific _path_ that must be taken to arrive at a given node.
+
+In general, we can specify paths through the tree structure:
+
+- based on node names
+- based on node content
+- based on a node's relationship to other nodes
+
+| Symbol  | Description                |
+|---------|----------------------------|
+|  `/`    | selects from the root node |
+|  `//`   | selects nodes anywhere     |
+|  `.`    | selects the current node   |
+|  `..`   | Selects the parent of the current node |
+|  `@`    | Selects attributes         |
+|  `[]`   | Square brackets to indicate attributes |
+
+
+Let's go back to the `p.listhead` nodes. These can be extracted with an Xpath expression like this:
 
 ```{r}
 xml_doc %>%
   html_nodes(xpath = '//p[@class="listhead"]') %>%
   html_text()
 ```
+
+The XPath `'//p[@class="listhead"]'` means that we want to locate, anywhere in 
+the tree (`//`), all `<p>` nodes that have an attribute named `class` that 
+takes the value `"listhead"`.
 
 What if you want to extract the `<a>` values inside the listed items `<li>`, 
 within the unlisted list `<ul>`?
@@ -261,9 +289,22 @@ To extract the first `"table"` you can use `html_nodes()` and `extract()` as fol
 xml_table1 <- xml_doc %>%
   html_nodes("table") %>%
   extract(1)
+
+class(xml_table1)
 ```
 
-Likewise, the second table can be extracted as follows
+The object `xml_table1` is not really an R table, but an object of class 
+`xml_nodeset`. To extract the html table as a data frame, `"rvest"` provides 
+the function `html_table()`:
+
+```{r}
+tbl1 <- html_table(xml_table1)
+
+head(tbl1)
+```
+
+
+Likewise, the second html table can be extracted (as an `xml_nodeset`) in the following way:
 
 ```{r}
 # extracting second table 
@@ -272,7 +313,7 @@ xml_table2 <- xml_doc %>%
   extract(2)
 ```
 
-Actually, both table can be extracted simultaneously:
+Actually, both tables can be extracted simultaneously:
 
 ```{r}
 # two html tables
@@ -281,7 +322,7 @@ xml_tables <- xml_doc %>%
   extract(1:2)
 ```
 
-Having extracted the tables we are interested in, we can select the `<a>` nodes, and then extract the values that correspond to the names of the teams:
+Having extracted the tables we are interested in, we can select the `<a>` nodes, and then extract the content that corresponds to the name of the teams:
 
 ```{r}
 # extract names of teams
@@ -307,9 +348,31 @@ Bingo!!!
 
 ## Your turn
 
-- Store the href attributes in a character vector
-- Create another character vector containing just the team abbreviations: e.g. `"BOS", "CLE", "TOR", ...`
-- Create a `for ()` loop to extract all the html tables
-- To extract the tables, you can use `readHTMLTable()`
-- Store each table in an csv file: `"GSW-roster-2017.csv"`
-- Once you have all the Roster tables, form a unique table (by merging or binding) all the team tables.
+- Store the href attributes in a character vector `hrefs`.
+- Use string manipulation functions to create a character vector `teams` that 
+contains just the team abbreviations: e.g. `"BOS", "CLE", "TOR", ...`
+- Create a character vector `files` with elements:
+`"BOS-roster-2017.csv", "CLE-roster-2017.csv", "TOR-roster-2017.csv", ...`
+- Use the object `basket` and the first element of `hrefs` (i.e. `hrefs[1]`) to 
+assemble a `team_url` like the one used for `gsw_url`:
+```
+# modify with `hrefs[1]`
+basket <- "https://www.basketball-reference.com"
+gsw <- "/teams/GSW/2017.html"
+gsw_url <- paste0(basket, gsw)
+```
+- Read the html document of `team_url`.
+- Use `html_table()` to extract the content of the html table as a data frame called `roster`.
+- Store the data frame in a csv file: `"BOS-roster-2017.csv"`.
+
+Having making sure that your code above works, now generalize it to more teams. In theory, your code should be able to collect all 30 roster tables. However, since everyone will be making constant requests to the _basketball-reference_ website at the same time, write code that scrapes a couple of roster tables (e.g. 5 or 7 teams).
+
+- Create a `for ()` loop to extract a handful of the roster tables as data frames.
+- Store each table in its own csv file: e.g. `"GSW-roster-2017.csv"`
+
+
+### Challenge
+
+Using all the saved csv files, how would you build a global table containing the extracted rosters, in a way that this table would also have a column for the team?
+
+Try getting such a global table and save it in a file `nba-rosters-2017.csv`
