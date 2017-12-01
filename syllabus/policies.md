@@ -114,7 +114,7 @@ progress with the course.
 
 - There will be one 50-minute in-class midterm, and one 3-hour final exam.
 - The date of the midterm is Friday October 13th. 
-- The final exam is currently scheduled for Day, Dec 15th from 8am to 11am. (classroom to be announced).
+- The final exam is currently scheduled for Day, Dec 15th from 8am to 11am, in Dwinelle 145 and 155.
 - If you do not take the final, you will NOT pass the class.
 - Please don't cheat. It's not worth it.
 - If I see you doing something that looks like cheating (e.g. moving your lips, talking, looking at someone else's paper, acting suspiciously), I will take it AS cheating and give you a zero (No questions asked).
