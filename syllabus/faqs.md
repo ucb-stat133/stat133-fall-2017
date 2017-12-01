@@ -79,7 +79,7 @@ journalist, or get some analytic skills, this course should be a good choice.
 ### Are we going to learn about machine learning methods?
 
 No. This course is not about machine learning (or statistical learning) methods.
-The Statistics department offers a dedcidated course on this topic: 
+The Statistics department offers a dedicated course on this topic: 
 __Stat 154: Modern Statistical Prediction and Machine Learning__.
 There is also __CS 189: Introduction to Machine Learning__ offered through 
 Electrical Engineering and Computer Sciences (EECS).
