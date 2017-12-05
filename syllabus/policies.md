@@ -144,7 +144,8 @@ progress with the course.
 | Concept    | Weight |
 |------------|--------|
 | Labs       | 10% |
-| Homework   | 35% |
+| Homework   | 20% |
+| Project    | 15% |
 | Posts      | 15% |
 | Midterm    | 15% |
 | Final test | 25% |
