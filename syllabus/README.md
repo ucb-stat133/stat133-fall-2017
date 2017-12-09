@@ -13,8 +13,8 @@
 + __Dates__: Aug 23-25
 + __Topics__: Introduction, policies/logistics, and course in a nutshell.
 + __Lecture material__
-    + [About the Course](https://docs.google.com/presentation/d/1odMBh760lfSBiRhEh2cNLEq8LY8YcQTl_lLutRVbZhs/pub?start=false&loop=false&delayms=3000) (slides)
-    + [Introduction: Big Picture](https://docs.google.com/presentation/d/1q8fIQ_xVo-S1awfh3qA6XqfZeyG4z3KvLgQj1L9ZuAY/pub?start=false&loop=false&delayms=3000) (slides)
+    + [About the Course](../slides/00-about-course.pdf) (slides)
+    + [Introduction: Big Picture](../slides/01-big-picture.pdf) (slides)
 + __Lab__: No lab
 + __Reading__:
     + [Course policies](policies.md), and [FAQs](faqs.md)
@@ -31,10 +31,10 @@
 + __Dates__: Aug 28-Sep 01:
 + __Topics__: Getting started with R, and comprehensive review of the RStudio workspace.
 + __Lecture material__
-    + [About R](https://docs.google.com/presentation/d/1n4Wo6lhYIeUi6XPhE7BVhX6cgfcTHkr1_uap0GWmD5Q/pub?start=false&loop=false&delayms=3000) (slides)
+    + [About R](../slides/02-about-R.pdf) (slides)
     + [First contact with R](../tutorials/01-intro-to-R.md) (tutorial)
     + [Intro to Rmd files](../tutorials/02-intro-to-Rmd-files.md) (tutorial)
-    + [Data Types and Vectors](https://docs.google.com/presentation/d/e/2PACX-1vTyI7ymGK8e8G-lXUkYHx7vSfN1bQN39k6MoQwOx0npaoVYyLUixFuQNmt32sr-G2sjtgtnr3mGcOYp/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Data Types and Vectors](../slides/03-R-vector-types.pdf) (slides)
 + __Lab material__:
     + [Getting started with R](../labs/lab01-R-basics.md)
 + __Reading__:
@@ -58,8 +58,8 @@
 + __Topics__: Getting to know R vectors and concepts like atomicity, vectorization, recycling, and subsetting.
 + __Lecture material__
     + [Intro to vectors](../tutorials/03-intro-to-vectors.md) (tutorial)
-    + [Arrays and Factors](https://docs.google.com/presentation/d/e/2PACX-1vSyy1gkP4eG1z_TXMAnY_23HWDW1GQAPFaQll1EQVXMyaOfCiH_bEYQch47ZkywDJoc8T-Ct14vlZby/pub?start=false&loop=false&delayms=3000) (slides)
-    + [Lists](https://docs.google.com/presentation/d/e/2PACX-1vRQsS5XHV4wyzMgTRXgtYXm7GoF6XLYPB-hFWvT_IvsMEBM1S_zsaPMEKd5wy2b9Uk7oARM29YxdsK7/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Arrays and Factors](../slides/04-arrays-factors.pdf) (slides)
+    + [Lists](../slides/05-lists.pdf) (slides)
 + __Lab material__:
     + [Getting started with vectors, factors, and lists](../labs/lab02-vector-basics.md)
 + __Reading__:
@@ -77,9 +77,9 @@
 + __Dates__: Sep 11-15
 + __Topics__: Fundamental low-level stuff for the rest of the course.
 + __Lecture material__
-    + [Filesystem Basics](https://docs.google.com/presentation/d/1V-JPhr3Do3A7Jn-zgFSqD7R171W-G02uEmxWoHZI7bs/pub?start=false&loop=false&delayms=3000) (slides)
-    + [Shell Basics](https://docs.google.com/presentation/d/1VTlxM0IrwhzSDVyqPM9a2JLG8wICVpOp3hrHvTcrA6Q/pub?start=false&loop=false&delayms=3000) (slides)
-    + [Git Basics](https://docs.google.com/presentation/d/1szPjE9eDD23YdZiq3-Tk85ZprY7d31uRtVxgTXSS_rc/pub?start=false&loop=false&delayms=3000) (slides)
+    + [Filesystem Basics](../slides/06-filesystem-basics.pdf) (slides)
+    + [Shell Basics](../slides/07-shell-basics.pdf) (slides)
+    + [Git Basics](../slides/08-git-basics.pdf) (slides)
 + __Lab material__:
     + [Minimal Bash and Git](../labs/lab03-minimal-bash-git.md)
     + [GitHub repo for your assignments](../labs/lab03-hws-repository.md)
@@ -98,11 +98,10 @@
 + __Dates__: Sep 18-22
 + __Topics__: Data Tables, typical storage formats, and relation with data frames.
 + __Lecture material__
-    + [Data Tables](https://docs.google.com/presentation/d/1WQIrQxtNXhEEpI0Yd5Ch4r2zwIp3KG2O_BVY5nsdY4Q/pub?start=false&loop=false&delayms=3000) (slides)
-    + [Data Frames](https://docs.google.com/presentation/d/e/2PACX-1vQe6DvbQATpBwuDvebpqetMnDEZyGPFtjllqkNpkKlQ07BM9jIJPpTwg-o0o_YSoO2PZkwaaezU6zaz/pub?start=false&loop=false&delayms=3000) (slides)
-    + [Importing Tables in R](https://docs.google.com/presentation/d/1vbqZoR2i8z3Zlpc8WxhA3ntKnfB8O1WVKnFVDdxZzdA/pub?start=false&loop=false&delayms=3000) (slides)
-    + [Basic manipulation of data frames](https://docs.google.com/presentation/d/1OsxnIgNTZG-gnD0rdTXzqf162_gNqnok_suMHG5KxpU/edit?usp=sharing) (slides)
-+ __Lab material__:
+    + [Data Tables](../slides/09-data-tables.pdf) (slides)
+    + [Importing Tables in R](../slides/10-importing-tables.pdf) (slides)
+    + [Data Frames](../slides/11-data-frame-basics.pdf) (slides)
+ + __Lab material__:
     + [Reading in tables in R](../labs/lab04-reading-tables.md)
     + [Manipulating data frames](../labs/lab04-data-frame-basics.md)
 + __Reading__:
@@ -125,7 +124,7 @@ graphs with `"ggplot2"`.
 + __Lecture Material__
     + [Introduction to the R package `"dplyr"`](../slides/12-dplyr-introduction.pdf) (slides by Hadley Wickham)
     + [Introduction to `"dplyr"`](../tutorials/05-intro-to-dplyr.md) (tutorial)
-    + [Introduction to the R package `"ggplot2"`](https://docs.google.com/presentation/d/e/2PACX-1vTGKt6asJIPfSXbuO5Jn1qtAOTQbOcWmE0TVXr67z7DOkOUHPj43Vi1Q7hqw-xYTy3pzD2985H9It0T/pub?start=false&loop=false&delayms=3000)
+    + [Introduction to the R package `"ggplot2"`](../slides/13-grammar-graphics.pdf) (slides)
     + ["ggplot2" lecture](../slides/14-ggplot-lecture.pdf) (slides by Karthik Ram)
 + __Lab material__:
     + [Getting started with dplyr and ggplot2](../labs/lab05-dplyr-ggplot-basics.md)
